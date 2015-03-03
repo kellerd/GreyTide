@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1F03CCBE-7F12-455B-9052-EDEA6AC24FBD}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GreyTide</RootNamespace>
+    <AssemblyName>GreyTide</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="partials\chart.html" />
+    <Content Include="scripts\angular.min.js.map" />
+    <Content Include="packages.config" />
+    <Content Include="data\models.json" />
+    <Content Include="scripts\angular-route.min.js.map" />
+    <Content Include="data\states.json" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="index.html" />
+    <Content Include="partials\state.html" />
+    <Content Include="partials\tide.html" />
+    <Content Include="scripts\angular-mocks.js" />
+    <Content Include="scripts\angular-route.js" />
+    <Content Include="scripts\angular-route.min.js" />
+    <Content Include="scripts\angular.js" />
+    <Content Include="scripts\angular.min.js" />
+    <Content Include="scripts\app\app.js" />
+    <Content Include="scripts\app\contollers.js" />
+    <Content Include="scripts\jqPlot\changes.txt" />
+    <Content Include="scripts\jqPlot\copyright.txt" />
+    <Content Include="scripts\jqPlot\excanvas.js" />
+    <Content Include="scripts\jqPlot\excanvas.min.js" />
+    <Content Include="scripts\jqPlot\gpl-2.0.txt" />
+    <Content Include="scripts\jqPlot\jqPlotCssStyling.txt" />
+    <Content Include="scripts\jqPlot\jqPlotOptions.txt" />
+    <Content Include="scripts\jqPlot\jquery.jqplot.css" />
+    <Content Include="scripts\jqPlot\jquery.jqplot.js" />
+    <Content Include="scripts\jqPlot\jquery.jqplot.min.css" />
+    <Content Include="scripts\jqPlot\jquery.jqplot.min.js" />
+    <Content Include="scripts\jqPlot\jquery.js" />
+    <Content Include="scripts\jqPlot\jquery.min.js" />
+    <Content Include="scripts\jqPlot\MIT-LICENSE.txt" />
+    <Content Include="scripts\jqPlot\optionsTutorial.txt" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.barRenderer.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.barRenderer.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.BezierCurveRenderer.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.BezierCurveRenderer.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.blockRenderer.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.blockRenderer.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.bubbleRenderer.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.bubbleRenderer.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.canvasAxisLabelRenderer.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.canvasAxisLabelRenderer.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.canvasAxisTickRenderer.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.canvasAxisTickRenderer.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.canvasOverlay.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.canvasOverlay.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.canvasTextRenderer.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.canvasTextRenderer.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.categoryAxisRenderer.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.categoryAxisRenderer.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.ciParser.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.ciParser.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.cursor.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.cursor.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.dateAxisRenderer.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.dateAxisRenderer.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.donutRenderer.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.donutRenderer.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.dragable.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.dragable.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.enhancedLegendRenderer.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.enhancedLegendRenderer.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.funnelRenderer.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.funnelRenderer.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.highlighter.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.highlighter.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.json2.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.json2.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.logAxisRenderer.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.logAxisRenderer.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.mekkoAxisRenderer.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.mekkoAxisRenderer.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.mekkoRenderer.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.mekkoRenderer.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.meterGaugeRenderer.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.meterGaugeRenderer.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.mobile.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.mobile.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.ohlcRenderer.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.ohlcRenderer.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.pieRenderer.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.pieRenderer.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.pointLabels.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.pointLabels.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.pyramidAxisRenderer.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.pyramidAxisRenderer.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.pyramidGridRenderer.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.pyramidGridRenderer.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.pyramidRenderer.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.pyramidRenderer.min.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.trendline.js" />
+    <Content Include="scripts\jqPlot\plugins\jqplot.trendline.min.js" />
+    <Content Include="scripts\jqPlot\README.txt" />
+    <Content Include="scripts\jqPlot\usage.txt" />
+    <None Include="scripts\linq-vsdoc.js" />
+    <Content Include="scripts\linq.js" />
+    <Content Include="scripts\linq.min.js" />
+    <Content Include="scripts\multi-select\angular-multi-select.css" />
+    <Content Include="scripts\multi-select\angular-multi-select.js" />
+    <Content Include="scripts\x-editable\xeditable.css" />
+    <Content Include="scripts\x-editable\xeditable.js" />
+    <Content Include="scripts\x-editable\xeditable.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1922</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1922/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

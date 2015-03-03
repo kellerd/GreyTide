@@ -1,0 +1,15 @@
+﻿<ul>
+    <li ng-repeat="state in States.model | filter:query">
+        <span>{{state.name}}</span><button ng-click="Remove(state)">-</button>
+        <input type="checkbox" ng-model="state.isDefault" disabled="disabled" />
+    </li>
+    <li>
+
+        <button ng-click="insertvisible = true" ng-show="!insertvisible">+</button>
+        <span ng-show="insertvisible">
+            <label>Name<input ng-model="newName" /></label>
+            <input type="checkbox" ng-model="newDefault" />
+            <button ng-click="insertvisible = false; Insert(newName,newDefault)">Insert</button>
+        </span>
+    </li>
+</ul>

@@ -1,0 +1,12 @@
+﻿[
+{ "name": "Completed", "isDefault": true },
+{ "name": "Hard Coated", "isDefault": true },
+{ "name": "Soft Coated", "isDefault": true },
+{ "name": "Dusted", "isDefault": true },
+{ "name": "Painted", "isDefault": true },
+{ "name": "RePainted", "isDefault": true },
+{ "name": "Based", "isDefault": true },
+{ "name": "Primed", "isDefault": true },
+{ "name": "Assembled", "isDefault": true },
+{ "name": "Striped", "isDefault": true }
+    ]

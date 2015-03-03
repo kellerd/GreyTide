@@ -1,0 +1,35 @@
+﻿<!doctype html>
+<html lang="en" ng-app="greyTideApp">
+<head>
+    <meta charset="utf-8">
+    <title>Grey Tide</title>
+    <script language="javascript" type="text/javascript" src="scripts/jqPlot/jquery.min.js"></script>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-route.min.js"></script>
+    <script src="scripts/linq.min.js"></script>
+    <script src="scripts/app/app.js"></script>
+    <script src="scripts/app/contollers.js"></script>
+    <script src="scripts/multi-select/angular-multi-select.js"></script>
+    <link href="scripts/multi-select/angular-multi-select.css" rel="stylesheet" />
+    <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="scripts/jqPlot/excanvas.js"></script><![endif]-->
+    <script language="javascript" type="text/javascript" src="scripts/jqPlot/jquery.jqplot.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="scripts/jqPlot/jquery.jqplot.css" />
+    <script type="text/javascript" src="scripts/jqPlot/plugins/jqplot.barRenderer.min.js"></script>
+    <script type="text/javascript" src="scripts/jqPlot/plugins/jqplot.categoryAxisRenderer.min.js"></script>
+    <script type="text/javascript" src="scripts/jqPlot/plugins/jqplot.pointLabels.min.js"></script>
+    <script type="text/javascript" language="javascript" src="scripts/jqPlot/plugins/jqplot.dateAxisRenderer.js"></script>
+    <script src="scripts/x-editable/xeditable.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a href='#/states'>States</a></li>
+            <li><a href="#/tide">Grey Tide</a></li>
+            <li><a href="#/chart">Chart</a></li>
+        </ul>
+    </header>
+    <div ng-view id="currentView"></div>
+
+</body>
+</html>
