@@ -1,4 +1,6 @@
-﻿<label>Search: <input ng-model="query" /></label>
+﻿<button ng-click="RefreshFromStore()" ng-disabled="Tide.loading">Restore from default</button>
+<br/>
+<label>Search: <input ng-model="query" /></label>
 <label>Search 2: <input ng-model="query2" /></label>
 <label>Search 3: <input ng-model="query3" /></label>
 <label>To Complete: <input type="checkbox" ng-model="query5" checked="checked"></label>
@@ -20,19 +22,26 @@
 <button ng-click="insertvisible = true;" ng-hide="insertvisible">+</button>
 <!--filter: filterModelOnState(query4.name, !query5)-->
 <ul>
-    <li ng-repeat="model in Tide.model | filter:query | filter:query2 | filter:query3 | orderBy:orderProp"> 
+    <li ng-repeat="model in Tide.model | filter:query | filter:query2 | filter:query3 | orderBy:orderProp">
         <button ng-click="Remove(model)">x</button>
-        <span>{{model.name}} <em>{{model.faction}}</em> - {{model.points}} Points - Last work done on: {{Tide.LastState(model)}}</span>
-        <div multi-select
-             input-model="model.States"
-             button-label="name"
-             item-label="name"
-             max-labels="1"
-             is-disabled="active"
-             tick-property="active"
-             on-item-click="setActive(model, data)"
-             on-close="Tide.SaveState()">
-        </div>
+        <ul>
+            <li>{{model.name}} - <em>{{model.faction}}</em></li>
+            <li>{{model.points}} Points</li>
+            <li>Model is currently {{model.current}} as of {{Tide.LastState(model)}}</li>
+            <li>
+                Recede tide: <div multi-select
+                                      input-model="model.States"
+                                      button-label="name"
+                                      item-label="name"
+                                      max-labels="0"
+                                      disable-property="active"
+                                      helper-elements=""
+                                      tick-property="active"
+                                      on-item-click="setActive(model, data)"
+                                      on-close="Tide.SaveState()">
+
+                </div>
+            </li>
+        </ul>
     </li>
-    
 </ul>

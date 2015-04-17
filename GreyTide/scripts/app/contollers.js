@@ -52,7 +52,7 @@ GreyTideControllers.controller('GreyTideController', ['$scope', '$filter', 'tide
             "name": newName,
             "points": newPoints,
             "faction": newFaction,
-            "States": [{ name: "Startup", date: (new Date(), 'yyyy-MM-dd') }]
+            "States": [{ name: "Startup", date: new Date().toISOString() }]
         }, tideService))
         $scope.Tide.SaveState();
     };
@@ -61,6 +61,11 @@ GreyTideControllers.controller('GreyTideController', ['$scope', '$filter', 'tide
     $scope.Factions = Enumerable.From($scope.Tide.model).Select(function (x) {
         return x.faction;
     }).Distinct().Select(function (x) { return { "name": x } }).ToArray();
+
+
+    $scope.RefreshFromStore = function () {
+        $scope.Tide.Refresh();
+    }
     //$scope.filterModelOnState = function (stateName, active) {
     //    return function (model) {
     //        return !stateName || 0 === stateName.length || Enumerable.From(model.States).Any(function (s) { return s.name == stateName && s.active == active; });
