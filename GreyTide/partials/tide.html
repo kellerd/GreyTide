@@ -1,7 +1,6 @@
 ﻿<label>Search: <input ng-model="query" /></label>
 <label>Search 2: <input ng-model="query2" /></label>
 <label>Search 3: <input ng-model="query3" /></label>
-<label>State: <select ng-model="query4" ng-options="item.name for item in States.model track by item.name"><option value="">-- choose state --</option></select></label>
 <label>To Complete: <input type="checkbox" ng-model="query5" checked="checked"></label>
 <label>
     Order By:
@@ -17,16 +16,11 @@
     <label>Points<input ng-model="newPoints" /></label>
     <button ng-click="Insert(newName, newFaction, newPoints)">Insert</button>
     <button ng-click="insertvisible = false;">Close</button>
-    <div multi-select
-         input-model="States.model"
-         button-label="name"
-         item-label="name"
-         tick-property="isDefault">
-    </div>
 </div>
 <button ng-click="insertvisible = true;" ng-hide="insertvisible">+</button>
+<!--filter: filterModelOnState(query4.name, !query5)-->
 <ul>
-    <li ng-repeat="model in Tide.model | filter:query | filter:query2 | filter:query3 | filter: filterModelOnState(query4.name, !query5) | orderBy:orderProp">
+    <li ng-repeat="model in Tide.model | filter:query | filter:query2 | filter:query3 | orderBy:orderProp"> 
         <button ng-click="Remove(model)">x</button>
         <span>{{model.name}} <em>{{model.faction}}</em> - {{model.points}} Points - Last work done on: {{Tide.LastState(model)}}</span>
         <div multi-select
@@ -34,20 +28,11 @@
              button-label="name"
              item-label="name"
              max-labels="1"
+             is-disabled="active"
              tick-property="active"
              on-item-click="setActive(model, data)"
              on-close="Tide.SaveState()">
         </div>
-        <!--<ul ng-if="model.States.length > 0">
-            <li ng-repeat="state in model.States">
-                <label>
-                    <input type="checkbox" ng-model="state.active" ng-change="setActive(state)" />
-                    {{state.name}}
-                </label>
-                <button ng-click="RemoveState(model, state)">x</button>
-                <em>{{state.date}}</em>
-            </li>
-        </ul>-->
     </li>
-
+    
 </ul>

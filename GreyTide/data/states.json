@@ -1,70 +1,26 @@
-﻿{
-    "StatesMachines": [
-        {
-            "name": "Default",
-            "events": [
-                { "name": "Complete", "from": "*", "to": "Complete" },
-                { "name": "Dislike", "from": "Completed", "to": "RequiresStripping" },
-                { "name": "FinishCoat", "from": "Painted", "to": "Complete" },
-                { "name": "Paint", "from": "Primed", "to": "Painted" },
-                { "name": "Prime", "from": "Assembled", "to": "Primed" },
-                { "name": "Assemble", "from": "NOS,RequiresAssembly", "to": "Assembled" },
-                { "name": "Buy Painted", "from": "None,ShoppingFor", "to": "Completed" },
-                { "name": "Buy Painted", "from": "None,ShoppingFor", "to": "Painted" },
-                { "name": "Buy Primed", "from": "None,ShoppingFor", "to": "Primed" },
-                { "name": "Buy Assembled", "from": "None,ShoppingFor", "to": "Assembled" },
-                { "name": "Buy Broken", "from": "None,ShoppingFor", "to": "RequiresAssembly" },
-                { "name": "Buy New", "from": "None,ShoppingFor", "to": "NOS" },
-                { "name": "Want", "from": "None", "to": "ShoppingFor" }
-            ]
-        },
-        {
-            "name": "DefaultPieces",
-            "events": [ 
-                 { "name": "Hard Coated", "from": "game", "to": "menu" },
-                { "name": "Soft Coated", "from": "game", "to": "menu" },
-                { "name": "Dusted", "from": "game", "to": "menu" },
-                { "name": "Painted", "from": "game", "to": "menu" },
-                { "name": "RePainted", "from": "game", "to": "menu" },
-                { "name": "Based", "from": "game", "to": "menu" },
-                { "name": "Prime", "from": "Assembled", "to": "Primed" },
-                { "name": "Assemble", "from": "NOS,RequiresAssembly", "to": "Assembled" },
-                { "name": "Strip", "from": "Painted,RequiresStripping", "to": "Primed" },
-                { "name": "Strip", "from": "Primed", "to": "Assembled" },
-                { "name": "Strip", "from": "Assembled", "to": "Requires Assembly" }
-            ]
-        }
-        {
-            "name": "TyranidPieces",
-            "events": [
-                { "name": "Hard Coated", "from": "game", "to": "menu" },
-                { "name": "Soft Coated", "from": "game", "to": "menu" },
-                { "name": "Dusted", "from": "game", "to": "menu" },
-                { "name": "Painted", "from": "game", "to": "menu" },
-                { "name": "RePainted", "from": "game", "to": "menu" },
-                { "name": "Based", "from": "game", "to": "menu" },
-                { "name": "Prime", "from": "Assembled", "to": "Primed" },
-                { "name": "Assemble", "from": "NOS,RequiresAssembly", "to": "Assembled" },
-                { "name": "Strip", "from": "Painted,RequiresStripping", "to": "Primed" },
-                { "name": "Strip", "from": "Primed", "to": "Assembled" },
-                { "name": "Strip", "from": "Assembled", "to": "Requires Assembly" }
-            ]
-        },
-        {
-            "name": "SpaceWolfPieces",
-            "events": [ 
-                 { "name": "Hard Coated", "from": "game", "to": "menu" },
-                { "name": "Soft Coated", "from": "game", "to": "menu" },
-                { "name": "Dusted", "from": "game", "to": "menu" },
-                { "name": "Painted", "from": "game", "to": "menu" },
-                { "name": "RePainted", "from": "game", "to": "menu" },
-                { "name": "Based", "from": "game", "to": "menu" },
-                { "name": "Prime", "from": "Assembled", "to": "Primed" },
-                { "name": "Assemble", "from": "NOS,RequiresAssembly", "to": "Assembled" },
-                { "name": "Strip", "from": "Painted,RequiresStripping", "to": "Primed" },
-                { "name": "Strip", "from": "Primed", "to": "Assembled" },
-                { "name": "Strip", "from": "Assembled", "to": "Requires Assembly" }
-            ]
-        }
-    ]
-}
+﻿[
+    {
+        "name": "Default",
+        "events": [
+            { "name": "Dislike", "from": "Completed", "to": "RequiresStripping" },
+            { "name": "Strip", "from": "Weathered", "to": "Painted" },
+            { "name": "Strip", "from": ["Painted","RequiresStripping"], "to": "Primed" },
+            { "name": "Strip", "from": "Primed", "to": "Assembled" },
+            { "name": "Strip", "from": "Assembled", "to": "RequiresAssembly" },
+            { "name": "Complete", "from": ["*", "Weathered", "Painted", "Primed", "Assembled", "NOS", "ShoppingFor", "ArdCoated"], "to": "Completed" },
+            { "name": "FinishCoat", "from": ["Painted","Weathered"], "to": "ArdCoated" },
+            { "name": "Weather", "from": "Painted", "to": "Weathered" },
+            { "name": "Paint", "from": "Primed", "to": "Painted" },
+            { "name": "Prime", "from": "Assembled", "to": "Primed" },
+            { "name": "Assemble", "from": ["NOS","RequiresAssembly"], "to": "Assembled" },
+            { "name": "Buy Completed", "from": ["None","ShoppingFor"], "to": "Completed" },
+            { "name": "Buy Painted", "from": ["None","ShoppingFor"], "to": "Painted" },
+            { "name": "Buy Primed", "from": ["None","ShoppingFor"], "to": "Primed" },
+            { "name": "Buy Assembled", "from": ["None","ShoppingFor"], "to": "Assembled" },
+            { "name": "Buy Broken", "from": ["None","ShoppingFor"], "to": "RequiresAssembly" },
+            { "name": "Buy New", "from": ["None","ShoppingFor"], "to": "NOS" },
+            { "name": "Want", "from": "None", "to": "ShoppingFor" },
+            { "name": "Startup", "from": "none", "to": "None" }
+        ]
+    }
+]

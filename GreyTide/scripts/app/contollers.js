@@ -1,24 +1,30 @@
 ﻿/// <reference path="../linq-vsdoc.js" />
 /// <reference path="../linq.min.js" />
+/// <reference path="app.js" />
 var GreyTideControllers = angular.module('GreyTideControllers', []);
 
 GreyTideControllers.controller('StateController', ['$scope', '$http', 'stateService', function ($scope, $http, stateService) {
     $scope.States = stateService;
 
-    $scope.Insert = function (newName, newDefault) {
-        $scope.States.model.push({
+    $scope.Insert = function (stateMachine, newName, newFrom, newTo) {
+        stateMachine.events.push({
             "name": newName,
-            "isDefault": newDefault
+            "from": newFrom,
+            "to": newTo
         })
         $scope.States.SaveState();
     };
     $scope.insertvisible = false;
 
-    $scope.Remove = function (item) {
+    $scope.Remove = function (stateMachine,item) {
         
-        var index = $scope.States.model.indexOf(item)
-        $scope.States.model.splice(index, 1);
+        var index = stateMachine.events.indexOf(item)
+        stateMachine.events.splice(index, 1);
         $scope.States.SaveState();
+    }
+
+    $scope.RefreshFromStore = function () {
+        $scope.States.Refresh();
     }
 }]);
 
@@ -27,12 +33,9 @@ GreyTideControllers.controller('GreyTideController', ['$scope', '$filter', 'tide
     $scope.States = stateService;
     $scope.orderProp = "[faction,name]";
     $scope.setActive = function (model, item) {
-        var updateItem = Enumerable.From(model.States).Where(function (x) { return x.name == item.name }).First();
-        updateItem.active = item.active;
-        if (item.active)
-            updateItem.date = $filter('date')(new Date(), 'yyyy-MM-dd');
-        else
-            updateItem.date = null;
+        if (item.active == true) {
+            model[item.name].call(model);
+        }
     }
     $scope.Remove = function (item) {
         var index = $scope.Tide.model.indexOf(item)
@@ -45,12 +48,12 @@ GreyTideControllers.controller('GreyTideController', ['$scope', '$filter', 'tide
         $scope.Tide.SaveState();
     }
     $scope.Insert = function (newName, newFaction, newPoints) {
-        $scope.Tide.model.push({
+        $scope.Tide.model.push(new ModelObject({
             "name": newName,
             "points": newPoints,
             "faction": newFaction,
-            "States": Enumerable.From(stateService.model).Where(function (x) { return x.isDefault }).Select(function (x) { return { "name": x.name, "active": false, "date": null }; }).ToArray()
-        })
+            "States": [{ name: "Startup", date: (new Date(), 'yyyy-MM-dd') }]
+        }, tideService))
         $scope.Tide.SaveState();
     };
     $scope.query5 = true;
@@ -58,11 +61,11 @@ GreyTideControllers.controller('GreyTideController', ['$scope', '$filter', 'tide
     $scope.Factions = Enumerable.From($scope.Tide.model).Select(function (x) {
         return x.faction;
     }).Distinct().Select(function (x) { return { "name": x } }).ToArray();
-    $scope.filterModelOnState = function (stateName, active) {
-        return function (model) {
-            return !stateName || 0 === stateName.length || Enumerable.From(model.States).Any(function (s) { return s.name == stateName && s.active == active; });
-        }
-    };
+    //$scope.filterModelOnState = function (stateName, active) {
+    //    return function (model) {
+    //        return !stateName || 0 === stateName.length || Enumerable.From(model.States).Any(function (s) { return s.name == stateName && s.active == active; });
+    //    }
+    //};
 }]);
 
 GreyTideControllers.controller('ChartController', ['$scope', 'tideService', 'stateService', function ($scope, tideService, stateService) {
