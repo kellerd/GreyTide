@@ -2,7 +2,7 @@
 <br/>
 <label>Search: <input ng-model="query" /></label>
 <label>Search 2: <input ng-model="query2" /></label>
-<label>Search 3: <input ng-model="query3" /></label>
+<label>State: <input ng-model="query3" /></label>
 <label>To Complete: <input type="checkbox" ng-model="query5" checked="checked"></label>
 <label>
     Order By:
@@ -22,7 +22,7 @@
 <button ng-click="insertvisible = true;" ng-hide="insertvisible">+</button>
 <!--filter: filterModelOnState(query4.name, !query5)-->
 <ul>
-    <li ng-repeat="model in Tide.model | filter:query | filter:query2 | filter:query3 | orderBy:orderProp">
+    <li ng-repeat="model in Tide.model | filter:query">
         <button ng-click="Remove(model)">x</button>
         <ul>
             <li>{{model.name}} - <em>{{model.faction}}</em></li>

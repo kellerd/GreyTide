@@ -182,7 +182,7 @@ ModelObject = function (json, tideService) {    // my constructor function
     this.faction = json.faction;
     this.Pieces = json.Pieces;
     this.tideService = tideService;
-    var existingStates = Enumerable.From(json.States).OrderBy(function (x) { return x.date; }).Select(function (x) { return { name: x.name, active: true, date: x.date }; });
+    var existingStates = Enumerable.From(json.States).OrderByDescending(function (x) { return x.date; }).Select(function (x) { return { name: x.name, active: true, date: x.date }; });
     if (existingStates.Count() == 0)
         existingStates = Enumerable.From([{ name: "Startup", active:true,date: new Date().toISOString() }]);
     this.States = existingStates.ToArray();
@@ -217,9 +217,7 @@ app.factory('tideService', ['$rootScope', '$http', 'stateService', function ($ro
         loading: false,
         SaveState: function () {
             if (!service.loading && service.model.length > 0) {
-                //storageMethod.tideService = Enumerable...
-                
-                var mod = Enumerable.From(service.model).Select(function (x) {
+                storageMethod.tideService = Enumerable.From(service.model).Select(function (x) {
                     return {
                         'name': x.name,
                         'points': x.points,
@@ -229,37 +227,27 @@ app.factory('tideService', ['$rootScope', '$http', 'stateService', function ($ro
                                 'name': y.name, 'active':true,'date': y.date
                             };
                         }).ToArray(),
-                        'Pieces': Enumerable.From(x.Pieces).Select(function (y) {
-                            return {
-                                'name': y.name, 'States': Enumerable.From(y.States).Where(function (z) { return z.active }).Select(function (a) {
-                                    return {
-                                        'name': a.name, 'active': true, 'date': a.date
-                                    };
-                                }).ToArray()
-                            }
-                        })
+                        'Pieces': x.Pieces
                     };
                 }).ToJSON();
-
-                mod = mod;
             }
         },
 
         RestoreState: function () {
             if (!service.loading) {
-                //service.loading = true;
-                //if (storageMethod.tideService) {
-                //    service.model = service.LoadFromJson(storageMethod.tideService);
-                //    service.loading = false;
-                //}
-                //if (service.model.length == 0 || service.model[0].name == "")
-                //    service.Refresh();
+                if (storageMethod.tideService) {
+                    service.loading = true;
+                    service.LoadFromJson(angular.fromJson(storageMethod.tideService));
+                    service.loading = false;
+                }
+                if (service.model.length == 0 || service.model[0].name == "")
+                    service.Refresh();
             }
         },
         LoadFromFile: function(file) {
             $http.get(file, { cache: false }).
                success(function (data) {
-                   service.LoadFromJson(data)
+                   service.LoadFromJson(data);
                }).
                error(function (data, status, headers, config) {
                 service.loading = false;
@@ -268,7 +256,7 @@ app.factory('tideService', ['$rootScope', '$http', 'stateService', function ($ro
         },
         LoadFromJson: function (data) {
             service.model = []
-            Enumerable.From(data).Take(10).Select(function (x) { return new ModelObject(x, service) }).ForEach(function (x) {
+            Enumerable.From(data).Select(function (x) { return new ModelObject(x, service) }).ForEach(function (x) {
                 service.model.push(x);
             });
             service.loading = false;
