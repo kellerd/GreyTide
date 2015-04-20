@@ -26,18 +26,38 @@ app.directive('chart', function () {
         //   plot3 = $.jqplot('chart3', [Primed,HardCoat,SoftCoat]
         //   plot3 = $.jqplot('chart3', [[SW Primed, TyrPrimed],[SW hard coat, Tyr hard coat],[SW Soft coat, Tyr Soft coat]]
         // Series = "Primed", "Hardcoat", "Softcoat"
-
+        
         link: function (scope, el, attrs) {
 
             // set up slider on load
             angular.element(document).ready(function () {
-
-                var data = Enumerable.From(scope.Tide.model);
-                var sum = data.Sum("$.points");
-                var raw = data.GroupBy("$.faction").Select("{Faction:$.Key(),List:$.Select('{state:$.States.OrderByDescending('$.date'),points:100.0*$.points/" + sum + "}')}");
-                var series = raw.SelectMany("$.List.Select('$.state').Distinct()");
-
-            //    var raw = JArray.Parse(tideModeljson).
+                
+                var model = Enumerable.From(scope.Tide.model);
+                var sum = model.Sum(function (data) { return data.points });
+                var groups = model.GroupBy(function (data) { return data.faction });
+                var raw = groups.Select(function (model) {
+                    return {
+                        Faction: model.Key(),
+                        List: Enumerable.From(model).Select( function (singlemodel) {
+                            return {
+                                state: Enumerable.From(singlemodel.States).OrderByDescending("d=>d.date").First().name,
+                                points: 100.0 * singlemodel.points / sum
+                            };
+                        })
+                    };
+                });
+                var series = raw.SelectMany("$.List.Select('$.state')").Distinct().OrderBy();
+                var data = series.Select(function (seri) {
+                    return raw.Select(function (r) {
+                        return r.List.Where(function (ud) {
+                            return ud.state == seri;
+                        }).Select(function (ud) {
+                            return ud.points;
+                        }).DefaultIfEmpty(0.0).Sum();
+                    }).ToArray();
+                });
+                //Linqpad c# version
+                //    var raw = JArray.Parse(tideModeljson).
 			                //GroupBy(m => m["faction"]).
 			                //Select(u => new {
 			                //    Faction = u.Key, 
@@ -52,28 +72,11 @@ app.directive('chart', function () {
                 //var series = raw.SelectMany(u => u.List.Select(ud => ud.state)).Distinct().Dump("Series");
                 //var data = series.Select(seri => raw.Select(r => r.List.Where(ud => ud.state.Equals(seri)).Select(ud => ud.points).DefaultIfEmpty(0d))).Dump("data");
 
-
-
-
-
-
-
-
-
-
-                var data = Enumerable.From(scope.Tide.model)
-
-                var data = jQuery.map(scope.Tide.model, function (model) {
-                    return [jQuery.map(model['States'], function (state) {
-                        return state["active"] ? 1 : 0;
-                    })];
-                });
-                var ticks = jQuery.map(scope.Tide.model, function (model) { return model['faction']; });
-                var series = jQuery.map(scope.States.model, function (state) { return state['name']; });
-                var plot3 = $.jqplot(el[0].id, [[0, 1], [0, 1], [1, 1], [0, 1], [1, 1], [0, 1], [0, 1], [0, 1], [1, 1]], {
+                var ticks = raw.Select("s=>s.Faction").ToArray()
+                var plot3 = $.jqplot(el[0].id, data.ToArray(), {
                     // Tell the plot to stack the bars.
                     stackSeries: true,
-                    series: series,
+                    series: series.Select(function (x) { return { label: x }}).ToArray(),
                     seriesDefaults: {
                         renderer: $.jqplot.BarRenderer,
                         rendererOptions: {
