@@ -1,7 +1,7 @@
 ﻿[
     {
         "name": "Hive Tyrant",
-        "points": "255",
+        "points": 255,
         "faction": "Tyranids",
         "States": [
             {
@@ -23,8 +23,8 @@
     },
     {
         "name": "Hive Tyrant",
-        "points": "255",
-        "faction": "Tyranid",
+        "points": 255,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Complete",
@@ -97,8 +97,8 @@
     },
     {
         "name": "Tervigon",
-        "points": "220",
-        "faction": "Tyranid",
+        "points": 220,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Complete",
@@ -129,8 +129,8 @@
     },
     {
         "name": "Venomthrope",
-        "points": "45",
-        "faction": "Tyranid",
+        "points": 45,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Prime",
@@ -146,8 +146,8 @@
     },
     {
         "name": "Venomthrope Finecast",
-        "points": "45",
-        "faction": "Tyranid",
+        "points": 45,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Buy New",
@@ -158,8 +158,8 @@
     },
     {
         "name": "Zoanthrope",
-        "points": "100",
-        "faction": "Tyranid",
+        "points": 100,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Assemble",
@@ -175,8 +175,8 @@
     },
     {
         "name": "Zoanthrope",
-        "points": "100",
-        "faction": "Tyranid",
+        "points": 100,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Complete",
@@ -249,8 +249,8 @@
     },
     {
         "name": "Zoanthrope Finecast",
-        "points": "50",
-        "faction": "Tyranid",
+        "points": 50,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Prime",
@@ -271,8 +271,8 @@
     },
     {
         "name": "Hormagaunt",
-        "points": "20",
-        "faction": "Tyranid",
+        "points": 20,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Buy New",
@@ -288,8 +288,8 @@
     },
     {
         "name": "Hormagaunt",
-        "points": "80",
-        "faction": "Tyranid",
+        "points": 80,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Complete",
@@ -310,8 +310,8 @@
     },
     {
         "name": "Ripper Swarm",
-        "points": "75",
-        "faction": "Tyranid",
+        "points": 75,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Complete",
@@ -332,8 +332,8 @@
     },
     {
         "name": "Termagaunt",
-        "points": "200",
-        "faction": "Tyranid",
+        "points": 200,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Complete",
@@ -406,8 +406,8 @@
     },
     {
         "name": "Termagaunt",
-        "points": "64",
-        "faction": "Tyranid",
+        "points": 64,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Complete",
@@ -428,8 +428,8 @@
     },
     {
         "name": "Gargoyle",
-        "points": "60",
-        "faction": "Tyranid",
+        "points": 60,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Complete",
@@ -460,8 +460,8 @@
     },
     {
         "name": "Hive Crone",
-        "points": "155",
-        "faction": "Tyranid",
+        "points": 155,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Dislike",
@@ -482,8 +482,8 @@
     },
     {
         "name": "Biovore",
-        "points": "80",
-        "faction": "Tyranid",
+        "points": 80,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Prime",
@@ -499,8 +499,8 @@
     },
     {
         "name": "Exocrine",
-        "points": "170",
-        "faction": "Tyranid",
+        "points": 170,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Strip Primer",
@@ -531,8 +531,8 @@
     },
     {
         "name": "Mawloc",
-        "points": "140",
-        "faction": "Tyranid",
+        "points": 140,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Complete",
@@ -605,8 +605,8 @@
     },
     {
         "name": "Tyrant Guard",
-        "points": "260",
-        "faction": "Tyranid",
+        "points": 260,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Dislike",
@@ -627,8 +627,8 @@
     },
     {
         "name": "Hive Guard",
-        "points": "55",
-        "faction": "Tyranid",
+        "points": 55,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Complete",
@@ -701,8 +701,8 @@
     },
     {
         "name": "Deathleaper",
-        "points": "130",
-        "faction": "Tyranid",
+        "points": 130,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Paint",
@@ -755,8 +755,8 @@
     },
     {
         "name": "Hive Tyrant",
-        "points": "185",
-        "faction": "Tyranid",
+        "points": 185,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Complete",
@@ -777,8 +777,8 @@
     },
     {
         "name": "Tyranid Prime",
-        "points": "130",
-        "faction": "Tyranid",
+        "points": 130,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Complete",
@@ -851,8 +851,8 @@
     },
     {
         "name": "Lictor",
-        "points": "100",
-        "faction": "Tyranid",
+        "points": 100,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Complete",
@@ -925,8 +925,8 @@
     },
     {
         "name": "Genestealer",
-        "points": "112",
-        "faction": "Tyranid",
+        "points": 112,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Complete",
@@ -947,8 +947,8 @@
     },
     {
         "name": "Broodlord",
-        "points": "60",
-        "faction": "Tyranid",
+        "points": 60,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Complete",
@@ -1021,8 +1021,8 @@
     },
     {
         "name": "Tyranid Warrior Old",
-        "points": "175",
-        "faction": "Tyranid",
+        "points": 175,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Complete",
@@ -1095,8 +1095,8 @@
     },
     {
         "name": "Tyranid Warrior Boneswords",
-        "points": "150",
-        "faction": "Tyranid",
+        "points": 150,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Prime",
@@ -1117,8 +1117,8 @@
     },
     {
         "name": "Tyranid Warrior Rending Claws",
-        "points": "120",
-        "faction": "Tyranid",
+        "points": 120,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Buy Primed",
@@ -1134,8 +1134,8 @@
     },
     {
         "name": "Tyranid Warrior New",
-        "points": "150",
-        "faction": "Tyranid",
+        "points": 150,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Buy New",
@@ -1151,8 +1151,8 @@
     },
     {
         "name": "Carnifex Old",
-        "points": "420",
-        "faction": "Tyranid",
+        "points": 420,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Complete",
@@ -1173,8 +1173,8 @@
     },
     {
         "name": "Carnifex VC",
-        "points": "140",
-        "faction": "Tyranid",
+        "points": 140,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Dislike",
@@ -1195,8 +1195,8 @@
     },
     {
         "name": "Carnifex CC",
-        "points": "135",
-        "faction": "Tyranid",
+        "points": 135,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Dislike",
@@ -1217,8 +1217,8 @@
     },
     {
         "name": "Carnifex New",
-        "points": "140",
-        "faction": "Tyranid",
+        "points": 140,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Buy New",
@@ -1234,8 +1234,8 @@
     },
     {
         "name": "Spawn of Cryptus",
-        "points": "70",
-        "faction": "Tyranid",
+        "points": 70,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Prime",
@@ -1251,8 +1251,8 @@
     },
     {
         "name": "Children of Cryptus",
-        "points": "145",
-        "faction": "Tyranid",
+        "points": 145,
+        "faction": "Tyranids",
         "States": [
             {
                 "name": "Assemble",
@@ -1273,7 +1273,7 @@
     },
     {
         "name": "Exocrine",
-        "points": "170",
+        "points": 170,
         "faction": "Tyranids",
         "States": [
             {
@@ -1290,7 +1290,7 @@
     },
     {
         "name": "Krom Dragongaze",
-        "points": "135",
+        "points": 135,
         "faction": "Space Wolves",
         "States": [
             {
@@ -1307,7 +1307,7 @@
     },
     {
         "name": "Njal",
-        "points": "180",
+        "points": 180,
         "faction": "Space Wolves",
         "States": [
             {
@@ -1371,7 +1371,7 @@
     },
     {
         "name": "Rune Priest 1",
-        "points": "60",
+        "points": 60,
         "faction": "Space Wolves",
         "States": [
             {
@@ -1388,7 +1388,7 @@
     },
     {
         "name": "Rune Priest 2",
-        "points": "60",
+        "points": 60,
         "faction": "Space Wolves",
         "States": [
             {
@@ -1405,7 +1405,7 @@
     },
     {
         "name": "Rune Priest 3",
-        "points": "60",
+        "points": 60,
         "faction": "Space Wolves",
         "States": [
             {
@@ -1422,7 +1422,7 @@
     },
     {
         "name": "Ulrik",
-        "points": "145",
+        "points": 145,
         "faction": "Space Wolves",
         "States": [
             {
@@ -1439,7 +1439,7 @@
     },
     {
         "name": "Battle Leader",
-        "points": "75",
+        "points": 75,
         "faction": "Space Wolves",
         "States": [
             {
@@ -1523,7 +1523,7 @@
     },
     {
         "name": "Wolf Lord on Thunderwolf",
-        "points": "210",
+        "points": 210,
         "faction": "Space Wolves",
         "States": [
             {
@@ -1577,7 +1577,7 @@
     },
     {
         "name": "Wolf Priest on Jump",
-        "points": "125",
+        "points": 125,
         "faction": "Space Wolves",
         "States": [
             {
@@ -1594,7 +1594,7 @@
     },
     {
         "name": "Terminators",
-        "points": "250",
+        "points": 250,
         "faction": "Space Wolves",
         "States": [
             {
@@ -1611,7 +1611,7 @@
     },
     {
         "name": "Terminators",
-        "points": "190",
+        "points": 190,
         "faction": "Space Wolves",
         "States": [
             {
@@ -1695,7 +1695,7 @@
     },
     {
         "name": "Scouts",
-        "points": "120",
+        "points": 120,
         "faction": "Space Wolves",
         "States": [
             {
@@ -1779,7 +1779,7 @@
     },
     {
         "name": "Blood Claws",
-        "points": "115",
+        "points": 115,
         "faction": "Space Wolves",
         "States": [
             {
@@ -1796,7 +1796,7 @@
     },
     {
         "name": "Sky Claws 1",
-        "points": "135",
+        "points": 135,
         "faction": "Space Wolves",
         "States": [
             {
@@ -1813,7 +1813,7 @@
     },
     {
         "name": "Sky Claws 2",
-        "points": "145",
+        "points": 145,
         "faction": "Space Wolves",
         "States": [
             {
@@ -1830,7 +1830,7 @@
     },
     {
         "name": "Grey Hunters 1",
-        "points": "130",
+        "points": 130,
         "faction": "Space Wolves",
         "States": [
             {
@@ -1847,7 +1847,7 @@
     },
     {
         "name": "Grey Hunters 2",
-        "points": "130",
+        "points": 130,
         "faction": "Space Wolves",
         "States": [
             {
@@ -1864,7 +1864,7 @@
     },
     {
         "name": "Grey Hunters 3",
-        "points": "130",
+        "points": 130,
         "faction": "Space Wolves",
         "States": [
             {
@@ -1881,7 +1881,7 @@
     },
     {
         "name": "Grey Hunters 4",
-        "points": "130",
+        "points": 130,
         "faction": "Space Wolves",
         "States": [
             {
@@ -1898,7 +1898,7 @@
     },
     {
         "name": "Grey Hunters 5",
-        "points": "130",
+        "points": 130,
         "faction": "Space Wolves",
         "States": [
             {
@@ -1915,7 +1915,7 @@
     },
     {
         "name": "Grey Hunters 6",
-        "points": "130",
+        "points": 130,
         "faction": "Space Wolves",
         "States": [
             {
@@ -1932,7 +1932,7 @@
     },
     {
         "name": "Land Speeder",
-        "points": "85",
+        "points": 85,
         "faction": "Space Wolves",
         "States": [
             {
@@ -1949,7 +1949,7 @@
     },
     {
         "name": "Thunderwolf",
-        "points": "260",
+        "points": 260,
         "faction": "Space Wolves",
         "States": [
             {
@@ -2003,7 +2003,7 @@
     },
     {
         "name": "Long Fangs 1",
-        "points": "145",
+        "points": 145,
         "faction": "Space Wolves",
         "States": [
             {
@@ -2087,7 +2087,7 @@
     },
     {
         "name": "Long Fangs 2",
-        "points": "180",
+        "points": 180,
         "faction": "Space Wolves",
         "States": [
             {
@@ -2104,7 +2104,7 @@
     },
     {
         "name": "Long Fangs 3",
-        "points": "245",
+        "points": 245,
         "faction": "Space Wolves",
         "States": [
             {
@@ -2121,7 +2121,7 @@
     },
     {
         "name": "Razorback",
-        "points": "75",
+        "points": 75,
         "faction": "Space Wolves",
         "States": [
             {
@@ -2158,7 +2158,7 @@
     },
     {
         "name": "Rhino",
-        "points": "35",
+        "points": 35,
         "faction": "Space Wolves",
         "States": [
             {
@@ -2175,7 +2175,7 @@
     },
     {
         "name": "Rhino",
-        "points": "35",
+        "points": 35,
         "faction": "Space Wolves",
         "States": [
             {
@@ -2192,7 +2192,7 @@
     },
     {
         "name": "Toxicrene",
-        "points": "210",
+        "points": 210,
         "faction": "Tyranids",
         "States": [
             {
@@ -2209,7 +2209,7 @@
     },
     {
         "name": "Stormwolf",
-        "points": "235",
+        "points": 235,
         "faction": "Space Wolves",
         "States": [
             {

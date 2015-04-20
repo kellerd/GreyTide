@@ -33,25 +33,24 @@ app.directive('chart', function () {
             angular.element(document).ready(function () {
 
                 var data = Enumerable.From(scope.Tide.model);
-                var sum = data.Sum("$.points")
+                var sum = data.Sum("$.points");
                 var raw = data.GroupBy("$.faction").Select("{Faction:$.Key(),List:$.Select('{state:$.States.OrderByDescending('$.date'),points:100.0*$.points/" + sum + "}')}");
                 var series = raw.SelectMany("$.List.Select('$.state').Distinct()");
 
-                //var raw = data.GroupBy(m => m["faction"]).Select(u => new {Faction = u.Key,
-                //          List = u.Select(m => new { state = m["States"].Where(s => s["active"].ToString() == "Yes").
-                //                                  OrderByDescending(s => DateTime.Parse((s["date"] ?? "1970-01-01").ToString())).
-                //                                  First()["name"]
-                //                                   , points = 100.0d * m["points"].ToObject<double>() / u.Sum(p => p["points"].ToObject<double>())
-                //          }
-                //      )
-                //  }
-                // );
+            //    var raw = JArray.Parse(tideModeljson).
+			                //GroupBy(m => m["faction"]).
+			                //Select(u => new {
+			                //    Faction = u.Key, 
+			                //    List = u.Select(m => new {
+			                //        state = m["States"].OrderByDescending(s => DateTime.Parse((s["date"] ?? "1970-01-01").ToString())).First()["name"],
+			                //        points = 100.0d * m["points"].ToObject<double>()  / u.Sum(p => p["points"].ToObject<double>())
+			                //    })
+                            //});
+						
+                //raw.Dump("raw");
 
-
-
-
-                //  var series = raw.SelectMany(u => u.List.Select(ud => ud.state)).Distinct();
-                //  var dataPoints = series.Select(seri => raw.Select(r => r.List.Where(ud => ud.state.Equals(seri)).Select(ud => ud.points).DefaultIfEmpty(0d)));
+                //var series = raw.SelectMany(u => u.List.Select(ud => ud.state)).Distinct().Dump("Series");
+                //var data = series.Select(seri => raw.Select(r => r.List.Where(ud => ud.state.Equals(seri)).Select(ud => ud.points).DefaultIfEmpty(0d))).Dump("data");
 
 
 

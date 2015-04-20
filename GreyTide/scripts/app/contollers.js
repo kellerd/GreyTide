@@ -50,7 +50,7 @@ GreyTideControllers.controller('GreyTideController', ['$scope', '$filter', 'tide
     $scope.Insert = function (newName, newFaction, newPoints) {
         $scope.Tide.model.push(new ModelObject({
             "name": newName,
-            "points": newPoints,
+            "points": parseFloat(newPoints),
             "faction": newFaction,
             "States": [{ name: "Startup", date: new Date().toISOString() }]
         }, tideService))
