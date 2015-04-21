@@ -40,13 +40,14 @@ app.directive('chart', function () {
                         Faction: model.Key(),
                         List: Enumerable.From(model).Select( function (singlemodel) {
                             return {
-                                state: Enumerable.From(singlemodel.States).OrderByDescending("d=>d.date").First().name,
-                                points: 100.0 * singlemodel.points / sum
+                                state: Enumerable.From(singlemodel.States).Where("d=>d.active").OrderByDescending("d=>d.date").First().name,
+                                points: singlemodel.points,
+                                name: singlemodel.name
                             };
                         })
                     };
                 });
-                var series = raw.SelectMany("$.List.Select('$.state')").Distinct().OrderBy();
+                var series = raw.SelectMany("$.List.Select('$.state')").Distinct();
                 var data = series.Select(function (seri) {
                     return raw.Select(function (r) {
                         return r.List.Where(function (ud) {
@@ -56,23 +57,8 @@ app.directive('chart', function () {
                         }).DefaultIfEmpty(0.0).Sum();
                     }).ToArray();
                 });
-                //Linqpad c# version
-                //    var raw = JArray.Parse(tideModeljson).
-			                //GroupBy(m => m["faction"]).
-			                //Select(u => new {
-			                //    Faction = u.Key, 
-			                //    List = u.Select(m => new {
-			                //        state = m["States"].OrderByDescending(s => DateTime.Parse((s["date"] ?? "1970-01-01").ToString())).First()["name"],
-			                //        points = 100.0d * m["points"].ToObject<double>()  / u.Sum(p => p["points"].ToObject<double>())
-			                //    })
-                            //});
-						
-                //raw.Dump("raw");
+                var ticks = raw.Select("s=>s.Faction").ToArray();
 
-                //var series = raw.SelectMany(u => u.List.Select(ud => ud.state)).Distinct().Dump("Series");
-                //var data = series.Select(seri => raw.Select(r => r.List.Where(ud => ud.state.Equals(seri)).Select(ud => ud.points).DefaultIfEmpty(0d))).Dump("data");
-
-                var ticks = raw.Select("s=>s.Faction").ToArray()
                 var plot3 = $.jqplot(el[0].id, data.ToArray(), {
                     // Tell the plot to stack the bars.
                     stackSeries: true,
@@ -88,27 +74,21 @@ app.directive('chart', function () {
                         },
                         pointLabels: { show: true }
                     },
-                    title: "By Date",
+                    title: "Points by Faction",
                     axes: {
                         xaxis: {
                             renderer: $.jqplot.CategoryAxisRenderer,
                             ticks: ticks
-                        },
-                        yaxis: {
-                            // Don't pad out the bottom of the data range.  By default,
-                            // axes scaled as if data extended 10% above and below the
-                            // actual range to prevent data points right on grid boundaries.
-                            // Don't want to do that here.
+                        }, yaxis: {
                             padMin: 0
                         }
                     },
                     legend: {
                         show: true,
-                        location: 'e',
+                        location: 's',
                         placement: 'outside'
                     }
                 });
-
             });
         }
     }
