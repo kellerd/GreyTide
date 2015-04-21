@@ -7,33 +7,15 @@
 var app = angular.module('greyTideApp', ['ngRoute',
   'GreyTideControllers', 'multi-select']);
 
-app.directive('chart', function () {
+app.directive('chart-bar', function () {
     return {
         restrict: 'A',
         scope: true,
-        //controller: function ($scope, $element, $attrs) {
-        //    $scope.onSlide = function (e, ui) {
-        //          //        $scope.model = ui.value;
-
-        //        // or set it on the model
-        //        // DataModel.model = ui.value;
-        //        // add to angular digest cycle
-        //        $scope.$digest();
-        //    };
-        //},
-        //          var s1 = Primed = [SW Primed, TyrPrimed]
-        //var s2 = Hard Coat = [SW hard coat, Tyr hard coat]
-        //   plot3 = $.jqplot('chart3', [Primed,HardCoat,SoftCoat]
-        //   plot3 = $.jqplot('chart3', [[SW Primed, TyrPrimed],[SW hard coat, Tyr hard coat],[SW Soft coat, Tyr Soft coat]]
-        // Series = "Primed", "Hardcoat", "Softcoat"
-        
         link: function (scope, el, attrs) {
 
-            // set up slider on load
             angular.element(document).ready(function () {
                 
                 var model = Enumerable.From(scope.Tide.model);
-                var sum = model.Sum(function (data) { return data.points });
                 var groups = model.GroupBy(function (data) { return data.faction });
                 var raw = groups.Select(function (model) {
                     return {
@@ -63,6 +45,75 @@ app.directive('chart', function () {
                     // Tell the plot to stack the bars.
                     stackSeries: true,
                     series: series.Select(function (x) { return { label: x }}).ToArray(),
+                    seriesDefaults: {
+                        renderer: $.jqplot.BarRenderer,
+                        rendererOptions: {
+                            // Put a 30 pixel margin between bars.
+                            barMargin: 30,
+                            // Highlight bars when mouse button pressed.
+                            // Disables default highlighting on mouse over.
+                            highlightMouseDown: true
+                        },
+                        pointLabels: { show: true }
+                    },
+                    title: "Points by Faction",
+                    axes: {
+                        xaxis: {
+                            renderer: $.jqplot.CategoryAxisRenderer,
+                            ticks: ticks
+                        }, yaxis: {
+                            padMin: 0
+                        }
+                    },
+                    legend: {
+                        show: true,
+                        location: 's',
+                        placement: 'outside'
+                    }
+                });
+            });
+        }
+    }
+});
+
+app.directive('chart-line', function () {
+    return {
+        restrict: 'A',
+        scope: true,
+        link: function (scope, el, attrs) {
+
+            // set up slider on load
+            angular.element(document).ready(function () {
+
+                var model = Enumerable.From(scope.Tide.model);
+                var raw = groups.Select(function (model) {
+                    return {
+                        Faction: model.Key(),
+                        List: Enumerable.From(model).Select(function (singlemodel) {
+                            return {
+                                state: Enumerable.From(singlemodel.States).Where("d=>d.active").OrderByDescending("d=>d.date").First().name,
+                                points: singlemodel.points,
+                                name: singlemodel.name
+                            };
+                        })
+                    };
+                });
+                var series = raw.SelectMany("$.List.Select('$.state')").Distinct();
+                var data = series.Select(function (seri) {
+                    return raw.Select(function (r) {
+                        return r.List.Where(function (ud) {
+                            return ud.state == seri;
+                        }).Select(function (ud) {
+                            return ud.points;
+                        }).DefaultIfEmpty(0.0).Sum();
+                    }).ToArray();
+                });
+                var ticks = raw.Select("s=>s.Faction").ToArray();
+
+                var plot3 = $.jqplot(el[0].id, data.ToArray(), {
+                    // Tell the plot to stack the bars.
+                    stackSeries: true,
+                    series: series.Select(function (x) { return { label: x } }).ToArray(),
                     seriesDefaults: {
                         renderer: $.jqplot.BarRenderer,
                         rendererOptions: {
