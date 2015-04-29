@@ -87,16 +87,25 @@ app.directive('chartline', function () {
 
                 var raw = Enumerable.From(scope.Tide.model).
                     SelectMany(function (u) {
-                        var states = Enumerable.From(u.States).Where(function (s) { return s.name != "Startup" && s.active }).
-                        					                   OrderBy(function (s) { return s.date }).
-                        					                   Select(function (s) {
+                        
+                        var orderedStates = Enumerable.From(u.States).Where(function (s) { return s.name != "Startup" && s.active }).
+                        					                   OrderBy(function (s) { return s.date });
+                        var currentObject = new ModelObject({
+                            "name": u.name,
+                            "points": u.points,
+                            "States": [orderedStates.First()]
+                        });
+
+                        var states = orderedStates.
+                        					                   Select(function (s, i) {
+                                                                   if (i != 0)
+                        					                            currentObject[s.name].call(currentObject);
                         					                       return {
                         					                           points: u.points,
                         					                           date: new Date(s.date),
-                        					                           name: s.name
+                        					                           name: currentObject.current
                         					                       }
-                        					                   }).
-                        					                   ToArray();
+                        					                   }).ToArray();
                         return Enumerable.From(states).SelectMany(function (s, idx) {
                             return (idx + 1) == states.length ? [s] :
                                 [s, { points: -s.points, date: new Date(states[idx + 1].date.valueOf() - 1000), name: s.name }]
