@@ -131,7 +131,7 @@ app.directive('chartline', function () {
                                                 return [new Date(items.Key()), items.Sum(function (i) { return i.points })]
                                             }).Where(function (g) {
                                                 return g[1] != 0
-                                            }).OrderBy(function(g) {return g[0]}).Concat([[new Date(new Date().setHours(0, 0, 0, 0)), 0]])
+                                            }).OrderBy(function(g) {return g[0]}).Concat([[new Date(), 0]])
                                                 .Scan([new Date(2014, 12, 29, 0, 0, 0, 0), 0], function (prev, next) { return [next[0], prev[1] + next[1]]; })
                                                 .Skip(1).ToArray()
                                         }
