@@ -22,14 +22,17 @@ app.directive('chartbar', function () {
                         Faction: model.Key(),
                         List: Enumerable.From(model).Select(function (singlemodel) {
                             return {
-                                state: Enumerable.From(singlemodel.States).Where("d=>d.active").OrderByDescending("d=>d.date").First().name,
+                                state: singlemodel.current,
                                 points: singlemodel.points,
                                 name: singlemodel.name
                             };
                         })
                     };
                 });
-                var series = raw.SelectMany("$.List.Select('$.state')").Distinct();
+                var statesOrder = Enumerable.From(scope.States.model[0].events).ToDictionary("$.to");
+                var series = raw.SelectMany("$.List.Select('$.state')").OrderBy(function (d) {
+                    return statesOrder.Contains(d) ? statesOrder.Get(d).order : -1;
+                }).Distinct();
                 var data = series.Select(function (seri) {
                     return raw.Select(function (r) {
                         return r.List.Where(function (ud) {
@@ -43,7 +46,7 @@ app.directive('chartbar', function () {
 
                 var plot3 = $.jqplot(el[0].id, data.ToArray(), {
                     // Tell the plot to stack the bars.
-                    stackSeries: true,
+                    stackSeries: false,
                     series: series.Select(function (x) { return { label: x } }).ToArray(),
                     seriesDefaults: {
                         renderer: $.jqplot.BarRenderer,
@@ -67,8 +70,8 @@ app.directive('chartbar', function () {
                     },
                     legend: {
                         show: true,
-                        location: 's',
-                        placement: 'outside'
+                        location: 'w',
+                        placement: 'inside'
                     }
                 });
             });
@@ -112,6 +115,8 @@ app.directive('chartline', function () {
                         });
                     });
 
+                var statesOrder = Enumerable.From(scope.States.model[0].events).ToDictionary("$.to");
+
                 var groups = raw.GroupBy(
                                     function (m) {
                                         return m.name
@@ -126,29 +131,28 @@ app.directive('chartline', function () {
                                                 return [new Date(items.Key()), items.Sum(function (i) { return i.points })]
                                             }).Where(function (g) {
                                                 return g[1] != 0
-                                            }).Concat([[new Date(new Date().setHours(0, 0, 0, 0)), 0]])
+                                            }).OrderBy(function(g) {return g[0]}).Concat([[new Date(new Date().setHours(0, 0, 0, 0)), 0]])
                                                 .Scan([new Date(2014, 12, 29, 0, 0, 0, 0), 0], function (prev, next) { return [next[0], prev[1] + next[1]]; })
                                                 .Skip(1).ToArray()
                                         }
                                     }).
                                 Where(function (g) {
-                                    return g.ItemsByDate.length > 1 && !(g.ItemsByDate.length == 2 && g.ItemsByDate[0][1] == g.ItemsByDate[1][1]);
+                                    return g.ItemsByDate.length > 1; //&& !(g.ItemsByDate.length == 2 && g.ItemsByDate[0][1] == g.ItemsByDate[1][1]);
                                 }).
                                 OrderBy(function (m) {
-                                    return m.name
+                                    return statesOrder.Contains(m.name) ? statesOrder.Get(m.name).order : -1;
                                 });
 
                 var series = groups.Select(function (g) { return g.name; });
                 var data = groups.Select(function (g) { return g.ItemsByDate; });
-                
                 var plot3 = $.jqplot(el[0].id, data.ToArray(), {
                     // Tell the plot to stack the bars.
                     series: series.Select(function (x) { return { label: x } }).ToArray(),
                     title: "Rolling tide",
                     legend: {
                         show: true,
-                        location: 's',
-                        placement: 'outside'
+                        location: 'w',
+                        placement: 'inside'
                     },
                     axes: { xaxis: { renderer: $.jqplot.DateAxisRenderer } },
                     seriesDefaults: {

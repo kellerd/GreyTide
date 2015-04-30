@@ -162,14 +162,14 @@
         "faction": "Tyranids",
         "States": [
             {
-                "name": "Assemble",
-                "active": true,
-                "date": "2015-01-01T19:00:00.000Z"
-            },
-            {
                 "name": "Prime",
                 "active": true,
                 "date": "2015-01-01T20:00:00.000Z"
+            },
+            {
+                "name": "Assemble",
+                "active": true,
+                "date": "2015-01-01T19:00:00.000Z"
             }
         ]
     },

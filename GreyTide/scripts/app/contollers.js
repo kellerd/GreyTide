@@ -75,5 +75,5 @@ GreyTideControllers.controller('GreyTideController', ['$scope', '$filter', 'tide
 
 GreyTideControllers.controller('ChartController', ['$scope', 'tideService', 'stateService', function ($scope, tideService, stateService) {
     $scope.Tide = tideService;
-    
+    $scope.States = stateService;
 }]);
