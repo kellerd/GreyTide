@@ -132,7 +132,7 @@ app.directive('chartline', function () {
                                         }
                                     }).
                                 Where(function (g) {
-                                    return g.ItemsByDate.length > 1;
+                                    return g.ItemsByDate.length > 1 && !(g.ItemsByDate.length == 2 && g.ItemsByDate[0][1] == g.ItemsByDate[1][1]);
                                 }).
                                 OrderBy(function (m) {
                                     return m.name
