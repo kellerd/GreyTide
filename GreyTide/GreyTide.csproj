@@ -82,8 +82,13 @@
     <Content Include="scripts\angular.js" />
     <Content Include="scripts\angular.min.js" />
     <Content Include="scripts\app\app.js" />
+    <Content Include="scripts\app\chart.js" />
     <Content Include="scripts\app\contollers.js" />
+    <Content Include="scripts\app\ModelObject.js" />
+    <Content Include="scripts\app\route.js" />
     <Content Include="scripts\app\state-machine.js" />
+    <Content Include="scripts\app\stateservice.js" />
+    <Content Include="scripts\app\tideservice.js" />
     <Content Include="scripts\jqPlot\changes.txt" />
     <Content Include="scripts\jqPlot\copyright.txt" />
     <Content Include="scripts\jqPlot\excanvas.js" />
