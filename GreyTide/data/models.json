@@ -19,7 +19,8 @@
                 "active": true,
                 "date": "2015-01-01T12:49:20.789Z"
             }
-        ]
+        ],
+        "Pieces": [ ]
     },
     {
         "name": "Hive Tyrant",
@@ -58,42 +59,100 @@
                 "points": 255,
                 "States": [
                     {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.670Z",
+                        "spc_fgFBj": 0,
+                        "idx_fgFBj": 0,
+                        "$$hashKey": "object:343"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.381Z",
+                        "spc_fgFBj": 0,
+                        "idx_fgFBj": 1,
+                        "$$hashKey": "object:344"
+                    },
+                    {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_fgFBj": 0,
+                        "idx_fgFBj": 2,
+                        "$$hashKey": "object:345"
                     },
                     {
                         "name": "Finish Coat",
                         "active": true,
-                        "date": "2015-01-01T22:00:00.000Z"
+                        "date": "2015-01-01T22:00:00.000Z",
+                        "spc_fgFBj": 0,
+                        "idx_fgFBj": 3,
+                        "$$hashKey": "object:346"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z"
+                        "date": "2015-01-01T21:00:00.000Z",
+                        "spc_fgFBj": 0,
+                        "idx_fgFBj": 4,
+                        "$$hashKey": "object:347"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z"
+                        "date": "2015-01-01T20:00:00.000Z",
+                        "spc_fgFBj": 0,
+                        "idx_fgFBj": 5,
+                        "$$hashKey": "object:348"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z"
+                        "date": "2015-01-01T19:00:00.000Z",
+                        "spc_fgFBj": 0,
+                        "idx_fgFBj": 6,
+                        "$$hashKey": "object:349"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [ ],
+                "$$hashKey": "object:207"
             },
             {
                 "name": "Base",
                 "points": 0,
                 "States": [
                     {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.671Z",
+                        "spc_QRHKc": 0,
+                        "idx_QRHKc": 0,
+                        "$$hashKey": "object:363"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.381Z",
+                        "spc_QRHKc": 0,
+                        "idx_QRHKc": 1,
+                        "$$hashKey": "object:364"
+                    },
+                    {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_QRHKc": 0,
+                        "idx_QRHKc": 2,
+                        "$$hashKey": "object:365"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [ ],
+                "$$hashKey": "object:208"
             }
         ]
     },
@@ -127,7 +186,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": [ ]
     },
     {
         "name": "Venomthrope",
@@ -144,7 +204,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": [ ]
     },
     {
         "name": "Venomthrope Finecast",
@@ -152,11 +213,17 @@
         "faction": "Tyranids",
         "States": [
             {
+                "name": "Assemble",
+                "active": true,
+                "date": "2015-04-29T19:00:00.000Z"
+            },
+            {
                 "name": "Buy New",
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": [ ]
     },
     {
         "name": "Zoanthrope",
@@ -173,7 +240,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Zoanthrope",
@@ -211,41 +279,99 @@
                 "name": "Model",
                 "States": [
                     {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.672Z",
+                        "spc_ZAVnB": 0,
+                        "idx_ZAVnB": 0,
+                        "$$hashKey": "object:436"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.382Z",
+                        "spc_ZAVnB": 0,
+                        "idx_ZAVnB": 1,
+                        "$$hashKey": "object:437"
+                    },
+                    {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_ZAVnB": 0,
+                        "idx_ZAVnB": 2,
+                        "$$hashKey": "object:438"
                     },
                     {
                         "name": "Finish Coat",
                         "active": true,
-                        "date": "2015-01-01T22:00:00.000Z"
+                        "date": "2015-01-01T22:00:00.000Z",
+                        "spc_ZAVnB": 0,
+                        "idx_ZAVnB": 3,
+                        "$$hashKey": "object:439"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z"
+                        "date": "2015-01-01T21:00:00.000Z",
+                        "spc_ZAVnB": 0,
+                        "idx_ZAVnB": 4,
+                        "$$hashKey": "object:440"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z"
+                        "date": "2015-01-01T20:00:00.000Z",
+                        "spc_ZAVnB": 0,
+                        "idx_ZAVnB": 5,
+                        "$$hashKey": "object:441"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z"
+                        "date": "2015-01-01T19:00:00.000Z",
+                        "spc_ZAVnB": 0,
+                        "idx_ZAVnB": 6,
+                        "$$hashKey": "object:442"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:213"
             },
             {
                 "name": "Base",
                 "States": [
                     {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.672Z",
+                        "spc_besju": 0,
+                        "idx_besju": 0,
+                        "$$hashKey": "object:456"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.382Z",
+                        "spc_besju": 0,
+                        "idx_besju": 1,
+                        "$$hashKey": "object:457"
+                    },
+                    {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_besju": 0,
+                        "idx_besju": 2,
+                        "$$hashKey": "object:458"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:214"
             }
         ]
     },
@@ -269,7 +395,8 @@
                 "active": true,
                 "date": "2015-01-01T12:49:20.793Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Hormagaunt",
@@ -286,7 +413,8 @@
                 "active": true,
                 "date": "2015-01-01T12:49:20.793Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Hormagaunt",
@@ -308,7 +436,8 @@
                 "active": true,
                 "date": "2015-01-01T21:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Ripper Swarm",
@@ -330,7 +459,8 @@
                 "active": true,
                 "date": "2015-01-01T21:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Termagaunt",
@@ -369,42 +499,100 @@
                 "points": 200,
                 "States": [
                     {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.673Z",
+                        "spc_hJkqB": 0,
+                        "idx_hJkqB": 0,
+                        "$$hashKey": "object:528"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.383Z",
+                        "spc_hJkqB": 0,
+                        "idx_hJkqB": 1,
+                        "$$hashKey": "object:529"
+                    },
+                    {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_hJkqB": 0,
+                        "idx_hJkqB": 2,
+                        "$$hashKey": "object:530"
                     },
                     {
                         "name": "Finish Coat",
                         "active": true,
-                        "date": "2015-01-01T22:00:00.000Z"
+                        "date": "2015-01-01T22:00:00.000Z",
+                        "spc_hJkqB": 0,
+                        "idx_hJkqB": 3,
+                        "$$hashKey": "object:531"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z"
+                        "date": "2015-01-01T21:00:00.000Z",
+                        "spc_hJkqB": 0,
+                        "idx_hJkqB": 4,
+                        "$$hashKey": "object:532"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z"
+                        "date": "2015-01-01T20:00:00.000Z",
+                        "spc_hJkqB": 0,
+                        "idx_hJkqB": 5,
+                        "$$hashKey": "object:533"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z"
+                        "date": "2015-01-01T19:00:00.000Z",
+                        "spc_hJkqB": 0,
+                        "idx_hJkqB": 6,
+                        "$$hashKey": "object:534"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:219"
             },
             {
                 "name": "Base",
                 "points": 0,
                 "States": [
                     {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.673Z",
+                        "spc_ZpNDX": 0,
+                        "idx_ZpNDX": 0,
+                        "$$hashKey": "object:548"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.384Z",
+                        "spc_ZpNDX": 0,
+                        "idx_ZpNDX": 1,
+                        "$$hashKey": "object:549"
+                    },
+                    {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_ZpNDX": 0,
+                        "idx_ZpNDX": 2,
+                        "$$hashKey": "object:550"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:220"
             }
         ]
     },
@@ -428,7 +616,8 @@
                 "active": true,
                 "date": "2015-01-01T21:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Gargoyle",
@@ -460,7 +649,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Hive Crone",
@@ -482,7 +672,8 @@
                 "active": true,
                 "date": "2015-01-01T12:49:20.794Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Biovore",
@@ -499,7 +690,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Exocrine",
@@ -531,7 +723,8 @@
                 "active": true,
                 "date": "2015-01-01T12:49:20.794Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Mawloc",
@@ -570,42 +763,100 @@
                 "points": 140,
                 "States": [
                     {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.674Z",
+                        "spc_ZyjEq": 0,
+                        "idx_ZyjEq": 0,
+                        "$$hashKey": "object:645"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.385Z",
+                        "spc_ZyjEq": 0,
+                        "idx_ZyjEq": 1,
+                        "$$hashKey": "object:646"
+                    },
+                    {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_ZyjEq": 0,
+                        "idx_ZyjEq": 2,
+                        "$$hashKey": "object:647"
                     },
                     {
                         "name": "Finish Coat",
                         "active": true,
-                        "date": "2015-01-01T22:00:00.000Z"
+                        "date": "2015-01-01T22:00:00.000Z",
+                        "spc_ZyjEq": 0,
+                        "idx_ZyjEq": 3,
+                        "$$hashKey": "object:648"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z"
+                        "date": "2015-01-01T21:00:00.000Z",
+                        "spc_ZyjEq": 0,
+                        "idx_ZyjEq": 4,
+                        "$$hashKey": "object:649"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z"
+                        "date": "2015-01-01T20:00:00.000Z",
+                        "spc_ZyjEq": 0,
+                        "idx_ZyjEq": 5,
+                        "$$hashKey": "object:650"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z"
+                        "date": "2015-01-01T19:00:00.000Z",
+                        "spc_ZyjEq": 0,
+                        "idx_ZyjEq": 6,
+                        "$$hashKey": "object:651"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:225"
             },
             {
                 "name": "Base",
                 "points": 0,
                 "States": [
                     {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.675Z",
+                        "spc_RpcnM": 0,
+                        "idx_RpcnM": 0,
+                        "$$hashKey": "object:665"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.385Z",
+                        "spc_RpcnM": 0,
+                        "idx_RpcnM": 1,
+                        "$$hashKey": "object:666"
+                    },
+                    {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_RpcnM": 0,
+                        "idx_RpcnM": 2,
+                        "$$hashKey": "object:667"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:226"
             }
         ]
     },
@@ -629,7 +880,8 @@
                 "active": true,
                 "date": "2015-01-01T12:49:20.794Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Hive Guard",
@@ -665,45 +917,103 @@
         "Pieces": [
             {
                 "name": "Model",
-        "points": 55,
+                "points": 55,
                 "States": [
+                    {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.675Z",
+                        "spc_vfdIH": 0,
+                        "idx_vfdIH": 0,
+                        "$$hashKey": "object:701"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.386Z",
+                        "spc_vfdIH": 0,
+                        "idx_vfdIH": 1,
+                        "$$hashKey": "object:702"
+                    },
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_vfdIH": 0,
+                        "idx_vfdIH": 2,
+                        "$$hashKey": "object:703"
                     },
                     {
                         "name": "Finish Coat",
                         "active": true,
-                        "date": "2015-01-01T22:00:00.000Z"
+                        "date": "2015-01-01T22:00:00.000Z",
+                        "spc_vfdIH": 0,
+                        "idx_vfdIH": 3,
+                        "$$hashKey": "object:704"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z"
+                        "date": "2015-01-01T21:00:00.000Z",
+                        "spc_vfdIH": 0,
+                        "idx_vfdIH": 4,
+                        "$$hashKey": "object:705"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z"
+                        "date": "2015-01-01T20:00:00.000Z",
+                        "spc_vfdIH": 0,
+                        "idx_vfdIH": 5,
+                        "$$hashKey": "object:706"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z"
+                        "date": "2015-01-01T19:00:00.000Z",
+                        "spc_vfdIH": 0,
+                        "idx_vfdIH": 6,
+                        "$$hashKey": "object:707"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:231"
             },
             {
                 "name": "Base",
-        "points": 0,
+                "points": 0,
                 "States": [
+                    {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.675Z",
+                        "spc_LymBc": 0,
+                        "idx_LymBc": 0,
+                        "$$hashKey": "object:721"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.386Z",
+                        "spc_LymBc": 0,
+                        "idx_LymBc": 1,
+                        "$$hashKey": "object:722"
+                    },
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_LymBc": 0,
+                        "idx_LymBc": 2,
+                        "$$hashKey": "object:723"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:232"
             }
         ]
     },
@@ -731,35 +1041,127 @@
         "Pieces": [
             {
                 "name": "Model",
-        "points": 130,
+                "points": 130,
                 "States": [
+                    {
+                        "name": "Strip Weathering",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.675Z",
+                        "spc_rumrn": 0,
+                        "idx_rumrn": 0,
+                        "$$hashKey": "object:746"
+                    },
+                    {
+                        "name": "Complete",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.675Z",
+                        "spc_rumrn": 0,
+                        "idx_rumrn": 1,
+                        "$$hashKey": "object:747"
+                    },
+                    {
+                        "name": "Finish Coat",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.675Z",
+                        "spc_rumrn": 0,
+                        "idx_rumrn": 2,
+                        "$$hashKey": "object:748"
+                    },
+                    {
+                        "name": "Weather",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.387Z",
+                        "spc_rumrn": 0,
+                        "idx_rumrn": 3,
+                        "$$hashKey": "object:749"
+                    },
+                    {
+                        "name": "Finish Coat",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.387Z",
+                        "spc_rumrn": 0,
+                        "idx_rumrn": 4,
+                        "$$hashKey": "object:750"
+                    },
+                    {
+                        "name": "Complete",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.387Z",
+                        "spc_rumrn": 0,
+                        "idx_rumrn": 5,
+                        "$$hashKey": "object:751"
+                    },
+                    {
+                        "name": "Strip Painting",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.387Z",
+                        "spc_rumrn": 0,
+                        "idx_rumrn": 6,
+                        "$$hashKey": "object:752"
+                    },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z"
+                        "date": "2015-01-01T21:00:00.000Z",
+                        "spc_rumrn": 0,
+                        "idx_rumrn": 7,
+                        "$$hashKey": "object:753"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z"
+                        "date": "2015-01-01T20:00:00.000Z",
+                        "spc_rumrn": 0,
+                        "idx_rumrn": 8,
+                        "$$hashKey": "object:754"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z"
+                        "date": "2015-01-01T19:00:00.000Z",
+                        "spc_rumrn": 0,
+                        "idx_rumrn": 9,
+                        "$$hashKey": "object:755"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Weathered",
+                "Pieces": [],
+                "$$hashKey": "object:237"
             },
             {
                 "name": "Base",
-        "points": 0,
+                "points": 0,
                 "States": [
+                    {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.676Z",
+                        "spc_dyTyI": 0,
+                        "idx_dyTyI": 0,
+                        "$$hashKey": "object:773"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.387Z",
+                        "spc_dyTyI": 0,
+                        "idx_dyTyI": 1,
+                        "$$hashKey": "object:774"
+                    },
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_dyTyI": 0,
+                        "idx_dyTyI": 2,
+                        "$$hashKey": "object:775"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:238"
             }
         ]
     },
@@ -783,7 +1185,8 @@
                 "active": true,
                 "date": "2015-01-01T21:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Tyranid Prime",
@@ -819,45 +1222,103 @@
         "Pieces": [
             {
                 "name": "Model",
-        "points": 130,
+                "points": 130,
                 "States": [
+                    {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.677Z",
+                        "spc_Teppm": 0,
+                        "idx_Teppm": 0,
+                        "$$hashKey": "object:809"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.387Z",
+                        "spc_Teppm": 0,
+                        "idx_Teppm": 1,
+                        "$$hashKey": "object:810"
+                    },
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_Teppm": 0,
+                        "idx_Teppm": 2,
+                        "$$hashKey": "object:811"
                     },
                     {
                         "name": "Finish Coat",
                         "active": true,
-                        "date": "2015-01-01T22:00:00.000Z"
+                        "date": "2015-01-01T22:00:00.000Z",
+                        "spc_Teppm": 0,
+                        "idx_Teppm": 3,
+                        "$$hashKey": "object:812"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z"
+                        "date": "2015-01-01T21:00:00.000Z",
+                        "spc_Teppm": 0,
+                        "idx_Teppm": 4,
+                        "$$hashKey": "object:813"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z"
+                        "date": "2015-01-01T20:00:00.000Z",
+                        "spc_Teppm": 0,
+                        "idx_Teppm": 5,
+                        "$$hashKey": "object:814"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z"
+                        "date": "2015-01-01T19:00:00.000Z",
+                        "spc_Teppm": 0,
+                        "idx_Teppm": 6,
+                        "$$hashKey": "object:815"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:243"
             },
             {
                 "name": "Base",
-        "points": 0,
+                "points": 0,
                 "States": [
+                    {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.677Z",
+                        "spc_qqNOd": 0,
+                        "idx_qqNOd": 0,
+                        "$$hashKey": "object:829"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.387Z",
+                        "spc_qqNOd": 0,
+                        "idx_qqNOd": 1,
+                        "$$hashKey": "object:830"
+                    },
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_qqNOd": 0,
+                        "idx_qqNOd": 2,
+                        "$$hashKey": "object:831"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:244"
             }
         ]
     },
@@ -895,45 +1356,103 @@
         "Pieces": [
             {
                 "name": "Model",
-        "points": 100,
+                "points": 100,
                 "States": [
+                    {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.678Z",
+                        "spc_GOUvw": 0,
+                        "idx_GOUvw": 0,
+                        "$$hashKey": "object:854"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.388Z",
+                        "spc_GOUvw": 0,
+                        "idx_GOUvw": 1,
+                        "$$hashKey": "object:855"
+                    },
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_GOUvw": 0,
+                        "idx_GOUvw": 2,
+                        "$$hashKey": "object:856"
                     },
                     {
                         "name": "Finish Coat",
                         "active": true,
-                        "date": "2015-01-01T22:00:00.000Z"
+                        "date": "2015-01-01T22:00:00.000Z",
+                        "spc_GOUvw": 0,
+                        "idx_GOUvw": 3,
+                        "$$hashKey": "object:857"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z"
+                        "date": "2015-01-01T21:00:00.000Z",
+                        "spc_GOUvw": 0,
+                        "idx_GOUvw": 4,
+                        "$$hashKey": "object:858"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z"
+                        "date": "2015-01-01T20:00:00.000Z",
+                        "spc_GOUvw": 0,
+                        "idx_GOUvw": 5,
+                        "$$hashKey": "object:859"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z"
+                        "date": "2015-01-01T19:00:00.000Z",
+                        "spc_GOUvw": 0,
+                        "idx_GOUvw": 6,
+                        "$$hashKey": "object:860"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:249"
             },
             {
                 "name": "Base",
-        "points": 0,
+                "points": 0,
                 "States": [
+                    {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.678Z",
+                        "spc_wgkrc": 0,
+                        "idx_wgkrc": 0,
+                        "$$hashKey": "object:874"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.388Z",
+                        "spc_wgkrc": 0,
+                        "idx_wgkrc": 1,
+                        "$$hashKey": "object:875"
+                    },
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_wgkrc": 0,
+                        "idx_wgkrc": 2,
+                        "$$hashKey": "object:876"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:250"
             }
         ]
     },
@@ -957,7 +1476,8 @@
                 "active": true,
                 "date": "2015-01-01T21:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Broodlord",
@@ -993,44 +1513,102 @@
         "Pieces": [
             {
                 "name": "Model",
-        "points": 60,
+                "points": 60,
                 "States": [
+                    {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.678Z",
+                        "spc_GnahI": 0,
+                        "idx_GnahI": 0,
+                        "$$hashKey": "object:910"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.388Z",
+                        "spc_GnahI": 0,
+                        "idx_GnahI": 1,
+                        "$$hashKey": "object:911"
+                    },
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_GnahI": 0,
+                        "idx_GnahI": 2,
+                        "$$hashKey": "object:912"
                     },
                     {
                         "name": "Finish Coat",
                         "active": true,
-                        "date": "2015-01-01T22:00:00.000Z"
+                        "date": "2015-01-01T22:00:00.000Z",
+                        "spc_GnahI": 0,
+                        "idx_GnahI": 3,
+                        "$$hashKey": "object:913"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z"
+                        "date": "2015-01-01T21:00:00.000Z",
+                        "spc_GnahI": 0,
+                        "idx_GnahI": 4,
+                        "$$hashKey": "object:914"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z"
+                        "date": "2015-01-01T20:00:00.000Z",
+                        "spc_GnahI": 0,
+                        "idx_GnahI": 5,
+                        "$$hashKey": "object:915"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z"
+                        "date": "2015-01-01T19:00:00.000Z",
+                        "spc_GnahI": 0,
+                        "idx_GnahI": 6,
+                        "$$hashKey": "object:916"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:255"
             },
             {
                 "name": "Base",
                 "States": [
                     {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.679Z",
+                        "spc_WytBb": 0,
+                        "idx_WytBb": 0,
+                        "$$hashKey": "object:930"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.389Z",
+                        "spc_WytBb": 0,
+                        "idx_WytBb": 1,
+                        "$$hashKey": "object:931"
+                    },
+                    {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_WytBb": 0,
+                        "idx_WytBb": 2,
+                        "$$hashKey": "object:932"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:256"
             }
         ]
     },
@@ -1068,44 +1646,102 @@
         "Pieces": [
             {
                 "name": "Model",
-        "points": 175,
+                "points": 175,
                 "States": [
+                    {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.679Z",
+                        "spc_VqIYy": 0,
+                        "idx_VqIYy": 0,
+                        "$$hashKey": "object:955"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.389Z",
+                        "spc_VqIYy": 0,
+                        "idx_VqIYy": 1,
+                        "$$hashKey": "object:956"
+                    },
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_VqIYy": 0,
+                        "idx_VqIYy": 2,
+                        "$$hashKey": "object:957"
                     },
                     {
                         "name": "Finish Coat",
                         "active": true,
-                        "date": "2015-01-01T22:00:00.000Z"
+                        "date": "2015-01-01T22:00:00.000Z",
+                        "spc_VqIYy": 0,
+                        "idx_VqIYy": 3,
+                        "$$hashKey": "object:958"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z"
+                        "date": "2015-01-01T21:00:00.000Z",
+                        "spc_VqIYy": 0,
+                        "idx_VqIYy": 4,
+                        "$$hashKey": "object:959"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z"
+                        "date": "2015-01-01T20:00:00.000Z",
+                        "spc_VqIYy": 0,
+                        "idx_VqIYy": 5,
+                        "$$hashKey": "object:960"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z"
+                        "date": "2015-01-01T19:00:00.000Z",
+                        "spc_VqIYy": 0,
+                        "idx_VqIYy": 6,
+                        "$$hashKey": "object:961"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:261"
             },
             {
                 "name": "Base",
                 "States": [
                     {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.679Z",
+                        "spc_EeGpM": 0,
+                        "idx_EeGpM": 0,
+                        "$$hashKey": "object:975"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.389Z",
+                        "spc_EeGpM": 0,
+                        "idx_EeGpM": 1,
+                        "$$hashKey": "object:976"
+                    },
+                    {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_EeGpM": 0,
+                        "idx_EeGpM": 2,
+                        "$$hashKey": "object:977"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:262"
             }
         ]
     },
@@ -1129,7 +1765,8 @@
                 "active": true,
                 "date": "2015-01-01T12:49:20.796Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Tyranid Warrior Rending Claws",
@@ -1146,7 +1783,8 @@
                 "active": true,
                 "date": "2015-01-01T12:49:20.796Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Tyranid Warrior New",
@@ -1163,7 +1801,8 @@
                 "active": true,
                 "date": "2015-01-01T12:49:20.796Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Carnifex Old",
@@ -1185,7 +1824,8 @@
                 "active": true,
                 "date": "2015-01-01T21:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Carnifex VC",
@@ -1207,7 +1847,8 @@
                 "active": true,
                 "date": "2015-01-01T12:49:20.797Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Carnifex CC",
@@ -1229,7 +1870,8 @@
                 "active": true,
                 "date": "2015-01-01T12:49:20.797Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Carnifex New",
@@ -1246,7 +1888,8 @@
                 "active": true,
                 "date": "2015-01-01T12:49:20.797Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Spawn of Cryptus",
@@ -1263,7 +1906,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Children of Cryptus",
@@ -1285,7 +1929,8 @@
                 "active": true,
                 "date": "2015-01-01T12:49:20.797Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Exocrine",
@@ -1302,7 +1947,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Krom Dragongaze",
@@ -1319,7 +1965,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Njal",
@@ -1350,39 +1997,110 @@
         "Pieces": [
             {
                 "name": "Model",
-        "points": 180,
+                "points": 180,
                 "States": [
+                    {
+                        "name": "Complete",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.681Z",
+                        "spc_cKmGn": 0,
+                        "idx_cKmGn": 0,
+                        "$$hashKey": "object:1132"
+                    },
+                    {
+                        "name": "Finish Coat",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.392Z",
+                        "spc_cKmGn": 0,
+                        "idx_cKmGn": 1,
+                        "$$hashKey": "object:1133"
+                    },
+                    {
+                        "name": "Complete",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.392Z",
+                        "spc_cKmGn": 0,
+                        "idx_cKmGn": 2,
+                        "$$hashKey": "object:1134"
+                    },
+                    {
+                        "name": "Strip Weathering",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.392Z",
+                        "spc_cKmGn": 0,
+                        "idx_cKmGn": 3,
+                        "$$hashKey": "object:1135"
+                    },
                     {
                         "name": "Weather",
                         "active": true,
-                        "date": "2015-01-01T21:30:00.000Z"
+                        "date": "2015-01-01T21:30:00.000Z",
+                        "spc_cKmGn": 0,
+                        "idx_cKmGn": 4,
+                        "$$hashKey": "object:1136"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z"
+                        "date": "2015-01-01T21:00:00.000Z",
+                        "spc_cKmGn": 0,
+                        "idx_cKmGn": 5,
+                        "$$hashKey": "object:1137"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z"
+                        "date": "2015-01-01T20:00:00.000Z",
+                        "spc_cKmGn": 0,
+                        "idx_cKmGn": 6,
+                        "$$hashKey": "object:1138"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z"
+                        "date": "2015-01-01T19:00:00.000Z",
+                        "spc_cKmGn": 0,
+                        "idx_cKmGn": 7,
+                        "$$hashKey": "object:1139"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Varnished",
+                "Pieces": [],
+                "$$hashKey": "object:267"
             },
             {
                 "name": "Base",
                 "States": [
                     {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.681Z",
+                        "spc_PehaR": 0,
+                        "idx_PehaR": 0,
+                        "$$hashKey": "object:1155"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.392Z",
+                        "spc_PehaR": 0,
+                        "idx_PehaR": 1,
+                        "$$hashKey": "object:1156"
+                    },
+                    {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_PehaR": 0,
+                        "idx_PehaR": 2,
+                        "$$hashKey": "object:1157"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:268"
             }
         ]
     },
@@ -1401,7 +2119,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Rune Priest 2",
@@ -1418,7 +2137,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Rune Priest 3",
@@ -1435,7 +2155,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Ulrik",
@@ -1452,7 +2173,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Battle Leader",
@@ -1493,49 +2215,110 @@
         "Pieces": [
             {
                 "name": "Model",
-        "points": 75,
+                "points": 75,
                 "States": [
+                    {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.682Z",
+                        "spc_bQyHN": 0,
+                        "idx_bQyHN": 0,
+                        "$$hashKey": "object:1231"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.394Z",
+                        "spc_bQyHN": 0,
+                        "idx_bQyHN": 1,
+                        "$$hashKey": "object:1232"
+                    },
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_bQyHN": 0,
+                        "idx_bQyHN": 2,
+                        "$$hashKey": "object:1233"
                     },
                     {
                         "name": "Finish Coat",
                         "active": true,
-                        "date": "2015-01-01T22:00:00.000Z"
+                        "date": "2015-01-01T22:00:00.000Z",
+                        "spc_bQyHN": 0,
+                        "idx_bQyHN": 3,
+                        "$$hashKey": "object:1234"
                     },
                     {
                         "name": "Weather",
                         "active": true,
-                        "date": "2015-01-01T21:30:00.000Z"
+                        "date": "2015-01-01T21:30:00.000Z",
+                        "spc_bQyHN": 0,
+                        "idx_bQyHN": 4,
+                        "$$hashKey": "object:1235"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z"
+                        "date": "2015-01-01T21:00:00.000Z",
+                        "spc_bQyHN": 0,
+                        "idx_bQyHN": 5,
+                        "$$hashKey": "object:1236"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z"
+                        "date": "2015-01-01T20:00:00.000Z",
+                        "spc_bQyHN": 0,
+                        "idx_bQyHN": 6,
+                        "$$hashKey": "object:1237"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z"
+                        "date": "2015-01-01T19:00:00.000Z",
+                        "spc_bQyHN": 0,
+                        "idx_bQyHN": 7,
+                        "$$hashKey": "object:1238"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:273"
             },
             {
                 "name": "Base",
                 "States": [
                     {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.682Z",
+                        "spc_naxMz": 0,
+                        "idx_naxMz": 0,
+                        "$$hashKey": "object:1254"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.394Z",
+                        "spc_naxMz": 0,
+                        "idx_naxMz": 1,
+                        "$$hashKey": "object:1255"
+                    },
+                    {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_naxMz": 0,
+                        "idx_naxMz": 2,
+                        "$$hashKey": "object:1256"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:274"
             }
         ]
     },
@@ -1561,56 +2344,148 @@
                 "points": 210,
                 "States": [
                     {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.683Z",
+                        "spc_GVbMJ": 0,
+                        "idx_GVbMJ": 0,
+                        "$$hashKey": "object:1274"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:48:07.294Z",
+                        "spc_GVbMJ": 0,
+                        "idx_GVbMJ": 1,
+                        "$$hashKey": "object:1275"
+                    },
+                    {
+                        "name": "Complete",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.394Z",
+                        "spc_GVbMJ": 0,
+                        "idx_GVbMJ": 2,
+                        "$$hashKey": "object:1276"
+                    },
+                    {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-04-15T23:00:00.000Z"
+                        "date": "2015-04-15T23:00:00.000Z",
+                        "spc_GVbMJ": 0,
+                        "idx_GVbMJ": 3,
+                        "$$hashKey": "object:1277"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z"
+                        "date": "2015-01-01T19:00:00.000Z",
+                        "spc_GVbMJ": 0,
+                        "idx_GVbMJ": 4,
+                        "$$hashKey": "object:1278"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:279"
             },
             {
                 "name": "Wolf Mount",
                 "States": [
                     {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.683Z",
+                        "spc_SGBuD": 0,
+                        "idx_SGBuD": 0,
+                        "$$hashKey": "object:1288"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.395Z",
+                        "spc_SGBuD": 0,
+                        "idx_SGBuD": 1,
+                        "$$hashKey": "object:1289"
+                    },
+                    {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-03-02T23:00:00.000Z"
+                        "date": "2015-03-02T23:00:00.000Z",
+                        "spc_SGBuD": 0,
+                        "idx_SGBuD": 2,
+                        "$$hashKey": "object:1290"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z"
+                        "date": "2015-01-01T20:00:00.000Z",
+                        "spc_SGBuD": 0,
+                        "idx_SGBuD": 3,
+                        "$$hashKey": "object:1291"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z"
+                        "date": "2015-01-01T19:00:00.000Z",
+                        "spc_SGBuD": 0,
+                        "idx_SGBuD": 4,
+                        "$$hashKey": "object:1292"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:280"
             },
             {
                 "name": "Base",
                 "States": [
                     {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.683Z",
+                        "spc_csifd": 0,
+                        "idx_csifd": 0,
+                        "$$hashKey": "object:1302"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.395Z",
+                        "spc_csifd": 0,
+                        "idx_csifd": 1,
+                        "$$hashKey": "object:1303"
+                    },
+                    {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-03-02T23:00:00.000Z"
+                        "date": "2015-03-02T23:00:00.000Z",
+                        "spc_csifd": 0,
+                        "idx_csifd": 2,
+                        "$$hashKey": "object:1304"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z"
+                        "date": "2015-01-01T20:00:00.000Z",
+                        "spc_csifd": 0,
+                        "idx_csifd": 3,
+                        "$$hashKey": "object:1305"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z"
+                        "date": "2015-01-01T19:00:00.000Z",
+                        "spc_csifd": 0,
+                        "idx_csifd": 4,
+                        "$$hashKey": "object:1306"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:281"
             }
         ]
     },
@@ -1629,7 +2504,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Terminators",
@@ -1646,7 +2522,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Terminators",
@@ -1687,49 +2564,110 @@
         "Pieces": [
             {
                 "name": "Model",
-        "points": 190,
+                "points": 190,
                 "States": [
+                    {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.683Z",
+                        "spc_bOfej": 0,
+                        "idx_bOfej": 0,
+                        "$$hashKey": "object:1360"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.395Z",
+                        "spc_bOfej": 0,
+                        "idx_bOfej": 1,
+                        "$$hashKey": "object:1361"
+                    },
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_bOfej": 0,
+                        "idx_bOfej": 2,
+                        "$$hashKey": "object:1362"
                     },
                     {
                         "name": "Finish Coat",
                         "active": true,
-                        "date": "2015-01-01T22:00:00.000Z"
+                        "date": "2015-01-01T22:00:00.000Z",
+                        "spc_bOfej": 0,
+                        "idx_bOfej": 3,
+                        "$$hashKey": "object:1363"
                     },
                     {
                         "name": "Weather",
                         "active": true,
-                        "date": "2015-01-01T21:30:00.000Z"
+                        "date": "2015-01-01T21:30:00.000Z",
+                        "spc_bOfej": 0,
+                        "idx_bOfej": 4,
+                        "$$hashKey": "object:1364"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z"
+                        "date": "2015-01-01T21:00:00.000Z",
+                        "spc_bOfej": 0,
+                        "idx_bOfej": 5,
+                        "$$hashKey": "object:1365"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z"
+                        "date": "2015-01-01T20:00:00.000Z",
+                        "spc_bOfej": 0,
+                        "idx_bOfej": 6,
+                        "$$hashKey": "object:1366"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z"
+                        "date": "2015-01-01T19:00:00.000Z",
+                        "spc_bOfej": 0,
+                        "idx_bOfej": 7,
+                        "$$hashKey": "object:1367"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:288"
             },
             {
                 "name": "Base",
                 "States": [
                     {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.684Z",
+                        "spc_XcDQe": 0,
+                        "idx_XcDQe": 0,
+                        "$$hashKey": "object:1383"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.396Z",
+                        "spc_XcDQe": 0,
+                        "idx_XcDQe": 1,
+                        "$$hashKey": "object:1384"
+                    },
+                    {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_XcDQe": 0,
+                        "idx_XcDQe": 2,
+                        "$$hashKey": "object:1385"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:289"
             }
         ]
     },
@@ -1772,49 +2710,110 @@
         "Pieces": [
             {
                 "name": "Model",
-        "points": 120,
+                "points": 120,
                 "States": [
+                    {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.684Z",
+                        "spc_mNATY": 0,
+                        "idx_mNATY": 0,
+                        "$$hashKey": "object:1411"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.396Z",
+                        "spc_mNATY": 0,
+                        "idx_mNATY": 1,
+                        "$$hashKey": "object:1412"
+                    },
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_mNATY": 0,
+                        "idx_mNATY": 2,
+                        "$$hashKey": "object:1413"
                     },
                     {
                         "name": "Finish Coat",
                         "active": true,
-                        "date": "2015-01-01T22:00:00.000Z"
+                        "date": "2015-01-01T22:00:00.000Z",
+                        "spc_mNATY": 0,
+                        "idx_mNATY": 3,
+                        "$$hashKey": "object:1414"
                     },
                     {
                         "name": "Weather",
                         "active": true,
-                        "date": "2015-01-01T21:30:00.000Z"
+                        "date": "2015-01-01T21:30:00.000Z",
+                        "spc_mNATY": 0,
+                        "idx_mNATY": 4,
+                        "$$hashKey": "object:1415"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z"
+                        "date": "2015-01-01T21:00:00.000Z",
+                        "spc_mNATY": 0,
+                        "idx_mNATY": 5,
+                        "$$hashKey": "object:1416"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z"
+                        "date": "2015-01-01T20:00:00.000Z",
+                        "spc_mNATY": 0,
+                        "idx_mNATY": 6,
+                        "$$hashKey": "object:1417"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z"
+                        "date": "2015-01-01T19:00:00.000Z",
+                        "spc_mNATY": 0,
+                        "idx_mNATY": 7,
+                        "$$hashKey": "object:1418"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:294"
             },
             {
                 "name": "Base",
                 "States": [
                     {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.684Z",
+                        "spc_fQxUi": 0,
+                        "idx_fQxUi": 0,
+                        "$$hashKey": "object:1434"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.396Z",
+                        "spc_fQxUi": 0,
+                        "idx_fQxUi": 1,
+                        "$$hashKey": "object:1435"
+                    },
+                    {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_fQxUi": 0,
+                        "idx_fQxUi": 2,
+                        "$$hashKey": "object:1436"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:295"
             }
         ]
     },
@@ -1833,7 +2832,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Sky Claws 1",
@@ -1850,7 +2850,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Sky Claws 2",
@@ -1867,7 +2868,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Grey Hunters 1",
@@ -1884,7 +2886,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Grey Hunters 2",
@@ -1901,7 +2904,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Grey Hunters 3",
@@ -1918,7 +2922,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Grey Hunters 4",
@@ -1935,7 +2940,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Grey Hunters 5",
@@ -1952,7 +2958,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Grey Hunters 6",
@@ -1969,7 +2976,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Land Speeder",
@@ -1986,7 +2994,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Thunderwolf",
@@ -2007,58 +3016,183 @@
         "Pieces": [
             {
                 "name": "Model",
-        "points": 260,
+                "points": 260,
                 "States": [
                     {
-                        "name": "Prime",
-                        "active": true,
-                        "date": "2015-04-15T23:00:00.000Z"
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.686Z",
+                        "spc_hExbE": 0,
+                        "idx_hExbE": 0,
+                        "$$hashKey": "object:1574"
                     },
                     {
-                        "name": "Assemble",
+                        "name": "Complete",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.686Z",
+                        "spc_hExbE": 0,
+                        "idx_hExbE": 1,
+                        "$$hashKey": "object:1575"
+                    },
+                    {
+                        "name": "Finish Coat",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.686Z",
+                        "spc_hExbE": 0,
+                        "idx_hExbE": 2,
+                        "$$hashKey": "object:1576"
+                    },
+                    {
+                        "name": "Weather",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.686Z",
+                        "spc_hExbE": 0,
+                        "idx_hExbE": 3,
+                        "$$hashKey": "object:1577"
+                    },
+                    {
+                        "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z"
-                    }
-                ]
-            },{
-                "name": "Wolf Mount",
-                "States": [
+                        "date": "2015-05-04T14:47:25.399Z",
+                        "spc_hExbE": 0,
+                        "idx_hExbE": 4,
+                        "$$hashKey": "object:1578"
+                    },
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-03-02T23:00:00.000Z"
+                        "date": "2015-05-04T14:47:25.399Z",
+                        "spc_hExbE": 0,
+                        "idx_hExbE": 5,
+                        "$$hashKey": "object:1579"
+                    },
+                    {
+                        "name": "Strip Primer",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.399Z",
+                        "spc_hExbE": 0,
+                        "idx_hExbE": 6,
+                        "$$hashKey": "object:1580"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z"
+                        "date": "2015-04-15T23:00:00.000Z",
+                        "spc_hExbE": 0,
+                        "idx_hExbE": 7,
+                        "$$hashKey": "object:1581"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z"
+                        "date": "2015-01-01T19:00:00.000Z",
+                        "spc_hExbE": 0,
+                        "idx_hExbE": 8,
+                        "$$hashKey": "object:1582"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Painted",
+                "Pieces": [],
+                "$$hashKey": "object:300"
+            },
+            {
+                "name": "Wolf Mount",
+                "States": [
+                    {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.686Z",
+                        "spc_LbwPG": 0,
+                        "idx_LbwPG": 0,
+                        "$$hashKey": "object:1597"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.399Z",
+                        "spc_LbwPG": 0,
+                        "idx_LbwPG": 1,
+                        "$$hashKey": "object:1598"
+                    },
+                    {
+                        "name": "Complete",
+                        "active": true,
+                        "date": "2015-03-02T23:00:00.000Z",
+                        "spc_LbwPG": 0,
+                        "idx_LbwPG": 2,
+                        "$$hashKey": "object:1599"
+                    },
+                    {
+                        "name": "Prime",
+                        "active": true,
+                        "date": "2015-01-01T20:00:00.000Z",
+                        "spc_LbwPG": 0,
+                        "idx_LbwPG": 3,
+                        "$$hashKey": "object:1600"
+                    },
+                    {
+                        "name": "Assemble",
+                        "active": true,
+                        "date": "2015-01-01T19:00:00.000Z",
+                        "spc_LbwPG": 0,
+                        "idx_LbwPG": 4,
+                        "$$hashKey": "object:1601"
+                    }
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:301"
             },
             {
                 "name": "Base",
                 "States": [
                     {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.686Z",
+                        "spc_sZidC": 0,
+                        "idx_sZidC": 0,
+                        "$$hashKey": "object:1611"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.399Z",
+                        "spc_sZidC": 0,
+                        "idx_sZidC": 1,
+                        "$$hashKey": "object:1612"
+                    },
+                    {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-03-02T23:00:00.000Z"
+                        "date": "2015-03-02T23:00:00.000Z",
+                        "spc_sZidC": 0,
+                        "idx_sZidC": 2,
+                        "$$hashKey": "object:1613"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z"
+                        "date": "2015-01-01T20:00:00.000Z",
+                        "spc_sZidC": 0,
+                        "idx_sZidC": 3,
+                        "$$hashKey": "object:1614"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z"
+                        "date": "2015-01-01T19:00:00.000Z",
+                        "spc_sZidC": 0,
+                        "idx_sZidC": 4,
+                        "$$hashKey": "object:1615"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:302"
             }
         ]
     },
@@ -2101,49 +3235,110 @@
         "Pieces": [
             {
                 "name": "Model",
-        "points": 145,
+                "points": 145,
                 "States": [
+                    {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.686Z",
+                        "spc_bfILK": 0,
+                        "idx_bfILK": 0,
+                        "$$hashKey": "object:1645"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.399Z",
+                        "spc_bfILK": 0,
+                        "idx_bfILK": 1,
+                        "$$hashKey": "object:1646"
+                    },
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_bfILK": 0,
+                        "idx_bfILK": 2,
+                        "$$hashKey": "object:1647"
                     },
                     {
                         "name": "Finish Coat",
                         "active": true,
-                        "date": "2015-01-01T22:00:00.000Z"
+                        "date": "2015-01-01T22:00:00.000Z",
+                        "spc_bfILK": 0,
+                        "idx_bfILK": 3,
+                        "$$hashKey": "object:1648"
                     },
                     {
                         "name": "Weather",
                         "active": true,
-                        "date": "2015-01-01T21:30:00.000Z"
+                        "date": "2015-01-01T21:30:00.000Z",
+                        "spc_bfILK": 0,
+                        "idx_bfILK": 4,
+                        "$$hashKey": "object:1649"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z"
+                        "date": "2015-01-01T21:00:00.000Z",
+                        "spc_bfILK": 0,
+                        "idx_bfILK": 5,
+                        "$$hashKey": "object:1650"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z"
+                        "date": "2015-01-01T20:00:00.000Z",
+                        "spc_bfILK": 0,
+                        "idx_bfILK": 6,
+                        "$$hashKey": "object:1651"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z"
+                        "date": "2015-01-01T19:00:00.000Z",
+                        "spc_bfILK": 0,
+                        "idx_bfILK": 7,
+                        "$$hashKey": "object:1652"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:309"
             },
             {
                 "name": "Base",
                 "States": [
                     {
+                        "name": "Strip Painting",
+                        "active": false,
+                        "date": "2015-05-13T13:13:01.687Z",
+                        "spc_aimgY": 0,
+                        "idx_aimgY": 0,
+                        "$$hashKey": "object:1668"
+                    },
+                    {
+                        "name": "Dislike",
+                        "active": true,
+                        "date": "2015-05-04T14:47:25.399Z",
+                        "spc_aimgY": 0,
+                        "idx_aimgY": 1,
+                        "$$hashKey": "object:1669"
+                    },
+                    {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z"
+                        "date": "2015-01-01T23:00:00.000Z",
+                        "spc_aimgY": 0,
+                        "idx_aimgY": 2,
+                        "$$hashKey": "object:1670"
                     }
-                ]
+                ],
+                "transition": null,
+                "current": "Requires Stripping",
+                "Pieces": [],
+                "$$hashKey": "object:310"
             }
         ]
     },
@@ -2162,7 +3357,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Long Fangs 3",
@@ -2179,7 +3375,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Razorback",
@@ -2216,7 +3413,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Rhino",
@@ -2233,7 +3431,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Rhino",
@@ -2250,7 +3449,8 @@
                 "active": true,
                 "date": "2015-01-01T19:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Toxicrene",
@@ -2267,7 +3467,8 @@
                 "active": true,
                 "date": "2015-01-31T23:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
     },
     {
         "name": "Stormwolf",
@@ -2284,6 +3485,187 @@
                 "active": true,
                 "date": "2015-01-31T23:00:00.000Z"
             }
-        ]
+        ],
+        "Pieces": []
+    },
+    {
+        "name": "Land Raider",
+        "points": 250,
+        "faction": "Space Wolves",
+        "States": [
+            {
+                "name": "Buy New",
+                "active": true,
+                "date": "2015-05-13T13:19:48.819Z"
+            },
+            {
+                "name": "Startup",
+                "active": true,
+                "date": "2015-05-13T13:19:48.814Z"
+            }
+        ],
+        "Pieces": []
+    },
+    {
+        "name": "Predator",
+        "points": 140,
+        "faction": "Space Wolves",
+        "States": [
+            {
+                "name": "Buy New",
+                "active": true,
+                "date": "2015-05-13T13:20:35.527Z"
+            },
+            {
+                "name": "Startup",
+                "active": true,
+                "date": "2015-05-13T13:20:35.525Z"
+            }
+        ],
+        "Pieces": []
+    },
+    {
+        "name": "Dreadnaught",
+        "points": 110,
+        "faction": "Space Wolves",
+        "States": [
+            {
+                "name": "Buy New",
+                "active": true,
+                "date": "2015-05-13T13:20:52.925Z"
+            },
+            {
+                "name": "Startup",
+                "active": true,
+                "date": "2015-05-13T13:20:52.924Z"
+            }
+        ],
+        "Pieces": []
+    },
+    {
+        "name": "Tac Squad",
+        "points": 160,
+        "faction": "Space Wolves",
+        "States": [
+            {
+                "name": "Buy New",
+                "active": true,
+                "date": "2015-05-13T13:21:27.103Z"
+            },
+            {
+                "name": "Startup",
+                "active": true,
+                "date": "2015-05-13T13:21:27.102Z"
+            }
+        ],
+        "Pieces": []
+    },
+    {
+        "name": "Terminators",
+        "points": 205,
+        "faction": "Space Wolves",
+        "States": [
+            {
+                "name": "Buy New",
+                "active": true,
+                "date": "2015-05-13T13:23:12.549Z"
+            },
+            {
+                "name": "Startup",
+                "active": true,
+                "date": "2015-05-13T13:23:12.548Z"
+            }
+        ],
+        "Pieces": []
+    },
+    {
+        "name": "Battle Leader",
+        "points": 75,
+        "faction": "Space Wolves",
+        "States": [
+            {
+                "name": "Buy New",
+                "active": true,
+                "date": "2015-05-13T13:24:25.605Z"
+            },
+            {
+                "name": "Startup",
+                "active": true,
+                "date": "2015-05-13T13:24:25.603Z"
+            }
+        ],
+        "Pieces": []
+    },
+    {
+        "name": "Warboss",
+        "points": 85,
+        "faction": "Ork",
+        "States": [
+            {
+                "name": "Buy New",
+                "active": true,
+                "date": "2015-05-13T13:28:50.032Z"
+            },
+            {
+                "name": "Startup",
+                "active": true,
+                "date": "2015-05-13T13:28:50.031Z"
+            }
+        ],
+        "Pieces": []
+    },
+    {
+        "name": "Nobs",
+        "points": 215,
+        "faction": "Ork",
+        "States": [
+            {
+                "name": "Buy New",
+                "active": true,
+                "date": "2015-05-13T13:28:56.332Z"
+            },
+            {
+                "name": "Startup",
+                "active": true,
+                "date": "2015-05-13T13:28:56.327Z"
+            }
+        ],
+        "Pieces": []
+    },
+    {
+        "name": "Boys",
+        "points": 120,
+        "faction": "Ork",
+        "States": [
+            {
+                "name": "Buy New",
+                "active": true,
+                "date": "2015-05-13T13:29:01.491Z"
+            },
+            {
+                "name": "Startup",
+                "active": true,
+                "date": "2015-05-13T13:29:01.489Z"
+            }
+        ],
+        "Pieces": []
+    },
+    {
+        "name": "Deffkoptas",
+        "points": 90,
+        "faction": "Ork",
+        "States": [
+            {
+                "name": "Buy New",
+                "active": true,
+                "date": "2015-05-13T13:29:12.592Z"
+            },
+            {
+                "name": "Startup",
+                "active": true,
+                "date": "2015-05-13T13:29:12.591Z"
+            }
+        ],
+        "Pieces": []
     }
 ]
