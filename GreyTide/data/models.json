@@ -61,48 +61,30 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_UVEtZ": 0,
-                        "idx_UVEtZ": 5,
-                        "$$hashKey": "object:3557"
+                        "date": "2015-01-01T23:00:00.000Z"
                     },
                     {
                         "name": "Finish Coat",
                         "active": true,
-                        "date": "2015-01-01T22:00:00.000Z",
-                        "spc_UVEtZ": 0,
-                        "idx_UVEtZ": 6,
-                        "$$hashKey": "object:3558"
+                        "date": "2015-01-01T22:00:00.000Z"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z",
-                        "spc_UVEtZ": 0,
-                        "idx_UVEtZ": 7,
-                        "$$hashKey": "object:3559"
+                        "date": "2015-01-01T21:00:00.000Z"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z",
-                        "spc_UVEtZ": 0,
-                        "idx_UVEtZ": 8,
-                        "$$hashKey": "object:3560"
+                        "date": "2015-01-01T20:00:00.000Z"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z",
-                        "spc_UVEtZ": 0,
-                        "idx_UVEtZ": 9,
-                        "$$hashKey": "object:3561"
+                        "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3416"
+                "Pieces": []
             },
             {
                 "name": "Base",
@@ -111,16 +93,10 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_LaRyy": 0,
-                        "idx_LaRyy": 5,
-                        "$$hashKey": "object:3584"
+                        "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3417"
+                "Pieces": []
             }
         ]
     },
@@ -254,48 +230,30 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_WqOZV": 0,
-                        "idx_WqOZV": 5,
-                        "$$hashKey": "object:3669"
+                        "date": "2015-01-01T23:00:00.000Z"
                     },
                     {
                         "name": "Finish Coat",
                         "active": true,
-                        "date": "2015-01-01T22:00:00.000Z",
-                        "spc_WqOZV": 0,
-                        "idx_WqOZV": 6,
-                        "$$hashKey": "object:3670"
+                        "date": "2015-01-01T22:00:00.000Z"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z",
-                        "spc_WqOZV": 0,
-                        "idx_WqOZV": 7,
-                        "$$hashKey": "object:3671"
+                        "date": "2015-01-01T21:00:00.000Z"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z",
-                        "spc_WqOZV": 0,
-                        "idx_WqOZV": 8,
-                        "$$hashKey": "object:3672"
+                        "date": "2015-01-01T20:00:00.000Z"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z",
-                        "spc_WqOZV": 0,
-                        "idx_WqOZV": 9,
-                        "$$hashKey": "object:3673"
+                        "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3422"
+                "Pieces": []
             },
             {
                 "name": "Base",
@@ -303,16 +261,10 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_rLzDT": 0,
-                        "idx_rLzDT": 5,
-                        "$$hashKey": "object:3696"
+                        "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3423"
+                "Pieces": []
             }
         ]
     },
@@ -442,48 +394,30 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_VHaEn": 0,
-                        "idx_VHaEn": 5,
-                        "$$hashKey": "object:3775"
+                        "date": "2015-01-01T23:00:00.000Z"
                     },
                     {
                         "name": "Finish Coat",
                         "active": true,
-                        "date": "2015-01-01T22:00:00.000Z",
-                        "spc_VHaEn": 0,
-                        "idx_VHaEn": 6,
-                        "$$hashKey": "object:3776"
+                        "date": "2015-01-01T22:00:00.000Z"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z",
-                        "spc_VHaEn": 0,
-                        "idx_VHaEn": 7,
-                        "$$hashKey": "object:3777"
+                        "date": "2015-01-01T21:00:00.000Z"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z",
-                        "spc_VHaEn": 0,
-                        "idx_VHaEn": 8,
-                        "$$hashKey": "object:3778"
+                        "date": "2015-01-01T20:00:00.000Z"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z",
-                        "spc_VHaEn": 0,
-                        "idx_VHaEn": 9,
-                        "$$hashKey": "object:3779"
+                        "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3428"
+                "Pieces": []
             },
             {
                 "name": "Base",
@@ -492,16 +426,10 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_OJYjI": 0,
-                        "idx_OJYjI": 5,
-                        "$$hashKey": "object:3802"
+                        "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3429"
+                "Pieces": []
             }
         ]
     },
@@ -679,106 +607,42 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_JFokg": 0,
-                        "idx_JFokg": 5,
-                        "$$hashKey": "object:3906"
+                        "date": "2015-01-01T23:00:00.000Z"
                     },
                     {
                         "name": "Finish Coat",
                         "active": true,
-                        "date": "2015-01-01T22:00:00.000Z",
-                        "spc_JFokg": 0,
-                        "idx_JFokg": 6,
-                        "$$hashKey": "object:3907"
+                        "date": "2015-01-01T22:00:00.000Z"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z",
-                        "spc_JFokg": 0,
-                        "idx_JFokg": 7,
-                        "$$hashKey": "object:3908"
+                        "date": "2015-01-01T21:00:00.000Z"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z",
-                        "spc_JFokg": 0,
-                        "idx_JFokg": 8,
-                        "$$hashKey": "object:3909"
+                        "date": "2015-01-01T20:00:00.000Z"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z",
-                        "spc_JFokg": 0,
-                        "idx_JFokg": 9,
-                        "$$hashKey": "object:3910"
+                        "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3434"
+                "Pieces": []
             },
             {
                 "name": "Base",
                 "points": 0,
                 "States": [
                     {
-                        "name": "Strip Primer",
-                        "active": false,
-                        "date": "2015-05-17T02:16:02.112Z",
-                        "spc_TFhEv": 0,
-                        "idx_TFhEv": 0,
-                        "$$hashKey": "object:3928"
-                    },
-                    {
-                        "name": "Complete",
-                        "active": false,
-                        "date": "2015-05-17T02:16:02.112Z",
-                        "spc_TFhEv": 0,
-                        "idx_TFhEv": 1,
-                        "$$hashKey": "object:3929"
-                    },
-                    {
-                        "name": "Paint",
-                        "active": false,
-                        "date": "2015-05-17T02:16:02.112Z",
-                        "spc_TFhEv": 0,
-                        "idx_TFhEv": 2,
-                        "$$hashKey": "object:3930"
-                    },
-                    {
-                        "name": "Strip Painting",
-                        "active": true,
-                        "date": "2015-05-13T13:13:01.675Z",
-                        "spc_TFhEv": 0,
-                        "idx_TFhEv": 3,
-                        "$$hashKey": "object:3931"
-                    },
-                    {
-                        "name": "Dislike",
-                        "active": true,
-                        "date": "2015-05-04T14:47:25.385Z",
-                        "spc_TFhEv": 0,
-                        "idx_TFhEv": 4,
-                        "$$hashKey": "object:3932"
-                    },
-                    {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_TFhEv": 0,
-                        "idx_TFhEv": 5,
-                        "$$hashKey": "object:3933"
+                        "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3435"
+                "Pieces": []
             }
         ]
     },
@@ -844,48 +708,30 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_hlHGS": 0,
-                        "idx_hlHGS": 5,
-                        "$$hashKey": "object:3976"
+                        "date": "2015-01-01T23:00:00.000Z"
                     },
                     {
                         "name": "Finish Coat",
                         "active": true,
-                        "date": "2015-01-01T22:00:00.000Z",
-                        "spc_hlHGS": 0,
-                        "idx_hlHGS": 6,
-                        "$$hashKey": "object:3977"
+                        "date": "2015-01-01T22:00:00.000Z"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z",
-                        "spc_hlHGS": 0,
-                        "idx_hlHGS": 7,
-                        "$$hashKey": "object:3978"
+                        "date": "2015-01-01T21:00:00.000Z"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z",
-                        "spc_hlHGS": 0,
-                        "idx_hlHGS": 8,
-                        "$$hashKey": "object:3979"
+                        "date": "2015-01-01T20:00:00.000Z"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z",
-                        "spc_hlHGS": 0,
-                        "idx_hlHGS": 9,
-                        "$$hashKey": "object:3980"
+                        "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3440"
+                "Pieces": []
             },
             {
                 "name": "Base",
@@ -894,16 +740,10 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_WZFze": 0,
-                        "idx_WZFze": 5,
-                        "$$hashKey": "object:4003"
+                        "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3441"
+                "Pieces": []
             }
         ]
     },
@@ -936,32 +776,20 @@
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z",
-                        "spc_EYQkn": 0,
-                        "idx_EYQkn": 8,
-                        "$$hashKey": "object:4038"
+                        "date": "2015-01-01T21:00:00.000Z"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z",
-                        "spc_EYQkn": 0,
-                        "idx_EYQkn": 9,
-                        "$$hashKey": "object:4039"
+                        "date": "2015-01-01T20:00:00.000Z"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z",
-                        "spc_EYQkn": 0,
-                        "idx_EYQkn": 10,
-                        "$$hashKey": "object:4040"
+                        "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Varnished",
-                "Pieces": [],
-                "$$hashKey": "object:3446"
+                "Pieces": []
             },
             {
                 "name": "Base",
@@ -970,16 +798,10 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_egxIg": 0,
-                        "idx_egxIg": 5,
-                        "$$hashKey": "object:4067"
+                        "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3447"
+                "Pieces": []
             }
         ]
     },
@@ -1045,106 +867,42 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_dZqyZ": 0,
-                        "idx_dZqyZ": 5,
-                        "$$hashKey": "object:4110"
+                        "date": "2015-01-01T23:00:00.000Z"
                     },
                     {
                         "name": "Finish Coat",
                         "active": true,
-                        "date": "2015-01-01T22:00:00.000Z",
-                        "spc_dZqyZ": 0,
-                        "idx_dZqyZ": 6,
-                        "$$hashKey": "object:4111"
+                        "date": "2015-01-01T22:00:00.000Z"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z",
-                        "spc_dZqyZ": 0,
-                        "idx_dZqyZ": 7,
-                        "$$hashKey": "object:4112"
+                        "date": "2015-01-01T21:00:00.000Z"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z",
-                        "spc_dZqyZ": 0,
-                        "idx_dZqyZ": 8,
-                        "$$hashKey": "object:4113"
+                        "date": "2015-01-01T20:00:00.000Z"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z",
-                        "spc_dZqyZ": 0,
-                        "idx_dZqyZ": 9,
-                        "$$hashKey": "object:4114"
+                        "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3452"
+                "Pieces": []
             },
             {
                 "name": "Base",
                 "points": 0,
                 "States": [
                     {
-                        "name": "Strip Primer",
-                        "active": false,
-                        "date": "2015-05-17T02:16:02.114Z",
-                        "spc_aZiuo": 0,
-                        "idx_aZiuo": 0,
-                        "$$hashKey": "object:4132"
-                    },
-                    {
-                        "name": "Complete",
-                        "active": false,
-                        "date": "2015-05-17T02:16:02.114Z",
-                        "spc_aZiuo": 0,
-                        "idx_aZiuo": 1,
-                        "$$hashKey": "object:4133"
-                    },
-                    {
-                        "name": "Paint",
-                        "active": false,
-                        "date": "2015-05-17T02:16:02.114Z",
-                        "spc_aZiuo": 0,
-                        "idx_aZiuo": 2,
-                        "$$hashKey": "object:4134"
-                    },
-                    {
-                        "name": "Strip Painting",
-                        "active": true,
-                        "date": "2015-05-13T13:13:01.677Z",
-                        "spc_aZiuo": 0,
-                        "idx_aZiuo": 3,
-                        "$$hashKey": "object:4135"
-                    },
-                    {
-                        "name": "Dislike",
-                        "active": true,
-                        "date": "2015-05-04T14:47:25.387Z",
-                        "spc_aZiuo": 0,
-                        "idx_aZiuo": 4,
-                        "$$hashKey": "object:4136"
-                    },
-                    {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_aZiuo": 0,
-                        "idx_aZiuo": 5,
-                        "$$hashKey": "object:4137"
+                        "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3453"
+                "Pieces": []
             }
         ]
     },
@@ -1187,48 +945,30 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_HGzwE": 0,
-                        "idx_HGzwE": 5,
-                        "$$hashKey": "object:4169"
+                        "date": "2015-01-01T23:00:00.000Z"
                     },
                     {
                         "name": "Finish Coat",
                         "active": true,
-                        "date": "2015-01-01T22:00:00.000Z",
-                        "spc_HGzwE": 0,
-                        "idx_HGzwE": 6,
-                        "$$hashKey": "object:4170"
+                        "date": "2015-01-01T22:00:00.000Z"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z",
-                        "spc_HGzwE": 0,
-                        "idx_HGzwE": 7,
-                        "$$hashKey": "object:4171"
+                        "date": "2015-01-01T21:00:00.000Z"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z",
-                        "spc_HGzwE": 0,
-                        "idx_HGzwE": 8,
-                        "$$hashKey": "object:4172"
+                        "date": "2015-01-01T20:00:00.000Z"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z",
-                        "spc_HGzwE": 0,
-                        "idx_HGzwE": 9,
-                        "$$hashKey": "object:4173"
+                        "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3458"
+                "Pieces": []
             },
             {
                 "name": "Base",
@@ -1237,16 +977,10 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_dbIvM": 0,
-                        "idx_dbIvM": 5,
-                        "$$hashKey": "object:4196"
+                        "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3459"
+                "Pieces": []
             }
         ]
     },
@@ -1312,105 +1046,41 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_DLZga": 0,
-                        "idx_DLZga": 5,
-                        "$$hashKey": "object:4239"
+                        "date": "2015-01-01T23:00:00.000Z"
                     },
                     {
                         "name": "Finish Coat",
                         "active": true,
-                        "date": "2015-01-01T22:00:00.000Z",
-                        "spc_DLZga": 0,
-                        "idx_DLZga": 6,
-                        "$$hashKey": "object:4240"
+                        "date": "2015-01-01T22:00:00.000Z"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z",
-                        "spc_DLZga": 0,
-                        "idx_DLZga": 7,
-                        "$$hashKey": "object:4241"
+                        "date": "2015-01-01T21:00:00.000Z"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z",
-                        "spc_DLZga": 0,
-                        "idx_DLZga": 8,
-                        "$$hashKey": "object:4242"
+                        "date": "2015-01-01T20:00:00.000Z"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z",
-                        "spc_DLZga": 0,
-                        "idx_DLZga": 9,
-                        "$$hashKey": "object:4243"
+                        "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3464"
+                "Pieces": []
             },
             {
                 "name": "Base",
                 "States": [
                     {
-                        "name": "Strip Primer",
-                        "active": false,
-                        "date": "2015-05-17T02:16:02.115Z",
-                        "spc_sAPbT": 0,
-                        "idx_sAPbT": 0,
-                        "$$hashKey": "object:4261"
-                    },
-                    {
-                        "name": "Complete",
-                        "active": false,
-                        "date": "2015-05-17T02:16:02.115Z",
-                        "spc_sAPbT": 0,
-                        "idx_sAPbT": 1,
-                        "$$hashKey": "object:4262"
-                    },
-                    {
-                        "name": "Paint",
-                        "active": false,
-                        "date": "2015-05-17T02:16:02.115Z",
-                        "spc_sAPbT": 0,
-                        "idx_sAPbT": 2,
-                        "$$hashKey": "object:4263"
-                    },
-                    {
-                        "name": "Strip Painting",
-                        "active": true,
-                        "date": "2015-05-13T13:13:01.679Z",
-                        "spc_sAPbT": 0,
-                        "idx_sAPbT": 3,
-                        "$$hashKey": "object:4264"
-                    },
-                    {
-                        "name": "Dislike",
-                        "active": true,
-                        "date": "2015-05-04T14:47:25.389Z",
-                        "spc_sAPbT": 0,
-                        "idx_sAPbT": 4,
-                        "$$hashKey": "object:4265"
-                    },
-                    {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_sAPbT": 0,
-                        "idx_sAPbT": 5,
-                        "$$hashKey": "object:4266"
+                        "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3465"
+                "Pieces": []
             }
         ]
     },
@@ -1453,48 +1123,30 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_UOnPS": 0,
-                        "idx_UOnPS": 5,
-                        "$$hashKey": "object:4298"
+                        "date": "2015-01-01T23:00:00.000Z"
                     },
                     {
                         "name": "Finish Coat",
                         "active": true,
-                        "date": "2015-01-01T22:00:00.000Z",
-                        "spc_UOnPS": 0,
-                        "idx_UOnPS": 6,
-                        "$$hashKey": "object:4299"
+                        "date": "2015-01-01T22:00:00.000Z"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z",
-                        "spc_UOnPS": 0,
-                        "idx_UOnPS": 7,
-                        "$$hashKey": "object:4300"
+                        "date": "2015-01-01T21:00:00.000Z"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z",
-                        "spc_UOnPS": 0,
-                        "idx_UOnPS": 8,
-                        "$$hashKey": "object:4301"
+                        "date": "2015-01-01T20:00:00.000Z"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z",
-                        "spc_UOnPS": 0,
-                        "idx_UOnPS": 9,
-                        "$$hashKey": "object:4302"
+                        "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3470"
+                "Pieces": []
             },
             {
                 "name": "Base",
@@ -1502,16 +1154,10 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_GMoNS": 0,
-                        "idx_GMoNS": 5,
-                        "$$hashKey": "object:4325"
+                        "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3471"
+                "Pieces": []
             }
         ]
     },
@@ -1536,13 +1182,13 @@
                 "date": "2015-01-01T12:49:20.796Z"
             }
         ],
-               "Pieces": [
+        "Pieces": [
             {
                 "name": "Model",
-                "points": 175,
+                "points": 150,
                 "States": [
                     {
-                        "name": "Painted",
+                        "name": "Paint",
                         "active": true,
                         "date": "2015-05-16T12:53:48.518Z"
                     },
@@ -1562,10 +1208,7 @@
                         "date": "2015-01-01T12:49:20.796Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3470"
+                "Pieces": []
             },
             {
                 "name": "Base",
@@ -1586,10 +1229,7 @@
                         "date": "2015-01-01T12:49:20.796Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3471"
+                "Pieces": []
             }
         ]
     },
@@ -1832,97 +1472,36 @@
                     {
                         "name": "Weather",
                         "active": true,
-                        "date": "2015-01-01T21:30:00.000Z",
-                        "spc_aRnfG": 0,
-                        "idx_aRnfG": 5,
-                        "$$hashKey": "object:4489"
+                        "date": "2015-01-01T21:30:00.000Z"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z",
-                        "spc_aRnfG": 0,
-                        "idx_aRnfG": 6,
-                        "$$hashKey": "object:4490"
+                        "date": "2015-01-01T21:00:00.000Z"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z",
-                        "spc_aRnfG": 0,
-                        "idx_aRnfG": 7,
-                        "$$hashKey": "object:4491"
+                        "date": "2015-01-01T20:00:00.000Z"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z",
-                        "spc_aRnfG": 0,
-                        "idx_aRnfG": 8,
-                        "$$hashKey": "object:4492"
+                        "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Completed",
-                "Pieces": [],
-                "$$hashKey": "object:3476"
+                "Pieces": []
             },
             {
                 "name": "Base",
                 "States": [
                     {
-                        "name": "Strip Primer",
-                        "active": false,
-                        "date": "2015-05-17T02:16:02.117Z",
-                        "spc_bvgNu": 0,
-                        "idx_bvgNu": 0,
-                        "$$hashKey": "object:4510"
-                    },
-                    {
-                        "name": "Complete",
-                        "active": false,
-                        "date": "2015-05-17T02:16:02.118Z",
-                        "spc_bvgNu": 0,
-                        "idx_bvgNu": 1,
-                        "$$hashKey": "object:4511"
-                    },
-                    {
-                        "name": "Paint",
-                        "active": false,
-                        "date": "2015-05-17T02:16:02.118Z",
-                        "spc_bvgNu": 0,
-                        "idx_bvgNu": 2,
-                        "$$hashKey": "object:4512"
-                    },
-                    {
-                        "name": "Strip Painting",
-                        "active": true,
-                        "date": "2015-05-13T13:13:01.681Z",
-                        "spc_bvgNu": 0,
-                        "idx_bvgNu": 3,
-                        "$$hashKey": "object:4513"
-                    },
-                    {
-                        "name": "Dislike",
-                        "active": true,
-                        "date": "2015-05-04T14:47:25.392Z",
-                        "spc_bvgNu": 0,
-                        "idx_bvgNu": 4,
-                        "$$hashKey": "object:4514"
-                    },
-                    {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_bvgNu": 0,
-                        "idx_bvgNu": 5,
-                        "$$hashKey": "object:4515"
+                        "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3477"
+                "Pieces": []
             }
         ]
     },
@@ -2042,56 +1621,35 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_XQVPM": 0,
-                        "idx_XQVPM": 5,
-                        "$$hashKey": "object:4598"
+                        "date": "2015-01-01T23:00:00.000Z"
                     },
                     {
                         "name": "Finish Coat",
                         "active": true,
-                        "date": "2015-01-01T22:00:00.000Z",
-                        "spc_XQVPM": 0,
-                        "idx_XQVPM": 6,
-                        "$$hashKey": "object:4599"
+                        "date": "2015-01-01T22:00:00.000Z"
                     },
                     {
                         "name": "Weather",
                         "active": true,
-                        "date": "2015-01-01T21:30:00.000Z",
-                        "spc_XQVPM": 0,
-                        "idx_XQVPM": 7,
-                        "$$hashKey": "object:4600"
+                        "date": "2015-01-01T21:30:00.000Z"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z",
-                        "spc_XQVPM": 0,
-                        "idx_XQVPM": 8,
-                        "$$hashKey": "object:4601"
+                        "date": "2015-01-01T21:00:00.000Z"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z",
-                        "spc_XQVPM": 0,
-                        "idx_XQVPM": 9,
-                        "$$hashKey": "object:4602"
+                        "date": "2015-01-01T20:00:00.000Z"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z",
-                        "spc_XQVPM": 0,
-                        "idx_XQVPM": 10,
-                        "$$hashKey": "object:4603"
+                        "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3482"
+                "Pieces": []
             },
             {
                 "name": "Base",
@@ -2099,16 +1657,10 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_uXMmI": 0,
-                        "idx_uXMmI": 5,
-                        "$$hashKey": "object:4628"
+                        "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3483"
+                "Pieces": []
             }
         ]
     },
@@ -2136,24 +1688,15 @@
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-04-15T23:00:00.000Z",
-                        "spc_LkfYr": 0,
-                        "idx_LkfYr": 6,
-                        "$$hashKey": "object:4656"
+                        "date": "2015-04-15T23:00:00.000Z"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z",
-                        "spc_LkfYr": 0,
-                        "idx_LkfYr": 7,
-                        "$$hashKey": "object:4657"
+                        "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3488"
+                "Pieces": []
             },
             {
                 "name": "Wolf Mount",
@@ -2161,32 +1704,20 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-03-02T23:00:00.000Z",
-                        "spc_EbhzA": 0,
-                        "idx_EbhzA": 5,
-                        "$$hashKey": "object:4676"
+                        "date": "2015-03-02T23:00:00.000Z"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z",
-                        "spc_EbhzA": 0,
-                        "idx_EbhzA": 6,
-                        "$$hashKey": "object:4677"
+                        "date": "2015-01-01T20:00:00.000Z"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z",
-                        "spc_EbhzA": 0,
-                        "idx_EbhzA": 7,
-                        "$$hashKey": "object:4678"
+                        "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3489"
+                "Pieces": []
             },
             {
                 "name": "Base",
@@ -2194,32 +1725,20 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-03-02T23:00:00.000Z",
-                        "spc_LcFtY": 0,
-                        "idx_LcFtY": 5,
-                        "$$hashKey": "object:4697"
+                        "date": "2015-03-02T23:00:00.000Z"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z",
-                        "spc_LcFtY": 0,
-                        "idx_LcFtY": 6,
-                        "$$hashKey": "object:4698"
+                        "date": "2015-01-01T20:00:00.000Z"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z",
-                        "spc_LcFtY": 0,
-                        "idx_LcFtY": 7,
-                        "$$hashKey": "object:4699"
+                        "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3490"
+                "Pieces": []
             }
         ]
     },
@@ -2303,56 +1822,35 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_EslwI": 0,
-                        "idx_EslwI": 5,
-                        "$$hashKey": "object:4762"
+                        "date": "2015-01-01T23:00:00.000Z"
                     },
                     {
                         "name": "Finish Coat",
                         "active": true,
-                        "date": "2015-01-01T22:00:00.000Z",
-                        "spc_EslwI": 0,
-                        "idx_EslwI": 6,
-                        "$$hashKey": "object:4763"
+                        "date": "2015-01-01T22:00:00.000Z"
                     },
                     {
                         "name": "Weather",
                         "active": true,
-                        "date": "2015-01-01T21:30:00.000Z",
-                        "spc_EslwI": 0,
-                        "idx_EslwI": 7,
-                        "$$hashKey": "object:4764"
+                        "date": "2015-01-01T21:30:00.000Z"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z",
-                        "spc_EslwI": 0,
-                        "idx_EslwI": 8,
-                        "$$hashKey": "object:4765"
+                        "date": "2015-01-01T21:00:00.000Z"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z",
-                        "spc_EslwI": 0,
-                        "idx_EslwI": 9,
-                        "$$hashKey": "object:4766"
+                        "date": "2015-01-01T20:00:00.000Z"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z",
-                        "spc_EslwI": 0,
-                        "idx_EslwI": 10,
-                        "$$hashKey": "object:4767"
+                        "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3497"
+                "Pieces": []
             },
             {
                 "name": "Base",
@@ -2360,16 +1858,10 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_whxdr": 0,
-                        "idx_whxdr": 5,
-                        "$$hashKey": "object:4792"
+                        "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3498"
+                "Pieces": []
             }
         ]
     },
@@ -2417,56 +1909,35 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_TdgWa": 0,
-                        "idx_TdgWa": 5,
-                        "$$hashKey": "object:4827"
+                        "date": "2015-01-01T23:00:00.000Z"
                     },
                     {
                         "name": "Finish Coat",
                         "active": true,
-                        "date": "2015-01-01T22:00:00.000Z",
-                        "spc_TdgWa": 0,
-                        "idx_TdgWa": 6,
-                        "$$hashKey": "object:4828"
+                        "date": "2015-01-01T22:00:00.000Z"
                     },
                     {
                         "name": "Weather",
                         "active": true,
-                        "date": "2015-01-01T21:30:00.000Z",
-                        "spc_TdgWa": 0,
-                        "idx_TdgWa": 7,
-                        "$$hashKey": "object:4829"
+                        "date": "2015-01-01T21:30:00.000Z"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z",
-                        "spc_TdgWa": 0,
-                        "idx_TdgWa": 8,
-                        "$$hashKey": "object:4830"
+                        "date": "2015-01-01T21:00:00.000Z"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z",
-                        "spc_TdgWa": 0,
-                        "idx_TdgWa": 9,
-                        "$$hashKey": "object:4831"
+                        "date": "2015-01-01T20:00:00.000Z"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z",
-                        "spc_TdgWa": 0,
-                        "idx_TdgWa": 10,
-                        "$$hashKey": "object:4832"
+                        "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3503"
+                "Pieces": []
             },
             {
                 "name": "Base",
@@ -2474,16 +1945,10 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_EfIOS": 0,
-                        "idx_EfIOS": 5,
-                        "$$hashKey": "object:4857"
+                        "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3504"
+                "Pieces": []
             }
         ]
     },
@@ -2691,24 +2156,15 @@
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-04-15T23:00:00.000Z",
-                        "spc_AjIpr": 0,
-                        "idx_AjIpr": 10,
-                        "$$hashKey": "object:5009"
+                        "date": "2015-04-15T23:00:00.000Z"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z",
-                        "spc_AjIpr": 0,
-                        "idx_AjIpr": 11,
-                        "$$hashKey": "object:5010"
+                        "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Weathered",
-                "Pieces": [],
-                "$$hashKey": "object:3509"
+                "Pieces": []
             },
             {
                 "name": "Wolf Mount",
@@ -2716,105 +2172,41 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-03-02T23:00:00.000Z",
-                        "spc_oDXVu": 0,
-                        "idx_oDXVu": 5,
-                        "$$hashKey": "object:5037"
+                        "date": "2015-03-02T23:00:00.000Z"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z",
-                        "spc_oDXVu": 0,
-                        "idx_oDXVu": 6,
-                        "$$hashKey": "object:5038"
+                        "date": "2015-01-01T20:00:00.000Z"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z",
-                        "spc_oDXVu": 0,
-                        "idx_oDXVu": 7,
-                        "$$hashKey": "object:5039"
+                        "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3510"
+                "Pieces": []
             },
             {
                 "name": "Base",
                 "States": [
                     {
-                        "name": "Strip Primer",
-                        "active": false,
-                        "date": "2015-05-17T02:16:02.136Z",
-                        "spc_HAIAD": 0,
-                        "idx_HAIAD": 0,
-                        "$$hashKey": "object:5053"
-                    },
-                    {
-                        "name": "Complete",
-                        "active": false,
-                        "date": "2015-05-17T02:16:02.136Z",
-                        "spc_HAIAD": 0,
-                        "idx_HAIAD": 1,
-                        "$$hashKey": "object:5054"
-                    },
-                    {
-                        "name": "Paint",
-                        "active": false,
-                        "date": "2015-05-17T02:16:02.136Z",
-                        "spc_HAIAD": 0,
-                        "idx_HAIAD": 2,
-                        "$$hashKey": "object:5055"
-                    },
-                    {
-                        "name": "Strip Painting",
-                        "active": true,
-                        "date": "2015-05-13T13:13:01.686Z",
-                        "spc_HAIAD": 0,
-                        "idx_HAIAD": 3,
-                        "$$hashKey": "object:5056"
-                    },
-                    {
-                        "name": "Dislike",
-                        "active": true,
-                        "date": "2015-05-04T14:47:25.399Z",
-                        "spc_HAIAD": 0,
-                        "idx_HAIAD": 4,
-                        "$$hashKey": "object:5057"
-                    },
-                    {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-03-02T23:00:00.000Z",
-                        "spc_HAIAD": 0,
-                        "idx_HAIAD": 5,
-                        "$$hashKey": "object:5058"
+                        "date": "2015-03-02T23:00:00.000Z"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z",
-                        "spc_HAIAD": 0,
-                        "idx_HAIAD": 6,
-                        "$$hashKey": "object:5059"
+                        "date": "2015-01-01T20:00:00.000Z"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z",
-                        "spc_HAIAD": 0,
-                        "idx_HAIAD": 7,
-                        "$$hashKey": "object:5060"
+                        "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3511"
+                "Pieces": []
             }
         ]
     },
@@ -2862,56 +2254,35 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_hKttf": 0,
-                        "idx_hKttf": 5,
-                        "$$hashKey": "object:5099"
+                        "date": "2015-01-01T23:00:00.000Z"
                     },
                     {
                         "name": "Finish Coat",
                         "active": true,
-                        "date": "2015-01-01T22:00:00.000Z",
-                        "spc_hKttf": 0,
-                        "idx_hKttf": 6,
-                        "$$hashKey": "object:5100"
+                        "date": "2015-01-01T22:00:00.000Z"
                     },
                     {
                         "name": "Weather",
                         "active": true,
-                        "date": "2015-01-01T21:30:00.000Z",
-                        "spc_hKttf": 0,
-                        "idx_hKttf": 7,
-                        "$$hashKey": "object:5101"
+                        "date": "2015-01-01T21:30:00.000Z"
                     },
                     {
                         "name": "Paint",
                         "active": true,
-                        "date": "2015-01-01T21:00:00.000Z",
-                        "spc_hKttf": 0,
-                        "idx_hKttf": 8,
-                        "$$hashKey": "object:5102"
+                        "date": "2015-01-01T21:00:00.000Z"
                     },
                     {
                         "name": "Prime",
                         "active": true,
-                        "date": "2015-01-01T20:00:00.000Z",
-                        "spc_hKttf": 0,
-                        "idx_hKttf": 9,
-                        "$$hashKey": "object:5103"
+                        "date": "2015-01-01T20:00:00.000Z"
                     },
                     {
                         "name": "Assemble",
                         "active": true,
-                        "date": "2015-01-01T19:00:00.000Z",
-                        "spc_hKttf": 0,
-                        "idx_hKttf": 10,
-                        "$$hashKey": "object:5104"
+                        "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3518"
+                "Pieces": []
             },
             {
                 "name": "Base",
@@ -2919,16 +2290,10 @@
                     {
                         "name": "Complete",
                         "active": true,
-                        "date": "2015-01-01T23:00:00.000Z",
-                        "spc_vPsVW": 0,
-                        "idx_vPsVW": 5,
-                        "$$hashKey": "object:5129"
+                        "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "transition": null,
-                "current": "Primed",
-                "Pieces": [],
-                "$$hashKey": "object:3519"
+                "Pieces": []
             }
         ]
     },

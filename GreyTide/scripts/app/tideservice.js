@@ -10,6 +10,20 @@ app.factory('tideService', ['$rootScope', '$http', 'stateService', function ($ro
         initial: { state: 'None', event: 'init', defer: true },
         events: stateService.model[0].events
     });
+    var pieces = function(model) {
+        return Enumerable.From(model).Select(function (x) {
+            return {
+                'name': x.name,
+                'points': x.points,
+                'States': Enumerable.From(x.States).Where(function (x) { return x.active }).Select(function (y) {
+                    return {
+                        'name': y.name, 'active': true, 'date': y.date
+                    };
+                }).ToArray(),
+                'Pieces': pieces(x.Pieces)
+            }
+            }).ToArray();
+        };
     var service = {
 
         model: [],
@@ -26,7 +40,7 @@ app.factory('tideService', ['$rootScope', '$http', 'stateService', function ($ro
                                 'name': y.name, 'active': true, 'date': y.date
                             };
                         }).ToArray(),
-                        'Pieces': x.Pieces
+                        'Pieces': pieces(x.Pieces)
                     };
                 }).ToJSON(ModelObjectReplacer);
             }

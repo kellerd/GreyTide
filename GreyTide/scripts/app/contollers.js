@@ -34,6 +34,7 @@ GreyTideControllers.controller('GreyTideController', ['$scope', '$filter', 'tide
     $scope.orderProp = "[faction,name]";
     $scope.setActive = function (model, item) {
         if (item.active == true) {
+            item.date = new Date().toISOString();
             model[item.name].call(model);
         }
     }

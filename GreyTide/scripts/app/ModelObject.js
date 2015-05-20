@@ -30,11 +30,22 @@ ModelObject.prototype = {
         if (this.tideService != null)
             this.tideService.SaveState();
         if (this.parent != null) {
-            var pieceStates = Enumerable.From(this.parent.Pieces).Select(function (p) { return p.current; });
-            if (Enumerable.From(this.parent.Pieces).Select(function (p) { return p.current; }).Distinct().Count() == 1)
-                this.parent[event].call(this.parent);
+            var p = this.parent;
+            if (Enumerable.From(this.parent.Pieces).Select(function (piece) { return piece.current; }).Distinct().Count() == 1) {
+                var state = Enumerable.From(p.States).Where(function (d) { return d.active == false && d.name == event; }).FirstOrDefault();
+                state.active = true;
+                state.date = new Date().toISOString();
+                p[event].call(p);
+            }
         }
         if (this.Pieces != null && this.Pieces.length > 0)
-            Enumerable.From(this.Pieces).ForEach(function (p) { p[event].call(p); })
+            Enumerable.From(this.Pieces).ForEach(function (p) {
+                if (Enumerable.From(p.transitions()).Contains(event)) {
+                    var state = Enumerable.From(p.States).Where(function (d) { return d.active == false && d.name == event; }).FirstOrDefault();
+                    state.active = true;
+                    state.date = new Date().toISOString();
+                    p[event].call(p);
+                }
+            })
     }
 };
