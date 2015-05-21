@@ -41,11 +41,15 @@
                                   on-close="Tide.SaveState()">
 
                 </div>
+            </li>
+            <li ng-show="model.Pieces.length==0"><button ng-click="AddPiece(model)">Split into Pieces</button></li>
+            <li ng-show="model.Pieces.length>0">
                 <ul>
                     <li ng-repeat="piece in model.Pieces">
+                        <button ng-click="RemovePiece(model,piece)">x</button>
                         <ul>
                             <li>{{piece.name}}</li>
-                            <li>{{piece.points}} Points</li>
+                            <li ng-show="piece.points!=0&&piece.points!=null&&piece.points!=undefined">{{piece.points}} Points</li>
                             <li>
                                 Recede tide: <div multi-select
                                                   input-model="piece.States"
@@ -60,8 +64,10 @@
 
                                 </div>
                             </li>
+                            <li ng-show="piece.Pieces.length==0"><button ng-click="AddPiece(piece)">Split into Pieces</button></li>
                         </ul>
                     </li>
+                    <li><button ng-click="AddPiece(model)">Add Piece</button></li>
                 </ul>
             </li>
         </ul>

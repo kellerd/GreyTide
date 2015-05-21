@@ -39,7 +39,7 @@ GreyTideControllers.controller('GreyTideController', ['$scope', '$filter', 'tide
         }
     }
     $scope.Remove = function (item) {
-        var index = $scope.Tide.model.indexOf(item)
+        var index = $scope.Tide.model.indexOf(item);
         $scope.Tide.model.splice(index, 1);
         $scope.Tide.SaveState();
     }
@@ -54,7 +54,7 @@ GreyTideControllers.controller('GreyTideController', ['$scope', '$filter', 'tide
             "points": parseFloat(newPoints),
             "faction": newFaction,
             "States": [{ name: "Startup", date: new Date().toISOString() }]
-        }, tideService))
+        }, tideService));
         $scope.Tide.SaveState();
     };
     $scope.query5 = true;
@@ -62,11 +62,23 @@ GreyTideControllers.controller('GreyTideController', ['$scope', '$filter', 'tide
     $scope.Factions = Enumerable.From($scope.Tide.model).Select(function (x) {
         return x.faction;
     }).Distinct().Select(function (x) { return { "name": x } }).ToArray();
-
+    $scope.AddPiece = function (model) {
+        model.Pieces.push(new ModelObject({
+            "name": 'New',
+            "points": 0,
+            "States": Enumerable.From(model.States).Where(function (d) { return d.active; }).ToArray()
+        }, tideService, model));
+        $scope.Tide.SaveState();
+    };
+    $scope.RemovePiece = function (model, item) {
+        var index = model.Pieces.indexOf(item);
+        model.Pieces.splice(index, 1);
+        $scope.Tide.SaveState();
+    };
 
     $scope.RefreshFromStore = function () {
         $scope.Tide.Refresh();
-    }
+    };
     //$scope.filterModelOnState = function (stateName, active) {
     //    return function (model) {
     //        return !stateName || 0 === stateName.length || Enumerable.From(model.States).Any(function (s) { return s.name == stateName && s.active == active; });

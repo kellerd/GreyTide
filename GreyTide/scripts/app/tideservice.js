@@ -17,7 +17,7 @@ app.factory('tideService', ['$rootScope', '$http', 'stateService', function ($ro
                 'points': x.points,
                 'States': Enumerable.From(x.States).Where(function (x) { return x.active }).Select(function (y) {
                     return {
-                        'name': y.name, 'active': true, 'date': y.date
+                        'name': y.name, 'date': y.date
                     };
                 }).ToArray(),
                 'Pieces': pieces(x.Pieces)
@@ -37,7 +37,7 @@ app.factory('tideService', ['$rootScope', '$http', 'stateService', function ($ro
                         'faction': x.faction,
                         'States': Enumerable.From(x.States).Where(function (x) { return x.active }).Select(function (y) {
                             return {
-                                'name': y.name, 'active': true, 'date': y.date
+                                'name': y.name, 'date': y.date
                             };
                         }).ToArray(),
                         'Pieces': pieces(x.Pieces)
