@@ -22,17 +22,17 @@
 <button ng-click="insertvisible = true;" ng-hide="insertvisible">+</button>
 <!--filter: filterModelOnState(query4.name, !query5)-->
 <ul>
-    <li ng-repeat="model in Tide.model | filter:query">
+    <li ng-repeat="model in Tide.model">
         <button ng-click="Remove(model)">x</button>
         <ul>
-            <li>{{model.name}} - <em>{{model.faction}}</em></li>
-            <li>{{model.points}} Points</li>
+            <li><a href="#" editable-text="model.name" onaftersave="Tide.SaveState()">{{model.name}}</a> - <em><a href="#" editable-text="model.faction" onaftersave="Tide.SaveState()">{{model.faction}}</a></em></li>
+            <li><a href="#" editable-number="model.points" onaftersave="Tide.SaveState()">{{model.points}}</a> Points</li>
             <li>Model is currently {{model.current}} as of {{Tide.LastState(model)}}</li>
             <li>
                 Recede tide: <div multi-select
                                   input-model="model.States"
                                   button-label="name"
-                                  item-label="name"
+                                  item-label="name,date"
                                   max-labels="0"
                                   disable-property="active"
                                   helper-elements=""
@@ -48,8 +48,8 @@
                     <li ng-repeat="piece in model.Pieces">
                         <button ng-click="RemovePiece(model,piece)">x</button>
                         <ul>
-                            <li>{{piece.name}}</li>
-                            <li ng-show="piece.points!=0&&piece.points!=null&&piece.points!=undefined">{{piece.points}} Points</li>
+                            <li><a href="#" editable-text="piece.name" onaftersave="Tide.SaveState()">{{piece.name}}</a></li>
+                            <li ng-show="piece.points!=0&&piece.points!=null&&piece.points!=undefined"><a href="#" editable-number="piece.points" onaftersave="Tide.SaveState()">{{piece.points}}</a> Points</li>
                             <li>
                                 Recede tide: <div multi-select
                                                   input-model="piece.States"
