@@ -50,8 +50,8 @@ GreyTideControllers.controller('GreyTideController', ['$scope', '$filter', 'tide
     $scope.Factions = Enumerable.From($scope.Tide.Items).Select(function (x) {
         return x.faction;
     }).Distinct().Select(function (x) { return { "name": x } }).ToArray();
-    $scope.AddItem = function (model,isRoot) {
-        model.Items.push(new ModelObject({
+    $scope.AddItem = function (model, isRoot) {
+        model.Items.splice(0,0,new ModelObject({
             "name": 'New',
             "points": 0,
             "faction": isRoot ? 'Faction':null,
@@ -59,15 +59,6 @@ GreyTideControllers.controller('GreyTideController', ['$scope', '$filter', 'tide
                             ? [{ name: "Startup", date: new Date().toISOString() }]
                             : Enumerable.From(model.States).Where(function (d) { return d.active; }).ToArray()
         }, tideService, model));
-        $scope.Tide.SaveState();
-    };
-    $scope.Insert = function (newName, newFaction, newPoints) {
-        $scope.Tide.Items.push(new ModelObject({
-            "name": newName,
-            "points": parseFloat(newPoints),
-            "faction": newFaction,
-            "States": [{ name: "Startup", date: new Date().toISOString() }]
-        }, tideService));
         $scope.Tide.SaveState();
     };
     $scope.RemoveItem = function (model, item) {

@@ -12,14 +12,6 @@
         <option value="-points">Points Descending</option>
     </select>
 </label>
-<div ng-show="insertvisible">
-    <label>Name<input ng-model="newName" /></label>
-    <label>Faction<input ng-model="newFaction" /></label>
-    <label>Points<input ng-model="newPoints" /></label>
-    <button ng-click="Insert(newName, newFaction, newPoints)">Insert</button>
-    <button ng-click="insertvisible = false;">Close</button>
-</div>
-<button ng-click="insertvisible = true;" ng-hide="insertvisible">+</button>
 <!--filter: filterModelOnState(query4.name, !query5)-->
 {{ item = Tide; '' }}
 <div ng-include="'partials/items.html'"></div>
