@@ -3,7 +3,7 @@
 /// <reference path="../angular.js" />
 var app = angular.module('greyTideApp');
 
-app.factory('tideService', ['$rootScope', '$http', 'stateService', '$q', function ($rootScope, $http, stateService, $q) {
+app.factory('tideService', ['$rootScope', '$http', 'stateService', function ($rootScope, $http, stateService) {
     var storageMethod = localStorage;
     StateMachine.create({
         target: ModelObject.prototype,
@@ -50,13 +50,8 @@ app.factory('tideService', ['$rootScope', '$http', 'stateService', '$q', functio
             if (!service.loading) {
                 if (storageMethod.tideService) {
                     service.loading = true;
-                    service.LoadFromJson(angular.fromJson(storageMethod.tideService)).then(function (greeting) {
-                        service.loading = false;
-                    }, function (reason) {
-                        alert('Failed: ' + reason);
-                    }, function (update) {
-                        service.Items.push(update);
-                    });
+                    service.LoadFromJson(angular.fromJson(storageMethod.tideService));
+                    service.loading = false;
                 }
                 if (service.Items.length == 0 || service.Items[0].name == "")
                     service.Refresh();
@@ -65,14 +60,7 @@ app.factory('tideService', ['$rootScope', '$http', 'stateService', '$q', functio
         LoadFromFile: function (file) {
             $http.get(file, { cache: false }).
                success(function (data) {
-                   service.LoadFromJson(data).then(function(greeting) {
-                       service.loading = false;
-                       service.SaveState();
-                   }, function(reason) {
-                       alert('Failed: ' + reason);
-                   }, function(update) {
-                       service.Items.push(update);
-                   });
+                   service.LoadFromJson(data);
                }).
                error(function (data, status, headers, config) {
                    service.loading = false;
@@ -80,17 +68,12 @@ app.factory('tideService', ['$rootScope', '$http', 'stateService', '$q', functio
                });
         },
         LoadFromJson: function (data) {
-            var deferred = $q.defer();
-
-            setTimeout(function () {
-                angular.forEach(data, function (x) {
-                    deferred.notify(new ModelObject(x, service));
-                });
-                deferred.resolve('Complete');
-                
-            }, 2000);
-
-            return deferred.promise;
+            service.Items = []
+            Enumerable.From(data).Select(function (x) { return new ModelObject(x, service) }).ForEach(function (x) {
+                service.Items.push(x);
+            });
+            service.loading = false;
+            service.SaveState();
         },
         Refresh: function () {
             if (!service.loading) {
