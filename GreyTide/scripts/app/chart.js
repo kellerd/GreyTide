@@ -13,7 +13,7 @@ app.directive('chartbar', function () {
 
             angular.element(document).ready(function () {
 
-                var model = Enumerable.From(scope.Tide.model);
+                var model = Enumerable.From(scope.Tide.Items);
                 var groups = model.GroupBy(function (data) { return data.faction });
                 var raw = groups.Select(function (model) {
                     return {
@@ -86,7 +86,7 @@ app.directive('chartline', function () {
             // set up slider on load
             angular.element(document).ready(function () {
 
-                var raw = Enumerable.From(scope.Tide.model).
+                var raw = Enumerable.From(scope.Tide.Items).
                     SelectMany(function (u) {
 
                         var orderedStates = Enumerable.From(u.States).Where(function (s) { return s.name != "Startup" && s.active }).

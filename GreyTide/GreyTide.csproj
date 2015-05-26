@@ -60,6 +60,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="partials\chart.html" />
+    <Content Include="partials\item.html" />
+    <Content Include="partials\items.html" />
     <Content Include="scripts\angular.min.js.map" />
     <Content Include="packages.config" />
     <Content Include="data\models.json" />
@@ -93,7 +95,6 @@
     <Content Include="scripts\jqPlot\copyright.txt" />
     <Content Include="scripts\jqPlot\excanvas.js" />
     <Content Include="scripts\jqPlot\excanvas.min.js" />
-    <Content Include="scripts\jqPlot\gpl-2.0.txt" />
     <Content Include="scripts\jqPlot\jqPlotCssStyling.txt" />
     <Content Include="scripts\jqPlot\jqPlotOptions.txt" />
     <Content Include="scripts\jqPlot\jquery.jqplot.css" />

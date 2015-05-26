@@ -38,18 +38,31 @@ GreyTideControllers.controller('GreyTideController', ['$scope', '$filter', 'tide
             model[item.name].call(model);
         }
     }
-    $scope.Remove = function (item) {
-        var index = $scope.Tide.model.indexOf(item);
-        $scope.Tide.model.splice(index, 1);
-        $scope.Tide.SaveState();
-    }
+    
     $scope.RemoveState = function (model, item) {
         var index = model.States.indexOf(item)
         model.States.splice(index, 1);
         $scope.Tide.SaveState();
     }
+    
+    $scope.query5 = true;
+    $scope.insertvisible = false;
+    $scope.Factions = Enumerable.From($scope.Tide.Items).Select(function (x) {
+        return x.faction;
+    }).Distinct().Select(function (x) { return { "name": x } }).ToArray();
+    $scope.AddItem = function (model,isRoot) {
+        model.Items.push(new ModelObject({
+            "name": 'New',
+            "points": 0,
+            "faction": isRoot ? 'Faction':null,
+            "States": isRoot
+                            ? [{ name: "Startup", date: new Date().toISOString() }]
+                            : Enumerable.From(model.States).Where(function (d) { return d.active; }).ToArray()
+        }, tideService, model));
+        $scope.Tide.SaveState();
+    };
     $scope.Insert = function (newName, newFaction, newPoints) {
-        $scope.Tide.model.push(new ModelObject({
+        $scope.Tide.Items.push(new ModelObject({
             "name": newName,
             "points": parseFloat(newPoints),
             "faction": newFaction,
@@ -57,22 +70,9 @@ GreyTideControllers.controller('GreyTideController', ['$scope', '$filter', 'tide
         }, tideService));
         $scope.Tide.SaveState();
     };
-    $scope.query5 = true;
-    $scope.insertvisible = false;
-    $scope.Factions = Enumerable.From($scope.Tide.model).Select(function (x) {
-        return x.faction;
-    }).Distinct().Select(function (x) { return { "name": x } }).ToArray();
-    $scope.AddPiece = function (model) {
-        model.Pieces.push(new ModelObject({
-            "name": 'New',
-            "points": 0,
-            "States": Enumerable.From(model.States).Where(function (d) { return d.active; }).ToArray()
-        }, tideService, model));
-        $scope.Tide.SaveState();
-    };
-    $scope.RemovePiece = function (model, item) {
-        var index = model.Pieces.indexOf(item);
-        model.Pieces.splice(index, 1);
+    $scope.RemoveItem = function (model, item) {
+        var index = model.Items.indexOf(item);
+        model.Items.splice(index, 1);
         $scope.Tide.SaveState();
     };
 

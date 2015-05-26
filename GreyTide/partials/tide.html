@@ -21,55 +21,5 @@
 </div>
 <button ng-click="insertvisible = true;" ng-hide="insertvisible">+</button>
 <!--filter: filterModelOnState(query4.name, !query5)-->
-<ul>
-    <li ng-repeat="model in Tide.model">
-        <button ng-click="Remove(model)">x</button>
-        <ul>
-            <li><a href="#" editable-text="model.name" onaftersave="Tide.SaveState()">{{model.name}}</a> - <em><a href="#" editable-text="model.faction" onaftersave="Tide.SaveState()">{{model.faction}}</a></em></li>
-            <li><a href="#" editable-number="model.points" onaftersave="Tide.SaveState()">{{model.points}}</a> Points</li>
-            <li>Model is currently {{model.current}} as of {{Tide.LastState(model)}}</li>
-            <li>
-                Recede tide: <div multi-select
-                                  input-model="model.States"
-                                  button-label="name"
-                                  item-label="name,date"
-                                  max-labels="0"
-                                  disable-property="active"
-                                  helper-elements=""
-                                  tick-property="active"
-                                  on-item-click="setActive(model, data)"
-                                  on-close="Tide.SaveState()">
-
-                </div>
-            </li>
-            <li ng-show="model.Pieces.length==0"><button ng-click="AddPiece(model)">Split into Pieces</button></li>
-            <li ng-show="model.Pieces.length>0">
-                <ul>
-                    <li ng-repeat="piece in model.Pieces">
-                        <button ng-click="RemovePiece(model,piece)">x</button>
-                        <ul>
-                            <li><a href="#" editable-text="piece.name" onaftersave="Tide.SaveState()">{{piece.name}}</a></li>
-                            <li ng-show="piece.points!=0&&piece.points!=null&&piece.points!=undefined"><a href="#" editable-number="piece.points" onaftersave="Tide.SaveState()">{{piece.points}}</a> Points</li>
-                            <li>
-                                Recede tide: <div multi-select
-                                                  input-model="piece.States"
-                                                  button-label="name"
-                                                  item-label="name"
-                                                  max-labels="0"
-                                                  disable-property="active"
-                                                  helper-elements=""
-                                                  tick-property="active"
-                                                  on-item-click="setActive(piece, data)"
-                                                  on-close="Tide.SaveState()">
-
-                                </div>
-                            </li>
-                            <li ng-show="piece.Pieces.length==0"><button ng-click="AddPiece(piece)">Split into Pieces</button></li>
-                        </ul>
-                    </li>
-                    <li><button ng-click="AddPiece(model)">Add Piece</button></li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-</ul>
+{{ item = Tide; '' }}
+<div ng-include="'partials/items.html'"></div>

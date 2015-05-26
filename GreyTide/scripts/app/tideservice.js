@@ -10,7 +10,7 @@ app.factory('tideService', ['$rootScope', '$http', 'stateService', function ($ro
         initial: { state: 'None', event: 'init', defer: true },
         events: stateService.model[0].events
     });
-    var pieces = function(model) {
+    var Items = function(model) {
         return Enumerable.From(model).Select(function (x) {
             return {
                 'name': x.name,
@@ -20,17 +20,17 @@ app.factory('tideService', ['$rootScope', '$http', 'stateService', function ($ro
                         'name': y.name, 'date': y.date
                     };
                 }).ToArray(),
-                'Pieces': pieces(x.Pieces)
+                'Items': Items(x.Items)
             }
             }).ToArray();
         };
     var service = {
 
-        model: [],
+        Items: [],
         loading: false,
         SaveState: function () {
-            if (!service.loading && service.model.length > 0) {
-                storageMethod.tideService = Enumerable.From(service.model).Select(function (x) {
+            if (!service.loading && service.Items.length > 0) {
+                storageMethod.tideService = Enumerable.From(service.Items).Select(function (x) {
                     return {
                         'name': x.name,
                         'points': x.points,
@@ -40,7 +40,7 @@ app.factory('tideService', ['$rootScope', '$http', 'stateService', function ($ro
                                 'name': y.name, 'date': y.date
                             };
                         }).ToArray(),
-                        'Pieces': pieces(x.Pieces)
+                        'Items': Items(x.Items)
                     };
                 }).ToJSON(ModelObjectReplacer);
             }
@@ -53,7 +53,7 @@ app.factory('tideService', ['$rootScope', '$http', 'stateService', function ($ro
                     service.LoadFromJson(angular.fromJson(storageMethod.tideService));
                     service.loading = false;
                 }
-                if (service.model.length == 0 || service.model[0].name == "")
+                if (service.Items.length == 0 || service.Items[0].name == "")
                     service.Refresh();
             }
         },
@@ -68,9 +68,9 @@ app.factory('tideService', ['$rootScope', '$http', 'stateService', function ($ro
                });
         },
         LoadFromJson: function (data) {
-            service.model = []
+            service.Items = []
             Enumerable.From(data).Select(function (x) { return new ModelObject(x, service) }).ForEach(function (x) {
-                service.model.push(x);
+                service.Items.push(x);
             });
             service.loading = false;
             service.SaveState();

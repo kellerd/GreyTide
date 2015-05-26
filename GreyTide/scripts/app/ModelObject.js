@@ -14,7 +14,7 @@ ModelObject = function (json, tideService,parent) {    // my constructor functio
     this[lastState.name].call(this);
     this.tideService = tideService;
     this.parent = parent;
-    this.Pieces = Enumerable.From(json.Pieces).Select(function (p) { return new ModelObject(p, tideService, self) }).ToArray();
+    this.Items = Enumerable.From(json.Items).Select(function (p) { return new ModelObject(p, tideService, self) }).ToArray();
 };
 ModelObjectReplacer = function (key, value) {
     if (key == "tideService") return undefined;
@@ -31,7 +31,7 @@ ModelObject.prototype = {
             this.tideService.SaveState();
         if (this.parent != null) {
             var p = this.parent;
-            if (Enumerable.From(this.parent.Pieces).Select(function (piece) { return piece.current; }).Distinct().Count() == 1) {
+            if (Enumerable.From(this.parent.Items).Select(function (item) { return item.current; }).Distinct().Count() == 1) {
                 var state = Enumerable.From(p.States).Where(function (d) { return d.active == false && d.name == event; }).FirstOrDefault();
                 if (!(typeof state === 'undefined')) {
                 state.active = true;
@@ -40,8 +40,8 @@ ModelObject.prototype = {
                 }
             }
         }
-        if (this.Pieces != null && this.Pieces.length > 0)
-            Enumerable.From(this.Pieces).ForEach(function (p) {
+        if (this.Items != null && this.Items.length > 0)
+            Enumerable.From(this.Items).ForEach(function (p) {
                 if (Enumerable.From(p.transitions()).Contains(event)) {
                     var state = Enumerable.From(p.States).Where(function (d) { return d.active == false && d.name == event; }).FirstOrDefault();
                     if (!(typeof state === 'undefined')) {
