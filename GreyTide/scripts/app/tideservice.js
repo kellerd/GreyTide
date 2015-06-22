@@ -3,7 +3,7 @@
 /// <reference path="../angular.js" />
 var app = angular.module('greyTideApp');
 
-app.factory('tideService', ['$rootScope', '$http', 'stateService', function ($rootScope, $http, stateService) {
+app.factory('tideService', ['$rootScope', '$http', 'stateService', 'responsivenessService', function ($rootScope, $http, stateService, responsivenessService) {
     var storageMethod = localStorage;
     StateMachine.create({
         target: ModelObject.prototype,
@@ -50,10 +50,10 @@ app.factory('tideService', ['$rootScope', '$http', 'stateService', function ($ro
             if (!service.loading) {
                 if (storageMethod.tideService) {
                     service.loading = true;
+
                     service.LoadFromJson(angular.fromJson(storageMethod.tideService));
                     service.loading = false;
-                }
-                if (service.Items.length == 0 || service.Items[0].name == "")
+                } else
                     service.Refresh();
             }
         },
@@ -68,12 +68,16 @@ app.factory('tideService', ['$rootScope', '$http', 'stateService', function ($ro
                });
         },
         LoadFromJson: function (data) {
-            service.Items = []
-            Enumerable.From(data).Select(function (x) { return new ModelObject(x, service) }).ForEach(function (x) {
-                service.Items.push(x);
-            });
-            service.loading = false;
-            service.SaveState();
+            service.Items = [];
+             responsivenessService.responsiveMap(data, function (model) {
+                return new ModelObject(model, service);
+             }).then(function (data) {
+                 service.Items.push.apply(service.Items,data);
+                 service.loading = false;
+                 service.SaveState();
+             });
+
+
         },
         Refresh: function () {
             if (!service.loading) {

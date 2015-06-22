@@ -7,8 +7,8 @@
             <a href="#" editable-text="child.faction" onaftersave="Tide.SaveState()">{{child.faction}}</a>
         </em>
     </li>
-    <li ng-show="child.points!=0&&child.points!=null&&child.points!=undefined">
-        <a href="#" editable-number="child.points" onaftersave="Tide.SaveState()">{{child.points}}</a> Points
+    <li>
+        <a href="#" editable-number="child.points" onaftersave="Tide.SaveState()">{{child.points || 0}}</a> Points
     </li>
     <li>
         {{child.name}} is currently {{child.current}} as of {{Tide.LastState(child)}}

@@ -172,6 +172,7 @@
     <Content Include="scripts\linq.min.js" />
     <Content Include="scripts\multi-select\angular-multi-select.css" />
     <Content Include="scripts\multi-select\angular-multi-select.js" />
+    <Content Include="scripts\parallel\parallel.js" />
     <Content Include="scripts\x-editable\xeditable.css" />
     <Content Include="scripts\x-editable\xeditable.js" />
     <Content Include="scripts\x-editable\xeditable.min.js" />
