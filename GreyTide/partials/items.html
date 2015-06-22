@@ -1,4 +1,4 @@
 ﻿<button ng-click="AddItem(item,item==Tide)">{{item.Items.length==0 ? 'Split into Items' : 'Add item'}}</button>
 <ul>
-    <li ng-repeat="child in item.Items" ng-include="'partials/item.html'"></li>
+    <li ng-repeat="child in item.Items| filter:criteriaMatch() | orderBy:orderProp" ng-include="'partials/item.html'"></li>
 </ul>

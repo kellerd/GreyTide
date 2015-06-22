@@ -1,6 +1,13 @@
 ﻿/// <reference path="../linq-vsdoc.js" />
 /// <reference path="../linq.min.js" />
 /// <reference path="app.js" />
+/// <reference path="tideservice.js" />
+/// <reference path="state-machine.js" />
+/// <reference path="stateservice.js" />
+/// <reference path="ModelObject.js" />
+/// <reference path="route.js" />
+/// <reference path="chart.js" />
+/// <reference path="ModelObject.js" />
 var GreyTideControllers = angular.module('GreyTideControllers', []);
 
 GreyTideControllers.controller('StateController', ['$scope', '$http', 'stateService', function ($scope, $http, stateService) {
@@ -46,10 +53,21 @@ GreyTideControllers.controller('GreyTideController', ['$scope', '$filter', 'tide
     }
     
     $scope.query5 = true;
-    $scope.insertvisible = false;
-    $scope.Factions = Enumerable.From($scope.Tide.Items).Select(function (x) {
-        return x.faction;
-    }).Distinct().Select(function (x) { return { "name": x } }).ToArray();
+
+    $scope.criteriaMatch = function () {
+        var strCheck = function (str) {
+            return ($scope.query1 == undefined ||  (str && str.indexOf($scope.query1) > -1)) && ($scope.query2 == undefined || (str && str.indexOf($scope.query2) > -1));
+        }
+        return function (item) {
+            return item.parent ||
+                (
+                    (!$scope.query5 || item.current != "Completed") &&
+                    (strCheck(item.name) || strCheck(item.faction) || strCheck((item.points | 0).toString())) &&
+                    (!$scope.query3 || item.current.indexOf($scope.query3) > -1)
+                );
+        };
+    };
+
     $scope.AddItem = function (model, isRoot) {
         model.Items.splice(0,0,new ModelObject({
             "name": 'New',
