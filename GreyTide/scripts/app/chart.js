@@ -13,7 +13,7 @@ app.directive('chartbar', function () {
         scope: true,
         link: function (scope, el, attrs) {
 
-            angular.element(document).ready(function () {
+            //angular.element(document).ready(function () {
 
                 var model = Enumerable.From(scope.Tide.Items);
                 var groups = model.GroupBy(function (data) { return data.faction });
@@ -62,7 +62,7 @@ app.directive('chartbar', function () {
                     nv.utils.windowResize(updateSize);
                     return chart;
                 });
-            });
+            //});
         }
     }
 });
@@ -75,7 +75,7 @@ app.directive('chartline', function () {
         link: function (scope, el, attrs) {
 
             // set up slider on load
-            angular.element(document).ready(function () {
+           // angular.element(document).ready(function () {
 
                 var raw = Enumerable.From(scope.Tide.Items).
                     SelectMany(function (u) {
@@ -182,7 +182,7 @@ app.directive('chartline', function () {
                     return chart;
                 });
 
-            });
+           // });
         }
     }
 });
