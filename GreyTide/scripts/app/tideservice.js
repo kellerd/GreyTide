@@ -10,37 +10,37 @@ app.factory('tideService', ['$rootScope', '$http', 'stateService', 'responsivene
         initial: { state: 'None', event: 'init', defer: true },
         events: stateService.model[0].events
     });
-    var Items = function(model) {
+    var items = function (model) {
         return Enumerable.From(model).Select(function (x) {
             return {
                 'name': x.name,
                 'points': x.points,
-                'States': Enumerable.From(x.States).Where(function (x) { return x.active }).Select(function (y) {
+                'states': Enumerable.From(x.states).Where(function (x) { return x.active }).Select(function (y) {
                     return {
                         'name': y.name, 'date': y.date
                     };
                 }).ToArray(),
-                'Items': Items(x.Items)
+                'items': items(x.items)
             }
             }).ToArray();
         };
     var service = {
 
-        Items: [],
+        items: [],
         loading: false,
         SaveState: function () {
-            if (!service.loading && service.Items.length > 0) {
-                storageMethod.tideService = Enumerable.From(service.Items).Select(function (x) {
+            if (!service.loading && service.items.length > 0) {
+                storageMethod.tideService = Enumerable.From(service.items).Select(function (x) {
                     return {
                         'name': x.name,
                         'points': x.points,
                         'faction': x.faction,
-                        'States': Enumerable.From(x.States).Where(function (x) { return x.active }).Select(function (y) {
+                        'states': Enumerable.From(x.states).Where(function (x) { return x.active }).Select(function (y) {
                             return {
                                 'name': y.name, 'date': y.date
                             };
                         }).ToArray(),
-                        'Items': Items(x.Items)
+                        'items': items(x.items)
                     };
                 }).ToJSON(ModelObjectReplacer);
             }
@@ -68,11 +68,11 @@ app.factory('tideService', ['$rootScope', '$http', 'stateService', 'responsivene
                });
         },
         LoadFromJson: function (data) {
-            service.Items = [];
+            service.items = [];
              responsivenessService.responsiveMap(data, function (model) {
                 return new ModelObject(model, service);
              }).then(function (data) {
-                 service.Items.push.apply(service.Items,data);
+                 service.items.push.apply(service.items, data);
                  service.loading = false;
                  service.SaveState();
              });
@@ -86,7 +86,7 @@ app.factory('tideService', ['$rootScope', '$http', 'stateService', 'responsivene
             }
         },
         LastState: function (item) {
-            var maxDateMili = Enumerable.From(item.States).Where(function (x) { return x.active; }).Max(function (x) { return Date.parse(x.date); });
+            var maxDateMili = Enumerable.From(item.states).Where(function (x) { return x.active; }).Max(function (x) { return Date.parse(x.date); });
             return new Date(maxDateMili).toLocaleDateString();
         }
     }

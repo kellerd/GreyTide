@@ -1,6 +1,6 @@
 ﻿<button ng-click="RefreshFromStore()">Restore from default</button>
 
-<div ng-repeat="stateMachine in States.model">
+<div ng-repeat="stateMachine in states.model">
     <p>{{stateMachine.name}}</p>
     <ul>
         <li ng-repeat="state in stateMachine.events">

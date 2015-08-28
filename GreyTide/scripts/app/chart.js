@@ -13,9 +13,9 @@ app.directive('chartbar', function () {
         scope: true,
         link: function (scope, el, attrs) {
 
-            //angular.element(document).ready(function () {
+            angular.element(document).ready(function () {
 
-                var model = Enumerable.From(scope.Tide.Items);
+                var model = Enumerable.From(scope.Tide.items);
                 var groups = model.GroupBy(function (data) { return data.faction });
                 var zeroUnion = model.Distinct(function (data) { return data.current }).Select(function (data) { return { x: data.current, y: 0 }; });
                 var data = groups.Select(function (model) {
@@ -62,7 +62,7 @@ app.directive('chartbar', function () {
                     nv.utils.windowResize(updateSize);
                     return chart;
                 });
-            //});
+            });
         }
     }
 });
@@ -75,17 +75,17 @@ app.directive('chartline', function () {
         link: function (scope, el, attrs) {
 
             // set up slider on load
-           // angular.element(document).ready(function () {
+            angular.element(document).ready(function () {
 
-                var raw = Enumerable.From(scope.Tide.Items).
+                var raw = Enumerable.From(scope.Tide.items).
                     SelectMany(function (u) {
 
-                        var orderedStates = Enumerable.From(u.States).Where(function (s) { return s.name != "Startup" && s.active }).
+                        var orderedStates = Enumerable.From(u.states).Where(function (s) { return s.name != "Startup" && s.active }).
                         					                   OrderBy(function (s) { return s.date });
                         var currentObject = new ModelObject({
                             "name": u.name,
                             "points": u.points,
-                            "States": [orderedStates.First()]
+                            "states": [orderedStates.First()]
                         });
 
                         var states = orderedStates.
@@ -104,7 +104,7 @@ app.directive('chartline', function () {
                         });
                     });
 
-                var statesOrder = Enumerable.From(scope.States.model[0].events).ToDictionary("$.to");
+                var statesOrder = Enumerable.From(scope.states.model[0].events).ToDictionary("$.to");
 
                 var dateUnion =
                     raw.
@@ -182,8 +182,80 @@ app.directive('chartline', function () {
                     return chart;
                 });
 
-           // });
+            });
         }
     }
 });
 
+
+//app.directive('chartbar', function () {
+//    return {
+//        restrict: 'A',
+//        scope: true,
+//        link: function (scope, el, attrs) {
+
+//            angular.element(document).ready(function () {
+
+//                var model = Enumerable.From(scope.Tide.items);
+//                var groups = model.GroupBy(function (data) { return data.faction });
+//                var raw = groups.Select(function (model) {
+//                    return {
+//                        Faction: model.Key(),
+//                        List: Enumerable.From(model).Select(function (singlemodel) {
+//                            return {
+//                                state: singlemodel.current,
+//                                points: singlemodel.points,
+//                                name: singlemodel.name
+//                            };
+//                        })
+//                    };
+//                });
+//                var statesOrder = Enumerable.From(scope.states.model[0].events).ToDictionary("$.to");
+//                var series = raw.SelectMany("$.List.Select('$.state')").OrderBy(function (d) {
+//                    return statesOrder.Contains(d) ? statesOrder.Get(d).order : -1;
+//                }).Distinct();
+//                var data = series.Select(function (seri) {
+//                    return raw.Select(function (r) {
+//                        return r.List.Where(function (ud) {
+//                            return ud.state == seri;
+//                        }).Select(function (ud) {
+//                            return ud.points;
+//                        }).DefaultIfEmpty(0.0).Sum();
+//                    }).ToArray();
+//                });
+//                var ticks = raw.Select("s=>s.Faction").ToArray();
+
+//                //var plot3 = $.jqplot(el[0].id, data.ToArray(), {
+//                //    // Tell the plot to stack the bars.
+//                //    stackSeries: true,
+//                //    series: series.Select(function (x) { return { label: x } }).ToArray(),
+//                //    seriesDefaults: {
+//                //        renderer: $.jqplot.BarRenderer,
+//                //        rendererOptions: {
+//                //            // Put a 30 pixel margin between bars.
+//                //            barMargin: 30,
+//                //            // Highlight bars when mouse button pressed.
+//                //            // Disables default highlighting on mouse over.
+//                //            highlightMouseDown: true
+//                //        },
+//                //        pointLabels: { show: true }
+//                //    },
+//                //    title: "Points by Faction",
+//                //    axes: {
+//                //        xaxis: {
+//                //            renderer: $.jqplot.CategoryAxisRenderer,
+//                //            ticks: ticks
+//                //        }, yaxis: {
+//                //            padMin: 0
+//                //        }
+//                //    },
+//                //    legend: {
+//                //        show: true,
+//                //        location: 'e',
+//                //        placement: 'inside'
+//                //    }
+//                //});
+//            });
+//        }
+//    }
+//});

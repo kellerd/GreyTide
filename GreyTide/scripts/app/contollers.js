@@ -11,7 +11,7 @@
 var GreyTideControllers = angular.module('GreyTideControllers', []);
 
 GreyTideControllers.controller('StateController', ['$scope', '$http', 'stateService', function ($scope, $http, stateService) {
-    $scope.States = stateService;
+    $scope.states = stateService;
 
     $scope.Insert = function (stateMachine, newName, newFrom, newTo) {
         stateMachine.events.push({
@@ -19,7 +19,7 @@ GreyTideControllers.controller('StateController', ['$scope', '$http', 'stateServ
             "from": newFrom,
             "to": newTo
         })
-        $scope.States.SaveState();
+        $scope.states.SaveState();
     };
     $scope.insertvisible = false;
 
@@ -27,17 +27,17 @@ GreyTideControllers.controller('StateController', ['$scope', '$http', 'stateServ
         
         var index = stateMachine.events.indexOf(item)
         stateMachine.events.splice(index, 1);
-        $scope.States.SaveState();
+        $scope.states.SaveState();
     }
 
     $scope.RefreshFromStore = function () {
-        $scope.States.Refresh();
+        $scope.states.Refresh();
     }
 }]);
 
 GreyTideControllers.controller('GreyTideController', ['$scope', '$filter', 'tideService', 'stateService', function ($scope, $filter, tideService, stateService) {
     $scope.Tide = tideService;
-    $scope.States = stateService;
+    $scope.states = stateService;
     $scope.orderProp = "[faction,name]";
     $scope.setActive = function (model, item) {
         if (item.active == true) {
@@ -47,8 +47,8 @@ GreyTideControllers.controller('GreyTideController', ['$scope', '$filter', 'tide
     }
     
     $scope.RemoveState = function (model, item) {
-        var index = model.States.indexOf(item)
-        model.States.splice(index, 1);
+        var index = model.states.indexOf(item)
+        model.states.splice(index, 1);
         $scope.Tide.SaveState();
     }
     
@@ -69,19 +69,19 @@ GreyTideControllers.controller('GreyTideController', ['$scope', '$filter', 'tide
     };
 
     $scope.AddItem = function (model, isRoot) {
-        model.Items.splice(0,0,new ModelObject({
+        model.items.splice(0, 0, new ModelObject({
             "name": 'New',
             "points": 0,
             "faction": isRoot ? 'Faction':null,
-            "States": isRoot
+            "states": isRoot
                             ? [{ name: "Startup", date: new Date().toISOString() }]
-                            : Enumerable.From(model.States).Where(function (d) { return d.active; }).ToArray()
+                            : Enumerable.From(model.states).Where(function (d) { return d.active; }).ToArray()
         }, tideService, model));
         $scope.Tide.SaveState();
     };
     $scope.RemoveItem = function (model, item) {
-        var index = model.Items.indexOf(item);
-        model.Items.splice(index, 1);
+        var index = model.items.indexOf(item);
+        model.items.splice(index, 1);
         $scope.Tide.SaveState();
     };
 
@@ -90,12 +90,12 @@ GreyTideControllers.controller('GreyTideController', ['$scope', '$filter', 'tide
     };
     //$scope.filterModelOnState = function (stateName, active) {
     //    return function (model) {
-    //        return !stateName || 0 === stateName.length || Enumerable.From(model.States).Any(function (s) { return s.name == stateName && s.active == active; });
+    //        return !stateName || 0 === stateName.length || Enumerable.From(model.states).Any(function (s) { return s.name == stateName && s.active == active; });
     //    }
     //};
 }]);
 
 GreyTideControllers.controller('ChartController', ['$scope', 'tideService', 'stateService', function ($scope, tideService, stateService) {
     $scope.Tide = tideService;
-    $scope.States = stateService;
+    $scope.states = stateService;
 }]);
