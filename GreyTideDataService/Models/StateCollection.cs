@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-
+using Breeze;
 namespace GreyTideDataService.Models
 {
     //"name": "Default", "events": []

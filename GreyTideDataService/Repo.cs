@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
+using Breeze.ContextProvider;
 using GreyTideDataService.Models;
 using Newtonsoft.Json;
 
 namespace GreyTideDataService
 {
-    public class Repo
+    public class Repo : ContextProvider
     {
 
 
@@ -24,16 +26,41 @@ namespace GreyTideDataService
             public TaskAwaiter<T> GetAwaiter() { return Value.GetAwaiter(); }
         }
 
-        public static AsyncLazy<IEnumerable<ModelPart>> Models =
-           new AsyncLazy<IEnumerable<ModelPart>>(() => 
+        public static Lazy<IEnumerable<ModelPart>> Models =
+           new Lazy<IEnumerable<ModelPart>>(() => 
                JsonConvert.DeserializeObject<IEnumerable<ModelPart>>(
                        File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data/models.json"))
-               ));
+               ), LazyThreadSafetyMode.ExecutionAndPublication);
 
-        public static AsyncLazy<IEnumerable<StateCollection>> States =
-           new AsyncLazy<IEnumerable<StateCollection>>(() =>
+        public static Lazy<IEnumerable<StateCollection>> States =
+           new Lazy<IEnumerable<StateCollection>>(() =>
                JsonConvert.DeserializeObject<IEnumerable<StateCollection>>(
                 File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data/states.json"))
-               ));
+               ), LazyThreadSafetyMode.ExecutionAndPublication);
+
+        public override IDbConnection GetDbConnection()
+        {
+            return null;
+        }
+
+        protected override void OpenDbConnection()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void CloseDbConnection()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override string BuildJsonMetadata()
+        {
+            return null;
+        }
+
+        protected override void SaveChangesCore(SaveWorkState saveWorkState)
+        {
+            throw new NotImplementedException(); //Upload to azure
+        }
     }
 }

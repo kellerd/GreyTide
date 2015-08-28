@@ -1,8 +1,9 @@
 ﻿/// <reference path="../angular.js" />
+/// <reference path="greyTideContext.js" />
 var app = angular.module('greyTideApp');
 
 
-app.factory('stateService', ['$rootScope', '$http', function ($rootScope, $http) {
+app.factory('stateService', ['$rootScope', '$http', 'greyTideContext', function ($rootScope, $http, greyTideContext) {
     var storageMethod = localStorage;
     var service = {
 
@@ -33,6 +34,7 @@ app.factory('stateService', ['$rootScope', '$http', function ($rootScope, $http)
         },
         Refresh: function () {
             service.LoadFromJson('data/states.json');
+            greyTideContext.getStates();
         }
     }
 
