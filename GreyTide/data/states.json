@@ -20,7 +20,7 @@
             { "order": 2,"name": "Buy Broken", "from": [ "none", "Nothing", "Shopping For" ], "to": "Requires Assembly" },
             { "order": 2,"name": "Buy New", "from": [ "none", "Nothing", "Shopping For" ], "to": "NOS" },
             { "order": 1,"name": "Want", "from": [ "none", "Nothing" ], "to": "Shopping For" },
-            { "order": -1,"name": "Startup", "from": "none", "to": "Nothing" }
+            { "order": -1,"name": "Startup", "from": ["none"], "to": "Nothing" }
         ]
     }
 ]

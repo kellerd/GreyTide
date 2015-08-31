@@ -26,15 +26,11 @@ app.factory('stateService', ['$rootScope', '$http', 'greyTideContext', function 
             if (service.model.length == 0 || service.model[0].name == "")
                 service.Refresh();
         },
-        LoadFromJson: function (file) {
-            $http.get(file).success(function (data) {
+        Refresh: function () {
+            greyTideContext.getStates(function (data) {
                 service.model = data;
                 service.SaveState();
-            });
-        },
-        Refresh: function () {
-            service.LoadFromJson('data/states.json');
-            greyTideContext.getStates();
+            }, function (error) { alert(error); });
         }
     }
 

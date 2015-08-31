@@ -3,7 +3,7 @@
 /// <reference path="../angular.js" />
 var app = angular.module('greyTideApp');
 
-app.factory('tideService', ['$rootScope', '$http', 'stateService', 'responsivenessService', function ($rootScope, $http, stateService, responsivenessService) {
+app.factory('tideService', ['$rootScope', '$http', 'stateService', 'responsivenessService','greyTideContext', function ($rootScope, $http, stateService, responsivenessService, greyTideContext) {
     var storageMethod = localStorage;
     StateMachine.create({
         target: ModelObject.prototype,
@@ -81,8 +81,9 @@ app.factory('tideService', ['$rootScope', '$http', 'stateService', 'responsivene
         },
         Refresh: function () {
             if (!service.loading) {
-                service.loading = true;
-                service.LoadFromFile('data/models.json');
+                greyTideContext.getModels(function (data) {
+                    service.LoadFromJson(data);
+                }, function (error) { alert(error); });
             }
         },
         LastState: function (item) {

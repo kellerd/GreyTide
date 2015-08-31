@@ -100,26 +100,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\BreezeWebApiConfig.cs" />
-    <Compile Include="Controllers\GreyTideController.cs" />
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Repo.cs" />
-    <Compile Include="Models\Model.cs" />
-    <Compile Include="Models\ModelPartState.cs" />
-    <Compile Include="Models\State.cs" />
-    <Compile Include="Models\StateCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="App_Data\models.json" />
-    <Content Include="App_Data\states.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

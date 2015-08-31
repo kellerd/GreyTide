@@ -88,11 +88,6 @@ GreyTideControllers.controller('GreyTideController', ['$scope', '$filter', 'tide
     $scope.RefreshFromStore = function () {
         $scope.Tide.Refresh();
     };
-    //$scope.filterModelOnState = function (stateName, active) {
-    //    return function (model) {
-    //        return !stateName || 0 === stateName.length || Enumerable.From(model.states).Any(function (s) { return s.name == stateName && s.active == active; });
-    //    }
-    //};
 }]);
 
 GreyTideControllers.controller('ChartController', ['$scope', 'tideService', 'stateService', function ($scope, tideService, stateService) {

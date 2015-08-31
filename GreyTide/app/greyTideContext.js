@@ -30,7 +30,7 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
         breeze.NamingConvention.camelCase.setAsDefault();
 
         var dataService = new breeze.DataService({
-            serviceName: "http://localhost:54040/breeze/GreyTide",
+            serviceName: "breeze/GreyTide",
             hasServerMetadata: false // don't ask the server for metadata
         });
 
@@ -68,7 +68,7 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
         return saveEntity(state);
     }
 
-    function getStates(statesObservable, errorObservable) {
+    function getStates(statesFunction, errorFunction) {
         return breeze.EntityQuery
             .from("States")
             .using(manager).execute()
@@ -76,13 +76,11 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
             .catch(getFailed);
 
         function getSucceeded(data) {
-            alter(data.results);
-            //statesObservable(data.results);
+            statesFunction(data.results);
         }
 
         function getFailed(error) {
-            alert(error);
-            //errorObservable("Error retrieving states: " + error.message);
+            errorFunction("Error retrieving states: " + error.message);
         }
     }
 

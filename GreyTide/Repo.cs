@@ -29,13 +29,13 @@ namespace GreyTideDataService
         public static Lazy<IEnumerable<ModelPart>> Models =
            new Lazy<IEnumerable<ModelPart>>(() => 
                JsonConvert.DeserializeObject<IEnumerable<ModelPart>>(
-                       File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data/models.json"))
+                       File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data/models.json"))
                ), LazyThreadSafetyMode.ExecutionAndPublication);
 
         public static Lazy<IEnumerable<StateCollection>> States =
            new Lazy<IEnumerable<StateCollection>>(() =>
                JsonConvert.DeserializeObject<IEnumerable<StateCollection>>(
-                File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data/states.json"))
+                File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data/states.json"))
                ), LazyThreadSafetyMode.ExecutionAndPublication);
 
         public override IDbConnection GetDbConnection()

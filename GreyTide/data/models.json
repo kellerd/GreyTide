@@ -3,7 +3,7 @@
         "name": "Hive Tyrant",
         "points": 255,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Dislike",
                 
@@ -20,13 +20,13 @@
                 "date": "2015-01-01T12:49:20.789Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Hive Tyrant",
         "points": 255,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Complete",
                 
@@ -53,11 +53,11 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": [
+        "items": [
             {
                 "name": "Model",
                 "points": 255,
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
@@ -84,19 +84,19 @@
                         "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             },
             {
                 "name": "Base",
                 "points": 0,
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
                         "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             }
         ]
     },
@@ -104,7 +104,7 @@
         "name": "Tervigon",
         "points": 220,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Complete",
                 
@@ -131,13 +131,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Venomthrope",
         "points": 45,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -149,13 +149,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Venomthrope Finecast",
         "points": 45,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -172,13 +172,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Zoanthrope",
         "points": 100,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -190,13 +190,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Zoanthrope",
         "points": 100,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Complete",
                 
@@ -223,10 +223,10 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": [
+        "items": [
             {
                 "name": "Model",
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
@@ -253,18 +253,18 @@
                         "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             },
             {
                 "name": "Base",
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
                         "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             }
         ]
     },
@@ -272,7 +272,7 @@
         "name": "Zoanthrope Finecast",
         "points": 50,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -289,13 +289,13 @@
                 "date": "2015-01-01T12:49:20.793Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Hormagaunt",
         "points": 20,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Buy New",
                 
@@ -307,13 +307,13 @@
                 "date": "2015-01-01T12:49:20.793Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Hormagaunt",
         "points": 80,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Complete",
                 
@@ -330,13 +330,13 @@
                 "date": "2015-01-01T21:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Ripper Swarm",
         "points": 75,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Complete",
                 
@@ -353,13 +353,13 @@
                 "date": "2015-01-01T21:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Termagaunt",
         "points": 200,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Complete",
                 
@@ -386,11 +386,11 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": [
+        "items": [
             {
                 "name": "Model",
                 "points": 200,
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
@@ -417,19 +417,19 @@
                         "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             },
             {
                 "name": "Base",
                 "points": 0,
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
                         "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             }
         ]
     },
@@ -437,7 +437,7 @@
         "name": "Termagaunt",
         "points": 64,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Complete",
                 
@@ -454,13 +454,13 @@
                 "date": "2015-01-01T21:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Gargoyle",
         "points": 60,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Complete",
                 
@@ -487,13 +487,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Hive Crone",
         "points": 155,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Dislike",
                 
@@ -510,13 +510,13 @@
                 "date": "2015-01-01T12:49:20.794Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Biovore",
         "points": 80,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -528,13 +528,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Exocrine",
         "points": 170,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -566,13 +566,13 @@
                 "date": "2015-01-01T12:49:20.794Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Mawloc",
         "points": 140,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Complete",
                 
@@ -599,11 +599,11 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": [
+        "items": [
             {
                 "name": "Model",
                 "points": 140,
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
@@ -630,19 +630,19 @@
                         "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             },
             {
                 "name": "Base",
                 "points": 0,
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
                         "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             }
         ]
     },
@@ -650,7 +650,7 @@
         "name": "Tyrant Guard",
         "points": 260,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Dislike",
                 
@@ -667,13 +667,13 @@
                 "date": "2015-01-01T12:49:20.794Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Hive Guard",
         "points": 55,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Complete",
                 
@@ -700,11 +700,11 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": [
+        "items": [
             {
                 "name": "Model",
                 "points": 55,
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
@@ -731,19 +731,19 @@
                         "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             },
             {
                 "name": "Base",
                 "points": 0,
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
                         "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             }
         ]
     },
@@ -751,7 +751,7 @@
         "name": "Deathleaper",
         "points": 130,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Paint",
                 
@@ -768,11 +768,11 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": [
+        "items": [
             {
                 "name": "Model",
                 "points": 130,
-                "States": [
+                "states": [
                     {
                         "name": "Paint",
                         
@@ -789,19 +789,19 @@
                         "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             },
             {
                 "name": "Base",
                 "points": 0,
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
                         "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             }
         ]
     },
@@ -809,7 +809,7 @@
         "name": "Hive Tyrant",
         "points": 185,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Complete",
                 
@@ -826,13 +826,13 @@
                 "date": "2015-01-01T21:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Tyranid Prime",
         "points": 130,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Complete",
                 
@@ -859,11 +859,11 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": [
+        "items": [
             {
                 "name": "Model",
                 "points": 130,
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
@@ -890,19 +890,19 @@
                         "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             },
             {
                 "name": "Base",
                 "points": 0,
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
                         "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             }
         ]
     },
@@ -910,7 +910,7 @@
         "name": "Lictor",
         "points": 100,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Complete",
                 
@@ -937,11 +937,11 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": [
+        "items": [
             {
                 "name": "Model",
                 "points": 100,
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
@@ -968,19 +968,19 @@
                         "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             },
             {
                 "name": "Base",
                 "points": 0,
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
                         "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             }
         ]
     },
@@ -988,7 +988,7 @@
         "name": "Genestealer",
         "points": 112,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Complete",
                 
@@ -1005,13 +1005,13 @@
                 "date": "2015-01-01T21:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Broodlord",
         "points": 60,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Complete",
                 
@@ -1038,11 +1038,11 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": [
+        "items": [
             {
                 "name": "Model",
                 "points": 60,
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
@@ -1069,18 +1069,18 @@
                         "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             },
             {
                 "name": "Base",
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
                         "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             }
         ]
     },
@@ -1088,7 +1088,7 @@
         "name": "Tyranid Warrior Old",
         "points": 175,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Complete",
                 
@@ -1115,11 +1115,11 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": [
+        "items": [
             {
                 "name": "Model",
                 "points": 175,
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
@@ -1146,18 +1146,18 @@
                         "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             },
             {
                 "name": "Base",
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
                         "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             }
         ]
     },
@@ -1165,7 +1165,7 @@
         "name": "Tyranid Warrior Boneswords",
         "points": 150,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -1182,11 +1182,11 @@
                 "date": "2015-01-01T12:49:20.796Z"
             }
         ],
-        "Items": [
+        "items": [
             {
                 "name": "Model",
                 "points": 150,
-                "States": [
+                "states": [
                     {
                         "name": "Paint",
                         
@@ -1208,11 +1208,11 @@
                         "date": "2015-01-01T12:49:20.796Z"
                     }
                 ],
-                "Items": []
+                "items": []
             },
             {
                 "name": "Base",
-                "States": [
+                "states": [
                     {
                         "name": "Prime",
                         
@@ -1229,7 +1229,7 @@
                         "date": "2015-01-01T12:49:20.796Z"
                     }
                 ],
-                "Items": []
+                "items": []
             }
         ]
     },
@@ -1237,7 +1237,7 @@
         "name": "Tyranid Warrior Rending Claws",
         "points": 120,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Buy Primed",
                 
@@ -1249,13 +1249,13 @@
                 "date": "2015-01-01T12:49:20.796Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Tyranid Warrior New",
         "points": 150,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Buy New",
                 
@@ -1267,13 +1267,13 @@
                 "date": "2015-01-01T12:49:20.796Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Carnifex Old",
         "points": 420,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Complete",
                 
@@ -1290,13 +1290,13 @@
                 "date": "2015-01-01T21:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Carnifex VC",
         "points": 140,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Dislike",
                 
@@ -1313,13 +1313,13 @@
                 "date": "2015-01-01T12:49:20.797Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Carnifex CC",
         "points": 135,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Dislike",
                 
@@ -1336,13 +1336,13 @@
                 "date": "2015-01-01T12:49:20.797Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Carnifex New",
         "points": 140,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Buy New",
                 
@@ -1354,13 +1354,13 @@
                 "date": "2015-01-01T12:49:20.797Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Spawn of Cryptus",
         "points": 70,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -1372,13 +1372,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Children of Cryptus",
         "points": 145,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -1400,13 +1400,13 @@
                 "date": "2015-01-01T12:49:20.797Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Exocrine",
         "points": 170,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -1418,13 +1418,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Krom Dragongaze",
         "points": 135,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -1436,13 +1436,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Njal",
         "points": 180,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Weather",
                 
@@ -1464,11 +1464,11 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": [
+        "items": [
             {
                 "name": "Model",
                 "points": 180,
-                "States": [
+                "states": [
                     {
                         "name": "Weather",
                         
@@ -1490,18 +1490,18 @@
                         "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             },
             {
                 "name": "Base",
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
                         "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             }
         ]
     },
@@ -1509,7 +1509,7 @@
         "name": "Rune Priest 1",
         "points": 60,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -1531,13 +1531,13 @@
                 "date": "2015-07-19T20:20:52.924Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Rune Priest 2",
         "points": 60,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -1559,13 +1559,13 @@
                 "date": "2015-07-19T20:20:52.924Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Rune Priest 3",
         "points": 60,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -1587,13 +1587,13 @@
                 "date": "2015-07-19T20:20:52.924Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Ulrik",
         "points": 145,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -1605,13 +1605,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Battle Leader",
         "points": 75,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Complete",
                 
@@ -1643,11 +1643,11 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": [
+        "items": [
             {
                 "name": "Model",
                 "points": 75,
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
@@ -1679,18 +1679,18 @@
                         "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             },
             {
                 "name": "Base",
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
                         "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             }
         ]
     },
@@ -1698,7 +1698,7 @@
         "name": "Wolf Lord on Thunderwolf",
         "points": 210,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -1710,11 +1710,11 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": [
+        "items": [
             {
                 "name": "Model",
                 "points": 210,
-                "States": [
+                "states": [
                     {
                         "name": "Prime",
                         
@@ -1726,11 +1726,11 @@
                         "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             },
             {
                 "name": "Wolf Mount",
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
@@ -1747,11 +1747,11 @@
                         "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             },
             {
                 "name": "Base",
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
@@ -1768,7 +1768,7 @@
                         "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             }
         ]
     },
@@ -1776,7 +1776,7 @@
         "name": "Wolf Priest on Jump",
         "points": 125,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -1788,13 +1788,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Terminators",
         "points": 250,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -1806,13 +1806,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Terminators",
         "points": 190,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Complete",
                 
@@ -1844,11 +1844,11 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": [
+        "items": [
             {
                 "name": "Model",
                 "points": 190,
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
@@ -1880,18 +1880,18 @@
                         "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             },
             {
                 "name": "Base",
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
                         "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             }
         ]
     },
@@ -1899,7 +1899,7 @@
         "name": "Scouts",
         "points": 120,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Complete",
                 
@@ -1931,11 +1931,11 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": [
+        "items": [
             {
                 "name": "Model",
                 "points": 120,
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
@@ -1967,18 +1967,18 @@
                         "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             },
             {
                 "name": "Base",
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
                         "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             }
         ]
     },
@@ -1986,7 +1986,7 @@
         "name": "Blood Claws",
         "points": 115,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -1998,13 +1998,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Sky Claws 1",
         "points": 135,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -2016,13 +2016,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Sky Claws 2",
         "points": 145,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -2034,13 +2034,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Grey Hunters 1",
         "points": 130,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -2052,13 +2052,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Grey Hunters 2",
         "points": 130,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -2070,13 +2070,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Grey Hunters 3",
         "points": 130,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -2088,13 +2088,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Grey Hunters 4",
         "points": 130,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -2106,13 +2106,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Grey Hunters 5",
         "points": 130,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -2124,13 +2124,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Grey Hunters 6",
         "points": 130,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -2142,13 +2142,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Land Speeder",
         "points": 85,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -2160,13 +2160,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Thunderwolf",
         "points": 260,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -2178,11 +2178,11 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": [
+        "items": [
             {
                 "name": "Model",
                 "points": 260,
-                "States": [
+                "states": [
                     {
                         "name": "Prime",
                         
@@ -2194,11 +2194,11 @@
                         "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             },
             {
                 "name": "Wolf Mount",
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
@@ -2215,11 +2215,11 @@
                         "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             },
             {
                 "name": "Base",
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
@@ -2236,7 +2236,7 @@
                         "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             }
         ]
     },
@@ -2244,7 +2244,7 @@
         "name": "Long Fangs 1",
         "points": 145,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Complete",
                 
@@ -2276,11 +2276,11 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": [
+        "items": [
             {
                 "name": "Model",
                 "points": 145,
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
@@ -2312,18 +2312,18 @@
                         "date": "2015-01-01T19:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             },
             {
                 "name": "Base",
-                "States": [
+                "states": [
                     {
                         "name": "Complete",
                         
                         "date": "2015-01-01T23:00:00.000Z"
                     }
                 ],
-                "Items": []
+                "items": []
             }
         ]
     },
@@ -2331,7 +2331,7 @@
         "name": "Long Fangs 2",
         "points": 180,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -2343,13 +2343,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Long Fangs 3",
         "points": 245,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -2361,13 +2361,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Razorback",
         "points": 75,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Complete",
                 
@@ -2399,13 +2399,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Rhino",
         "points": 35,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -2417,13 +2417,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Rhino",
         "points": 35,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -2435,13 +2435,13 @@
                 "date": "2015-01-01T19:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Toxicrene",
         "points": 210,
         "faction": "Tyranids",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -2453,13 +2453,13 @@
                 "date": "2015-01-31T23:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Stormwolf",
         "points": 235,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Prime",
                 
@@ -2471,13 +2471,13 @@
                 "date": "2015-01-31T23:00:00.000Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Land Raider",
         "points": 250,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Buy New",
                 
@@ -2489,13 +2489,13 @@
                 "date": "2015-05-13T13:19:48.814Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Predator",
         "points": 140,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Buy New",
                 
@@ -2507,13 +2507,13 @@
                 "date": "2015-05-13T13:20:35.525Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Dreadnaught",
         "points": 110,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Buy New",
                 
@@ -2545,13 +2545,13 @@
                 "date": "2015-06-23T13:20:52.924Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Tac Squad",
         "points": 160,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Buy New",
                 
@@ -2563,13 +2563,13 @@
                 "date": "2015-05-13T13:21:27.102Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Terminators",
         "points": 205,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Buy New",
                 
@@ -2581,13 +2581,13 @@
                 "date": "2015-05-13T13:23:12.548Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Battle Leader",
         "points": 75,
         "faction": "Space Wolves",
-        "States": [
+        "states": [
             {
                 "name": "Buy New",
                 
@@ -2599,13 +2599,13 @@
                 "date": "2015-05-13T13:24:25.603Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Warboss",
         "points": 85,
         "faction": "Ork",
-        "States": [
+        "states": [
             {
                 "name": "Buy New",
                 
@@ -2617,13 +2617,13 @@
                 "date": "2015-05-13T13:28:50.031Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Nobs",
         "points": 215,
         "faction": "Ork",
-        "States": [
+        "states": [
             {
                 "name": "Buy New",
                 
@@ -2635,13 +2635,13 @@
                 "date": "2015-05-13T13:28:56.327Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Boys",
         "points": 120,
         "faction": "Ork",
-        "States": [
+        "states": [
             {
                 "name": "Buy New",
                 
@@ -2653,13 +2653,13 @@
                 "date": "2015-05-13T13:29:01.489Z"
             }
         ],
-        "Items": []
+        "items": []
     },
     {
         "name": "Deffkoptas",
         "points": 90,
         "faction": "Ork",
-        "States": [
+        "states": [
             {
                 "name": "Buy New",
                 
@@ -2671,6 +2671,6 @@
                 "date": "2015-05-13T13:29:12.591Z"
             }
         ],
-        "Items": []
+        "items": []
     }
 ]
