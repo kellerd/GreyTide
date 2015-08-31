@@ -27,7 +27,7 @@ app.factory('stateService', ['$rootScope', '$http', 'greyTideContext', function 
                 service.Refresh();
         },
         Refresh: function () {
-            greyTideContext.getStates(function (data) {
+            greyTideContext.states.get(function (data) {
                 service.model = data;
                 service.SaveState();
             }, function (error) { alert(error); });

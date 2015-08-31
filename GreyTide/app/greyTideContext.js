@@ -4,21 +4,16 @@ var app = angular.module('greyTideApp');
 
 app.factory('greyTideContext', ['breeze', function (breeze) {
    var manager, metadataStore;
-    configureForBreeze();
+   configureForBreeze();
+   configureConstructors();
 
     var datacontext = {
         clearCache: clearCache,
-        createModel: createModel,
-        createState: createState,
-        deleteModel: deleteModel,
-        deleteState: deleteState,
-        getStates: getStates,
+        models: CreateUpdateSave("Model"),
+        states: CreateUpdateSave("State"),
         metadataStore: metadataStore,
-        saveNewModel: saveNewModel,
-        saveNewState: saveNewState,
     };
 
-    return datacontext;
 
     //#region Private Members
 
@@ -49,39 +44,44 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
             }
         });
     }
-    
-    function createModel(initialValues) {
-        return manager.createEntity("Model", initialValues);
+    function configureConstructors()
+    {
+        metadataStore.registerEntityTypeCtor('Model', ModelConstructor);
     }
-    
-    function createState(initialValues) {
-        return manager.createEntity("State", initialValues);
-    }
-   
-    function deleteModel(model) {
-        model.entityAspect.setDeleted();
-        return saveEntity(model);
-    }
-    
-    function deleteState(state) {       
-        state.entityAspect.setDeleted();
-        return saveEntity(state);
-    }
-
-    function getStates(statesFunction, errorFunction) {
-        return breeze.EntityQuery
-            .from("States")
-            .using(manager).execute()
-            .then(getSucceeded)
-            .catch(getFailed);
-
-        function getSucceeded(data) {
-            statesFunction(data.results);
+    function CreateUpdateSave(modelName) {
+        var localModelName = modelName;
+        var dataSet = {
+            create: create,
+            remove: remove,
+            get: get,
+            save: saveEntity
+        };
+        function create(initialValues) {
+            return manager.createEntity(localModelName, initialValues);
         }
 
-        function getFailed(error) {
-            errorFunction("Error retrieving states: " + error.message);
+        function remove(model) {
+            model.entityAspect.setDeleted();
+            return saveEntity(model);
         }
+
+        function get(statesFunction, errorFunction) {
+            return breeze.EntityQuery
+                .from(localModelName + "s")
+                .using(manager).execute()
+                .then(getSucceeded)
+                .catch(getFailed);
+
+            function getSucceeded(data) {
+                statesFunction(data.results);
+            }
+
+            function getFailed(error) {
+                errorFunction("Error retrieving states: " + error.message);
+            }
+        }
+
+        return dataSet;
     }
 
     function saveEntity(masterEntity) {
@@ -127,14 +127,6 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
         }
     }
 
-    function saveNewModel(model) {
-        return saveEntity(model);
-    }
 
-    function saveNewState(state) {
-        return saveEntity(state);
-    } 
-
-    //#endregion
-    return service;
+    return datacontext;
 }]);

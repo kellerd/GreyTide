@@ -50,22 +50,11 @@ app.factory('tideService', ['$rootScope', '$http', 'stateService', 'responsivene
             if (!service.loading) {
                 if (storageMethod.tideService) {
                     service.loading = true;
-
                     service.LoadFromJson(angular.fromJson(storageMethod.tideService));
                     service.loading = false;
                 } else
                     service.Refresh();
             }
-        },
-        LoadFromFile: function (file) {
-            $http.get(file, { cache: false }).
-               success(function (data) {
-                   service.LoadFromJson(data);
-               }).
-               error(function (data, status, headers, config) {
-                   service.loading = false;
-                   alert(status + ":" + data);
-               });
         },
         LoadFromJson: function (data) {
             service.items = [];
@@ -81,13 +70,20 @@ app.factory('tideService', ['$rootScope', '$http', 'stateService', 'responsivene
         },
         Refresh: function () {
             if (!service.loading) {
-                greyTideContext.getModels(function (data) {
+                greyTideContext.models.get(function (data) {
                     service.LoadFromJson(data);
-                }, function (error) { alert(error); });
+                }, function (data, status, headers, config) {
+                    service.loading = false;
+                    alert(status + ":" + data);
+                });
             }
         },
         LastState: function (item) {
-            var maxDateMili = Enumerable.From(item.states).Where(function (x) { return x.active; }).Max(function (x) { return Date.parse(x.date); });
+            var maxDateMili = Enumerable.From(item.states).Where(function (x) {
+                return x.active;
+            }).Max(function (x) {
+                return Date.parse(x.date);
+            });
             return new Date(maxDateMili).toLocaleDateString();
         }
     }
