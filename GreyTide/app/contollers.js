@@ -1,5 +1,5 @@
-﻿/// <reference path="../linq-vsdoc.js" />
-/// <reference path="../linq.min.js" />
+﻿/// <reference path="../scripts/linq-vsdoc.js" />
+/// <reference path="../scripts/linq.min.js" />
 /// <reference path="app.js" />
 /// <reference path="tideservice.js" />
 /// <reference path="state-machine.js" />

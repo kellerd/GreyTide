@@ -1,5 +1,5 @@
-﻿/// <reference path="../linq-vsdoc.js" />
-/// <reference path="../linq.min.js" />
+﻿/// <reference path="../scripts/linq-vsdoc.js" />
+/// <reference path="../scripts/linq.min.js" />
 
 Model = function(json, tideService,parent) {    // my constructor function
     this.name = json.name;

@@ -1,9 +1,9 @@
 ﻿
-/// <reference path="../linq-vsdoc.js" />
-/// <reference path="../linq.min.js" />
-/// <reference path="../angular.js" />
-/// <reference path="../d3/d3.js" />
-/// <reference path="../nv.d3.js" />
+/// <reference path="../scripts/linq-vsdoc.js" />
+/// <reference path="../scripts/linq.min.js" />
+/// <reference path="../scripts/angular.js" />
+/// <reference path="../scripts/d3/d3.js" />
+/// <reference path="../scripts/nv.d3.js" />
 var app = angular.module('greyTideApp');
 
 

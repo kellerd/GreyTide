@@ -1,7 +1,7 @@
-﻿/// <reference path="../linq-vsdoc.js" />
-/// <reference path="../linq.min.js" />
-/// <reference path="../angular.js" />
-/// <reference path="../angular-route.js" />
+﻿/// <reference path="../scripts/linq-vsdoc.js" />
+/// <reference path="../scripts/linq.min.js" />
+/// <reference path="../scripts/angular.js" />
+/// <reference path="../scripts/angular-route.js" />
 /// <reference path="contollers.js" />
 var app = angular.module('greyTideApp', ['ngRoute',
   'GreyTideControllers', 'multi-select', 'xeditable',    'breeze.angular' ]);

@@ -1,4 +1,5 @@
-﻿/// <reference path="../angular.js" />
+﻿/// <reference path="../scripts/angular.js" />
+/// <reference path="../scripts/breeze.min.js.js" />
 var app = angular.module('greyTideApp');
 
 
@@ -42,7 +43,7 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
     };
 
     var ModelInitializer = function (model) {
-        model[model.current].call(model);
+        //model[model.current].call(model);
     };
 
 
@@ -53,25 +54,24 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
 
     var datacontext = {
         clearCache: clearCache,
-        models: CreateUpdateSave("Model"),
-        states: CreateUpdateSave("State"),
+        models: CreateUpdateSave("Model", function (name) {return breeze.EntityQuery.from(name).expand("states,items");}),
+        states: CreateUpdateSave("State", function (name) { return breeze.EntityQuery.from(name).expand("events"); }),
         metadataStore: metadataStore,
     };
-
-
-    breeze.EntityQuery
-                .from("States")
-                .using(manager).expand("Events").execute()
-                .then(function (data) {
-                    StateMachine.create({
-                        target: Model.prototype,
-                        initial: { state: 'None', event: 'init', defer: true },
-                        events: data[0].events
-                    });
-                })
-                .catch(function (error) {
-                    alert(error);
-                });
+    datacontext.models.get(function (data) {
+            alert(data.toString());
+        }, function (error) {
+        alert(error);
+    });
+    //datacontext.states.get(function (data) {
+    //                StateMachine.create({
+    //                    target: Model.prototype,
+    //                    initial: { state: 'None', event: 'init', defer: true },
+    //                    events: data[0].events
+    //                });
+    //            },function (error) {
+    //                alert(error);
+    //            });
 
 
     
@@ -106,7 +106,7 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
     {
         metadataStore.registerEntityTypeCtor('Model', Model, ModelInitializer);
     }
-    function CreateUpdateSave(modelName) {
+    function CreateUpdateSave(modelName, breezeQueryFactory) {
         var localModelName = modelName;
         var dataSet = {
             create: create,
@@ -123,15 +123,15 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
             return saveEntity(model);
         }
 
-        function get(statesFunction, errorFunction) {
-            return breeze.EntityQuery
-                .from(localModelName + "s")
+        function get(successFunction, errorFunction) {
+
+            return breezeQueryFactory(localModelName + "s")
                 .using(manager).execute()
                 .then(getSucceeded)
                 .catch(getFailed);
 
             function getSucceeded(data) {
-                statesFunction(data.results);
+                successFunction(data.results);
             }
 
             function getFailed(error) {

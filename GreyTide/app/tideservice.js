@@ -1,6 +1,6 @@
-﻿/// <reference path="../linq-vsdoc.js" />
-/// <reference path="../linq.min.js" />
-/// <reference path="../angular.js" />
+﻿/// <reference path="../scripts/linq-vsdoc.js" />
+/// <reference path="../scripts/linq.min.js" />
+/// <reference path="../scripts/angular.js" />
 var app = angular.module('greyTideApp');
 
 app.factory('tideService', ['$rootScope', '$http', 'stateService', 'responsivenessService','greyTideContext', function ($rootScope, $http, stateService, responsivenessService, greyTideContext) {

@@ -1,4 +1,4 @@
-﻿/// <reference path="../angular.js" />
+﻿/// <reference path="../scripts/angular.js" />
 /// <reference path="greyTideContext.js" />
 var app = angular.module('greyTideApp');
 

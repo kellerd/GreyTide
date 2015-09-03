@@ -1,5 +1,5 @@
-﻿/// <reference path="../angular.js" />
-/// <reference path="../angular-route.js" />
+﻿/// <reference path="../scripts/angular.js" />
+/// <reference path="../scripts/angular-route.js" />
 var app = angular.module('greyTideApp');
 
 
