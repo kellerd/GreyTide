@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GreyTideDataService.Models
 {
@@ -18,5 +19,8 @@ namespace GreyTideDataService.Models
         public int Points { get; set; }
         public List<Model> Items { get; set; }
         public List<ModelState>  States{ get; set; }
+        [ForeignKey("Parent")]
+        public Guid ParentId { get { return (Parent == null ? Guid.Empty : Parent.Id); } set { return; } }
+        public Model Parent { get; set; }
     }
 }

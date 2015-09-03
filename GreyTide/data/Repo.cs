@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Runtime.CompilerServices;
-using System.Threading;
 using System.Threading.Tasks;
 using Breeze.ContextProvider;
 using GreyTideDataService.Models;
@@ -11,6 +10,7 @@ using Newtonsoft.Json;
 using Breeze.ContextProvider.EF6;
 using System.Linq;
 using System.Data.Entity;
+using System.Threading;
 
 namespace GreyTideDataService
 {
@@ -37,19 +37,18 @@ namespace GreyTideDataService
         public static Lazy<IEnumerable<Model>> Models =
            new Lazy<IEnumerable<Model>>(() =>
            {
-               var models = JsonConvert.DeserializeObject<IEnumerable<Model>>(
-File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data/models.json"))
-);
-               
+               var models = JsonConvert.DeserializeObject<IEnumerable<Model>>(File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data/models.json")));
                models.ToList().ForEach(process);
                return models;
            }, LazyThreadSafetyMode.ExecutionAndPublication);
 
         public static Lazy<IEnumerable<StateCollection>> States =
            new Lazy<IEnumerable<StateCollection>>(() =>
-               JsonConvert.DeserializeObject<IEnumerable<StateCollection>>(
-                File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data/states.json"))
-               ), LazyThreadSafetyMode.ExecutionAndPublication);
+           {
+               var states = JsonConvert.DeserializeObject<IEnumerable<StateCollection>>(File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data/states.json")));
+               states.ToList().ForEach(processStates);
+               return states;
+           }, LazyThreadSafetyMode.ExecutionAndPublication);
 
         public override IDbConnection GetDbConnection()
         {
@@ -66,7 +65,7 @@ File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data/model
             throw new NotImplementedException();
         }
         public static EFContextProvider<GreyTideContext> MetadataConects =
-            new EFContextProvider<GreyTideContext>();
+             new EFContextProvider<GreyTideContext>();
         protected override string BuildJsonMetadata()
         {
             return MetadataConects.Metadata();
@@ -76,13 +75,33 @@ File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data/model
         {
             throw new NotImplementedException(); //Upload to azure
         }
-        private static void process  (Model m)
+        private static void process(Model m)
         {
             var lastState = m.States.OrderByDescending((s) => s.Date).DefaultIfEmpty(new ModelState { Name = "Startup", Date = DateTime.Now }).FirstOrDefault();
             m.Current = lastState.Name;
             m.CurrentDate = lastState.Date;
+            m.Id = Guid.NewGuid();
+            if (m.States != null && m.States.Any())
+            {
+                m.States.ForEach((s) => s.Model = m);
+            }
             if (m.Items != null && m.Items.Any())
-                m.Items.ForEach(process);
+            {
+                m.Items.ForEach((i) =>
+                {
+                    process(i);
+                    i.Parent = m;
+                });
+            }
+        }
+        private static void processStates(StateCollection sc)
+        {
+            sc.Id = Guid.NewGuid();
+            if (sc.Events != null && sc.Events.Any())
+                sc.Events.ForEach(s => {
+                    s.StateCollection = sc;
+                    s.From.ForEach(f => f.State = s);
+                    });
         }
     }
 }
