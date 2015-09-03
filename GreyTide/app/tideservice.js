@@ -6,7 +6,7 @@ var app = angular.module('greyTideApp');
 app.factory('tideService', ['$rootScope', '$http', 'stateService', 'responsivenessService','greyTideContext', function ($rootScope, $http, stateService, responsivenessService, greyTideContext) {
     var storageMethod = localStorage;
     StateMachine.create({
-        target: ModelObject.prototype,
+        target: Model.prototype,
         initial: { state: 'None', event: 'init', defer: true },
         events: stateService.model[0].events
     });
@@ -42,7 +42,7 @@ app.factory('tideService', ['$rootScope', '$http', 'stateService', 'responsivene
                         }).ToArray(),
                         'items': items(x.items)
                     };
-                }).ToJSON(ModelObjectReplacer);
+                }).ToJSON(ModelReplacer);
             }
         },
 
@@ -59,7 +59,7 @@ app.factory('tideService', ['$rootScope', '$http', 'stateService', 'responsivene
         LoadFromJson: function (data) {
             service.items = [];
              responsivenessService.responsiveMap(data, function (model) {
-                return new ModelObject(model, service);
+                return new Model(model, service);
              }).then(function (data) {
                  service.items.push.apply(service.items, data);
                  service.loading = false;

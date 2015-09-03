@@ -14,19 +14,20 @@ namespace Controllers
     public class GreyTideController : ApiController
     {
 
-        readonly Repo _contextProvider = new Repo();
+        static readonly Repo _contextProvider = new Repo();
 
         // ~/breeze/GreyTide/Metadata 
         [HttpGet]
         public string Metadata()
         {
-            return _contextProvider.Metadata();
+            var metadata =  _contextProvider.Metadata();
+            return metadata;
         }
 
         // ~/breeze/GreyTide/Models
         // ~/breeze/GreyTide/Models?$filter=IsArchived eq false&$orderby=CreatedAt 
         [HttpGet]
-        public IQueryable<ModelPart> Models()
+        public IQueryable<Model> Models()
         {
             return Repo.Models.Value.AsQueryable();
         }

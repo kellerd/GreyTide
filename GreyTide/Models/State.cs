@@ -10,6 +10,7 @@ namespace GreyTideDataService.Models
 
         public int Order { get; set; }
         [Required]
+        [Key]
         public string Name { get; set; }
         [Required]
         public List<string> From { get; set; }

@@ -4,10 +4,10 @@
 /// <reference path="tideservice.js" />
 /// <reference path="state-machine.js" />
 /// <reference path="stateservice.js" />
-/// <reference path="ModelObject.js" />
+/// <reference path="Model.js" />
 /// <reference path="route.js" />
 /// <reference path="chart.js" />
-/// <reference path="ModelObject.js" />
+/// <reference path="Model.js" />
 var GreyTideControllers = angular.module('GreyTideControllers', []);
 
 GreyTideControllers.controller('StateController', ['$scope', '$http', 'stateService', function ($scope, $http, stateService) {
@@ -69,7 +69,7 @@ GreyTideControllers.controller('GreyTideController', ['$scope', '$filter', 'tide
     };
 
     $scope.AddItem = function (model, isRoot) {
-        model.items.splice(0, 0, new ModelObject({
+        model.items.splice(0, 0, new Model({
             "name": 'New',
             "points": 0,
             "faction": isRoot ? 'Faction':null,

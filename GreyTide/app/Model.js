@@ -1,7 +1,7 @@
 ﻿/// <reference path="../linq-vsdoc.js" />
 /// <reference path="../linq.min.js" />
 
-ModelObject = function (json, tideService,parent) {    // my constructor function
+Model = function(json, tideService,parent) {    // my constructor function
     this.name = json.name;
     this.points = json.points;
     this.faction = json.faction;
@@ -9,19 +9,15 @@ ModelObject = function (json, tideService,parent) {    // my constructor functio
     var existingStates = Enumerable.From(json.states).OrderByDescending(function (x) { return x.date; }).Select(function (x) { return { name: x.name, active: true, date: x.date }; });
     if (existingStates.Count() == 0)
         existingStates = Enumerable.From([{ name: "Startup", active: true, date: new Date().toISOString() }]);
-    this.States = existingStates.ToArray();
-    var lastState = existingStates.First();
+    this.states = existingStates.ToArray();
+    var lastState = this.states[0];
     this[lastState.name].call(this);
     this.tideService = tideService;
     this.parent = parent;
-    this.items = Enumerable.From(json.items).Select(function (p) { return new ModelObject(p, tideService, self) }).ToArray();
+    this.items = Enumerable.From(json.items).Select(function (p) { return new Model(p, tideService, self) }).ToArray();
 };
-ModelObjectReplacer = function (key, value) {
-    if (key == "tideService") return undefined;
-    if (key == "parent") return undefined;
-    else return value;
-}
-ModelObject.prototype = {
+
+Model.prototype = {
 
     //onpanic: function (event, from, to) { alert('panic'); },
     //onclear: function (event, from, to) { alert('all is clear'); },
@@ -34,9 +30,9 @@ ModelObject.prototype = {
             if (Enumerable.From(this.parent.items).Select(function (item) { return item.current; }).Distinct().Count() == 1) {
                 var state = Enumerable.From(p.states).Where(function (d) { return d.active == false && d.name == event; }).FirstOrDefault();
                 if (!(typeof state === 'undefined')) {
-                state.active = true;
-                state.date = new Date().toISOString();
-                p[event].call(p);
+                    state.active = true;
+                    state.date = new Date().toISOString();
+                    p[event].call(p);
                 }
             }
         }
@@ -53,3 +49,9 @@ ModelObject.prototype = {
             })
     }
 };
+
+ModelReplacer = function (key, value) {
+    if (key == "tideService") return undefined;
+    if (key == "parent") return undefined;
+    else return value;
+}

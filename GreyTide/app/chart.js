@@ -82,7 +82,7 @@ app.directive('chartline', function () {
 
                         var orderedStates = Enumerable.From(u.states).Where(function (s) { return s.name != "Startup" && s.active }).
                         					                   OrderBy(function (s) { return s.date });
-                        var currentObject = new ModelObject({
+                        var currentObject = new Model({
                             "name": u.name,
                             "points": u.points,
                             "states": [orderedStates.First()]

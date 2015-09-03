@@ -3,7 +3,51 @@ var app = angular.module('greyTideApp');
 
 
 app.factory('greyTideContext', ['breeze', function (breeze) {
-   var manager, metadataStore;
+    var manager, metadataStore;
+
+    function Model() {    // my constructor function
+
+    };
+
+
+    Model.prototype = {
+
+        //onpanic: function (event, from, to) { alert('panic'); },
+        //onclear: function (event, from, to) { alert('all is clear'); },
+        onafterevent: function (event, from, to) {
+            this.states = Enumerable.From(this.transitions()).Select(function (x) { return { name: x, active: false, date: new Date().toISOString() }; }).Union(Enumerable.From(this.states).Where(function (s) { return s.active })).ToArray();
+            if (this.parentEntity != null) {
+                var p = this.parentEntity;
+                if (Enumerable.From(this.parentEntity.items).Select(function (item) { return item.current; }).Distinct().Count() == 1) {
+                    var state = Enumerable.From(p.states).Where(function (d) { return d.active == false && d.name == event; }).FirstOrDefault();
+                    if (!(typeof state === 'undefined')) {
+                        state.active = true;
+                        state.date = new Date().toISOString();
+                        p[event].call(p);
+                    }
+                }
+            }
+            if (this.items != null && this.items.length > 0)
+                Enumerable.From(this.items).ForEach(function (p) {
+                    if (Enumerable.From(p.transitions()).Contains(event)) {
+                        var state = Enumerable.From(p.states).Where(function (d) { return d.active == false && d.name == event; }).FirstOrDefault();
+                        if (!(typeof state === 'undefined')) {
+                            state.active = true;
+                            state.date = new Date().toISOString();
+                            p[event].call(p);
+                        }
+                    }
+                })
+        }
+    };
+
+    var ModelInitializer = function (model) {
+        model[model.current].call(model);
+    };
+
+
+
+
    configureForBreeze();
    configureConstructors();
 
@@ -15,6 +59,23 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
     };
 
 
+    breeze.EntityQuery
+                .from("States")
+                .using(manager).expand("Events").execute()
+                .then(function (data) {
+                    StateMachine.create({
+                        target: Model.prototype,
+                        initial: { state: 'None', event: 'init', defer: true },
+                        events: data[0].events
+                    });
+                })
+                .catch(function (error) {
+                    alert(error);
+                });
+
+
+    
+
     //#region Private Members
 
     function clearCache() {
@@ -24,12 +85,8 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
     function configureForBreeze() {
         breeze.NamingConvention.camelCase.setAsDefault();
 
-        var dataService = new breeze.DataService({
-            serviceName: "breeze/GreyTide",
-            hasServerMetadata: false // don't ask the server for metadata
-        });
-
-        manager = new breeze.EntityManager({ dataService: dataService });
+        var dataServiceName = "breeze/GreyTide";
+        manager = new breeze.EntityManager(dataServiceName);
         metadataStore = manager.metadataStore;
         configureManagerToSaveModifiedItemImmediately();
     }
@@ -44,9 +101,10 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
             }
         });
     }
+    
     function configureConstructors()
     {
-        metadataStore.registerEntityTypeCtor('Model', ModelConstructor);
+        metadataStore.registerEntityTypeCtor('Model', Model, ModelInitializer);
     }
     function CreateUpdateSave(modelName) {
         var localModelName = modelName;

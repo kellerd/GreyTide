@@ -6,9 +6,9 @@ using System.Text;
 
 namespace GreyTideDataService.Models
 {
-   public class ModelPartState
+   public class ModelState
    {
-       [Required]
+       [Required][Key]
        public string Name { get; set; }
        [Required]
        public DateTime Date { get; set; }
