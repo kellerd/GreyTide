@@ -43,38 +43,46 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
     };
 
     var ModelInitializer = function (model) {
-        //model[model.current].call(model);
+        model[model.currentState].call(model);
     };
 
 
 
 
-   configureForBreeze();
-   configureConstructors();
+    configureForBreeze();
+    configureConstructors();
 
     var datacontext = {
         clearCache: clearCache,
-        models: CreateUpdateSave("Model", function (name) {return breeze.EntityQuery.from(name).expand("states,items");}),
-        states: CreateUpdateSave("State", function (name) { return breeze.EntityQuery.from(name).expand("events.from"); }),
+        models: CreateUpdateSave("Model", function (name) { return breeze.EntityQuery.from(name).expand("states,items"); }),
+        states: CreateUpdateSave("State", function (name) { return breeze.EntityQuery.from(name).expand("events.from").top(2); }),
         metadataStore: metadataStore,
     };
+    
+    datacontext.states.get(function (data) {
+        var events = data[0].events.map(function (e) {
+            return {
+                name: e.name,
+                from: e.from.map(function (f) { return f.name; }),
+                to: e.to
+            }
+        });
+
+        StateMachine.create({
+            target: Model.prototype,
+            initial: { state: 'None', event: 'init', defer: true },
+            events: events
+        });
+    }, function (error) {
+        alert(error);
+    });
+
     //datacontext.models.get(function (data) {
     //        alert(data.toString());
     //    }, function (error) {
     //    alert(error);
     //});
-    datacontext.states.get(function (data) {
-                    StateMachine.create({
-                        target: Model.prototype,
-                        initial: { state: 'None', event: 'init', defer: true },
-                        events: data[0].events
-                    });
-                },function (error) {
-                    alert(error);
-                });
 
-
-    
 
     //#region Private Members
 
@@ -101,13 +109,12 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
             }
         });
     }
-    
-    function configureConstructors()
-    {
+
+    function configureConstructors() {
         metadataStore.registerEntityTypeCtor('Model', Model, ModelInitializer);
     }
     function configureMetadata() {
-        
+
     }
     function CreateUpdateSave(modelName, breezeQueryFactory) {
         var localModelName = modelName;
@@ -152,7 +159,7 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
         function saveFailed(error) {
             setErrorMessage(error);
             // Let them see it "wrong" briefly before reverting"
-            setTimeout(function() { manager.rejectChanges(); }, 1000);
+            setTimeout(function () { manager.rejectChanges(); }, 1000);
             throw error; // so caller can see failure
         }
 
@@ -176,7 +183,7 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
             try { // return the first error message
                 var firstError = error.entityErrors[0];
                 return firstError.errorMessage;
-            } catch(e) { // ignore problem extracting error message 
+            } catch (e) { // ignore problem extracting error message 
                 return "validation error";
             }
         }

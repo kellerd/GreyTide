@@ -28,9 +28,23 @@ app.factory('stateService', ['$rootScope', '$http', 'greyTideContext', function 
         },
         Refresh: function () {
             greyTideContext.states.get(function (data) {
-                service.model = data;
+                service.model = data.map(function (d) {
+                    return {
+
+                        name: d.name,
+                        events: d.events.map(function (e) {
+                            return {
+                                name: e.name,
+                                from: e.from.map(function (f) { return f.name; }),
+                                to: e.to
+                            }
+                        })
+                    }
+                });
                 service.SaveState();
-            }, function (error) { alert(error); });
+            }, function (error) {
+                alert(error);
+            });
         }
     }
 

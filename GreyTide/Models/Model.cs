@@ -13,14 +13,18 @@ namespace GreyTideDataService.Models
         [Required]
         public string Name { get; set; }
         [Required]
-        public string Current { get; set; }
+        public string CurrentState { get; set; }
         public DateTime CurrentDate { get; set; }
         public string Faction { get; set; }
         public int Points { get; set; }
         public List<Model> Items { get; set; }
         public List<ModelState>  States{ get; set; }
-        [ForeignKey("Parent")]
         public Guid ParentId { get { return (Parent == null ? Guid.Empty : Parent.Id); } set { return; } }
-        public Model Parent { get; set; }
+        protected Model Parent { get; set; }
+
+        internal void SetParent(Model m)
+        {
+            Parent = m;
+        }
     }
 }

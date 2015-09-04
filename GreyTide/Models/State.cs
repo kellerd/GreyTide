@@ -10,15 +10,19 @@ namespace GreyTideDataService.Models
         // { "order": 0,"name": "Dislike", "from": [ "none", "Completed" ], "to": "Requires Stripping" } 
 
         public int Order { get; set; }
+        public Guid Id { get; set; }
         [Required]
-        [Key]
         public string Name { get; set; }
         [Required]
         public List<FromState> From { get; set; }
         [Required]
         public string To {get;set;}
-        public StateCollection StateCollection { get; set; }
-        [ForeignKey("StateCollection")]
+        protected StateCollection StateCollection { get; set; }
         public Guid StateCollectionId { get { return StateCollection.Id; } set { return; } }
+
+        internal void SetStateCollection(StateCollection sc)
+        {
+            StateCollection = sc;
+        }
     }
 }

@@ -11,8 +11,12 @@ namespace GreyTideDataService.Models
        public string Name { get; set; }
        [Required]
        public DateTime Date { get; set; }
-        [ForeignKey("Model")]
         public Guid ModelId { get { return (Model == null ? Guid.Empty : Model.Id); } set { return; } }
-        public Model Model { get; set; }
+        protected Model Model { get; set; }
+
+        internal void SetModel(Model m)
+        {
+            Model = m;
+        }
     }
 }

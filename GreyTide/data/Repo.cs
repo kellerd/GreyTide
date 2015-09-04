@@ -78,19 +78,19 @@ namespace GreyTideDataService
         private static void process(Model m)
         {
             var lastState = m.States.OrderByDescending((s) => s.Date).DefaultIfEmpty(new ModelState { Name = "Startup", Date = DateTime.Now }).FirstOrDefault();
-            m.Current = lastState.Name;
+            m.CurrentState = lastState.Name;
             m.CurrentDate = lastState.Date;
             m.Id = Guid.NewGuid();
             if (m.States != null && m.States.Any())
             {
-                m.States.ForEach((s) => s.Model = m);
+                m.States.ForEach((s) => s.SetModel ( m));
             }
             if (m.Items != null && m.Items.Any())
             {
                 m.Items.ForEach((i) =>
                 {
                     process(i);
-                    i.Parent = m;
+                    i.SetParent ( m);
                 });
             }
         }
@@ -99,8 +99,11 @@ namespace GreyTideDataService
             sc.Id = Guid.NewGuid();
             if (sc.Events != null && sc.Events.Any())
                 sc.Events.ForEach(s => {
-                    s.StateCollection = sc;
-                    s.From.ForEach(f => f.State = s);
+                    s.Id = Guid.NewGuid();
+                    s.SetStateCollection(sc);
+                    s.From.ForEach(f => {
+                        f.Id = Guid.NewGuid();
+                        f.SetState(s); });
                     });
         }
     }
