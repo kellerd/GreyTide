@@ -11,34 +11,55 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
     };
 
 
+
+    function guid() {
+        function s4() {
+            return Math.floor((1 + Math.random()) * 0x10000)
+              .toString(16)
+              .substring(1);
+        }
+        return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+          s4() + '-' + s4() + s4() + s4();
+    }
+
     Model.prototype = {
 
         //onpanic: function (event, from, to) { alert('panic'); },
         //onclear: function (event, from, to) { alert('all is clear'); },
         onafterevent: function (event, from, to) {
-            this.states = Enumerable.From(this.transitions()).Select(function (x) { return { name: x, active: false, date: new Date().toISOString() }; }).Union(Enumerable.From(this.states).Where(function (s) { return s.active })).ToArray();
-            if (this.parentEntity != null) {
-                var p = this.parentEntity;
-                if (Enumerable.From(this.parentEntity.items).Select(function (item) { return item.current; }).Distinct().Count() == 1) {
-                    var state = Enumerable.From(p.states).Where(function (d) { return d.active == false && d.name == event; }).FirstOrDefault();
-                    if (!(typeof state === 'undefined')) {
-                        state.active = true;
-                        state.date = new Date().toISOString();
-                        p[event].call(p);
-                    }
-                }
-            }
-            if (this.items != null && this.items.length > 0)
-                Enumerable.From(this.items).ForEach(function (p) {
-                    if (Enumerable.From(p.transitions()).Contains(event)) {
-                        var state = Enumerable.From(p.states).Where(function (d) { return d.active == false && d.name == event; }).FirstOrDefault();
+            if (this.states.length == 0 || this.states[0].name != event) {
+                this.states.push(manager.createEntity("ModelState", { id: guid(), name: event, date: new Date().toISOString(), active: true, modelId: this.modelId }));
+                this.allStates = Enumerable.From(this.transitions()).Select(function (x) { return { name: x, active: false, date: new Date().toISOString() }; }).Union(Enumerable.From(this.states).Where(function (s) { return s.active })).ToArray();
+
+
+                if (this.parentEntity != null) {
+                    var p = this.parentEntity;
+                    if (Enumerable.From(this.parentEntity.items).Select(function (item) { return item.current; }).Distinct().Count() == 1) {
+                        var state = Enumerable.From(p.allStates).Where(function (d) { return d.active == false && d.name == event; }).FirstOrDefault();
                         if (!(typeof state === 'undefined')) {
                             state.active = true;
                             state.date = new Date().toISOString();
                             p[event].call(p);
                         }
                     }
-                })
+                }
+                if (this.items != null && this.items.length > 0)
+                    Enumerable.From(this.items).ForEach(function (p) {
+                        if (Enumerable.From(p.transitions()).Contains(event)) {
+                            var state = Enumerable.From(p.allStates).Where(function (d) { return d.active == false && d.name == event; }).FirstOrDefault();
+                            if (!(typeof state === 'undefined')) {
+                                state.active = true;
+                                state.date = new Date().toISOString();
+                                p[event].call(p);
+                            }
+                        }
+                    })
+            } else {
+                this.allStates = Enumerable.From(this.transitions()).Select(function (x) { return { name: x, active: false, date: new Date().toISOString() }; }).Union(Enumerable.From(this.states).Where(function (s) { return s.active })).ToArray();
+            }
+           
+
+
         }
     };
 
@@ -55,10 +76,10 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
     var datacontext = {
         clearCache: clearCache,
         models: CreateUpdateSave("Model", function (name) { return breeze.EntityQuery.from(name).expand("states,items"); }),
-        states: CreateUpdateSave("State", function (name) { return breeze.EntityQuery.from(name).expand("events.from").top(2); }),
+        states: CreateUpdateSave("State", function (name) { return breeze.EntityQuery.from(name).expand("events.from"); }),
         metadataStore: metadataStore,
     };
-    
+
     datacontext.states.get(function (data) {
         var events = data[0].events.map(function (e) {
             return {
@@ -77,11 +98,11 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
         alert(error);
     });
 
-    //datacontext.models.get(function (data) {
-    //        alert(data.toString());
-    //    }, function (error) {
-    //    alert(error);
-    //});
+    datacontext.models.get(function (data) {
+        //alert(data.toString());
+    }, function (error) {
+        alert(error);
+    });
 
 
     //#region Private Members

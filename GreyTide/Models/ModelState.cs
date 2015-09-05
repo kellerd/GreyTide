@@ -7,6 +7,7 @@ namespace GreyTideDataService.Models
    public class ModelState
    {
         [Key]
+       public Guid Id { get; set; }
        [Required]
        public string Name { get; set; }
        [Required]

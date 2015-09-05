@@ -83,14 +83,18 @@ namespace GreyTideDataService
             m.Id = Guid.NewGuid();
             if (m.States != null && m.States.Any())
             {
-                m.States.ForEach((s) => s.SetModel ( m));
+                m.States.ForEach((s) =>
+                {
+                    s.SetModel(m);
+                    s.Id = Guid.NewGuid();
+                });
             }
             if (m.Items != null && m.Items.Any())
             {
                 m.Items.ForEach((i) =>
                 {
                     process(i);
-                    i.SetParent ( m);
+                    i.SetParent(m);
                 });
             }
         }
@@ -98,13 +102,16 @@ namespace GreyTideDataService
         {
             sc.Id = Guid.NewGuid();
             if (sc.Events != null && sc.Events.Any())
-                sc.Events.ForEach(s => {
+                sc.Events.ForEach(s =>
+                {
                     s.Id = Guid.NewGuid();
                     s.SetStateCollection(sc);
-                    s.From.ForEach(f => {
+                    s.From.ForEach(f =>
+                    {
                         f.Id = Guid.NewGuid();
-                        f.SetState(s); });
+                        f.SetState(s);
                     });
+                });
         }
     }
 }
