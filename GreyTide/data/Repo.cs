@@ -89,6 +89,8 @@ namespace GreyTideDataService
                     s.Id = Guid.NewGuid();
                 });
             }
+            m.States = m.States.OrderByDescending((s) => s.Date).ToList();
+
             if (m.Items != null && m.Items.Any())
             {
                 m.Items.ForEach((i) =>

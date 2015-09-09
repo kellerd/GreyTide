@@ -160,7 +160,6 @@
     <Content Include="app\app.js" />
     <Content Include="app\chart.js" />
     <Content Include="app\contollers.js" />
-    <Content Include="app\Model.js" />
     <Content Include="app\route.js" />
     <Content Include="app\state-machine.js" />
     <Content Include="app\stateservice.js" />
@@ -173,7 +172,6 @@
     <Content Include="scripts\nv.d3.css" />
     <Content Include="scripts\nv.d3.js" />
     <Content Include="scripts\nv.d3.min.js" />
-    <Content Include="scripts\parallel\parallel.js" />
     <Content Include="scripts\q.js" />
     <Content Include="scripts\q.min.js" />
     <Content Include="scripts\x-editable\xeditable.css" />

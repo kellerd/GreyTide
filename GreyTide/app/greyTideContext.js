@@ -67,9 +67,6 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
         model[model.currentState].call(model);
     };
 
-
-
-
     configureForBreeze();
     configureConstructors();
 
@@ -88,7 +85,6 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
                 to: e.to
             }
         });
-
         StateMachine.create({
             target: Model.prototype,
             initial: { state: 'None', event: 'init', defer: true },
@@ -97,13 +93,6 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
     }, function (error) {
         alert(error);
     });
-
-    datacontext.models.get(function (data) {
-        //alert(data.toString());
-    }, function (error) {
-        alert(error);
-    });
-
 
     //#region Private Members
 
@@ -124,7 +113,7 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
         manager.entityChanged.subscribe(function (args) {
             if (args.entityAction === breeze.EntityAction.EntityStateChange) {
                 var entity = args.entity;
-                if (entity.entityAspect.entityState.isModified()) {
+                if (entity.entityAspect.entityState.isAddedModifiedorDeleted()) {
                     saveEntity(entity);
                 }
             }
@@ -133,9 +122,6 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
 
     function configureConstructors() {
         metadataStore.registerEntityTypeCtor('Model', Model, ModelInitializer);
-    }
-    function configureMetadata() {
-
     }
     function CreateUpdateSave(modelName, breezeQueryFactory) {
         var localModelName = modelName;
