@@ -74,6 +74,7 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
         clearCache: clearCache,
         models: CreateUpdateSave("Model", function (name) { return breeze.EntityQuery.from(name).expand("states,items"); }),
         states: CreateUpdateSave("State", function (name) { return breeze.EntityQuery.from(name).expand("events.from"); }),
+        guidGenerator: guid,
         metadataStore: metadataStore,
     };
 

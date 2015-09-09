@@ -32,7 +32,7 @@ app.directive('chartbar', function () {
                             }).
                             Union(zeroUnion, function (data) { return data.x }).
                             ToArray()
-                        }
+                    }
                 }).OrderBy("$.key");
 
                 var chart;
@@ -68,7 +68,7 @@ app.directive('chartbar', function () {
 });
 
 
-app.directive('chartline', function () {
+app.directive('chartline',  ['greyTideContext', function (greyTideContext) {
     return {
         restrict: 'A',
         scope: true,
@@ -80,18 +80,22 @@ app.directive('chartline', function () {
                 var raw = Enumerable.From(scope.Tide.items).
                     SelectMany(function (u) {
 
-                        var orderedStates = Enumerable.From(u.states).Where(function (s) { return s.name != "Startup" && s.active }).
+                        var orderedStates = Enumerable.From(u.states).Where(function (s) { return s.name != "Startup"}).
                         					                   OrderBy(function (s) { return s.date });
-                        var currentObject = new Model({
-                            "name": u.name,
-                            "points": u.points,
-                            "states": [orderedStates.First()]
-                        });
+                        var firstState = orderedStates.First();
+                        var currentObject = greyTideContext.models.create(
+                            {
+                                "id:": greyTideContext.guidGenerator(),
+                                "name": u.name,
+                                "points": u.points,
+                                "currentState": firstState.name,
+                                "states": [firstState]
+                            }, EntityState.Detached);
 
                         var states = orderedStates.
                         					                   Select(function (s, i) {
-                        					                       if (i != 0)
-                        					                           currentObject[s.name].call(currentObject);
+                        					                       //if (i != 0)
+                        					                       //    currentObject[s.name].call(currentObject);
                         					                       return {
                         					                           points: u.points,
                         					                           date: new Date(s.date),
@@ -159,7 +163,10 @@ app.directive('chartline', function () {
                         .tickFormat(function (d) {
                             return d3.time.format('%x')(new Date(d))
                         });
-                    chart.yAxisTickFormat(d3.format(',.0f'));
+                    chart.yAxis.
+                        tickFormat(function (d) {
+                            return d3.format(',.0f');
+                        });
                     d3.select('#' + el[0].id + ' svg')
                         .datum(data.ToArray())
                         .transition().duration(500)
@@ -185,77 +192,4 @@ app.directive('chartline', function () {
             });
         }
     }
-});
-
-
-//app.directive('chartbar', function () {
-//    return {
-//        restrict: 'A',
-//        scope: true,
-//        link: function (scope, el, attrs) {
-
-//            angular.element(document).ready(function () {
-
-//                var model = Enumerable.From(scope.Tide.items);
-//                var groups = model.GroupBy(function (data) { return data.faction });
-//                var raw = groups.Select(function (model) {
-//                    return {
-//                        Faction: model.Key(),
-//                        List: Enumerable.From(model).Select(function (singlemodel) {
-//                            return {
-//                                state: singlemodel.current,
-//                                points: singlemodel.points,
-//                                name: singlemodel.name
-//                            };
-//                        })
-//                    };
-//                });
-//                var statesOrder = Enumerable.From(scope.states.model[0].events).ToDictionary("$.to");
-//                var series = raw.SelectMany("$.List.Select('$.state')").OrderBy(function (d) {
-//                    return statesOrder.Contains(d) ? statesOrder.Get(d).order : -1;
-//                }).Distinct();
-//                var data = series.Select(function (seri) {
-//                    return raw.Select(function (r) {
-//                        return r.List.Where(function (ud) {
-//                            return ud.state == seri;
-//                        }).Select(function (ud) {
-//                            return ud.points;
-//                        }).DefaultIfEmpty(0.0).Sum();
-//                    }).ToArray();
-//                });
-//                var ticks = raw.Select("s=>s.Faction").ToArray();
-
-//                //var plot3 = $.jqplot(el[0].id, data.ToArray(), {
-//                //    // Tell the plot to stack the bars.
-//                //    stackSeries: true,
-//                //    series: series.Select(function (x) { return { label: x } }).ToArray(),
-//                //    seriesDefaults: {
-//                //        renderer: $.jqplot.BarRenderer,
-//                //        rendererOptions: {
-//                //            // Put a 30 pixel margin between bars.
-//                //            barMargin: 30,
-//                //            // Highlight bars when mouse button pressed.
-//                //            // Disables default highlighting on mouse over.
-//                //            highlightMouseDown: true
-//                //        },
-//                //        pointLabels: { show: true }
-//                //    },
-//                //    title: "Points by Faction",
-//                //    axes: {
-//                //        xaxis: {
-//                //            renderer: $.jqplot.CategoryAxisRenderer,
-//                //            ticks: ticks
-//                //        }, yaxis: {
-//                //            padMin: 0
-//                //        }
-//                //    },
-//                //    legend: {
-//                //        show: true,
-//                //        location: 'e',
-//                //        placement: 'inside'
-//                //    }
-//                //});
-//            });
-//        }
-//    }
-//});
+}]);
