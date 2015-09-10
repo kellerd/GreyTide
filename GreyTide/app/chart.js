@@ -68,7 +68,7 @@ app.directive('chartbar', function () {
 });
 
 
-app.directive('chartline',  ['greyTideContext', function (greyTideContext) {
+app.directive('chartline',  ['breeze','greyTideContext', function (breeze,greyTideContext) {
     return {
         restrict: 'A',
         scope: true,
@@ -81,23 +81,26 @@ app.directive('chartline',  ['greyTideContext', function (greyTideContext) {
                     SelectMany(function (u) {
 
                         var orderedStates = Enumerable.From(u.states).Where(function (s) { return s.name != "Startup"}).
-                        					                   OrderBy(function (s) { return s.date });
-                        var firstState = orderedStates.First();
+                        					                   OrderBy(function (s) { return s.date }).Select(function (s) { return { name: s.name, date: s.date } }).ToArray();
+                        var name = u.name;
+                        var points = u.points;
+                        var firstState = orderedStates[0];
+                        //Init an object with the starting state
                         var currentObject = greyTideContext.models.create(
                             {
                                 "id:": greyTideContext.guidGenerator(),
-                                "name": u.name,
-                                "points": u.points,
+                                "name": name,
+                                "points": points,
                                 "currentState": firstState.name,
                                 "states": [firstState]
-                            }, EntityState.Detached);
-
-                        var states = orderedStates.
+                            }, breeze.EntityState.Detached);
+                        //Push the object through each state to select next states
+                        var states = Enumerable.From(orderedStates).
                         					                   Select(function (s, i) {
-                        					                       //if (i != 0)
-                        					                       //    currentObject[s.name].call(currentObject);
+                        					                       if (i != 0)
+                        					                           currentObject[s.name].call(currentObject);
                         					                       return {
-                        					                           points: u.points,
+                        					                           points: currentObject.points,
                         					                           date: new Date(s.date),
                         					                           name: currentObject.current
                         					                       }
@@ -165,7 +168,7 @@ app.directive('chartline',  ['greyTideContext', function (greyTideContext) {
                         });
                     chart.yAxis.
                         tickFormat(function (d) {
-                            return d3.format(',.0f');
+                            return d3.format(',.0f')(d);
                         });
                     d3.select('#' + el[0].id + ' svg')
                         .datum(data.ToArray())

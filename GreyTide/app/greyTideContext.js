@@ -28,7 +28,7 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
         //onclear: function (event, from, to) { alert('all is clear'); },
         onafterevent: function (event, from, to) {
             if (this.states.length == 0 || this.states[0].name != event) {
-                this.states.push(manager.createEntity("ModelState", { id: guid(), name: event, date: new Date().toISOString(), active: true, modelId: this.modelId }));
+                this.states.push(manager.createEntity("ModelState", { id: guid(), name: event, date: new Date().toISOString(), active: true, modelId: this.modelId }, breeze.EntityState.Detached));
                 this.allStates = Enumerable.From(this.transitions()).Select(function (x) { return { name: x, active: false, date: new Date().toISOString() }; }).Union(Enumerable.From(this.states).Where(function (s) { return s.active })).ToArray();
 
 
@@ -107,7 +107,7 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
         var dataServiceName = "breeze/GreyTide";
         manager = new breeze.EntityManager(dataServiceName);
         metadataStore = manager.metadataStore;
-        configureManagerToSaveModifiedItemImmediately();
+        //configureManagerToSaveModifiedItemImmediately();
     }
 
     function configureManagerToSaveModifiedItemImmediately() {
@@ -132,8 +132,8 @@ app.factory('greyTideContext', ['breeze', function (breeze) {
             get: get,
             save: saveEntity
         };
-        function create(initialValues) {
-            return manager.createEntity(localModelName, initialValues);
+        function create(initialValues, entityState, mergeStrategy) {
+            return manager.createEntity(localModelName, initialValues, entityState, mergeStrategy);
         }
 
         function remove(model) {
