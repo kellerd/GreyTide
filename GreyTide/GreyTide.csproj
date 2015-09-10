@@ -127,10 +127,13 @@
     <Content Include="partials\chart.html" />
     <Content Include="partials\item.html" />
     <Content Include="partials\items.html" />
-    <Content Include="scripts\angular-route.min.js" />
-    <Content Include="scripts\angular.min.js.map" />
     <Content Include="packages.config" />
     <Content Include="app\greyTideContext.js" />
+    <Content Include="scripts\angular-mocks.js" />
+    <Content Include="scripts\angular-route.js" />
+    <Content Include="scripts\angular-route.min.js" />
+    <Content Include="scripts\angular.js" />
+    <Content Include="scripts\angular.min.js" />
     <Content Include="scripts\breeze.bridge.angular.js" />
     <Content Include="scripts\breeze.debug.js" />
     <Content Include="scripts\breeze.directives.js" />
@@ -139,9 +142,10 @@
     <Content Include="scripts\d3\d3.min.js" />
     <Content Include="data\models.json" />
     <Content Include="data\states.json" />
-    <Content Include="scripts\angular-route.min.js.map" />
     <Content Include="scripts\d3\LICENSE" />
     <Content Include="LICENSE.md" />
+    <Content Include="scripts\angular.min.js.map" />
+    <Content Include="scripts\angular-route.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -153,10 +157,6 @@
     <Content Include="index.html" />
     <Content Include="partials\state.html" />
     <Content Include="partials\tide.html" />
-    <Content Include="scripts\angular-mocks.js" />
-    <Content Include="scripts\angular-route.js" />
-    <Content Include="scripts\angular.js" />
-    <Content Include="scripts\angular.min.js" />
     <Content Include="app\app.js" />
     <Content Include="app\chart.js" />
     <Content Include="app\contollers.js" />
