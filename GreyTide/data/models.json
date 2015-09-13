@@ -536,6 +536,16 @@
     "faction": "Tyranids",
     "states": [
       {
+        "name": "Complete",
+
+        "date": "2015-09-12T21:06:00.000Z"
+      },
+      {
+        "name": "Finish Coat",
+
+        "date": "2015-09-12T20:55:00.000Z"
+      },
+      {
         "name": "Paint",
 
         "date": "2015-09-05T04:56:00.000Z"
@@ -757,6 +767,16 @@
     "points": 130,
     "faction": "Tyranids",
     "states": [
+      {
+        "name": "Complete",
+
+        "date": "2015-09-12T21:06:00.000Z"
+      },
+      {
+        "name": "Finish Coat",
+
+        "date": "2015-09-12T20:55:00.000Z"
+      },
       {
         "name": "Paint",
 
@@ -1192,6 +1212,16 @@
         "name": "Model",
         "points": 150,
         "states": [
+          {
+            "name": "Complete",
+
+            "date": "2015-09-12T21:06:00.000Z"
+          },
+          {
+            "name": "Finish Coat",
+
+            "date": "2015-09-12T20:55:00.000Z"
+          },
           {
             "name": "Paint",
 
