@@ -19,4 +19,3 @@ var App;
             // Include $route to kick start the router.
         }]);
 })(App || (App = {}));
-//# sourceMappingURL=app.js.map

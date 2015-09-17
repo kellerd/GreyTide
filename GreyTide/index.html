@@ -30,6 +30,10 @@
     <link href="content/customtheme.css" rel="stylesheet">
     <link href="content/styles.css" rel="stylesheet" />
     <link href="content/breeze.directives.css" rel="stylesheet" />
+    <link href="scripts/x-editable/xeditable.css" rel="stylesheet">
+    <link href="scripts/nv.d3.css" rel="stylesheet" />
+    <link href="scripts/multi-select/angular-multi-select.css" rel="stylesheet" />
+
 </head>
 <body>
     <div>
@@ -63,7 +67,11 @@
     <script src="scripts/breeze.bridge.angular.js"></script>
     <script src="scripts/breeze.directives.js"></script>
     <script src="scripts/breeze.saveErrorExtensions.js"></script>
-
+    <script src="scripts/x-editable/xeditable.js"></script>
+    <script src="scripts/linq.js"></script>
+    <script src="scripts/state-machine.js"></script>
+    <script src="scripts/d3/d3.min.js"></script>
+    <script src="scripts/nv.d3.js"></script>
 
     <!-- Bootstrapping -->
     <script src="app/app.js"></script>
@@ -77,7 +85,6 @@
     <script src="app/common/common.js"></script>
     <script src="app/common/logger.js"></script>
     <script src="app/common/spinner.js"></script>
-    <script src="scripts/linq.js"></script>
 
     <!-- common.bootstrap Modules -->
     <script src="app/common/bootstrap/common.bootstapModule.js"></script>
@@ -90,6 +97,7 @@
     <script src="app/layout/sidebarCtrl.js"></script>
     <script src="app/chart/chart.js"></script>
     <script src="app/tide/tide.js"></script>
+    <script src="app/tide/state.js"></script>
 
     <!-- app Directives -->
     <script src="app/directives/cc-sidebar.js"></script>
@@ -101,6 +109,7 @@
     <script src="app/directives/cc-scroll-to-top.js"></script>
     <script src="app/directives/cc-img-person.js"></script>
     <script src="app/chart/chart.directives.js"></script>
+    <script src="scripts/multi-select/angular-multi-select.js"></script>
     
     <!-- app Services -->
     <script src="app/services/datacontext.js"></script>

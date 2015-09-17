@@ -304,11 +304,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="index.htmlx" />
     <Content Include="app\state\state.html" />
     <Content Include="app\tide\tide.html" />
     <Content Include="app\chart\chart.directives.js" />
-    <Content Include="app\state-machine.js" />
+    <Content Include="scripts\state-machine.js" />
     <Content Include="app\stateservice.js" />
     <Content Include="app\tideservice.js" />
     <None Include="scripts\linq-vsdoc.js" />
@@ -366,6 +365,7 @@
     <TypeScriptCompile Include="app\layout\sidebarCtrl.ts" />
     <TypeScriptCompile Include="app\services\datacontext.ts" />
     <TypeScriptCompile Include="app\services\entityManagerFactory.ts" />
+    <TypeScriptCompile Include="app\state\state.ts" />
     <TypeScriptCompile Include="app\tide\tide.ts" />
     <TypeScriptCompile Include="scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="scripts\typings\angularjs\angular-cookies.d.ts" />
@@ -387,9 +387,7 @@
       <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="partials\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
