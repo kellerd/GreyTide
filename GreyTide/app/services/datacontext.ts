@@ -7,6 +7,7 @@ module App.Services {
         getTideAndState(): ng.IPromise<ITideAndState>;
         getTide(): ng.IPromise<any>;
         getStates(): ng.IPromise<any>;
+        prime(): Function;
     }
 
     export interface ITideAndState {
@@ -78,6 +79,9 @@ module App.Services {
             };
 
             return this.$q.when(TideAndState);
+        }
+        public prime():void {
+            
         }
     }
 

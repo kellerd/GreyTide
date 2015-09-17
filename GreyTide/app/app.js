@@ -15,7 +15,8 @@ var App;
         'ui.bootstrap' // ui-bootstrap (ex: carousel, pagination, dialog)
     ]);
     // Handle routing errors and success events
-    App.app.run(['$route', function ($route) {
+    App.app.run(['$route', 'datacontext', function ($route, datacontext) {
             // Include $route to kick start the router.
+            datacontext.prime();
         }]);
 })(App || (App = {}));
