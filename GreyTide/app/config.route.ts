@@ -38,13 +38,33 @@ module App
                     }
                 }
             }, {
-                url: '/admin',
+                url: '/state',
                 config: {
-                    title: 'admin',
-                    templateUrl: 'app/admin/admin.html',
+                    title: 'state',
+                    templateUrl: 'app/state/state.html',
                     settings: {
                         nav: 2,
-                        content: '<i class="fa fa-lock"></i> Admin'
+                        content: '<i class="fa fa-lock"></i> States'
+                    }
+                }
+            }, {
+                url: '/tide',
+                config: {
+                    title: 'tide',
+                    templateUrl: 'app/tide/tide.html',
+                    settings: {
+                        nav: 3,
+                        content: '<i class="fa fa-lock"></i> Grey Tide'
+                    }
+                }
+            }, {
+                url: '/chart',
+                config: {
+                    title: 'chart',
+                    templateUrl: 'app/chart/chart.html',
+                    settings: {
+                        nav: 3,
+                        content: '<i class="fa fa-lock"></i> Chart'
                     }
                 }
             }

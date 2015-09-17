@@ -243,9 +243,9 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="index.html" />
-    <Content Include="partials\chart.html" />
-    <Content Include="partials\item.html" />
-    <Content Include="partials\items.html" />
+    <Content Include="app\chart\chart.html" />
+    <Content Include="app\tide\item.html" />
+    <Content Include="app\tide\items.html" />
     <Content Include="packages.config" />
     <Content Include="app\greyTideContext.js" />
     <Content Include="scripts\angular-animate.js" />
@@ -305,10 +305,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="index.htmlx" />
-    <Content Include="partials\state.html" />
-    <Content Include="partials\tide.html" />
-    <Content Include="app\chart.js" />
-    <Content Include="app\route.js" />
+    <Content Include="app\state\state.html" />
+    <Content Include="app\tide\tide.html" />
+    <Content Include="app\chart\chart.directives.js" />
     <Content Include="app\state-machine.js" />
     <Content Include="app\stateservice.js" />
     <Content Include="app\tideservice.js" />
@@ -343,6 +342,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="app\admin\admin.ts" />
     <TypeScriptCompile Include="app\app.ts" />
+    <TypeScriptCompile Include="app\chart\chart.ts" />
     <TypeScriptCompile Include="app\common\bootstrap\bootstrap.dialog.ts" />
     <TypeScriptCompile Include="app\common\bootstrap\common.bootstapModule.ts" />
     <TypeScriptCompile Include="app\common\common.ts" />
@@ -366,6 +366,7 @@
     <TypeScriptCompile Include="app\layout\sidebarCtrl.ts" />
     <TypeScriptCompile Include="app\services\datacontext.ts" />
     <TypeScriptCompile Include="app\services\entityManagerFactory.ts" />
+    <TypeScriptCompile Include="app\tide\tide.ts" />
     <TypeScriptCompile Include="scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="scripts\typings\angularjs\angular-cookies.d.ts" />
     <TypeScriptCompile Include="scripts\typings\angularjs\angular-mocks.d.ts" />
@@ -375,6 +376,8 @@
     <TypeScriptCompile Include="scripts\typings\angularjs\angular.d.ts" />
     <TypeScriptCompile Include="scripts\typings\breeze\breeze.d.ts" />
     <TypeScriptCompile Include="scripts\typings\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\linq\linq.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\linq\linq.jquery.d.ts" />
     <TypeScriptCompile Include="scripts\typings\q\Q.d.ts" />
     <TypeScriptCompile Include="scripts\typings\toastr\toastr.d.ts" />
   </ItemGroup>
@@ -383,6 +386,9 @@
       <Project>{41784ebd-baeb-49ab-89d9-a38be3af2cdc}</Project>
       <Name>Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="partials\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

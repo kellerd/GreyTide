@@ -36,11 +36,11 @@ module App{
     };
 
     var config:IConfigurations = {
-        appErrorPrefix: '[HT Error] ', //Configure the exceptionHandler decorator
-        docTitle: 'HotTowel: ',
+        appErrorPrefix: '[Tide Error] ', //Configure the exceptionHandler decorator
+        docTitle: 'GreyTide: ',
         events: events,
         remoteServiceName: remoteServiceName,
-        version: '2.1.0',
+        version: '0.2.0',
         imageSettings: {
             imageBasePath: '',
             unknownPersonImageSource:''
@@ -48,6 +48,7 @@ module App{
     };
 
     var app = angular.module('app');
+    //Global variable for angular, should be static
     app.value('config', config);
     app.config(['$logProvider', $logProvider => {
         // turn debugging off/on (no info or warn)

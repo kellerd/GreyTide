@@ -51,17 +51,17 @@ module App.Controllers
 
         getMessageCount()
         {
-            return this.datacontext.getMessageCount().then(data =>
+            return this.datacontext.getTideAndState().then(data =>
             {
-                return this.messageCount = data;
+                return this.messageCount = 42;
             });
         }
 
         getPeople()
         {
-            return this.datacontext.getPeople().then(data =>
+            return this.datacontext.getTideAndState().then(data =>
             {
-                return this.people = data;
+                return this.people = data.tide;
             });
         }
 
