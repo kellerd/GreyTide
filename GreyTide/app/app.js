@@ -20,3 +20,4 @@ var App;
             datacontext.prime();
         }]);
 })(App || (App = {}));
+//# sourceMappingURL=app.js.map
