@@ -28,7 +28,7 @@ module App{
     toastr.options.positionClass = 'toast-bottom-right';
 
     // For use with the HotTowel-Angular-Breeze add-on that uses Breeze
-    var remoteServiceName = 'breeze/Breeze';
+    var remoteServiceName = 'breeze/GreyTide';
 
     var events: IEvents = {
         controllerActivateSuccess: 'controller.activateSuccess',

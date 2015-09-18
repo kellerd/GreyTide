@@ -1,6 +1,6 @@
 ﻿/// <reference path="../../scripts/typings/angularjs/angular.d.ts" />
+/// <reference path="../../scripts/typings/statemachine/statemachine.d.ts" />
 /// <reference path="../../scripts/typings/breeze/breeze.d.ts" />
-
 module App.Services {
 
     export interface IDatacontext {
@@ -17,7 +17,6 @@ module App.Services {
 
     export class Datacontext {
         public static serviceId: string = 'datacontext';
-        private common: App.Shared.ICommon;
         private $q: ng.IQService;
 
         private getLogFn: (moduleId: string, fnName?: string)=>any;
@@ -25,24 +24,21 @@ module App.Services {
         private logSuccess: (message: string, data?: any, source?: string, showToast?: boolean) => void;
         private log: (message: string, data?: any, source?: string, showToast?: boolean) => void;
         private EntityQuery: typeof breeze.EntityQuery;
-        private manager: breeze.EntityManager;
-        private config: IConfigurations;
+        private manager: IManagerAndMetaModels;
 
-        constructor(common: App.Shared.ICommon, emFactory: IEntityManagerFactory, config:IConfigurations) {
-            this.common = common;
+        constructor(private common: App.Shared.ICommon, entityManagerFactory: IEntityManagerFactory, private config:IConfigurations) {
             this.$q = common.$q;
             this.getLogFn = common.logger.getLogFn;
             this.log = this.getLogFn(Datacontext.serviceId);
             this.logError = this.getLogFn(Datacontext.serviceId, 'error');
             this.logSuccess = this.getLogFn(Datacontext.serviceId, 'success');
             this.EntityQuery = breeze.EntityQuery;
-            this.manager = emFactory.newManager();
-            this.config = config;
+            this.manager = entityManagerFactory.newManager();
         }
         public getTide(): ng.IPromise<any> {
             var tide;
             return this.EntityQuery.from("Tide").expand("states,items")
-                .using(this.manager).execute()
+                .using(this.manager.manager).execute()
                 .then(getSucceeded)
                 .catch(this.getFailed);
 
@@ -62,7 +58,7 @@ module App.Services {
         public getStates(): ng.IPromise<any> {
             var states;
             return this.EntityQuery.from("States").expand("events.from")
-                .using(this.manager).execute()
+                .using(this.manager.manager).execute()
                 .then(getSucceeded)
                 .catch(this.getFailed);
 
@@ -78,11 +74,26 @@ module App.Services {
             });
         }
         public prime():void {
-            
+            //this.getStates().then(function (data) {
+            //    var events = data[0].events.map(function (e) {
+            //        return {
+            //            name: e.name,
+            //            from: e.from.map(function (f) { return f.name; }),
+            //            to: e.to
+            //        }
+            //    });
+            //    StateMachine.create({
+            //        target: this.manager.Model.prototype,
+            //        initial: { state: 'None', event: 'init', defer: true },
+            //        events: events
+            //    });
+            //}, function (error) {
+            //    alert(error);
+            //});
         }
     }
 
     // Register with angular
-    app.factory(Datacontext.serviceId, ['common', 'emFactory', 'config', (common, emFactory, config) => new Datacontext(common, emFactory, config)]);
+    app.factory(Datacontext.serviceId, ['common', 'entityManagerFactory', 'config', (common, entityManagerFactory, config) => new Datacontext(common, entityManagerFactory, config)]);
 
 }
