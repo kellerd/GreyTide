@@ -49,7 +49,7 @@ module App.Services {
             }
         }
 
-        private getFailed(error) {
+        private getFailed = (error) => {
             var msg = this.config.appErrorPrefix + "Error retrieving states: " + error.message;
             this.logError(msg, error);
             throw error;
