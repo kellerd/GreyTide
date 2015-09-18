@@ -73,12 +73,9 @@ module App.Services {
             }
         }
         public getTideAndState(): ng.IPromise<ITideAndState> {
-            var TideAndState: ITideAndState = {
-                states: [],
-                tide: []
-            };
-
-            return this.$q.when(TideAndState);
+            return this.$q.all([this.getStates(), this.getTide()]).then(function (dataArray) {
+                return <ITideAndState>{ states: dataArray[0], tide: dataArray[1] };
+            });
         }
         public prime():void {
             

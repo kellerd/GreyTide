@@ -306,7 +306,7 @@
   <ItemGroup>
     <Content Include="app\state\state.html" />
     <Content Include="app\tide\tide.html" />
-    <Content Include="app\chart\chart.directives.js" />
+    <TypeScriptCompile Include="app\chart\chart.directives.ts" />
     <Content Include="scripts\state-machine.js" />
     <Content Include="app\stateservice.js" />
     <Content Include="app\tideservice.js" />
