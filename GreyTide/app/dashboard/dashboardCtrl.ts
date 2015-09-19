@@ -15,17 +15,17 @@ module App.Controllers
         controllerId = DashboardCtrl.controllerId;
         common: App.Shared.ICommon;
         datacontext: App.Services.IDatacontext;
-        log: any;
+        log: (message: string, data?: any, source?: string, showToast?: boolean) => void;
         messageCount: number;
         news: INews;
         people: Array<any> = [];
 
 //#endregion
-        constructor(common, datacontext)
+        constructor(common:App.Shared.ICommon, datacontext:App.Services.IDatacontext)
         {
             this.common = common;
             this.datacontext = datacontext;
-            this.log = common.logger.getLogFn();
+            this.log = common.logger.log;
             this.news = this.getNews();
 
             // Queue all promises and wait for them to finish before loading the view

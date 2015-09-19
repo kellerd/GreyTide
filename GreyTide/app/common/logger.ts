@@ -3,7 +3,6 @@
 module App.Shared{
 
     export interface ILogger {
-        getLogFn(moduleId: string, fnName?: string): Function
         log(message: string, data: any, source: string, showToast: boolean)
         logError(message: string, data: any, source: string, showToast: boolean)
         logSuccess(message: string, data: any, source: string, showToast: boolean)
@@ -17,7 +16,6 @@ module App.Shared{
         $log;
         logFn:Function;
         service = {
-        getLogFn: this.getLogFn,
         log: this.log,
         logError: this.logError,
         logSuccess: this.logSuccess,
@@ -30,50 +28,30 @@ module App.Shared{
             this.$log = $log;
         }
         //#region Public Methods
-        //TODO: see if there is a way to solve this more intuitive than returning an anonymous function
-        getLogFn(moduleId: string, logFunctionName?: string): Function
-        {
-            logFunctionName = logFunctionName || 'log';
-            switch (logFunctionName.toLowerCase()) { // convert aliases
-                case 'success':
-                    logFunctionName = 'logSuccess'; break;
-                case 'error':
-                    logFunctionName = 'logError'; break;
-                case 'warn':
-                    logFunctionName = 'logWarning'; break;
-                case 'warning':
-                    logFunctionName = 'logWarning'; break;
-            }
-            
-            
-            return (msg: string, data?: any, showToast?: boolean) => {
-                this.logFn = this.service[logFunctionName] || this.service.log;
-                this.logFn(msg, data, moduleId, (showToast === undefined) ? true : showToast);
-            };
-        }
+        
 
-        log(message: string, data: any, source: string, showToast: boolean)
+        public log = (message: string, data: any, source: string, showToast: boolean) =>
         {
             this.logIt(message, data, source, showToast, 'info');
         }
 
-        logWarning(message: string, data: any, source: string, showToast: boolean)
+        public logWarning = (message: string, data: any, source: string, showToast: boolean) =>
         {
             this.logIt(message, data, source, showToast, 'warning');
         }
 
-        logSuccess(message: string, data: any, source: string, showToast: boolean)
+        public logSuccess = (message: string, data: any, source: string, showToast: boolean) =>
         {
             this.logIt(message, data, source, showToast, 'success');
         }
 
-        logError(message: string, data: any, source: string, showToast: boolean)
+        public logError = (message: string, data: any, source: string, showToast: boolean) =>
         {
             this.logIt(message, data, source, showToast, 'error');
         }
 
         //#endregion
-        private logIt(message:string, data:any, source:string, showToast:any, toastType:string) {
+        private logIt=(message:string, data:any, source:string, showToast:any, toastType:string) => {
             var write = (toastType === 'error') ? this.$log.error : this.$log.log;
             source = source ? '[' + source + '] ' : '';
             write(source, message, data);

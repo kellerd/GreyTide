@@ -24,12 +24,12 @@ namespace Controllers
             return metadata;
         }
 
-        // ~/breeze/GreyTide/Models
-        // ~/breeze/GreyTide/Models?$filter=IsArchived eq false&$orderby=CreatedAt 
+        // ~/breeze/GreyTide/Tide
+        // ~/breeze/GreyTide/Tide?$filter=IsArchived eq false&$orderby=CreatedAt 
         [HttpGet]
-        public IQueryable<Model> Models()
+        public IQueryable<Model> Tide()
         {
-            return Repo.Models.Value.AsQueryable();
+            return Repo.Tide.Value.AsQueryable();
         }
 
         // ~/breeze/GreyTide/States

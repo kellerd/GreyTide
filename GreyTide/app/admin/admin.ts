@@ -22,7 +22,6 @@ module App.Controllers{
             this.common = common;
             this.controllerId = AdminCtrl.controllerId;
             this.title = "Admin";
-            this.log = this.common.logger.getLogFn(AdminCtrl.controllerId);
             this.activate([]);
         } 
         //#region private methods

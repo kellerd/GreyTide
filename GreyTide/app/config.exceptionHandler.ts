@@ -13,7 +13,6 @@ module App
     function extendExceptionHandler($delegate:any, config:IConfigurations, logger:ILogger)
     {
         var appErrorPrefix = config.appErrorPrefix;
-        var logError = logger.getLogFn('app', 'error');
         return (exception, cause) =>
         {
             $delegate(exception, cause);
@@ -24,7 +23,7 @@ module App
 
             var errorData = { exception: exception, cause: cause };
             var msg = appErrorPrefix + exception.message;
-            logError(msg, errorData, true);
+            logger.logError(msg, errorData, 'app', true);
         };
     }
 
