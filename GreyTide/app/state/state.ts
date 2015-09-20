@@ -10,7 +10,7 @@ module App.Controllers
         datacontext: App.Services.IDatacontext;
         log: (message: string, data?: any, source?: string, showToast?: boolean) => void;
         messageCount: number;
-        state: Array<any> = [];
+        states: Array<any> = [];
 
 //#endregion
         constructor(common:App.Shared.ICommon, datacontext:App.Services.IDatacontext)
@@ -36,7 +36,7 @@ module App.Controllers
         {
             return this.datacontext.getStates().then(data =>
             {
-                return this.state = data;
+                return this.states = data;
             });
         }
 
