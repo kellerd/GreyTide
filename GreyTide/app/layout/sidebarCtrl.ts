@@ -5,7 +5,7 @@ module App.Controllers
 
     export interface ISidebarCtrl
     {
-        isCurrent(route): string
+        isCurrent(route: IAppRoute): string
         navRoutes: Array<Object>
     }
 
@@ -20,13 +20,13 @@ module App.Controllers
             this.activate();
         }
 
-        public isCurrent(route)
+        public isCurrent(route:IAppRoute)
         {
-            if (!route.config.title || !this.$route.current || !this.$route.current.title)
+            if (!route.title || !this.$route.current || !this.$route.current.title)
             {
                 return '';
             }
-            var menuName = route.config.title;
+            var menuName = route.title;
             return this.$route.current.title.substr(0, menuName.length) === menuName ? 'current' : '';
         }
         public navClick()
@@ -41,8 +41,8 @@ module App.Controllers
 
         private getNavRoutes()
         {
-            this.navRoutes = this.routes.filter(r => r.config.settings && r.config.settings.nav)
-                .sort((r1, r2) => r1.config.settings.nav - r2.config.settings.nav);
+            this.navRoutes = this.routes.filter((r:IAppRoute) => r.settings && r.settings.nav)
+                .sort((r1: IAppRoute, r2: IAppRoute) => r1.settings.nav - r2.settings.nav);
         }
     }
 
