@@ -12,7 +12,7 @@ module App.Directives {
     }
 
     interface IChartScope extends ng.IScope {
-        chartdata: Array<any>;
+        vm:App.Controllers.Chart
     }
     interface IChartLine extends ng.IDirective {
     }
@@ -21,20 +21,22 @@ module App.Directives {
 
         constructor(private config: IConfigurations) {
         }
-        protected static initChart = function (chart, svgSelector: string, scope: IChartScope) {
-            var updateSize = function () {
-                var width = nv.utils.windowSize().width - 40,
-                    height = Math.max(nv.utils.windowSize().height / 2 - 40, 400);
+        protected static initChart = (chart, svgSelector: string, chartdata:() => ng.IPromise<any[]>) => {
+            chartdata().then(data => {
+                var updateSize = () => {
+                    var width = nv.utils.windowSize().width - 40,
+                        height = Math.max(nv.utils.windowSize().height / 2 - 40, 400);
 
-                d3.select(svgSelector)
-                    .attr('width', width)
-                    .attr('height', height)
-                chart.width(width).height(height)
-                chart.update();
-            };
-            d3.select(svgSelector).datum(scope.chartdata).transition().duration(500).call(chart);
-            updateSize();
-            nv.utils.windowResize(updateSize);
+                    d3.select(svgSelector)
+                        .attr('width', width)
+                        .attr('height', height)
+                    chart.width(width).height(height)
+                    chart.update();
+                };
+                d3.select(svgSelector).datum(data).call(chart);
+                updateSize();
+                nv.utils.windowResize(updateSize);
+            });
         }
     }
 
@@ -47,14 +49,13 @@ module App.Directives {
         }
 
         link = (scope: IChartScope, el, attrs) => {
-
-            var svgSelector = '#' + el[0].id + ' svg';
-            angular.element(document).ready(function () {
-                nv.addGraph(function () {
+            angular.element(document).ready( () => {
+                var svgSelector = '#' + el[0].id + ' svg';
+                nv.addGraph(()=>{
                     var chart;
                     chart = nv.models.multiBarChart();
                     chart.yAxis.tickFormat(d3.format(',.0f'));
-                    TideChart.initChart(chart, svgSelector, scope);
+                    TideChart.initChart(chart, svgSelector, scope.vm.getBarChart);
                     return chart;
                 });
             });
@@ -69,11 +70,9 @@ module App.Directives {
         }
 
         link = (scope: IChartScope, el, attrs) => {
-            angular.element(document).ready(function () {
-                var data = scope.chartdata;
-                var chart;
+            angular.element(document).ready(() => {
                 var svgSelector = '#' + el[0].id + ' svg';
-                nv.addGraph(function () {
+                nv.addGraph( () => {
                     var chart = nv.models.stackedAreaChart()
                         .margin({ right: 100, bottom: 30, left: 100 })
                         .x(function (d) { return d[0]; })   //We can modify the data accessor functions...
@@ -91,7 +90,7 @@ module App.Directives {
                         tickFormat(function (d) {
                             return d3.format(',.0f')(d);
                         });
-                    TideChart.initChart(chart, svgSelector, scope);
+                    TideChart.initChart(chart, svgSelector, scope.vm.getLineChart);
                     return chart;
                 });
             });

@@ -21,7 +21,7 @@ module App.Controllers
             this.log = common.logger.log;
 
             // Queue all promises and wait for them to finish before loading the view
-            this.activate([this.getBarChart(), this.getLineChart()]);
+            //this.activate([this.getBarChart(), this.getLineChart()]);
         }
 
         // TODO: is there a more elegant way of activating the controller - base class?
@@ -33,7 +33,7 @@ module App.Controllers
 
 //#region Public Methods
 
-        getBarChart()
+        getBarChart = () => 
         {
             var dc = this.datacontext;
             return dc.getTideAndState().then(data =>
@@ -114,12 +114,12 @@ module App.Controllers
                     OrderBy(function (m) {
                         return statesOrder.Contains(m.name) ? statesOrder.Get(m.name).order : -1;
                     });
-
-                return this.barData = groups.Select(function (g) { return { 'key': g.name, 'values': g.ItemsByDate }; }).ToArray();
+                this.barData = groups.Select(function (g) { return { 'key': g.name, 'values': g.ItemsByDate }; }).ToArray();
+                return this.barData;
             });
         }
 
-        getLineChart()
+        getLineChart = () => 
         {
             var dc = this.datacontext;
             return dc.getTide().then(data =>
@@ -142,7 +142,8 @@ module App.Controllers
                             ToArray()
                     }
                 }).OrderBy("$.key");
-                return this.barLineData = d.ToArray();
+                this.barLineData = d.ToArray();
+                return this.barLineData;
             });
         }
 

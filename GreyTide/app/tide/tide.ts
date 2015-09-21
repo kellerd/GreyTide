@@ -30,8 +30,9 @@ module App.Controllers {
                 .then(() => { this.log('Activated Tide View'); });
         }
         criteriaMatch = () => {
+            var localThis = this;
             var strCheck = (str) => {
-                return (this.query1 == undefined || (str && str.indexOf(this.query1) > -1)) && (this.query2 == undefined || (str && str.indexOf(this.query2) > -1));
+                return (localThis.query1 == undefined || (str && str.indexOf(localThis.query1) > -1)) && (localThis.query2 == undefined || (str && str.indexOf(localThis.query2) > -1));
             }
             return (item) => {
                 return item.parent ||
