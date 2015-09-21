@@ -35,7 +35,8 @@ module App.Controllers
 
         getBarChart()
         {
-            return this.datacontext.getTideAndState().then(data =>
+            var dc = this.datacontext;
+            return dc.getTideAndState().then(data =>
             {
                 var raw = Enumerable.From(data.tide).
                     SelectMany(function (u) {
@@ -51,9 +52,9 @@ module App.Controllers
                         var points = u.points;
                         var firstState = orderedStates[0];
                         //Init an object with the starting state
-                        var currentObject = this.datacontext.models.create(
+                        var currentObject:any = dc.create("Model",
                             {
-                                "id:": this.datacontext.guidGenerator(),
+                                "id:": App.Services.GuidGenerator.newGuid(),
                                 "name": name,
                                 "points": points,
                                 "currentState": firstState.name,
@@ -76,7 +77,7 @@ module App.Controllers
                         });
                     });
 
-                var statesOrder = Enumerable.From(data.states.model[0].events).ToDictionary("$.to",null);
+                var statesOrder = Enumerable.From(data.states[0].events).ToDictionary("$.to",null);
 
                 var dateUnion =
                     raw.
@@ -120,7 +121,8 @@ module App.Controllers
 
         getLineChart()
         {
-            return this.datacontext.getTide().then(data =>
+            var dc = this.datacontext;
+            return dc.getTide().then(data =>
             {
                 var model = Enumerable.From(data);
                 var groups = model.GroupBy(function (data) { return data.faction });

@@ -8,6 +8,7 @@ module App.Services {
         getTide(): ng.IPromise<any>;
         getStates(): ng.IPromise<any>;
         prime(): Function;
+        create(localModelName: string, initialValues?: {}, entityState?: breeze.EntityStateSymbol, mergeStrategy?: breeze.MergeStrategySymbol) : breeze.Entity
     }
 
     export interface ITideAndState {
@@ -34,6 +35,10 @@ module App.Services {
             this.EntityQuery = breeze.EntityQuery;
             this.manager = entityManagerFactory.newManager();
         }
+        create(localModelName: string, initialValues?: {}, entityState?: breeze.EntityStateSymbol, mergeStrategy?: breeze.MergeStrategySymbol): breeze.Entity {
+            return this.manager.manager.createEntity(localModelName, initialValues, entityState, mergeStrategy);
+        }
+
         public getTide(): ng.IPromise<any> {
             var tide;
 

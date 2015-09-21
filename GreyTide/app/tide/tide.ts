@@ -1,20 +1,21 @@
 ﻿'use strict';
-module App.Controllers
-{
-    export class Tide
-    {
+module App.Controllers {
+    export class Tide {
         public static controllerId: string = 'tide';
-//#region Variables
+        //#region Variables
         controllerId = Tide.controllerId;
         common: App.Shared.ICommon;
         datacontext: App.Services.IDatacontext;
         log: (message: string, data?: any, source?: string, showToast?: boolean) => void;
         messageCount: number;
         tide: Array<any> = [];
-
-//#endregion
-        constructor(common:App.Shared.ICommon, datacontext:App.Services.IDatacontext)
-        {
+        query1: string;
+        query2: string;
+        query3: string;
+        query5: Array<any>;
+        orderProp: string;
+        //#endregion
+        constructor(common: App.Shared.ICommon, datacontext: App.Services.IDatacontext) {
             this.common = common;
             this.datacontext = datacontext;
             this.log = common.logger.log;
@@ -24,23 +25,37 @@ module App.Controllers
         }
 
         // TODO: is there a more elegant way of activating the controller - base class?
-        activate(promises: Array<ng.IPromise<any>>)
-        {
+        activate(promises: Array<ng.IPromise<any>>) {
             this.common.activateController(promises, this.controllerId)
                 .then(() => { this.log('Activated Tide View'); });
         }
+        criteriaMatch = () => {
+            var strCheck = (str) => {
+                return (this.query1 == undefined || (str && str.indexOf(this.query1) > -1)) && (this.query2 == undefined || (str && str.indexOf(this.query2) > -1));
+            }
+            return (item) => {
+                return item.parent ||
+                    (
+                        (this.query5 || item.current != "Completed") &&
+                        (strCheck(item.name) || strCheck(item.faction) || strCheck((item.points | 0).toString())) &&
+                        (!this.query3 || item.current.indexOf(this.query3) > -1)
+                    );
+            };
+        };
 
-//#region Public Methods
-
-        getTide()
-        {
-            return this.datacontext.getTide().then(data =>
-            {
+        //#region Public Methods
+        getStates() {
+            return this.datacontext.getStates().then((data: any) => {
+                return this.query5 = data.map((s) => s.name);
+            });
+        }
+        getTide() {
+            return this.datacontext.getTide().then(data => {
                 return this.tide = data;
             });
         }
 
-//#endregion
+        //#endregion
     }
 
     // register controller with angular
