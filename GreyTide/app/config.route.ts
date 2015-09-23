@@ -29,14 +29,15 @@ module App {
     function getRoutes(): IAppRoute[] {
         return [
             {
-                title: 'dashboard',
+                title: 'tide',
                 url: '/',
                 settings: {
                     nav: 1,
-                    content: '<i class="fa fa-dashboard"></i> Dashboard'
+                    content: '<i class="fa fa-lock"></i> Grey Tide'
                 },
                 config: {
-                    templateUrl: 'app/dashboard/dashboard.html'
+                    templateUrl: 'app/tide/tide.html'
+
                 }
             }, {
                 title: 'state',
@@ -49,18 +50,7 @@ module App {
                     templateUrl: 'app/state/state.html'
                    
                 }
-            }, {
-                title: 'tide',
-                url: '/tide',
-                settings: {
-                    nav: 3,
-                    content: '<i class="fa fa-lock"></i> Grey Tide'
-                },
-                config: {
-                    templateUrl: 'app/tide/tide.html'
-                    
-                }
-            }, {
+            },  {
                 title: 'chart',
                 url: '/chart',
                 settings: {

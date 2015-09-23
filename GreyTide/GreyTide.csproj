@@ -121,8 +121,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\admin\admin.html" />
-    <Content Include="app\dashboard\dashboard.html" />
     <Content Include="app\layout\shell.html" />
     <Content Include="app\layout\sidebar.html" />
     <Content Include="app\layout\topnav.html" />
@@ -337,7 +335,6 @@
     <Compile Include="data\Repo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app\admin\admin.ts" />
     <TypeScriptCompile Include="app\app.ts" />
     <TypeScriptCompile Include="app\chart\chart.directives.ts" />
     <TypeScriptCompile Include="app\chart\chart.ts" />
@@ -351,7 +348,6 @@
     <TypeScriptCompile Include="app\config.exceptionHandler.ts" />
     <TypeScriptCompile Include="app\config.route.ts" />
     <TypeScriptCompile Include="app\config.ts" />
-    <TypeScriptCompile Include="app\dashboard\dashboardCtrl.ts" />
     <TypeScriptCompile Include="app\directives\cc-img-person.ts" />
     <TypeScriptCompile Include="app\directives\cc-menu-item-rendered.ts" />
     <TypeScriptCompile Include="app\directives\cc-scroll-to-top.ts" />
