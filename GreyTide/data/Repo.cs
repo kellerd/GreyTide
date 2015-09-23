@@ -11,16 +11,13 @@ using Breeze.ContextProvider.EF6;
 using System.Linq;
 using System.Data.Entity;
 using System.Threading;
-using GreyTideDataService.Models.V1;
+using GreyTideDataService.Models.V2;
 
 namespace GreyTideDataService
 {
     public class Repo : ContextProvider
     {
-        static Repo()
-        {
-            Database.SetInitializer<GreyTideContext>(null);
-        }
+        
 
         public class AsyncLazy<T> : Lazy<Task<T>>
         {
@@ -65,11 +62,11 @@ namespace GreyTideDataService
         {
             throw new NotImplementedException();
         }
-        public static EFContextProvider<GreyTideContext> MetadataConects =
-             new EFContextProvider<GreyTideContext>();
+        
         protected override string BuildJsonMetadata()
         {
-            return MetadataConects.Metadata();
+           
+            throw new NotImplementedException(); 
         }
 
         protected override void SaveChangesCore(SaveWorkState saveWorkState)

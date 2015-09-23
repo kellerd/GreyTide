@@ -41,6 +41,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.0.4.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.0.4\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Breeze.ContextProvider, Version=1.5.0.0, Culture=neutral, PublicKeyToken=f6085f1a45e2ac59, processorArchitecture=MSIL">
       <HintPath>..\packages\Breeze.Server.ContextProvider.1.5.4\lib\Breeze.ContextProvider.dll</HintPath>
       <Private>True</Private>
@@ -328,8 +332,10 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\AutoMapperConfig.cs" />
     <Compile Include="App_Start\BreezeWebApiConfig.cs" />
-    <Compile Include="Controllers\v1\v1Controller.cs" />
+    <Compile Include="Controllers\v2Controller.cs" />
+    <Compile Include="Controllers\v1Controller.cs" />
     <Compile Include="data\GreyTideContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="data\Repo.cs" />
