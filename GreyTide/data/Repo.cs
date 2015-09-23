@@ -34,7 +34,7 @@ namespace GreyTideDataService
             public TaskAwaiter<T> GetAwaiter() { return Value.GetAwaiter(); }
         }
 
-        public static Lazy<IEnumerable<Model>> Models =
+        public static Lazy<IEnumerable<Model>> Tide =
            new Lazy<IEnumerable<Model>>(() =>
            {
                var models = JsonConvert.DeserializeObject<IEnumerable<Model>>(File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data/models.json")));
