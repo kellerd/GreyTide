@@ -4,7 +4,7 @@ namespace GreyTideDataService
 {
     public class GreyTideContext : DbContext
     {
-        public DbSet<Model> Models { get; set; }
+        public DbSet<Model> Tide { get; set; }
         public DbSet<StateCollection> States { get; set; }
     }
 }
