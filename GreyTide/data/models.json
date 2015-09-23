@@ -536,6 +536,16 @@
     "faction": "Tyranids",
     "states": [
       {
+        "name": "Complete",
+
+        "date": "2015-09-12T21:06:00.000Z"
+      },
+      {
+        "name": "Finish Coat",
+
+        "date": "2015-09-12T20:55:00.000Z"
+      },
+      {
         "name": "Paint",
 
         "date": "2015-09-05T04:56:00.000Z"
@@ -757,6 +767,16 @@
     "points": 130,
     "faction": "Tyranids",
     "states": [
+      {
+        "name": "Complete",
+
+        "date": "2015-09-12T21:06:00.000Z"
+      },
+      {
+        "name": "Finish Coat",
+
+        "date": "2015-09-12T20:55:00.000Z"
+      },
       {
         "name": "Paint",
 
@@ -1193,6 +1213,16 @@
         "points": 150,
         "states": [
           {
+            "name": "Complete",
+
+            "date": "2015-09-12T21:06:00.000Z"
+          },
+          {
+            "name": "Finish Coat",
+
+            "date": "2015-09-12T20:55:00.000Z"
+          },
+          {
             "name": "Paint",
 
             "date": "2015-05-16T12:53:48.518Z"
@@ -1534,6 +1564,11 @@
         "name": "Weather",
 
         "date": "2015-07-19T20:20:52.924Z"
+      },
+      {
+        "name": "Complete",
+
+        "date": "2015-09-14T23:20:52.924Z"
       }
     ],
     "items": [ ]
@@ -1562,6 +1597,11 @@
         "name": "Weather",
 
         "date": "2015-07-19T20:20:52.924Z"
+      },
+      {
+        "name": "Complete",
+
+        "date": "2015-09-14T23:20:52.924Z"
       }
     ],
     "items": [ ]
@@ -1590,6 +1630,11 @@
         "name": "Weather",
 
         "date": "2015-07-19T20:20:52.924Z"
+      },
+      {
+        "name": "Complete",
+
+        "date": "2015-09-14T23:20:52.924Z"
       }
     ],
     "items": [ ]
@@ -2411,17 +2456,22 @@
     "points": 35,
     "faction": "Space Wolves",
     "states": [
-      
-            {
-                "name": "Weather",
-                
-                "date": "2015-07-24T18:00:00.000Z"
-            },
-            {
-                "name": "Paint",
-                
-                "date": "2015-07-23T16:00:00.000Z"
-            },
+
+      {
+        "name": "Weather",
+
+        "date": "2015-07-24T18:00:00.000Z"
+      },
+      {
+        "name": "Paint",
+
+        "date": "2015-07-23T16:00:00.000Z"
+      },
+      {
+        "name": "Complete",
+
+        "date": "2015-09-14T23:20:52.924Z"
+      },
       {
         "name": "Prime",
 
@@ -2435,258 +2485,263 @@
     ],
     "items": [ ]
   },
-    {
-        "name": "Rhino",
-        "points": 35,
-        "faction": "Space Wolves",
-        "states": [
-            {
-                "name": "Prime",
-                
-                "date": "2015-01-01T20:00:00.000Z"
-            },
-            {
-                "name": "Assemble",
-                
-                "date": "2015-01-01T19:00:00.000Z"
-            }
-        ],
-        "items": []
-    },
-    {
-        "name": "Toxicrene",
-        "points": 210,
-        "faction": "Tyranids",
-        "states": [
-            {
-                "name": "Prime",
-                
-                "date": "2015-03-20T23:00:00.000Z"
-            },
-            {
-                "name": "Assemble",
-                
-                "date": "2015-01-31T23:00:00.000Z"
-            }
-        ],
-        "items": []
-    },
-    {
-        "name": "Stormwolf",
-        "points": 235,
-        "faction": "Space Wolves",
-        "states": [
-            {
-                "name": "Prime",
-                
-                "date": "2015-03-20T23:00:00.000Z"
-            },
-            {
-                "name": "Assemble",
-                
-                "date": "2015-01-31T23:00:00.000Z"
-            }
-        ],
-        "items": []
-    },
-    {
-        "name": "Land Raider",
-        "points": 250,
-        "faction": "Space Wolves",
-        "states": [
-            {
-                "name": "Buy New",
-                
-                "date": "2015-05-13T13:19:48.819Z"
-            },
-            {
-                "name": "Startup",
-                
-                "date": "2015-05-13T13:19:48.814Z"
-            }
-        ],
-        "items": []
-    },
-    {
-        "name": "Predator",
-        "points": 140,
-        "faction": "Space Wolves",
-        "states": [
-            {
-                "name": "Buy New",
-                
-                "date": "2015-05-13T13:20:35.527Z"
-            },
-            {
-                "name": "Startup",
-                
-                "date": "2015-05-13T13:20:35.525Z"
-            }
-        ],
-        "items": []
-    },
-    {
-        "name": "Dreadnaught",
-        "points": 110,
-        "faction": "Space Wolves",
-        "states": [
-            {
-                "name": "Buy New",
-                
-                "date": "2015-05-13T13:20:52.925Z"
-            },
-            {
-                "name": "Startup",
-                
-                "date": "2015-05-13T13:20:52.924Z"
-            },
-            {
-                "name": "Assemble",
-                
-                "date": "2015-06-13T13:20:52.924Z"
-            },
-            {
-                "name": "Prime",
-                
-                "date": "2015-06-14T13:20:52.924Z"
-            },
-            {
-                "name": "Paint",
-                
-                "date": "2015-06-22T13:20:52.924Z"
-            },
-            {
-                "name": "Weather",
-                
-                "date": "2015-06-23T13:20:52.924Z"
-            }
-        ],
-        "items": []
-    },
-    {
-        "name": "Tac Squad",
-        "points": 160,
-        "faction": "Space Wolves",
-        "states": [
-            {
-                "name": "Buy New",
-                
-                "date": "2015-05-13T13:21:27.103Z"
-            },
-            {
-                "name": "Startup",
-                
-                "date": "2015-05-13T13:21:27.102Z"
-            }
-        ],
-        "items": []
-    },
-    {
-        "name": "Terminators",
-        "points": 205,
-        "faction": "Space Wolves",
-        "states": [
-            {
-                "name": "Buy New",
-                
-                "date": "2015-05-13T13:23:12.549Z"
-            },
-            {
-                "name": "Startup",
-                
-                "date": "2015-05-13T13:23:12.548Z"
-            }
-        ],
-        "items": []
-    },
-    {
-        "name": "Battle Leader",
-        "points": 75,
-        "faction": "Space Wolves",
-        "states": [
-            {
-                "name": "Buy New",
-                
-                "date": "2015-05-13T13:24:25.605Z"
-            },
-            {
-                "name": "Startup",
-                
-                "date": "2015-05-13T13:24:25.603Z"
-            }
-        ],
-        "items": []
-    },
-    {
-        "name": "Warboss",
-        "points": 85,
-        "faction": "Ork",
-        "states": [
-            {
-                "name": "Buy New",
-                
-                "date": "2015-05-13T13:28:50.032Z"
-            },
-            {
-                "name": "Startup",
-                
-                "date": "2015-05-13T13:28:50.031Z"
-            }
-        ],
-        "items": []
-    },
-    {
-        "name": "Nobs",
-        "points": 215,
-        "faction": "Ork",
-        "states": [
-            {
-                "name": "Buy New",
-                
-                "date": "2015-05-13T13:28:56.332Z"
-            },
-            {
-                "name": "Startup",
-                
-                "date": "2015-05-13T13:28:56.327Z"
-            }
-        ],
-        "items": []
-    },
-    {
-        "name": "Boys",
-        "points": 120,
-        "faction": "Ork",
-        "states": [
-            {
-                "name": "Buy New",
-                
-                "date": "2015-05-13T13:29:01.491Z"
-            },
-            {
-                "name": "Startup",
-                
-                "date": "2015-05-13T13:29:01.489Z"
-            }
-        ],
-        "items": []
-    },
-    {
-        "name": "Deffkoptas",
-        "points": 90,
-        "faction": "Ork",
-        "states": [
-            {
-                "name": "Buy New",
-                
-                "date": "2015-05-13T13:29:12.592Z"
-            },
-            {
-                "name": "Startup",
-                
-                "date": "2015-05-13T13:29:12.591Z"
-            }
-        ],
-        "items": []
-    }
+  {
+    "name": "Rhino",
+    "points": 35,
+    "faction": "Space Wolves",
+    "states": [
+      {
+        "name": "Prime",
+
+        "date": "2015-01-01T20:00:00.000Z"
+      },
+      {
+        "name": "Assemble",
+
+        "date": "2015-01-01T19:00:00.000Z"
+      }
+    ],
+    "items": [ ]
+  },
+  {
+    "name": "Toxicrene",
+    "points": 210,
+    "faction": "Tyranids",
+    "states": [
+      {
+        "name": "Prime",
+
+        "date": "2015-03-20T23:00:00.000Z"
+      },
+      {
+        "name": "Assemble",
+
+        "date": "2015-01-31T23:00:00.000Z"
+      }
+    ],
+    "items": [ ]
+  },
+  {
+    "name": "Stormwolf",
+    "points": 235,
+    "faction": "Space Wolves",
+    "states": [
+      {
+        "name": "Prime",
+
+        "date": "2015-03-20T23:00:00.000Z"
+      },
+      {
+        "name": "Assemble",
+
+        "date": "2015-01-31T23:00:00.000Z"
+      }
+    ],
+    "items": [ ]
+  },
+  {
+    "name": "Land Raider",
+    "points": 250,
+    "faction": "Space Wolves",
+    "states": [
+      {
+        "name": "Buy New",
+
+        "date": "2015-05-13T13:19:48.819Z"
+      },
+      {
+        "name": "Startup",
+
+        "date": "2015-05-13T13:19:48.814Z"
+      }
+    ],
+    "items": [ ]
+  },
+  {
+    "name": "Predator",
+    "points": 140,
+    "faction": "Space Wolves",
+    "states": [
+      {
+        "name": "Buy New",
+
+        "date": "2015-05-13T13:20:35.527Z"
+      },
+      {
+        "name": "Startup",
+
+        "date": "2015-05-13T13:20:35.525Z"
+      }
+    ],
+    "items": [ ]
+  },
+  {
+    "name": "Dreadnaught",
+    "points": 110,
+    "faction": "Space Wolves",
+    "states": [
+      {
+        "name": "Buy New",
+
+        "date": "2015-05-13T13:20:52.925Z"
+      },
+      {
+        "name": "Startup",
+
+        "date": "2015-05-13T13:20:52.924Z"
+      },
+      {
+        "name": "Assemble",
+
+        "date": "2015-06-13T13:20:52.924Z"
+      },
+      {
+        "name": "Prime",
+
+        "date": "2015-06-14T13:20:52.924Z"
+      },
+      {
+        "name": "Paint",
+
+        "date": "2015-06-22T13:20:52.924Z"
+      },
+      {
+        "name": "Weather",
+
+        "date": "2015-06-23T13:20:52.924Z"
+      },
+      {
+        "name": "Complete",
+
+        "date": "2015-09-14T23:20:52.924Z"
+      }
+    ],
+    "items": [ ]
+  },
+  {
+    "name": "Tac Squad",
+    "points": 160,
+    "faction": "Space Wolves",
+    "states": [
+      {
+        "name": "Buy New",
+
+        "date": "2015-05-13T13:21:27.103Z"
+      },
+      {
+        "name": "Startup",
+
+        "date": "2015-05-13T13:21:27.102Z"
+      }
+    ],
+    "items": [ ]
+  },
+  {
+    "name": "Terminators",
+    "points": 205,
+    "faction": "Space Wolves",
+    "states": [
+      {
+        "name": "Buy New",
+
+        "date": "2015-05-13T13:23:12.549Z"
+      },
+      {
+        "name": "Startup",
+
+        "date": "2015-05-13T13:23:12.548Z"
+      }
+    ],
+    "items": [ ]
+  },
+  {
+    "name": "Battle Leader",
+    "points": 75,
+    "faction": "Space Wolves",
+    "states": [
+      {
+        "name": "Buy New",
+
+        "date": "2015-05-13T13:24:25.605Z"
+      },
+      {
+        "name": "Startup",
+
+        "date": "2015-05-13T13:24:25.603Z"
+      }
+    ],
+    "items": [ ]
+  },
+  {
+    "name": "Warboss",
+    "points": 85,
+    "faction": "Ork",
+    "states": [
+      {
+        "name": "Buy New",
+
+        "date": "2015-05-13T13:28:50.032Z"
+      },
+      {
+        "name": "Startup",
+
+        "date": "2015-05-13T13:28:50.031Z"
+      }
+    ],
+    "items": [ ]
+  },
+  {
+    "name": "Nobs",
+    "points": 215,
+    "faction": "Ork",
+    "states": [
+      {
+        "name": "Buy New",
+
+        "date": "2015-05-13T13:28:56.332Z"
+      },
+      {
+        "name": "Startup",
+
+        "date": "2015-05-13T13:28:56.327Z"
+      }
+    ],
+    "items": [ ]
+  },
+  {
+    "name": "Boys",
+    "points": 120,
+    "faction": "Ork",
+    "states": [
+      {
+        "name": "Buy New",
+
+        "date": "2015-05-13T13:29:01.491Z"
+      },
+      {
+        "name": "Startup",
+
+        "date": "2015-05-13T13:29:01.489Z"
+      }
+    ],
+    "items": [ ]
+  },
+  {
+    "name": "Deffkoptas",
+    "points": 90,
+    "faction": "Ork",
+    "states": [
+      {
+        "name": "Buy New",
+
+        "date": "2015-05-13T13:29:12.592Z"
+      },
+      {
+        "name": "Startup",
+
+        "date": "2015-05-13T13:29:12.591Z"
+      }
+    ],
+    "items": [ ]
+  }
 ]
