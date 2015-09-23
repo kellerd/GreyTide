@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-namespace GreyTideDataService.Models
+namespace GreyTideDataService.Models.V1
 {
     //"name": "Default", "events": []
     public class StateCollection

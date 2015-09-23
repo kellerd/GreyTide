@@ -11,6 +11,7 @@ using Breeze.ContextProvider.EF6;
 using System.Linq;
 using System.Data.Entity;
 using System.Threading;
+using GreyTideDataService.Models.V1;
 
 namespace GreyTideDataService
 {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace GreyTideDataService.Models
+namespace GreyTideDataService.Models.V1
 {
     public class FromState
     {

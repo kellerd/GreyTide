@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace GreyTideDataService.Models
+namespace GreyTideDataService.Models.V1
 {
     public class Model
     {

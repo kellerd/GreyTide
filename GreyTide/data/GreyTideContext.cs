@@ -1,4 +1,4 @@
-﻿using GreyTideDataService.Models;
+﻿using GreyTideDataService.Models.V1;
 using System.Data.Entity;
 namespace GreyTideDataService
 {
