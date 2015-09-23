@@ -10,8 +10,6 @@ module App.Controllers
         datacontext: App.Services.IDatacontext;
         log: (message: string, data?: any, source?: string, showToast?: boolean) => void;
         messageCount: number;
-        barData: Array<any> = [];
-        barLineData: Array<any> = [];
 
 //#endregion
         constructor(common:App.Shared.ICommon, datacontext:App.Services.IDatacontext)
@@ -21,7 +19,7 @@ module App.Controllers
             this.log = common.logger.log;
 
             // Queue all promises and wait for them to finish before loading the view
-            //this.activate([this.getBarChart(), this.getLineChart()]);
+            this.activate(null);
         }
 
         // TODO: is there a more elegant way of activating the controller - base class?
@@ -33,7 +31,7 @@ module App.Controllers
 
 //#region Public Methods
 
-        getBarChart = () => 
+        getLineChart = () => 
         {
             var dc = this.datacontext;
             return dc.getTideAndState().then(data =>
@@ -48,46 +46,49 @@ module App.Controllers
                                 OrderBy(function (s: any) { return s.date }).
                                 Select(function (s: any) { return { name: s.name, date: s.date } }).
                                 ToArray();
-                        var name = u.name;
-                        var points = u.points;
-                        var firstState = orderedStates[0];
                         //Init an object with the starting state
                         var currentObject:any = dc.create("Model",
                             {
                                 "id:": App.Services.GuidGenerator.newGuid(),
-                                "name": name,
-                                "points": points,
-                                "currentState": firstState.name,
-                                "states": [firstState]
+                                "name": u.name,
+                                "points": u.points,
+                                "currentState": orderedStates[0].name,
+                                "states": [orderedStates[0]]
                             }, breeze.EntityState.Detached);
                         //Push the object through each state to select next states
-                        var states = Enumerable.From(orderedStates).
-                            Select(function (s, i) {
-                                if (i != 0)
-                                    currentObject[s.name].call(currentObject);
-                                return {
-                                    points: currentObject.points,
-                                    date: new Date(s.date),
-                                    name: currentObject.current
-                                }
-                            }).ToArray();
-                        return Enumerable.From(states).SelectMany(function (s, idx) {
-                            return (idx + 1) == states.length ? [s] :
-                                [s, { points: -s.points, date: new Date(states[idx + 1].date.valueOf() - 1000), name: s.name }]
+                        var states =
+                            Enumerable.
+                            From(orderedStates).
+                            Select(function (s, i) {if (i != 0)
+                                                        currentObject[s.name].call(currentObject);
+                                                    return {
+                                                        points: currentObject.points,
+                                                        date: new Date(s.date),
+                                                        name: currentObject.current
+                                                    }
+                                }).
+                            ToArray();
+                        return Enumerable.
+                                From(states).
+                                SelectMany(function (s, idx) {
+                                    return (idx + 1) == states.length ? [s] :
+                                        [s, {
+                                            points: -s.points,
+                                            date: new Date(states[idx + 1].date.valueOf() - 1000),
+                                            name: s.name
+                                        }]
+                            });
                         });
-                    });
 
                 var statesOrder = Enumerable.From(data.states[0].events).ToDictionary("$.to",null);
 
-                var dateUnion =
-                    raw.
-                        GroupBy(function (s) { return new Date(s.date).setHours(0, 0, 0, 0); }, null, function (key, d) {
-                            return { points: 0, date: key }
-                        });
+                var dateUnion = raw.GroupBy(
+                    function (s) { return new Date(s.date).setHours(0, 0, 0, 0); },
+                    null,
+                    function (key, d) { return { points: 0, date: key }});
 
-                var groups = raw.GroupBy((m:any) => {
-                        return m.name;
-                    },
+                var groups = raw.GroupBy(
+                    (m: any) => { return m.name; },
                     null,
                     function (key, item) {
                         return {
@@ -114,36 +115,39 @@ module App.Controllers
                     OrderBy(function (m) {
                         return statesOrder.Contains(m.name) ? statesOrder.Get(m.name).order : -1;
                     });
-                this.barData = groups.Select(function (g) { return { 'key': g.name, 'values': g.ItemsByDate }; }).ToArray();
-                return this.barData;
+                return groups.Select(function (g) { return { 'key': g.name, 'values': g.ItemsByDate }; }).ToArray();
             });
         }
 
-        getLineChart = () => 
+        getBarChart = () => 
         {
             var dc = this.datacontext;
             return dc.getTide().then(data =>
             {
                 var model = Enumerable.From(data);
                 var groups = model.GroupBy(function (data) { return data.faction });
-                var zeroUnion = model.Distinct(function (data) { return data.current }).Select(function (data) { return { x: data.current, y: 0 }; });
+                var zeroUnion =
+                    model.
+                    Distinct(function (data) { return data.current }).
+                    Select(function (data) { return { x: data.current, y: 0 }; });
                 var d = groups.Select(function (model) {
                     return {
                         key: model.Key(),
                         values:
-                        model.
-                            GroupBy(function (models) { return models.current; }, null, function (key, models) {
-                                return {
-                                    x: key,
-                                    y: models.Select(function (d) { return d.points; }).DefaultIfEmpty(0).Sum()
-                                };
-                            }).
-                            Union(zeroUnion, function (data) { return data.x }).
-                            ToArray()
+                        model.GroupBy(
+                                    function (models) { return models.current; },
+                                    null,
+                                    function (key, models) {
+                                            return {
+                                                x: key,
+                                                y: models.Select(function (d) { return d.points; }).DefaultIfEmpty(0).Sum()
+                                            };
+                                        }).
+                                Union(zeroUnion, function (data) { return data.x }).
+                                ToArray()
                     }
                 }).OrderBy("$.key");
-                this.barLineData = d.ToArray();
-                return this.barLineData;
+                return  d.ToArray();
             });
         }
 

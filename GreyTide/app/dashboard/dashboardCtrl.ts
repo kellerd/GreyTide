@@ -59,9 +59,9 @@ module App.Controllers
 
         getPeople()
         {
-            return this.datacontext.getTideAndState().then(data =>
+            return this.datacontext.getStates().then(data =>
             {
-                return this.people = data.tide;
+                return this.people = data;
             });
         }
 

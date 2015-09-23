@@ -24,7 +24,7 @@ module App.Directives {
         protected static initChart = (chart, svgSelector: string, chartdata:() => ng.IPromise<any[]>) => {
             chartdata().then(data => {
                 var updateSize = () => {
-                    var width = nv.utils.windowSize().width - 40,
+                    var width = nv.utils.windowSize().width - 220,
                         height = Math.max(nv.utils.windowSize().height / 2 - 40, 400);
 
                     d3.select(svgSelector)
@@ -62,7 +62,7 @@ module App.Directives {
         }
     }
     class ChartLine extends TideChart implements IChartLine {
-        static directiveId: string = 'chartbar';
+        static directiveId: string = 'chartline';
         restrict: string = "A";
 
         constructor(config: IConfigurations) {
