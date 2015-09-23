@@ -9,19 +9,15 @@ module App.Controllers {
         log: (message: string, data?: any, source?: string, showToast?: boolean) => void;
         messageCount: number;
         tide: Array<any> = [];
-        query1: string;
-        query2: string;
-        query3: string;
-        query5: Array<any>;
         orderProp: string;
         //#endregion
-        constructor(common: App.Shared.ICommon, datacontext: App.Services.IDatacontext) {
+        constructor(common: App.Shared.ICommon, datacontext: App.Services.IDatacontext, private $scope) {
             this.common = common;
             this.datacontext = datacontext;
             this.log = common.logger.log;
 
             // Queue all promises and wait for them to finish before loading the view
-            this.activate([this.getTide()]);
+            this.activate([this.getTide(), this.getStates()]);
         }
 
         // TODO: is there a more elegant way of activating the controller - base class?
@@ -29,25 +25,21 @@ module App.Controllers {
             this.common.activateController(promises, this.controllerId)
                 .then(() => { this.log('Activated Tide View'); });
         }
-        criteriaMatch = () => {
-            var localThis = this;
+        criteriaMatch = (item) => {
             var strCheck = (str) => {
-                return (localThis.query1 == undefined || (str && str.indexOf(localThis.query1) > -1)) && (localThis.query2 == undefined || (str && str.indexOf(localThis.query2) > -1));
+                return (this.$scope.query1 == undefined || (str && str.indexOf(this.$scope.query1) > -1)) && (this.$scope.query2 == undefined || (str && str.indexOf(this.$scope.query2) > -1));
             }
-            return (item) => {
-                return item.parent ||
-                    (
-                        (this.query5 || item.current != "Completed") &&
-                        (strCheck(item.name) || strCheck(item.faction) || strCheck((item.points | 0).toString())) &&
-                        (!this.query3 || item.current.indexOf(this.query3) > -1)
-                    );
-            };
+            return item.parent ||
+                (
+                    (this.$scope.query5 || item.current != "Completed") &&
+                    (strCheck(item.name) || strCheck(item.faction) || strCheck((item.points | 0).toString())) &&
+                    (!this.$scope.query3 || item.current.indexOf(this.$scope.query3) > -1)
+                );
         };
-
         //#region Public Methods
         getStates() {
             return this.datacontext.getStates().then((data: any) => {
-                return this.query5 = data.map((s) => s.name);
+                return this.$scope.query3data = data[0].events.map((s) => s.to).filter(function (item, i, ar) { return ar.indexOf(item) === i; }).sort();
             });
         }
         getTide() {
@@ -60,7 +52,7 @@ module App.Controllers {
     }
 
     // register controller with angular
-    app.controller(Tide.controllerId, ['common', 'datacontext',
-        (c, dc) => new App.Controllers.Tide(c, dc)
+    app.controller(Tide.controllerId, ['common', 'datacontext', '$scope',
+        (c, dc, scope) => new App.Controllers.Tide(c, dc, scope)
     ]);
 }

@@ -3,8 +3,9 @@
     <br />
     <label>Search: <input ng-model="query1" /></label>
     <label>Search 2: <input ng-model="query2" /></label>
-    <label>State: <input ng-model="query3" /></label>
-    <label>To Complete: <input type="checkbox" ng-model="query5" checked="checked"></label>
+    
+    <label>State: <select ng-options="item as item for item in query3data" ng-model="query3"><option value="">-- choose state --</option></select></label>
+    <label>Completed? <input type="checkbox" ng-model="query5"></label>
     <label>
         Order By:
         <select ng-model="orderProp">
