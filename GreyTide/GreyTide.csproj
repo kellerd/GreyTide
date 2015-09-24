@@ -263,6 +263,7 @@
     <Content Include="scripts\breeze.bridge.angular.js" />
     <Content Include="scripts\breeze.debug.js" />
     <Content Include="scripts\breeze.directives.js" />
+    <Content Include="scripts\breeze.metadata-helper.js" />
     <Content Include="scripts\breeze.min.js" />
     <Content Include="scripts\breeze.saveErrorExtensions.js" />
     <Content Include="scripts\d3\d3.js" />
@@ -377,6 +378,7 @@
     <TypeScriptCompile Include="scripts\typings\angularjs\angular-sanitize.d.ts" />
     <TypeScriptCompile Include="scripts\typings\angularjs\angular.d.ts" />
     <TypeScriptCompile Include="scripts\typings\breeze\breeze.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\breeze\breeze.metadata-helper.d.ts" />
     <TypeScriptCompile Include="scripts\typings\d3\d3.d.ts" />
     <TypeScriptCompile Include="scripts\typings\d3\nvd3.d.ts" />
     <TypeScriptCompile Include="scripts\typings\d3\plugins\d3.superformula.d.ts" />
