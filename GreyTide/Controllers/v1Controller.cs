@@ -18,10 +18,15 @@ namespace Controllers.V1
         static v1Controller()
         {
             Database.SetInitializer<GreyTideContext>(null);
+            _Tide = Mapper.Map<IEnumerable<Model>>(Repo.Tide.Value).AsQueryable();
+            _States = Mapper.Map<IEnumerable<StateCollection>>(Repo.States.Value).AsQueryable();
         }
         static readonly Repo _contextProvider = new Repo();
         static EFContextProvider<GreyTideContext> MetadataConects =
              new EFContextProvider<GreyTideContext>();
+        private readonly static IQueryable<StateCollection> _States;
+        private static readonly IQueryable<Model> _Tide;
+
         // ~/tide/v1/Metadata 
         [HttpGet]
         public string Metadata()
@@ -34,7 +39,7 @@ namespace Controllers.V1
         [HttpGet]
         public IQueryable<Model> Tide()
         {
-            return Mapper.Map<IEnumerable<Model>>(Repo.Tide.Value).AsQueryable();
+            return _Tide;
         }
 
         // ~/tide/v1/States
@@ -42,7 +47,7 @@ namespace Controllers.V1
         [HttpGet]
         public IQueryable<StateCollection> States()
         {
-            return Mapper.Map<IEnumerable<StateCollection>>(Repo.States.Value).AsQueryable();
+            return _States;
         }
 
         // ~/tide/v1/SaveChanges

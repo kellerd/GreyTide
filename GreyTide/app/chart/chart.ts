@@ -112,7 +112,7 @@ module App.Controllers
                     Where(function (g) {
                         return g.ItemsByDate.length > 1;
                     }).
-                    OrderBy(function (m) {
+                    OrderByDescending(function (m) {
                         return statesOrder.Contains(m.name) ? statesOrder.Get(m.name).order : -1;
                     });
                 return groups.Select(function (g) { return { 'key': g.name, 'values': g.ItemsByDate }; }).ToArray();
