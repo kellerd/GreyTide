@@ -22,12 +22,18 @@ module App.Services {
             this.preventValidateOnAttach();
             this.metadataStore = new breeze.MetadataStore();
             this.serviceName = config.remoteServiceName;
+            MetadataHelper.FillMetadataStore(this.metadataStore);
         }
 
         public newManager(): IManagerAndMetaModels {
+            var dataService = new breeze.DataService({
+                serviceName: this.serviceName,
+                hasServerMetadata: false
+            });
+
             var mgrAndModel: IManagerAndMetaModels = {
                 manager: new breeze.EntityManager({
-                    serviceName: this.serviceName,
+                    dataService: dataService,
                     metadataStore: this.metadataStore
                 }),
                     Model:function Model() { }

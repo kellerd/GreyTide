@@ -16,12 +16,17 @@ namespace GreyTideDataService.App_Start {
       GlobalConfiguration.Configuration.Routes.MapHttpRoute(
           name: "BreezeApi",
           routeTemplate: "tide/{action}",
-          defaults: new { controller = "v1" }
+          defaults: new { controller = "v2" }
       );
       GlobalConfiguration.Configuration.Routes.MapHttpRoute(
-          name: "BreezeApiVersioning",
+          name: "BreezeApiV1",
           routeTemplate: "tide/v1/{action}",
           defaults: new { controller = "v1" }
+      );
+        GlobalConfiguration.Configuration.Routes.MapHttpRoute(
+          name: "BreezeApiV2",
+          routeTemplate: "tide/v2/{action}",
+          defaults: new { controller = "v2" }
       );
         }
   }
