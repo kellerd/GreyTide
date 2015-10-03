@@ -16,7 +16,6 @@ module App {
             // type order is irrelevant
             addModel();
             addModelState();
-            addFromState();
             addStateCollection();
             addState();
             // addType - make it easy to add the type to the store using the helper
@@ -28,19 +27,19 @@ module App {
                 addType({
                     name: 'Model',
                     dataProperties: {
-                        UserToken: { type: GUID, required: true },
-                        Id: { type: GUID, required: true },
-                        Name: { type: STRING, required: true },
-                        CurrentState: { type: STRING },
-                        CurrentDate: { type: DATE },
-                        Faction: { type: STRING },
-                        Points: { type: ID }, 
-                        ParentId: { type: GUID }
+                        userToken: { type: GUID, required: true },
+                        id: { type: GUID, required: true },
+                        name: { type: STRING, required: true },
+                        currentState: { type: STRING },
+                        currentDate: { type: DATE },
+                        faction: { type: STRING },
+                        points: { type: ID }, 
+                        parentId: { type: GUID },
+                        states: { complexTypeName: 'ModelState', required: true, isScalar:false }
                     },
                     navigationProperties :{ 
-                        Items: { type: 'Model', hasMany: true },
-                        States: { type: 'ModelState', hasMany: true },
-                        Parent: { type: 'Model', hasMany: false }
+                        items: { type: 'Model', hasMany: true },
+                        parent: { type: 'Model', hasMany: false }
                     }
 
                 });
@@ -50,31 +49,29 @@ module App {
                     name: 'ModelState',
                     isComplexType: true,
                     dataProperties: {
-                        Name: { type: STRING, required: true },
-                        Date: { type: DATE, required: true }
+                        name: { type: STRING, required: true },
+                        date: { type: DATE, required: true }
                     }
                 });
             };
-            function addFromState() {
-                addType({
-                    name: 'FromState',
-                    isComplexType: true,
-                    dataProperties: {
-                        Name: { type: STRING, required: true }
-                    }
-                });
-            };
+            //function addFromState() {
+            //    addType({
+            //        name: 'FromState',
+            //        isComplexType: true,
+            //        dataProperties: {
+            //            name: { type: STRING, required: true }
+            //        }
+            //    });
+            //};
             function addState() {
                 addType({
                     name: 'State',
                     isComplexType: true,
                     dataProperties: {
-                        Order: { type: ID, required: true },
-                        Name: { type: STRING, required: true },
-                        To: { type: STRING, required: true }
-                    },
-                    navigationProperties: {
-                        From: { type: 'FromState', hasMany: true }
+                        order: { type: ID, required: true },
+                        name: { type: STRING, required: true },
+                        to: { type: STRING, required: true },
+                        from: { type: STRING, required: true, isScalar: false }
                     }
                 });
             };
@@ -82,11 +79,10 @@ module App {
                 addType({
                     name: 'StateCollection',
                     dataProperties: {
-                        UserToken: { type: GUID, required: true },
-                        Id: { type: GUID, required: true },
-                        Name: { type: STRING, required: true }
-                    }, navigationProperties: {
-                        Events: { type: 'State', hasMany: true }
+                        userToken: { type: GUID, required: true },
+                        id: { type: GUID, required: true },
+                        name: { type: STRING, required: true },
+                        events: { complexTypeName: 'State', required: true }
                     }
                 });
             };

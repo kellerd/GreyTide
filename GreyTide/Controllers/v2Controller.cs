@@ -14,13 +14,6 @@ namespace Controllers.V2
 
         static readonly Repo _contextProvider = new Repo();
 
-        // ~/tide/v2/Metadata 
-        [HttpGet]
-        public string Metadata()
-        {
-            var metadata = _contextProvider.Metadata();
-            return metadata;
-        }
 
         // ~/tide/v2/Tide
         // ~/tide/v2/Tide?$filter=IsArchived eq false&$orderby=CreatedAt 

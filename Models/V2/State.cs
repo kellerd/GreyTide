@@ -13,7 +13,7 @@ namespace GreyTideDataService.Models.V2
         [Required]
         public string Name { get; set; }
         [Required]
-        public List<FromState> From { get; set; }
+        public List<string> From { get; set; }
         [Required]
         public string To {get;set;}
     }

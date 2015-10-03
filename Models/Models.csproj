@@ -42,7 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="V2\FromState.cs" />
     <Compile Include="V2\Model.cs" />
     <Compile Include="V2\ModelState.cs" />
     <Compile Include="V2\State.cs" />

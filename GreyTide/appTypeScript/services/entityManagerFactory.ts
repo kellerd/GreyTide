@@ -60,7 +60,7 @@ module App.Services {
                 //onclear: function (event, from, to) { alert('all is clear'); },
                 onafterevent: function (event, from, to) {
                     if (this.states.length == 0 || this.states[0].name != event) {
-                        this.states.push(mgr.manager.createEntity("ModelState", { id: GuidGenerator.newGuid(), name: event, date: new Date().toISOString(), active: true, modelId: this.modelId }, breeze.EntityState.Detached));
+                        this.states.push(mgr.manager.createEntity("Model:#GreyTide.Models", { id: GuidGenerator.newGuid(), name: event, date: new Date().toISOString(), active: true, modelId: this.modelId }, breeze.EntityState.Detached));
                         this.allStates = Enumerable.From(this.transitions()).Select(function (x) { return { name: x, active: false, date: new Date().toISOString() }; }).Union(Enumerable.From(this.states).Where(function (s:any) { return s.active })).ToArray();
                         if (this.parentEntity != null) {
                             var p = this.parentEntity;

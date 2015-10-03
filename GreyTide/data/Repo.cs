@@ -7,9 +7,7 @@ using System.Threading.Tasks;
 using Breeze.ContextProvider;
 using GreyTideDataService.Models;
 using Newtonsoft.Json;
-using Breeze.ContextProvider.EF6;
 using System.Linq;
-using System.Data.Entity;
 using System.Threading;
 using GreyTideDataService.Models.V2;
 
