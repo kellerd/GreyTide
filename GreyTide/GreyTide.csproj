@@ -365,8 +365,8 @@
     <TypeScriptCompile Include="app\directives\cc-widget-minimize.ts" />
     <TypeScriptCompile Include="app\layout\shellCtrl.ts" />
     <TypeScriptCompile Include="app\layout\sidebarCtrl.ts" />
-    <TypeScriptCompile Include="app\services\entityMetadata.ts" />
     <TypeScriptCompile Include="app\services\entityManagerFactory.ts" />
+    <TypeScriptCompile Include="app\services\entityMetadata.ts" />
     <TypeScriptCompile Include="app\services\guid.ts" />
     <TypeScriptCompile Include="app\services\datacontext.ts" />
     <TypeScriptCompile Include="app\state\state.ts" />
