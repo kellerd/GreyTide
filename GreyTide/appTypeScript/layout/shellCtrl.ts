@@ -68,7 +68,7 @@ module App.Controllers
         {
             var events = this.config.events;
             this.$rootScope.$on('$routeChangeStart',
-                (event, next, current) => { this.toggleSpinner(true); }
+                (event, next, current) => { if(next.$$route.redirectTo != "/") this.toggleSpinner(true); }
             );
 
             this.$rootScope.$on(events.controllerActivateSuccess,

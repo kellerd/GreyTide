@@ -15,7 +15,7 @@ module App {
 
 
     export class RouteConfigurator {
-        constructor($routeProvider: ng.route.IRouteProvider, routes) {
+        constructor($routeProvider: ng.route.IRouteProvider, routes, $locationProvider:ng.ILocationProvider) {
             routes.forEach(r => {
                 $routeProvider.when(r.url, r.config);
             });
@@ -70,9 +70,9 @@ module App {
 
     // Configure the routes and route resolvers
     app.config([
-        '$routeProvider', 'routes',
-        ($routeProvider, routes) =>
-            new RouteConfigurator($routeProvider, routes)
+        '$routeProvider', 'routes','$locationProvider',
+        ($routeProvider, routes, $locationProvider) =>
+            new RouteConfigurator($routeProvider, routes, $locationProvider)
     ]);
 
 }

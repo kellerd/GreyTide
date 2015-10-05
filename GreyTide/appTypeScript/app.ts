@@ -14,12 +14,15 @@ module App {
     // 3rd Party Modules
         'breeze.angular',    // configures breeze for an angular app
         'breeze.directives', // contains the breeze validation directive (zValidate)
-        'ui.bootstrap'       // ui-bootstrap (ex: carousel, pagination, dialog)
+        'ui.bootstrap',       // ui-bootstrap (ex: carousel, pagination, dialog)
+        'xeditable'         //editable items in tide
     ]);
     
     // Handle routing errors and success events
-    app.run(['$route', 'datacontext', function ($route, datacontext: App.Services.IDatacontext) {
+    app.run(['$route', 'datacontext', 'editableOptions', function ($route, datacontext: App.Services.IDatacontext, editableOptions) {
         // Include $route to kick start the router.
         datacontext.prime();
+        editableOptions.theme = 'bs3';
     }]);
+
 }

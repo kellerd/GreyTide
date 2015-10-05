@@ -1,14 +1,14 @@
 ﻿<button ng-click="RemoveItem(item,child)">x</button>
 <ul>
     <li>
-        <a href="#" editable-text="child.name">{{child.name}}</a>
+        <span editable-text="child.name">{{child.name}}</span>
         <em ng-show="child.faction!=undefined">
             -
-            <a href="#" editable-text="child.faction">{{child.faction}}</a>
+            <span editable-text="child.faction">{{child.faction}}</span>
         </em>
     </li>
     <li>
-        <a href="#" editable-number="child.points">{{child.points || 0}}</a> Points
+        <span editable-number="child.points">{{child.points || 0}}</span> Points
     </li>
     <li>
         {{child.name}} is currently {{child.current}} as of {{child.currentDate | date : 'short' : '+0430' }}
