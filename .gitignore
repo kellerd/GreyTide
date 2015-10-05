@@ -155,5 +155,5 @@ $RECYCLE.BIN/
 .DS_Store
 /.vs/config
 /packages
-/GreyTide/appTypeScript/*.js
-/GreyTide/appTypeScript/*.js.map
+/GreyTide/app/*.js
+/GreyTide/app/*.js.map
