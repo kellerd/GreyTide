@@ -36,7 +36,7 @@ module App {
                     content: '<i class="fa fa-lock"></i> Grey Tide'
                 },
                 config: {
-                    templateUrl: 'appTypeScript/tide/tide.html'
+                    templateUrl: 'app/tide/tide.html'
 
                 }
             }, {
@@ -47,7 +47,7 @@ module App {
                     content: '<i class="fa fa-lock"></i> States'
                 },
                 config: {
-                    templateUrl: 'appTypeScript/state/state.html'
+                    templateUrl: 'app/state/state.html'
                    
                 }
             },  {
@@ -58,7 +58,7 @@ module App {
                     content: '<i class="fa fa-lock"></i> Chart'
                 },
                 config: {
-                    templateUrl: 'appTypeScript/chart/chart.html'                  
+                    templateUrl: 'app/chart/chart.html'                  
                 }
             }
 

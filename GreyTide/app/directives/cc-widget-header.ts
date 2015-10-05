@@ -23,7 +23,7 @@ module App.Directives
     {
         static directiveId: string = 'ccWidgetHeader';
         restrict: string = "A";
-        templateUrl = 'appTypeScript/layout/widgetheader.html';
+        templateUrl = 'app/layout/widgetheader.html';
         scope = {
             'title': '@',
             'subtitle': '@',
