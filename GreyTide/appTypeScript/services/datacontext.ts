@@ -90,7 +90,12 @@ module App.Services {
                 });
                 StateMachine.create({
                     target: this.manager.Model.prototype,
-                    initial: { state: 'None', event: 'init', defer: true },
+                    initial: { state: 'None', event: 'init'},
+                    events: events
+                });
+                StateMachine.create({
+                    target: this.manager.ModelItem.prototype,
+                    initial: { state: 'None', event: 'init' },
                     events: events
                 });
                 this.log("States primed");
