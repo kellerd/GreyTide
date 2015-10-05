@@ -49,8 +49,7 @@ module App {
                         currentState: { type: STRING },
                         currentDate: { type: DATE },
                         points: { type: ID },
-                        states: { complexTypeName: 'ModelState', required: true, isScalar: false },
-                        items: { complexTypeName: 'ModelItem', isScalar:false }
+                        states: { complexTypeName: 'ModelState', required: true, isScalar: false }
                     }
                 });
             };

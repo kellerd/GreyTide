@@ -26,7 +26,6 @@ module App.Controllers {
                 .then(() => { this.log('Activated Tide View'); });
         }
         criteriaMatch = (item) => {
-            return true;
             var strCheck = (str) => {
                 return (this.$scope.query1 == undefined || (str && str.indexOf(this.$scope.query1) > -1)) && (this.$scope.query2 == undefined || (str && str.indexOf(this.$scope.query2) > -1));
             }

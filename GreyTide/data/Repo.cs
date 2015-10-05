@@ -71,7 +71,7 @@ namespace GreyTideDataService
         {
             throw new NotImplementedException(); //Upload to azure
         }
-        private static void process(ModelItem m)
+        private static void process(Model m)
         {
             m.States = m.States.OrderByDescending((s) => s.Date).ToList();
             var lastState = m.States.DefaultIfEmpty(new ModelState { Name = "Startup", Date = DateTime.Now }).FirstOrDefault();
@@ -88,6 +88,13 @@ namespace GreyTideDataService
                     process(i);
                 });
             }
+        }
+        private static void process(ModelItem m)
+        {
+            m.States = m.States.OrderByDescending((s) => s.Date).ToList();
+            var lastState = m.States.DefaultIfEmpty(new ModelState { Name = "Startup", Date = DateTime.Now }).FirstOrDefault();
+            m.CurrentState = lastState.Name;
+            m.CurrentDate = lastState.Date;
         }
         private static void processStates(StateCollection sc)
         {

@@ -302,8 +302,6 @@
     <None Include="scripts\linq-vsdoc.js" />
     <Content Include="scripts\linq.js" />
     <Content Include="scripts\linq.min.js" />
-    <Content Include="scripts\multi-select\angular-multi-select.css" />
-    <Content Include="scripts\multi-select\angular-multi-select.js" />
     <Content Include="scripts\nv.d3.css" />
     <Content Include="scripts\nv.d3.js" />
     <Content Include="scripts\nv.d3.min.js" />

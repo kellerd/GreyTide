@@ -14,18 +14,13 @@
         {{child.name}} is currently {{child.current}} as of {{child.currentDate | date : 'short' : '+0430' }}
     </li>
     <li>
-        Recede tide:
-        <div multi-select
-             input-model="child.allStates"
-             button-label="name"
-             item-label="name"
-             max-labels="0"
-             disable-property="active"
-             helper-elements=""
-             tick-property="active"
-             on-item-click="setActive(child, data)">
-
-        </div>
+        Recede Tide:
+        <ul>
+            <li ng-repeat="state in child.allStates|filter:{active:false}">
+                <button ng-click="setActive(child, state)">{{state.name}}</button>
+            </li>
+        </ul>
+        
     </li>
     {{ item = child; '' }}
     <li ng-include="'appTypeScript/tide/items.html'"></li>

@@ -56,30 +56,45 @@ module App.Services {
         }
         private configureConstructors(mgr: IManagerAndMetaModels) {
             
-            let prototype = {
+            mgr.Model.prototype = {
                 //onpanic: function (event, from, to) { alert('panic'); },
                 //onclear: function (event, from, to) { alert('all is clear'); },
                 onafterevent: function (event, from, to) {
-                    if (this.states != undefined) {
-                        if (this.states.length == 0 || this.states[0].name != event) {
-                            let type = <breeze.ComplexType>mgr.manager.metadataStore.getEntityType("ModelState");
-                            let newType = type.createInstance(
-                                {
-                                    name: event,
-                                    date: new Date().toISOString()
-                                });
-                            this.states.push(newType);
-                            this.allStates =
-                            Enumerable.
-                                From(this.transitions()).
-                                Select(function (x) { return { name: x, active: false, date: new Date().toISOString() }; }).
-                                Union(
-                                Enumerable.From(this.states).
-                                    Select(function (x: any) { return { name: x.name, active: true, date: x.date }; })
-                                ).ToArray();
-                            if (this.parentEntity != null) {
-                                var p = this.parentEntity;
-                                if (Enumerable.From(this.parentEntity.items).Select(function (item: any) { return item.current; }).Distinct().Count() == 1) {
+                    handleChangeChildStates(this, event, from, to);
+                }
+            };
+            function handleChangeChildStates(_model, event, from, to) {
+                if (_model.states != undefined) {
+                    if (_model.states.length == 0 || _model.states[0].name != event) {
+                        let type = <breeze.ComplexType>mgr.manager.metadataStore.getEntityType("ModelState");
+                        let newType = type.createInstance(
+                            {
+                                name: event,
+                                date: new Date().toISOString()
+                            });
+                        _model.states.push(newType);
+                        _model.allStates =
+                        Enumerable.
+                            From(_model.transitions()).
+                            Select(function (x) { return { name: x, active: false, date: new Date().toISOString() }; }).
+                            Union(
+                            Enumerable.From(_model.states).
+                                Select(function (x: any) { return { name: x.name, active: true, date: x.date }; })
+                            ).ToArray();
+                        if (_model.parentEntity != null) {
+                            var p = _model.parentEntity;
+                            if (Enumerable.From(_model.parentEntity.items).Select(function (item: any) { return item.current; }).Distinct().Count() == 1) {
+                                var state: any = Enumerable.From(p.allStates).Where(function (d: any) { return d.active == false && d.name == event; }).FirstOrDefault(null);
+                                if (!(state != null)) {
+                                    state.active = true;
+                                    state.date = new Date().toISOString();
+                                    p[event].call(p);
+                                }
+                            }
+                        }
+                        if (_model.items != null && _model.items.length > 0)
+                            Enumerable.From(_model.items).ForEach(function (p: any) {
+                                if (Enumerable.From(p.transitions()).Contains(event)) {
                                     var state: any = Enumerable.From(p.allStates).Where(function (d: any) { return d.active == false && d.name == event; }).FirstOrDefault(null);
                                     if (!(state != null)) {
                                         state.active = true;
@@ -87,36 +102,28 @@ module App.Services {
                                         p[event].call(p);
                                     }
                                 }
-                            }
-                            if (this.items != null && this.items.length > 0)
-                                Enumerable.From(this.items).ForEach(function (p: any) {
-                                    if (Enumerable.From(p.transitions()).Contains(event)) {
-                                        var state: any = Enumerable.From(p.allStates).Where(function (d: any) { return d.active == false && d.name == event; }).FirstOrDefault(null);
-                                        if (!(state != null)) {
-                                            state.active = true;
-                                            state.date = new Date().toISOString();
-                                            p[event].call(p);
-                                        }
-                                    }
-                                })
-                        } else {
-                            this.allStates = Enumerable.From(this.transitions()).Select(function (x) { return { name: x, active: false, date: new Date().toISOString() }; }).Union(Enumerable.From(this.states).Select(function (x: any) { return { name: x.name, active: true, date: x.date }; })).ToArray();
-                        }
+                            })
+                    } else {
+                        _model.allStates = Enumerable.From(_model.transitions()).Select(function (x) { return { name: x, active: false, date: new Date().toISOString() }; }).Union(Enumerable.From(_model.states).Select(function (x: any) { return { name: x.name, active: true, date: x.date }; })).ToArray();
                     }
+                }
+            }
+            mgr.ModelItem.prototype = {
+                //onpanic: function (event, from, to) { alert('panic'); },
+                //onclear: function (event, from, to) { alert('all is clear'); },
+                onafterevent: function (event, from, to) {
+                    handleChangeChildStates(this, event, from, to);
                 }
             };
 
-            mgr.Model.prototype = prototype;
-            mgr.ModelItem.prototype = prototype;
-
             var ModelInitializer = function (model) {
-                model[model.currentState].call(model);
+                if (model.current == "none")  model[model.currentState].call(model);
             };
 
             this.metadataStore.registerEntityTypeCtor('Model', mgr.Model, ModelInitializer);
 
             var modelItemInitializer = function (modelItem) {
-                modelItem[modelItem.currentState].call(modelItem);
+               if(modelItem.current == "none") modelItem[modelItem.currentState].call(modelItem);
             };
 
             this.metadataStore.registerEntityTypeCtor('ModelItem', mgr.ModelItem, modelItemInitializer);

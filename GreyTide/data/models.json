@@ -1527,7 +1527,16 @@
     "name": "Njal",
     "points": 180,
     "faction": "Space Wolves",
-    "states": [
+    "states": [{
+        "name": "Complete",
+
+        "date": "2015-09-14T23:20:52.924Z"
+      },
+      {
+        "name": "Finish Coat",
+
+        "date": "2015-09-14T22:20:52.924Z"
+      },
       {
         "name": "Weather",
 
@@ -1553,7 +1562,16 @@
       {
         "name": "Model",
         "points": 180,
-        "states": [
+        "states": [{
+        "name": "Complete",
+
+        "date": "2015-09-14T23:20:52.924Z"
+      },
+      {
+        "name": "Finish Coat",
+
+        "date": "2015-09-14T22:20:52.924Z"
+      },
           {
             "name": "Weather",
 
@@ -2150,11 +2168,22 @@
     "points": 135,
     "faction": "Space Wolves",
     "states": [
-      {
-              "name": "Startup",
 
-              "date": "2015-01-01T12:49:20.789Z"
-            }
+      {
+        "name": "Startup",
+
+        "date": "2015-01-01T12:49:20.789Z"
+      },
+          {
+            "name": "Prime",
+
+            "date": "2015-01-01T20:00:00.000Z"
+          },
+          {
+            "name": "Assemble",
+
+            "date": "2015-01-01T19:00:00.000Z"
+          }
     ],
     "items": [
       {
@@ -2182,11 +2211,11 @@
       {
         "name": "Base",
         "states": [
-            {
-              "name": "Startup",
+          {
+            "name": "Startup",
 
-              "date": "2015-01-01T12:49:20.789Z"
-            }
+            "date": "2015-01-01T12:49:20.789Z"
+          }
         ],
         "items": [ ]
       }
@@ -2201,7 +2230,17 @@
               "name": "Startup",
 
               "date": "2015-01-01T12:49:20.789Z"
-            }
+            },
+          {
+            "name": "Prime",
+
+            "date": "2015-01-01T20:00:00.000Z"
+          },
+          {
+            "name": "Assemble",
+
+            "date": "2015-01-01T19:00:00.000Z"
+          }
     ],
     "items": [
       {

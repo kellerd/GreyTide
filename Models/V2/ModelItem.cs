@@ -12,7 +12,6 @@ namespace GreyTideDataService.Models.V2
         public string CurrentState { get; set; }
         public DateTime CurrentDate { get; set; }
         public int Points { get; set; }
-        public List<ModelItem> Items { get; set; }
         public List<ModelState> States { get; set; }
     }
 }

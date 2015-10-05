@@ -11,5 +11,6 @@ namespace GreyTideDataService.Models.V2
         [Key]
         public Guid Id { get; set; }
         public string Faction { get; set; }
+        public List<ModelItem> Items { get; set; }
     }
 }
