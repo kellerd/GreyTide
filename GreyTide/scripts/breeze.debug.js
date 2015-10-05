@@ -8094,19 +8094,22 @@ var EntityType = (function () {
   }
 
   function coEquals(co1, co2) {
-    var dataProps = co1.complexAspect.parentProperty.dataType.dataProperties;
-    var areEqual = dataProps.every(function (dp) {
-      if (!dp.isSettable) return true;
-      var v1 = co1.getProperty(dp.name);
-      var v2 = co2.getProperty(dp.name);
-      if (dp.isComplexProperty) {
-        return coEquals(v1, v2);
-      } else {
-        var dataType = dp.dataType; // this will be a complexType when dp is a complexProperty
-        return (v1 === v2 || (dataType && dataType.isDate && v1 && v2 && v1.valueOf() === v2.valueOf()));
-      }
-    });
-    return areEqual;
+      var dataProps = co1.complexAspect.parentProperty.dataType.dataProperties;
+      var areEqual = dataProps.every(function (dp) {
+          if (!dp.isSettable) return true;
+          var v1 = co1.getProperty(dp.name);
+          var v2 = co2.getProperty(dp.name);
+          if (dp.isComplexProperty && dp.isScalar) {
+              return coEquals(v1, v2);
+          }
+          else if (dp.isComplexProperty && !dp.isScalar) {
+              return __arrayEquals(v1, v2, coEquals)
+          } else {
+              var dataType = dp.dataType; // this will be a complexType when dp is a complexProperty
+              return (v1 === v2 || (dataType && dataType.isDate && v1 && v2 && v1.valueOf() === v2.valueOf()));
+          }
+      });
+      return areEqual;
   }
 
   /**
