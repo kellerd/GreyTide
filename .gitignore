@@ -152,6 +152,8 @@ Desktop.ini
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
-# Mac desktop service store files
 .DS_Store
 /.vs/config
+/packages
+/GreyTide/appTypeScript/*.js
+/GreyTide/appTypeScript/*.js.map

@@ -20,7 +20,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>1.6</TypeScriptToolsVersion>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,7 +41,44 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.0.4.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.0.4\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Breeze.ContextProvider, Version=1.5.0.0, Culture=neutral, PublicKeyToken=f6085f1a45e2ac59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Breeze.Server.ContextProvider.1.5.4\lib\Breeze.ContextProvider.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Breeze.WebApi2, Version=1.5.0.0, Culture=neutral, PublicKeyToken=f6085f1a45e2ac59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Breeze.Server.WebApi2.1.5.4\lib\Breeze.WebApi2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.6.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.6.4\lib\net40\Microsoft.Data.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.6.4\lib\net40\System.Spatial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -50,6 +88,18 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.OData, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.5.7.0\lib\net45\System.Web.Http.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -57,22 +107,185 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebActivator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivator.1.0.0.0\lib\WebActivator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="appTypeScript\layout\shell.html" />
+    <Content Include="appTypeScript\layout\sidebar.html" />
+    <Content Include="appTypeScript\layout\topnav.html" />
+    <Content Include="appTypeScript\layout\widgetheader.html" />
+    <Content Include="content\bootstrap-theme.css" />
+    <Content Include="content\bootstrap-theme.min.css" />
+    <Content Include="content\bootstrap.css" />
+    <Content Include="content\bootstrap.min.css" />
+    <Content Include="content\breeze.directives.css" />
+    <Content Include="content\customtheme.css" />
+    <Content Include="content\font-awesome.css" />
+    <Content Include="content\font-awesome.min.css" />
+    <Content Include="content\fullcalendar.css" />
+    <Content Include="content\ie10mobile.css" />
+    <Content Include="content\images\AngularJS-small.png" />
+    <Content Include="content\images\animated-overlay.gif" />
+    <Content Include="content\images\breezelogo.png" />
+    <Content Include="content\images\icon.png" />
+    <Content Include="content\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="content\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="content\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="content\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="content\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="content\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="content\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="content\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="content\images\ui-icons_222222_256x240.png" />
+    <Content Include="content\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="content\images\ui-icons_454545_256x240.png" />
+    <Content Include="content\images\ui-icons_888888_256x240.png" />
+    <Content Include="content\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="content\jquery-ui.css" />
+    <Content Include="content\jquery.gritter.css" />
     <Content Include="content\nv.d3.css" />
     <Content Include="content\nv.d3.min.css" />
-    <Content Include="partials\chart.html" />
-    <Content Include="partials\item.html" />
-    <Content Include="partials\items.html" />
-    <Content Include="scripts\angular.min.js.map" />
+    <Content Include="content\prettyPhoto.css" />
+    <Content Include="content\rateit.css" />
+    <Content Include="content\styles.css" />
+    <Content Include="content\themeimages\delete.gif" />
+    <Content Include="content\themeimages\favicon\favicon.png" />
+    <Content Include="content\themeimages\gritter\gritter.png" />
+    <Content Include="content\themeimages\gritter\ie-spacer.gif" />
+    <Content Include="content\themeimages\icons\android.png" />
+    <Content Include="content\themeimages\icons\chrome.png" />
+    <Content Include="content\themeimages\icons\firefox.png" />
+    <Content Include="content\themeimages\icons\ie.png" />
+    <Content Include="content\themeimages\icons\ios.png" />
+    <Content Include="content\themeimages\icons\linux.png" />
+    <Content Include="content\themeimages\icons\mac.png" />
+    <Content Include="content\themeimages\icons\metro.png" />
+    <Content Include="content\themeimages\icons\opera.png" />
+    <Content Include="content\themeimages\icons\safari.png" />
+    <Content Include="content\themeimages\icons\windows.png" />
+    <Content Include="content\themeimages\photos\s1.jpg" />
+    <Content Include="content\themeimages\photos\s10.jpg" />
+    <Content Include="content\themeimages\photos\s2.jpg" />
+    <Content Include="content\themeimages\photos\s3.jpg" />
+    <Content Include="content\themeimages\photos\s4.jpg" />
+    <Content Include="content\themeimages\photos\s5.jpg" />
+    <Content Include="content\themeimages\photos\s6.jpg" />
+    <Content Include="content\themeimages\photos\s7.jpg" />
+    <Content Include="content\themeimages\photos\s8.jpg" />
+    <Content Include="content\themeimages\photos\s9.jpg" />
+    <Content Include="content\themeimages\photos\t1.jpg" />
+    <Content Include="content\themeimages\photos\t10.jpg" />
+    <Content Include="content\themeimages\photos\t2.jpg" />
+    <Content Include="content\themeimages\photos\t3.jpg" />
+    <Content Include="content\themeimages\photos\t4.jpg" />
+    <Content Include="content\themeimages\photos\t5.jpg" />
+    <Content Include="content\themeimages\photos\t6.jpg" />
+    <Content Include="content\themeimages\photos\t7.jpg" />
+    <Content Include="content\themeimages\photos\t8.jpg" />
+    <Content Include="content\themeimages\photos\t9.jpg" />
+    <Content Include="content\themeimages\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="content\themeimages\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="content\themeimages\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="content\themeimages\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="content\themeimages\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="content\themeimages\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="content\themeimages\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="content\themeimages\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="content\themeimages\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="content\themeimages\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="content\themeimages\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="content\themeimages\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="content\themeimages\prettyPhoto\default\default_thumb.png" />
+    <Content Include="content\themeimages\prettyPhoto\default\loader.gif" />
+    <Content Include="content\themeimages\prettyPhoto\default\sprite.png" />
+    <Content Include="content\themeimages\prettyPhoto\default\sprite_next.png" />
+    <Content Include="content\themeimages\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="content\themeimages\prettyPhoto\default\sprite_x.png" />
+    <Content Include="content\themeimages\prettyPhoto\default\sprite_y.png" />
+    <Content Include="content\themeimages\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="content\themeimages\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="content\themeimages\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="content\themeimages\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="content\themeimages\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="content\themeimages\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="content\themeimages\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="content\themeimages\prettyPhoto\facebook\loader.gif" />
+    <Content Include="content\themeimages\prettyPhoto\facebook\sprite.png" />
+    <Content Include="content\themeimages\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="content\themeimages\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="content\themeimages\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="content\themeimages\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="content\themeimages\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="content\themeimages\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="content\themeimages\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="content\themeimages\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="content\themeimages\prettyPhoto\light_square\loader.gif" />
+    <Content Include="content\themeimages\prettyPhoto\light_square\sprite.png" />
+    <Content Include="content\themeimages\star.gif" />
+    <Content Include="content\themeimages\user.jpg" />
+    <Content Include="content\toastr.css" />
+    <Content Include="content\toastr.min.css" />
+    <Content Include="content\widgets.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="index.html" />
+    <Content Include="appTypeScript\chart\chart.html" />
+    <Content Include="appTypeScript\tide\item.html" />
+    <Content Include="appTypeScript\tide\items.html" />
     <Content Include="packages.config" />
-    <Content Include="data\models.json" />
-    <Content Include="scripts\angular-route.min.js.map" />
-    <Content Include="data\states.json" />
+    <Content Include="scripts\angular-animate.js" />
+    <Content Include="scripts\angular-animate.min.js" />
+    <Content Include="scripts\angular-mocks.js" />
+    <Content Include="scripts\angular-route.js" />
+    <Content Include="scripts\angular-route.min.js" />
+    <Content Include="scripts\angular-sanitize.js" />
+    <Content Include="scripts\angular-sanitize.min.js" />
+    <Content Include="scripts\angular.js" />
+    <Content Include="scripts\angular.min.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\breeze.bridge.angular.js" />
+    <Content Include="scripts\breeze.debug.js" />
+    <Content Include="scripts\breeze.directives.js" />
+    <Content Include="scripts\breeze.metadata-helper.js" />
+    <Content Include="scripts\breeze.min.js" />
+    <Content Include="scripts\breeze.saveErrorExtensions.js" />
     <Content Include="scripts\d3\d3.js" />
     <Content Include="scripts\d3\d3.min.js" />
+    <Content Include="data\models.json" />
+    <Content Include="data\states.json" />
     <Content Include="scripts\d3\LICENSE" />
-    <Content Include="nvd3.license.md" />
+    <Content Include="LICENSE.md" />
+    <Content Include="scripts\angular.min.js.map" />
+    <Content Include="scripts\angular-route.min.js.map" />
+    <Content Include="scripts\angular-animate.min.js.map" />
+    <Content Include="scripts\angular-sanitize.min.js.map" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="content\bootstrap.css.map" />
+    <Content Include="content\bootstrap-theme.css.map" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="content\toastr.scss" />
+    <Content Include="content\toastr.less" />
+    <None Include="scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="scripts\jquery-2.1.4.js" />
+    <Content Include="scripts\jquery-2.1.4.min.js" />
+    <Content Include="scripts\moment-with-locales.js" />
+    <Content Include="scripts\moment-with-locales.min.js" />
+    <Content Include="scripts\moment.js" />
+    <Content Include="scripts\moment.min.js" />
+    <Content Include="scripts\theme\customtheme.js" />
+    <Content Include="scripts\jquery-2.1.4.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -81,44 +294,114 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="index.html" />
-    <Content Include="partials\state.html" />
-    <Content Include="partials\tide.html" />
-    <Content Include="scripts\angular-mocks.js" />
-    <Content Include="scripts\angular-route.js" />
-    <Content Include="scripts\angular-route.min.js" />
-    <Content Include="scripts\angular.js" />
-    <Content Include="scripts\angular.min.js" />
-    <Content Include="scripts\app\app.js" />
-    <Content Include="scripts\app\chart.js" />
-    <Content Include="scripts\app\contollers.js" />
-    <Content Include="scripts\app\ModelObject.js" />
-    <Content Include="scripts\app\route.js" />
-    <Content Include="scripts\app\state-machine.js" />
-    <Content Include="scripts\app\stateservice.js" />
-    <Content Include="scripts\app\tideservice.js" />
+    <Content Include="appTypeScript\state\state.html" />
+    <Content Include="appTypeScript\tide\tide.html" />
+    <Content Include="scripts\state-machine.js" />
+    <Content Include="app\stateservice.js" />
+    <Content Include="app\tideservice.js" />
     <None Include="scripts\linq-vsdoc.js" />
     <Content Include="scripts\linq.js" />
     <Content Include="scripts\linq.min.js" />
-    <Content Include="scripts\multi-select\angular-multi-select.css" />
-    <Content Include="scripts\multi-select\angular-multi-select.js" />
     <Content Include="scripts\nv.d3.css" />
     <Content Include="scripts\nv.d3.js" />
     <Content Include="scripts\nv.d3.min.js" />
-    <Content Include="scripts\parallel\parallel.js" />
+    <Content Include="scripts\q.js" />
+    <Content Include="scripts\q.min.js" />
+    <Content Include="scripts\spin.js" />
+    <Content Include="scripts\spin.min.js" />
+    <Content Include="scripts\toastr.js" />
+    <Content Include="scripts\toastr.min.js" />
+    <Content Include="scripts\ui-bootstrap-tpls-0.10.0.js" />
+    <Content Include="scripts\ui-bootstrap-tpls-0.10.0.min.js" />
     <Content Include="scripts\x-editable\xeditable.css" />
     <Content Include="scripts\x-editable\xeditable.js" />
     <Content Include="scripts\x-editable\xeditable.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\AutoMapperConfig.cs" />
+    <Compile Include="App_Start\BreezeWebApiConfig.cs" />
+    <Compile Include="Controllers\v2Controller.cs" />
+    <Compile Include="Controllers\v1Controller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="data\Repo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="appTypeScript\app.ts" />
+    <TypeScriptCompile Include="appTypeScript\chart\chart.directives.ts" />
+    <TypeScriptCompile Include="appTypeScript\chart\chart.ts" />
+    <TypeScriptCompile Include="appTypeScript\common\bootstrap\bootstrap.dialog.ts" />
+    <TypeScriptCompile Include="appTypeScript\common\bootstrap\common.bootstapModule.ts" />
+    <TypeScriptCompile Include="appTypeScript\common\common.ts" />
+    <TypeScriptCompile Include="appTypeScript\common\commonConfig.ts" />
+    <TypeScriptCompile Include="appTypeScript\common\commonModule.ts" />
+    <TypeScriptCompile Include="appTypeScript\common\logger.ts" />
+    <TypeScriptCompile Include="appTypeScript\common\spinner.ts" />
+    <TypeScriptCompile Include="appTypeScript\config.exceptionHandler.ts" />
+    <TypeScriptCompile Include="appTypeScript\config.route.ts" />
+    <TypeScriptCompile Include="appTypeScript\config.ts" />
+    <TypeScriptCompile Include="appTypeScript\directives\cc-img-person.ts" />
+    <TypeScriptCompile Include="appTypeScript\directives\cc-menu-item-rendered.ts" />
+    <TypeScriptCompile Include="appTypeScript\directives\cc-scroll-to-top.ts" />
+    <TypeScriptCompile Include="appTypeScript\directives\cc-sidebar.ts" />
+    <TypeScriptCompile Include="appTypeScript\directives\cc-spinner.ts" />
+    <TypeScriptCompile Include="appTypeScript\directives\cc-widget-close.ts" />
+    <TypeScriptCompile Include="appTypeScript\directives\cc-widget-header.ts" />
+    <TypeScriptCompile Include="appTypeScript\directives\cc-widget-minimize.ts" />
+    <TypeScriptCompile Include="appTypeScript\layout\shellCtrl.ts" />
+    <TypeScriptCompile Include="appTypeScript\layout\sidebarCtrl.ts" />
+    <TypeScriptCompile Include="appTypeScript\services\entityManagerFactory.ts" />
+    <TypeScriptCompile Include="appTypeScript\services\entityMetadata.ts" />
+    <TypeScriptCompile Include="appTypeScript\services\guid.ts" />
+    <TypeScriptCompile Include="appTypeScript\services\datacontext.ts" />
+    <TypeScriptCompile Include="appTypeScript\state\state.ts" />
+    <TypeScriptCompile Include="appTypeScript\tide\tide.ts" />
+    <TypeScriptCompile Include="scripts\typings\angularjs\angular-animate.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\angularjs\angular-cookies.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\angularjs\angular-mocks.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\angularjs\angular-resource.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\angularjs\angular-route.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\angularjs\angular-sanitize.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\angularjs\angular.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\breeze\breeze.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\breeze\breeze.metadata-helper.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\d3\d3.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\d3\nvd3.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\d3\plugins\d3.superformula.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\linq\linq.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\linq\linq.jquery.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\q\Q.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\statemachine\statemachine.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\toastr\toastr.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{41784ebd-baeb-49ab-89d9-a38be3af2cdc}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptModuleKind>None</TypeScriptModuleKind>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
