@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="V2\Model.cs" />
+    <Compile Include="V2\ModelItem.cs" />
     <Compile Include="V2\ModelState.cs" />
     <Compile Include="V2\State.cs" />
     <Compile Include="V2\StateCollection.cs" />

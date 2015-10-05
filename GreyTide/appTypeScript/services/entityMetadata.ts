@@ -18,6 +18,7 @@ module App {
             addModelState();
             addStateCollection();
             addState();
+            addModelItems();
             // addType - make it easy to add the type to the store using the helper
             function addType(type) {
                 helper.addTypeToStore(store, type);
@@ -34,14 +35,23 @@ module App {
                         currentDate: { type: DATE },
                         faction: { type: STRING },
                         points: { type: ID }, 
-                        parentId: { type: GUID },
-                        states: { complexTypeName: 'ModelState', required: true, isScalar:false }
-                    },
-                    navigationProperties :{ 
-                        items: { type: 'Model', hasMany: true },
-                        parent: { type: 'Model', hasMany: false }
+                        states: { complexTypeName: 'ModelState', required: true, isScalar: false },
+                        items: { complexTypeName: 'ModelItem', isScalar: false }
                     }
-
+                });
+            };
+            function addModelItems() {
+                addType({
+                    name: 'ModelItem',
+                    isComplexType: true,
+                    dataProperties: {
+                        name: { type: STRING, required: true },
+                        currentState: { type: STRING },
+                        currentDate: { type: DATE },
+                        points: { type: ID },
+                        states: { complexTypeName: 'ModelState', required: true, isScalar: false },
+                        items: { complexTypeName: 'ModelItem', isScalar:false }
+                    }
                 });
             };
             function addModelState() {
@@ -54,15 +64,6 @@ module App {
                     }
                 });
             };
-            //function addFromState() {
-            //    addType({
-            //        name: 'FromState',
-            //        isComplexType: true,
-            //        dataProperties: {
-            //            name: { type: STRING, required: true }
-            //        }
-            //    });
-            //};
             function addState() {
                 addType({
                     name: 'State',

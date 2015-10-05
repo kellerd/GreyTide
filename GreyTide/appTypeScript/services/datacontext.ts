@@ -44,10 +44,10 @@ module App.Services {
 
             var getSucceeded = (data) => {
                 tide = data.results;
-                this.log("Retrieved [Tide] from remote data source", tide.length, null, true);
+                this.log("Retrieved [Models] from remote data source", tide.length, null, true);
                 return tide;
             }
-            return this.EntityQuery.from("Tide").expand("states,items")
+            return this.EntityQuery.from("Models")
                 .using(this.manager.manager).execute()
                 .then(getSucceeded)
                 .catch(this.getFailed);
@@ -68,7 +68,7 @@ module App.Services {
                 this.log("Retrieved [States] from remote data source", states.length, null, true);
                 return states;
             }
-            return this.EntityQuery.from("States").expand("events.from")
+            return this.EntityQuery.from("States")
                 .using(this.manager.manager).execute()
                 .then(getSucceeded)
                 .catch(this.getFailed);

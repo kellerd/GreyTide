@@ -15,10 +15,10 @@ namespace Controllers.V2
         static readonly Repo _contextProvider = new Repo();
 
 
-        // ~/tide/v2/Tide
-        // ~/tide/v2/Tide?$filter=IsArchived eq false&$orderby=CreatedAt 
+        // ~/tide/v2/Models
+        // ~/tide/v2/Models?$filter=IsArchived eq false&$orderby=CreatedAt 
         [HttpGet]
-        public IQueryable<Model> Tide()
+        public IQueryable<Model> Models()
         {
             return Repo.Tide.Value.AsQueryable();
         }

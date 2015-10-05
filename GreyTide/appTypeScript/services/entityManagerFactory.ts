@@ -9,13 +9,14 @@ module App.Services {
     export interface IManagerAndMetaModels {
         manager: breeze.EntityManager
         Model:Function
+        ModelItem:Function
     }
 
 
     export class EntityManagerFactory {
         public static serviceId = 'entityManagerFactory';
-        metadataStore: any;
-        serviceName: any;
+        metadataStore: breeze.MetadataStore;
+        serviceName: string;
 
         constructor(private breeze, private config) {
             this.setNamingConventionToCamelCase();
@@ -36,7 +37,8 @@ module App.Services {
                     dataService: dataService,
                     metadataStore: this.metadataStore
                 }),
-                    Model:function Model() { }
+                Model:function Model() { },
+                ModelItem: function ModelItem() { }
             };
             
             //this.configureManagerToSaveModifiedItemImmediately(mgrAndModel.manager);
@@ -54,19 +56,31 @@ module App.Services {
         }
         private configureConstructors(mgr: IManagerAndMetaModels) {
             
-
-            mgr.Model.prototype = {
+            let prototype = {
                 //onpanic: function (event, from, to) { alert('panic'); },
                 //onclear: function (event, from, to) { alert('all is clear'); },
                 onafterevent: function (event, from, to) {
                     if (this.states.length == 0 || this.states[0].name != event) {
-                        this.states.push(mgr.manager.createEntity("Model:#GreyTide.Models", { id: GuidGenerator.newGuid(), name: event, date: new Date().toISOString(), active: true, modelId: this.modelId }, breeze.EntityState.Detached));
-                        this.allStates = Enumerable.From(this.transitions()).Select(function (x) { return { name: x, active: false, date: new Date().toISOString() }; }).Union(Enumerable.From(this.states).Where(function (s:any) { return s.active })).ToArray();
+                        let type = <breeze.ComplexType>mgr.manager.metadataStore.getEntityType("ModelState");
+                        let newType = type.createInstance(
+                            {
+                                name: event,
+                                date: new Date().toISOString()
+                            });
+                        this.states.push(newType);
+                        this.allStates =
+                        Enumerable.
+                            From(this.transitions()).
+                            Select(function (x) { return { name: x, active: false, date: new Date().toISOString() }; }).
+                            Union(
+                            Enumerable.From(this.states).
+                                Select(function (x: any) { return { name: x.name, active: true, date: x.date }; })
+                            ).ToArray();
                         if (this.parentEntity != null) {
                             var p = this.parentEntity;
-                            if (Enumerable.From(this.parentEntity.items).Select(function (item:any) { return item.current; }).Distinct().Count() == 1) {
-                                var state:any = Enumerable.From(p.allStates).Where(function (d: any) { return d.active == false && d.name == event; }).FirstOrDefault(null);
-                                if (!(state !=null)) {
+                            if (Enumerable.From(this.parentEntity.items).Select(function (item: any) { return item.current; }).Distinct().Count() == 1) {
+                                var state: any = Enumerable.From(p.allStates).Where(function (d: any) { return d.active == false && d.name == event; }).FirstOrDefault(null);
+                                if (!(state != null)) {
                                     state.active = true;
                                     state.date = new Date().toISOString();
                                     p[event].call(p);
@@ -74,9 +88,9 @@ module App.Services {
                             }
                         }
                         if (this.items != null && this.items.length > 0)
-                            Enumerable.From(this.items).ForEach(function (p:any) {
+                            Enumerable.From(this.items).ForEach(function (p: any) {
                                 if (Enumerable.From(p.transitions()).Contains(event)) {
-                                    var state:any= Enumerable.From(p.allStates).Where(function (d:any) { return d.active == false && d.name == event; }).FirstOrDefault(null);
+                                    var state: any = Enumerable.From(p.allStates).Where(function (d: any) { return d.active == false && d.name == event; }).FirstOrDefault(null);
                                     if (!(state != null)) {
                                         state.active = true;
                                         state.date = new Date().toISOString();
@@ -85,16 +99,25 @@ module App.Services {
                                 }
                             })
                     } else {
-                        this.allStates = Enumerable.From(this.transitions()).Select(function (x) { return { name: x, active: false, date: new Date().toISOString() }; }).Union(Enumerable.From(this.states).Where(function (s:any) { return s.active })).ToArray();
+                        this.allStates = Enumerable.From(this.transitions()).Select(function (x) { return { name: x, active: false, date: new Date().toISOString() }; }).Union(Enumerable.From(this.states).Select(function (x: any) { return { name: x.name, active: true, date: x.date }; })).ToArray();
                     }
                 }
             };
 
-            var ModelInitializer = function (model) {
-                model[model.currentState].call(model);
-            };
+            mgr.Model.prototype = prototype;
+            mgr.ModelItem.prototype = prototype;
 
-            this.metadataStore.registerEntityTypeCtor('Model', mgr.Model, ModelInitializer);
+            //var ModelInitializer = function (model) {
+            //    model[model.currentState].call(model);
+            //};
+
+            //this.metadataStore.registerEntityTypeCtor('Model', mgr.Model, ModelInitializer);
+
+            //var modelItemInitializer = function (modelItem) {
+            //    modelItem[modelItem.currentState].call(modelItem);
+            //};
+
+            //this.metadataStore.registerEntityTypeCtor('ModelItem', mgr.modelItem, modelItemInitializer);
         }
         private configureManagerToSaveModifiedItemImmediately(mgr: breeze.EntityManager) {
             function saveEntity(masterEntity) {
