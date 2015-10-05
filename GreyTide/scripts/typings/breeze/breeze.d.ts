@@ -144,6 +144,8 @@ declare module breeze {
         validators: Validator[];
         addProperty(dataProperty: DataProperty): ComplexType;
         getProperties(): DataProperty[];
+        createInstance<T>(data: any): T;
+        createInstance<T>(): T;
     }
 
     class DataProperty implements IProperty {

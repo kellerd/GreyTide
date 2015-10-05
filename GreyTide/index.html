@@ -32,12 +32,10 @@
     <link href="content/breeze.directives.css" rel="stylesheet" />
     <link href="scripts/x-editable/xeditable.css" rel="stylesheet">
     <link href="scripts/nv.d3.css" rel="stylesheet" />
-    <link href="scripts/multi-select/angular-multi-select.css" rel="stylesheet" />
-
 </head>
 <body>
     <div>
-        <div data-ng-include="'/app/layout/shell.html'"></div>
+        <div data-ng-include="'/appTypeScript/layout/shell.html'"></div>
         <div id="splash-page" data-ng-show="false">
             <div class="page-splash">
                 <div class="page-splash-message">
@@ -67,6 +65,7 @@
     <script src="scripts/breeze.bridge.angular.js"></script>
     <script src="scripts/breeze.directives.js"></script>
     <script src="scripts/breeze.saveErrorExtensions.js"></script>
+    <script src="scripts/breeze.metadata-helper.js"></script>
     <script src="scripts/x-editable/xeditable.js"></script>
     <script src="scripts/linq.js"></script>
     <script src="scripts/state-machine.js"></script>
@@ -74,45 +73,43 @@
     <script src="scripts/nv.d3.js"></script>
 
     <!-- Bootstrapping -->
-    <script src="app/app.js"></script>
-    <script src="app/common/commonModule.js"></script>
-    <script src="app/config.js"></script>
-    <script src="app/config.exceptionHandler.js"></script>
-    <script src="app/config.route.js"></script>
+    <script src="appTypeScript/app.js"></script>
+    <script src="appTypeScript/common/commonModule.js"></script>
+    <script src="appTypeScript/config.js"></script>
+    <script src="appTypeScript/config.exceptionHandler.js"></script>
+    <script src="appTypeScript/config.route.js"></script>
     <!-- common Modules -->
     
-    <script src="app/common/commonConfig.js"></script>
-    <script src="app/common/common.js"></script>
-    <script src="app/common/logger.js"></script>
-    <script src="app/common/spinner.js"></script>
+    <script src="appTypeScript/common/commonConfig.js"></script>
+    <script src="appTypeScript/common/common.js"></script>
+    <script src="appTypeScript/common/logger.js"></script>
+    <script src="appTypeScript/common/spinner.js"></script>
 
     <!-- common.bootstrap Modules -->
-    <script src="app/common/bootstrap/common.bootstapModule.js"></script>
-    <script src="app/common/bootstrap/bootstrap.dialog.js"></script>
+    <script src="appTypeScript/common/bootstrap/common.bootstapModule.js"></script>
+    <script src="appTypeScript/common/bootstrap/bootstrap.dialog.js"></script>
 
     <!-- app -->
-    <script src="app/admin/admin.js"></script>
-    <script src="app/layout/shellCtrl.js"></script>
-    <script src="app/layout/sidebarCtrl.js"></script>
-    <script src="app/chart/chart.js"></script>
-    <script src="app/tide/tide.js"></script>
-    <script src="app/state/state.js"></script>
+    <script src="appTypeScript/layout/shellCtrl.js"></script>
+    <script src="appTypeScript/layout/sidebarCtrl.js"></script>
+    <script src="appTypeScript/chart/chart.js"></script>
+    <script src="appTypeScript/tide/tide.js"></script>
+    <script src="appTypeScript/state/state.js"></script>
 
     <!-- app Directives -->
-    <script src="app/directives/cc-sidebar.js"></script>
-    <script src="app/directives/cc-spinner.js"></script>
-    <script src="app/directives/cc-widget-header.js"></script>
-    <script src="app/directives/cc-widget-close.js"></script>
-    <script src="app/directives/cc-menu-item-rendered.js"></script>
-    <script src="app/directives/cc-widget-minimize.js"></script>
-    <script src="app/directives/cc-scroll-to-top.js"></script>
-    <script src="app/directives/cc-img-person.js"></script>
-    <script src="app/chart/chart.directives.js"></script>
-    <script src="scripts/multi-select/angular-multi-select.js"></script>
-    
+    <script src="appTypeScript/directives/cc-sidebar.js"></script>
+    <script src="appTypeScript/directives/cc-spinner.js"></script>
+    <script src="appTypeScript/directives/cc-widget-header.js"></script>
+    <script src="appTypeScript/directives/cc-widget-close.js"></script>
+    <script src="appTypeScript/directives/cc-menu-item-rendered.js"></script>
+    <script src="appTypeScript/directives/cc-widget-minimize.js"></script>
+    <script src="appTypeScript/directives/cc-scroll-to-top.js"></script>
+    <script src="appTypeScript/directives/cc-img-person.js"></script>
+    <script src="appTypeScript/chart/chart.directives.js"></script>
     <!-- app Services -->
-    <script src="app/services/guid.js"></script>
-    <script src="app/services/datacontext.js"></script>
-    <script src="app/services/entityManagerFactory.js"></script>
+    <script src="appTypeScript/services/guid.js"></script>
+    <script src="appTypeScript/services/entityMetadata.js"></script>
+    <script src="appTypeScript/services/datacontext.js"></script>
+    <script src="appTypeScript/services/entityManagerFactory.js"></script>
 </body>
 </html>

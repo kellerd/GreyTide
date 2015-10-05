@@ -1,0 +1,27 @@
+﻿<button ng-click="RemoveItem(item,child)">x</button>
+<ul>
+    <li>
+        <span editable-text="child.name">{{child.name}}</span>
+        <em ng-show="child.faction!=undefined">
+            -
+            <span editable-text="child.faction">{{child.faction}}</span>
+        </em>
+    </li>
+    <li>
+        <span editable-number="child.points">{{child.points || 0}}</span> Points
+    </li>
+    <li>
+        {{child.name}} is currently {{child.current}} as of {{child.currentDate | date : 'short' : '+0430' }}
+    </li>
+    <li>
+        Recede Tide:
+        <ul>
+            <li ng-repeat="state in child.allStates|filter:{active:false}">
+                <button ng-click="setActive(child, state)">{{state.name}}</button>
+            </li>
+        </ul>
+        
+    </li>
+    {{ item = child; '' }}
+    <li ng-include="'appTypeScript/tide/items.html'"></li>
+</ul>

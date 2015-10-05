@@ -41,24 +41,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.0.4.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.0.4\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Breeze.ContextProvider, Version=1.5.0.0, Culture=neutral, PublicKeyToken=f6085f1a45e2ac59, processorArchitecture=MSIL">
       <HintPath>..\packages\Breeze.Server.ContextProvider.1.5.4\lib\Breeze.ContextProvider.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Breeze.ContextProvider.EF6, Version=1.5.0.0, Culture=neutral, PublicKeyToken=f6085f1a45e2ac59, processorArchitecture=MSIL">
-      <HintPath>..\packages\Breeze.Server.ContextProvider.EF6.1.5.4\lib\Breeze.ContextProvider.EF6.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Breeze.WebApi2, Version=1.5.0.0, Culture=neutral, PublicKeyToken=f6085f1a45e2ac59, processorArchitecture=MSIL">
       <HintPath>..\packages\Breeze.Server.WebApi2.1.5.4\lib\Breeze.WebApi2.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
@@ -121,10 +113,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\layout\shell.html" />
-    <Content Include="app\layout\sidebar.html" />
-    <Content Include="app\layout\topnav.html" />
-    <Content Include="app\layout\widgetheader.html" />
+    <Content Include="appTypeScript\layout\shell.html" />
+    <Content Include="appTypeScript\layout\sidebar.html" />
+    <Content Include="appTypeScript\layout\topnav.html" />
+    <Content Include="appTypeScript\layout\widgetheader.html" />
     <Content Include="content\bootstrap-theme.css" />
     <Content Include="content\bootstrap-theme.min.css" />
     <Content Include="content\bootstrap.css" />
@@ -241,9 +233,9 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="index.html" />
-    <Content Include="app\chart\chart.html" />
-    <Content Include="app\tide\item.html" />
-    <Content Include="app\tide\items.html" />
+    <Content Include="appTypeScript\chart\chart.html" />
+    <Content Include="appTypeScript\tide\item.html" />
+    <Content Include="appTypeScript\tide\items.html" />
     <Content Include="packages.config" />
     <Content Include="scripts\angular-animate.js" />
     <Content Include="scripts\angular-animate.min.js" />
@@ -259,6 +251,7 @@
     <Content Include="scripts\breeze.bridge.angular.js" />
     <Content Include="scripts\breeze.debug.js" />
     <Content Include="scripts\breeze.directives.js" />
+    <Content Include="scripts\breeze.metadata-helper.js" />
     <Content Include="scripts\breeze.min.js" />
     <Content Include="scripts\breeze.saveErrorExtensions.js" />
     <Content Include="scripts\d3\d3.js" />
@@ -301,16 +294,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\state\state.html" />
-    <Content Include="app\tide\tide.html" />
+    <Content Include="appTypeScript\state\state.html" />
+    <Content Include="appTypeScript\tide\tide.html" />
     <Content Include="scripts\state-machine.js" />
     <Content Include="app\stateservice.js" />
     <Content Include="app\tideservice.js" />
     <None Include="scripts\linq-vsdoc.js" />
     <Content Include="scripts\linq.js" />
     <Content Include="scripts\linq.min.js" />
-    <Content Include="scripts\multi-select\angular-multi-select.css" />
-    <Content Include="scripts\multi-select\angular-multi-select.js" />
     <Content Include="scripts\nv.d3.css" />
     <Content Include="scripts\nv.d3.js" />
     <Content Include="scripts\nv.d3.min.js" />
@@ -328,41 +319,43 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\AutoMapperConfig.cs" />
     <Compile Include="App_Start\BreezeWebApiConfig.cs" />
-    <Compile Include="Controllers\GreyTideController.cs" />
-    <Compile Include="data\GreyTideContext.cs" />
+    <Compile Include="Controllers\v2Controller.cs" />
+    <Compile Include="Controllers\v1Controller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="data\Repo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app\app.ts" />
-    <TypeScriptCompile Include="app\chart\chart.directives.ts" />
-    <TypeScriptCompile Include="app\chart\chart.ts" />
-    <TypeScriptCompile Include="app\common\bootstrap\bootstrap.dialog.ts" />
-    <TypeScriptCompile Include="app\common\bootstrap\common.bootstapModule.ts" />
-    <TypeScriptCompile Include="app\common\common.ts" />
-    <TypeScriptCompile Include="app\common\commonConfig.ts" />
-    <TypeScriptCompile Include="app\common\commonModule.ts" />
-    <TypeScriptCompile Include="app\common\logger.ts" />
-    <TypeScriptCompile Include="app\common\spinner.ts" />
-    <TypeScriptCompile Include="app\config.exceptionHandler.ts" />
-    <TypeScriptCompile Include="app\config.route.ts" />
-    <TypeScriptCompile Include="app\config.ts" />
-    <TypeScriptCompile Include="app\directives\cc-img-person.ts" />
-    <TypeScriptCompile Include="app\directives\cc-menu-item-rendered.ts" />
-    <TypeScriptCompile Include="app\directives\cc-scroll-to-top.ts" />
-    <TypeScriptCompile Include="app\directives\cc-sidebar.ts" />
-    <TypeScriptCompile Include="app\directives\cc-spinner.ts" />
-    <TypeScriptCompile Include="app\directives\cc-widget-close.ts" />
-    <TypeScriptCompile Include="app\directives\cc-widget-header.ts" />
-    <TypeScriptCompile Include="app\directives\cc-widget-minimize.ts" />
-    <TypeScriptCompile Include="app\layout\shellCtrl.ts" />
-    <TypeScriptCompile Include="app\layout\sidebarCtrl.ts" />
-    <TypeScriptCompile Include="app\services\entityManagerFactory.ts" />
-    <TypeScriptCompile Include="app\services\guid.ts" />
-    <TypeScriptCompile Include="app\services\datacontext.ts" />
-    <TypeScriptCompile Include="app\state\state.ts" />
-    <TypeScriptCompile Include="app\tide\tide.ts" />
+    <TypeScriptCompile Include="appTypeScript\app.ts" />
+    <TypeScriptCompile Include="appTypeScript\chart\chart.directives.ts" />
+    <TypeScriptCompile Include="appTypeScript\chart\chart.ts" />
+    <TypeScriptCompile Include="appTypeScript\common\bootstrap\bootstrap.dialog.ts" />
+    <TypeScriptCompile Include="appTypeScript\common\bootstrap\common.bootstapModule.ts" />
+    <TypeScriptCompile Include="appTypeScript\common\common.ts" />
+    <TypeScriptCompile Include="appTypeScript\common\commonConfig.ts" />
+    <TypeScriptCompile Include="appTypeScript\common\commonModule.ts" />
+    <TypeScriptCompile Include="appTypeScript\common\logger.ts" />
+    <TypeScriptCompile Include="appTypeScript\common\spinner.ts" />
+    <TypeScriptCompile Include="appTypeScript\config.exceptionHandler.ts" />
+    <TypeScriptCompile Include="appTypeScript\config.route.ts" />
+    <TypeScriptCompile Include="appTypeScript\config.ts" />
+    <TypeScriptCompile Include="appTypeScript\directives\cc-img-person.ts" />
+    <TypeScriptCompile Include="appTypeScript\directives\cc-menu-item-rendered.ts" />
+    <TypeScriptCompile Include="appTypeScript\directives\cc-scroll-to-top.ts" />
+    <TypeScriptCompile Include="appTypeScript\directives\cc-sidebar.ts" />
+    <TypeScriptCompile Include="appTypeScript\directives\cc-spinner.ts" />
+    <TypeScriptCompile Include="appTypeScript\directives\cc-widget-close.ts" />
+    <TypeScriptCompile Include="appTypeScript\directives\cc-widget-header.ts" />
+    <TypeScriptCompile Include="appTypeScript\directives\cc-widget-minimize.ts" />
+    <TypeScriptCompile Include="appTypeScript\layout\shellCtrl.ts" />
+    <TypeScriptCompile Include="appTypeScript\layout\sidebarCtrl.ts" />
+    <TypeScriptCompile Include="appTypeScript\services\entityManagerFactory.ts" />
+    <TypeScriptCompile Include="appTypeScript\services\entityMetadata.ts" />
+    <TypeScriptCompile Include="appTypeScript\services\guid.ts" />
+    <TypeScriptCompile Include="appTypeScript\services\datacontext.ts" />
+    <TypeScriptCompile Include="appTypeScript\state\state.ts" />
+    <TypeScriptCompile Include="appTypeScript\tide\tide.ts" />
     <TypeScriptCompile Include="scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="scripts\typings\angularjs\angular-cookies.d.ts" />
     <TypeScriptCompile Include="scripts\typings\angularjs\angular-mocks.d.ts" />
@@ -371,6 +364,7 @@
     <TypeScriptCompile Include="scripts\typings\angularjs\angular-sanitize.d.ts" />
     <TypeScriptCompile Include="scripts\typings\angularjs\angular.d.ts" />
     <TypeScriptCompile Include="scripts\typings\breeze\breeze.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\breeze\breeze.metadata-helper.d.ts" />
     <TypeScriptCompile Include="scripts\typings\d3\d3.d.ts" />
     <TypeScriptCompile Include="scripts\typings\d3\nvd3.d.ts" />
     <TypeScriptCompile Include="scripts\typings\d3\plugins\d3.superformula.d.ts" />

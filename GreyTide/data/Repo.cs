@@ -7,19 +7,15 @@ using System.Threading.Tasks;
 using Breeze.ContextProvider;
 using GreyTideDataService.Models;
 using Newtonsoft.Json;
-using Breeze.ContextProvider.EF6;
 using System.Linq;
-using System.Data.Entity;
 using System.Threading;
+using GreyTideDataService.Models.V2;
 
 namespace GreyTideDataService
 {
     public class Repo : ContextProvider
     {
-        static Repo()
-        {
-            Database.SetInitializer<GreyTideContext>(null);
-        }
+        
 
         public class AsyncLazy<T> : Lazy<Task<T>>
         {
@@ -64,11 +60,11 @@ namespace GreyTideDataService
         {
             throw new NotImplementedException();
         }
-        public static EFContextProvider<GreyTideContext> MetadataConects =
-             new EFContextProvider<GreyTideContext>();
+        
         protected override string BuildJsonMetadata()
         {
-            return MetadataConects.Metadata();
+           
+            throw new NotImplementedException(); 
         }
 
         protected override void SaveChangesCore(SaveWorkState saveWorkState)
@@ -77,43 +73,32 @@ namespace GreyTideDataService
         }
         private static void process(Model m)
         {
-            var lastState = m.States.OrderByDescending((s) => s.Date).DefaultIfEmpty(new ModelState { Name = "Startup", Date = DateTime.Now }).FirstOrDefault();
+            m.States = m.States.OrderByDescending((s) => s.Date).ToList();
+            var lastState = m.States.DefaultIfEmpty(new ModelState { Name = "Startup", Date = DateTime.Now }).FirstOrDefault();
             m.CurrentState = lastState.Name;
             m.CurrentDate = lastState.Date;
-            m.Id = Guid.NewGuid();
-            if (m.States != null && m.States.Any())
-            {
-                m.States.ForEach((s) =>
-                {
-                    s.SetModel(m);
-                    s.Id = Guid.NewGuid();
-                });
+            if (m is Model) {
+                ((Model)m).Id = Guid.NewGuid();
             }
-            m.States = m.States.OrderByDescending((s) => s.Date).ToList();
 
             if (m.Items != null && m.Items.Any())
             {
                 m.Items.ForEach((i) =>
                 {
                     process(i);
-                    i.SetParent(m);
                 });
             }
+        }
+        private static void process(ModelItem m)
+        {
+            m.States = m.States.OrderByDescending((s) => s.Date).ToList();
+            var lastState = m.States.DefaultIfEmpty(new ModelState { Name = "Startup", Date = DateTime.Now }).FirstOrDefault();
+            m.CurrentState = lastState.Name;
+            m.CurrentDate = lastState.Date;
         }
         private static void processStates(StateCollection sc)
         {
             sc.Id = Guid.NewGuid();
-            if (sc.Events != null && sc.Events.Any())
-                sc.Events.ForEach(s =>
-                {
-                    s.Id = Guid.NewGuid();
-                    s.SetStateCollection(sc);
-                    s.From.ForEach(f =>
-                    {
-                        f.Id = Guid.NewGuid();
-                        f.SetState(s);
-                    });
-                });
         }
     }
 }
