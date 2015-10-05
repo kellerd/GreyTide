@@ -84,18 +84,18 @@ module App.Services {
                 var events = data[0].events.map((e) => {
                     return {
                         name: e.name,
-                        from: e.from.map(function (f) { return f.name; }),
+                        from: e.from,
                         to: e.to
                     }
                 });
                 StateMachine.create({
                     target: this.manager.Model.prototype,
-                    initial: { state: 'None', event: 'init'},
+                    initial: { state: 'None', event: 'init',defer:true},
                     events: events
                 });
                 StateMachine.create({
                     target: this.manager.ModelItem.prototype,
-                    initial: { state: 'None', event: 'init' },
+                    initial: { state: 'None', event: 'init',defer:true },
                     events: events
                 });
                 this.log("States primed");
