@@ -53,6 +53,10 @@
       <HintPath>..\packages\Breeze.Server.WebApi2.1.5.4\lib\Breeze.WebApi2.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.Azure.Documents.Client, Version=1.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.DocumentDB.1.5.0\lib\net40\Microsoft.Azure.Documents.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Data.Edm, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Data.Edm.5.6.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
@@ -321,6 +325,7 @@
     <Compile Include="App_Start\BreezeWebApiConfig.cs" />
     <Compile Include="Controllers\v2Controller.cs" />
     <Compile Include="Controllers\v1Controller.cs" />
+    <Compile Include="data\AzureConStr.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="data\Repo.cs" />
   </ItemGroup>
