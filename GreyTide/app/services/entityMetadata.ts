@@ -28,8 +28,8 @@ module App {
                 addType({
                     name: 'Model',
                     dataProperties: {
-                        userToken: { type: GUID, required: true },
-                        id: { type: GUID, required: true },
+                        
+                        id: { type: STRING, required: true },
                         name: { type: STRING, required: true },
                         currentState: { type: STRING },
                         currentDate: { type: DATE },
@@ -79,8 +79,8 @@ module App {
                 addType({
                     name: 'StateCollection',
                     dataProperties: {
-                        userToken: { type: GUID, required: true },
-                        id: { type: GUID, required: true },
+                        
+                        id: { type: STRING, required: true },
                         name: { type: STRING, required: true },
                         events: { complexTypeName: 'State', required: true }
                     }

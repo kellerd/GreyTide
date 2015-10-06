@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Microsoft.Azure.Documents;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace GreyTideDataService.Models.V2
 {
-    public class ModelItem
+    public class ModelItem : Document
     {
         [Required]
         public string Name { get; set; }

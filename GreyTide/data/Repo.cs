@@ -10,6 +10,7 @@ using Newtonsoft.Json;
 using System.Linq;
 using System.Threading;
 using GreyTideDataService.Models.V2;
+using GreyTide.data;
 
 namespace GreyTideDataService
 {
@@ -30,7 +31,7 @@ namespace GreyTideDataService
             public TaskAwaiter<T> GetAwaiter() { return Value.GetAwaiter(); }
         }
 
-        public static Lazy<IEnumerable<Model>> Tide =
+        public static Lazy<IEnumerable<Model>> Models =
            new Lazy<IEnumerable<Model>>(() =>
            {
                var models = JsonConvert.DeserializeObject<IEnumerable<Model>>(File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data/models.json")));
@@ -78,7 +79,7 @@ namespace GreyTideDataService
             m.CurrentState = lastState.Name;
             m.CurrentDate = lastState.Date;
             if (m is Model) {
-                ((Model)m).Id = Guid.NewGuid();
+                ((Model)m).Id = Guid.NewGuid().ToString();
             }
 
             if (m.Items != null && m.Items.Any())
@@ -98,7 +99,7 @@ namespace GreyTideDataService
         }
         private static void processStates(StateCollection sc)
         {
-            sc.Id = Guid.NewGuid();
+            sc.Id = Guid.NewGuid().ToString(); 
         }
     }
 }
