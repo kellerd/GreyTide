@@ -43,8 +43,10 @@ namespace GreyTideDataService
            new Lazy<IEnumerable<StateCollection>>(() =>
            {
                var states = JsonConvert.DeserializeObject<IEnumerable<StateCollection>>(File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data/states.json")));
+               states.ToList().ForEach(process);
                return states;
            }, LazyThreadSafetyMode.ExecutionAndPublication);
+
 
         public override IDbConnection GetDbConnection()
         {
@@ -77,7 +79,7 @@ namespace GreyTideDataService
             var lastState = m.States.DefaultIfEmpty(new ModelState { Name = "Startup", Date = DateTime.Now }).FirstOrDefault();
             m.CurrentState = lastState.Name;
             m.CurrentDate = lastState.Date;
-
+            m.Id = Guid.NewGuid();
             if (m.Items != null && m.Items.Any())
             {
                 m.Items.ForEach((i) =>
@@ -92,6 +94,11 @@ namespace GreyTideDataService
             var lastState = m.States.DefaultIfEmpty(new ModelState { Name = "Startup", Date = DateTime.Now }).FirstOrDefault();
             m.CurrentState = lastState.Name;
             m.CurrentDate = lastState.Date;
+        }
+
+        private static void process(StateCollection obj)
+        {
+            obj.Id = Guid.NewGuid();
         }
     }
 }

@@ -1,12 +1,13 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace GreyTideDataService.Models.V2
 {
     public class Model : ModelItem
     {
-        [JsonProperty(PropertyName = "id")]
+        [Key]
         public Guid Id { get; set; }
         public string Faction { get; set; }
         public List<ModelItem> Items { get; set; }

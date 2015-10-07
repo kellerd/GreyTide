@@ -40,11 +40,20 @@ namespace Controllers.V2
                 //Will change to create on account approval/creation
                 var documentState = Client.CreateDocumentQuery<StateCollection>(documentCollection.SelfLink).Where(sc => sc.Type == typeof(StateCollection).FullName).AsEnumerable().FirstOrDefault();
                 if (documentState == null)
-                    Repo.States.Value.ToList().ForEach(sc => Client.CreateDocumentAsync(documentCollection.SelfLink, sc));
+                    Repo.States.Value.ToList().ForEach(sc => {
+                        var result = Client.CreateDocumentAsync(documentCollection.SelfLink, sc).Result;
+                        if (result.StatusCode != System.Net.HttpStatusCode.Created)
+                            throw new Exception($"{sc.Name} is not migrated");
+                    });
 
                 var documentModel = Client.CreateDocumentQuery<Model>(documentCollection.SelfLink).Where(sc => sc.Type == typeof(Model).FullName).AsEnumerable().FirstOrDefault();
                 if (documentModel == null)
-                    Repo.Models.Value.ToList().ForEach(sc => Client.CreateDocumentAsync(documentCollection.SelfLink, sc));
+                    Repo.Models.Value.ToList().ForEach(sc => {
+                        var result = Client.CreateDocumentAsync(documentCollection.SelfLink, sc).Result;
+                        if (result.StatusCode != System.Net.HttpStatusCode.Created)
+                            throw new Exception($"{sc.Name} is not migrated");
+                    });
+
             }
             catch (Exception ex)
             {
@@ -61,7 +70,7 @@ namespace Controllers.V2
         public IQueryable<Model> Models()
         {
             Database database = Client.CreateDatabaseQuery().Where(db => db.Id == HardDriveAzureConnectionStr.DatabaseId).ToArray().FirstOrDefault();
-            DocumentCollection documentCollection = Client.CreateDocumentCollectionQuery(database.SelfLink).Where(c => c.Id == HardDriveAzureConnectionStr.UserToken.ToString("N")).AsEnumerable().FirstOrDefault();
+            DocumentCollection documentCollection = Client.CreateDocumentCollectionQuery(database.SelfLink).Where(c => c.Id == HardDriveAzureConnectionStr.UserToken.ToString("N")).ToArray().FirstOrDefault();
             return Client.CreateDocumentQuery<Model>(documentCollection.SelfLink).Where(sc => sc.Type == typeof(Model).FullName);
         }
 
@@ -71,8 +80,7 @@ namespace Controllers.V2
         public IQueryable<StateCollection> States()
         {
             Database database = Client.CreateDatabaseQuery().Where(db => db.Id == HardDriveAzureConnectionStr.DatabaseId).ToArray().FirstOrDefault();
-            DocumentCollection documentCollection = Client.CreateDocumentCollectionQuery(database.SelfLink).Where(c => c.Id == HardDriveAzureConnectionStr.UserToken.ToString("N")).AsEnumerable().FirstOrDefault();
-            string typeName = typeof(StateCollection).FullName;
+            DocumentCollection documentCollection = Client.CreateDocumentCollectionQuery(database.SelfLink).Where(c => c.Id == HardDriveAzureConnectionStr.UserToken.ToString("N")).ToArray().FirstOrDefault();
             return Client.CreateDocumentQuery<StateCollection>(documentCollection.SelfLink).Where(sc => sc.Type == typeof(StateCollection).FullName);
         }
 
