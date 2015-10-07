@@ -75,14 +75,13 @@ namespace GreyTide
         }
         private static void process(Model m)
         {
-            m.States = m.States.OrderByDescending((s) => s.Date).ToList();
-            var lastState = m.States.DefaultIfEmpty(new ModelState { Name = "Startup", Date = DateTime.Now }).FirstOrDefault();
-            m.CurrentState = lastState.Name;
-            m.CurrentDate = lastState.Date;
-            m.Id = Guid.NewGuid();
-            if (m.Items != null && m.Items.Any())
+            m.states = m.states.OrderByDescending((s) => s.date).ToList();
+            var lastState = m.states.DefaultIfEmpty(new ModelState { name = "Startup", date = DateTime.Now }).FirstOrDefault();
+            m.currentState = lastState.name;
+            m.currentDate = lastState.date;
+            if (m.items != null && m.items.Any())
             {
-                m.Items.ForEach((i) =>
+                m.items.ForEach((i) =>
                 {
                     process(i);
                 });
@@ -90,15 +89,14 @@ namespace GreyTide
         }
         private static void process(ModelItem m)
         {
-            m.States = m.States.OrderByDescending((s) => s.Date).ToList();
-            var lastState = m.States.DefaultIfEmpty(new ModelState { Name = "Startup", Date = DateTime.Now }).FirstOrDefault();
-            m.CurrentState = lastState.Name;
-            m.CurrentDate = lastState.Date;
+            m.states = m.states.OrderByDescending((s) => s.date).ToList();
+            var lastState = m.states.DefaultIfEmpty(new ModelState { name = "Startup", date = DateTime.Now }).FirstOrDefault();
+            m.currentState = lastState.name;
+            m.currentDate = lastState.date;
         }
 
         private static void process(StateCollection obj)
         {
-            obj.Id = Guid.NewGuid();
         }
     }
 }

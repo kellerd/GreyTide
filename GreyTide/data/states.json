@@ -1,58 +1,58 @@
 ﻿[
   {
     "id": "696f3615-698a-4c49-af36-38b03c125817",
-    "Name": "Default",
-    "Events": [
+    "name": "Default",
+    "events": [
       {
-        "Order": 0,
-        "Name": "Dislike",
-        "From": [
+        "order": 0,
+        "name": "Dislike",
+        "from": [
           "none",
           "Completed"
         ],
-        "To": "Requires Stripping"
+        "to": "Requires Stripping"
       },
       {
-        "Order": 5,
-        "Name": "Strip Weathering",
-        "From": [
+        "order": 5,
+        "name": "Strip Weathering",
+        "from": [
           "none",
           "Weathered"
         ],
-        "To": "Painted"
+        "to": "Painted"
       },
       {
-        "Order": 4,
-        "Name": "Strip Painting",
-        "From": [
+        "order": 4,
+        "name": "Strip Painting",
+        "from": [
           "none",
           "Painted",
           "Requires Stripping"
         ],
-        "To": "Primed"
+        "to": "Primed"
       },
       {
-        "Order": 3,
-        "Name": "Strip Primer",
-        "From": [
+        "order": 3,
+        "name": "Strip Primer",
+        "from": [
           "none",
           "Primed"
         ],
-        "To": "Assembled"
+        "to": "Assembled"
       },
       {
-        "Order": 2,
-        "Name": "Strip Glue",
-        "From": [
+        "order": 2,
+        "name": "Strip Glue",
+        "from": [
           "none",
           "Assembled"
         ],
-        "To": "Requires Assembly"
+        "to": "Requires Assembly"
       },
       {
-        "Order": 8,
-        "Name": "Complete",
-        "From": [
+        "order": 8,
+        "name": "Complete",
+        "from": [
           "none",
           "Weathered",
           "Painted",
@@ -61,131 +61,131 @@
           "NOS",
           "Varnished"
         ],
-        "To": "Completed"
+        "to": "Completed"
       },
       {
-        "Order": 7,
-        "Name": "Finish Coat",
-        "From": [
+        "order": 7,
+        "name": "Finish Coat",
+        "from": [
           "none",
           "Painted",
           "Weathered"
         ],
-        "To": "Varnished"
+        "to": "Varnished"
       },
       {
-        "Order": 6,
-        "Name": "Weather",
-        "From": [
+        "order": 6,
+        "name": "Weather",
+        "from": [
           "none",
           "Painted"
         ],
-        "To": "Weathered"
+        "to": "Weathered"
       },
       {
-        "Order": 5,
-        "Name": "Paint",
-        "From": [
+        "order": 5,
+        "name": "Paint",
+        "from": [
           "none",
           "Primed"
         ],
-        "To": "Painted"
+        "to": "Painted"
       },
       {
-        "Order": 4,
-        "Name": "Prime",
-        "From": [
+        "order": 4,
+        "name": "Prime",
+        "from": [
           "none",
           "Assembled"
         ],
-        "To": "Primed"
+        "to": "Primed"
       },
       {
-        "Order": 3,
-        "Name": "Assemble",
-        "From": [
+        "order": 3,
+        "name": "Assemble",
+        "from": [
           "none",
           "NOS",
           "Requires Assembly"
         ],
-        "To": "Assembled"
+        "to": "Assembled"
       },
       {
-        "Order": 8,
-        "Name": "Buy Completed",
-        "From": [
+        "order": 8,
+        "name": "Buy Completed",
+        "from": [
           "none",
           "Nothing",
           "Shopping For"
         ],
-        "To": "Completed"
+        "to": "Completed"
       },
       {
-        "Order": 5,
-        "Name": "Buy Painted",
-        "From": [
+        "order": 5,
+        "name": "Buy Painted",
+        "from": [
           "none",
           "Nothing",
           "Shopping For"
         ],
-        "To": "Painted"
+        "to": "Painted"
       },
       {
-        "Order": 4,
-        "Name": "Buy Primed",
-        "From": [
+        "order": 4,
+        "name": "Buy Primed",
+        "from": [
           "none",
           "Nothing",
           "Shopping For"
         ],
-        "To": "Primed"
+        "to": "Primed"
       },
       {
-        "Order": 3,
-        "Name": "Buy Assembled",
-        "From": [
+        "order": 3,
+        "name": "Buy Assembled",
+        "from": [
           "none",
           "Nothing",
           "Shopping For"
         ],
-        "To": "Assembled"
+        "to": "Assembled"
       },
       {
-        "Order": 2,
-        "Name": "Buy Broken",
-        "From": [
+        "order": 2,
+        "name": "Buy Broken",
+        "from": [
           "none",
           "Nothing",
           "Shopping For"
         ],
-        "To": "Requires Assembly"
+        "to": "Requires Assembly"
       },
       {
-        "Order": 2,
-        "Name": "Buy New",
-        "From": [
+        "order": 2,
+        "name": "Buy New",
+        "from": [
           "none",
           "Nothing",
           "Shopping For"
         ],
-        "To": "NOS"
+        "to": "NOS"
       },
       {
-        "Order": 1,
-        "Name": "Want",
-        "From": [
+        "order": 1,
+        "name": "Want",
+        "from": [
           "none",
           "Nothing"
         ],
-        "To": "Shopping For"
+        "to": "Shopping For"
       },
       {
-        "Order": -1,
-        "Name": "Startup",
-        "From": [
+        "order": -1,
+        "name": "Startup",
+        "from": [
           "none"
         ],
-        "To": "Nothing"
+        "to": "Nothing"
       }
     ],
     "Type": "GreyTide.Models.StateCollection"

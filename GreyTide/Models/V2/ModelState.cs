@@ -7,8 +7,8 @@ namespace GreyTide.Models.V2
    public class ModelState
    {
        [Required]
-       public string Name { get; set; }
+       public string name { get; set; }
        [Required]
-       public DateTime Date { get; set; }
+       public DateTime date { get; set; }
     }
 }

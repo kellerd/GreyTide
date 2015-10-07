@@ -20,8 +20,28 @@ namespace GreyTideDataService.App_Start
                 {
                     V1.States.ForEach((s) =>
                     {
-                        s.SetModel(V1);
                         s.Id = Guid.NewGuid();
+                        s.SetModel(V1);
+                    });
+                }
+                if (V1.Items != null && V1.Items.Any())
+                {
+                    V1.Items.ForEach((s) =>
+                    {
+                        s.Id = Guid.NewGuid();
+                        s.SetParent(V1);
+                    });
+                }
+            });
+            Mapper.CreateMap<ModelItem, GreyTide.Models.V1.Model>().AfterMap((V2, V1) =>
+            {
+                V1.Id = Guid.NewGuid();
+                if (V1.States != null && V1.States.Any())
+                {
+                    V1.States.ForEach((s) =>
+                    {
+                        s.Id = Guid.NewGuid();
+                        s.SetModel(V1);
                     });
                 }
             });

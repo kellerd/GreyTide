@@ -7,11 +7,11 @@ namespace GreyTide.Models.V2
     public class ModelItem
     {
         [Required]
-        public string Name { get; set; }
+        public string name { get; set; }
         [Required]
-        public string CurrentState { get; set; }
-        public DateTime CurrentDate { get; set; }
-        public int Points { get; set; }
-        public List<ModelState> States { get; set; }
+        public string currentState { get; set; }
+        public DateTime currentDate { get; set; }
+        public int points { get; set; }
+        public List<ModelState> states { get; set; }
     }
 }

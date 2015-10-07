@@ -323,6 +323,7 @@
   <ItemGroup>
     <Compile Include="App_Start\AutoMapperConfig.cs" />
     <Compile Include="App_Start\BreezeWebApiConfig.cs" />
+    <Compile Include="Controllers\SaveChangesResult.cs" />
     <Compile Include="Controllers\v2Controller.cs" />
     <Compile Include="Controllers\v1Controller.cs" />
     <Compile Include="data\AzureConStr.cs" />

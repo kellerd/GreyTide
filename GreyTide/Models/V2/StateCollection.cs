@@ -8,10 +8,10 @@ namespace GreyTide.Models.V2
     public class StateCollection
     {
         [Key]
-        public Guid Id { get; set; }
+        public Guid id { get; set; }
         [Required]
-        public string Name { get; set ; }
-        public List<State> Events {get;set;}
-        public string Type { get { return GetType().FullName; } }
+        public string name { get; set ; }
+        public List<State> events {get;set;}
+        public string type { get { return GetType().FullName; } }
     }
 }

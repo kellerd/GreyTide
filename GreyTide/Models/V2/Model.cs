@@ -8,9 +8,9 @@ namespace GreyTide.Models.V2
     public class Model : ModelItem
     {
         [Key]
-        public Guid Id { get; set; }
-        public string Faction { get; set; }
-        public List<ModelItem> Items { get; set; }
-        public string Type { get { return GetType().FullName; } }
+        public Guid id { get; set; }
+        public string faction { get; set; }
+        public List<ModelItem> items { get; set; }
+        public string type { get { return GetType().FullName; } }
     }
 }

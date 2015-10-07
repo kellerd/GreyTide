@@ -9,12 +9,12 @@ namespace GreyTide.Models.V2
     {
         // { "order": 0,"name": "Dislike", "from": [ "none", "Completed" ], "to": "Requires Stripping" } 
 
-        public int Order { get; set; }
+        public int order { get; set; }
         [Required]
-        public string Name { get; set; }
+        public string name { get; set; }
         [Required]
-        public List<string> From { get; set; }
+        public List<string> from { get; set; }
         [Required]
-        public string To {get;set;}
+        public string to {get;set;}
     }
 }
