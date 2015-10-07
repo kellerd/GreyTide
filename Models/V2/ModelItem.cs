@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace GreyTideDataService.Models.V2
 {
-    public class ModelItem : Document
+    public class ModelItem
     {
         [Required]
         public string Name { get; set; }

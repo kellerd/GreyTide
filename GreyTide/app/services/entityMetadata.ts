@@ -29,12 +29,13 @@ module App {
                     name: 'Model',
                     dataProperties: {
                         
-                        id: { type: STRING, required: true },
+                        id: { type: GUID, required: true },
                         name: { type: STRING, required: true },
                         currentState: { type: STRING },
                         currentDate: { type: DATE },
                         faction: { type: STRING },
-                        points: { type: ID }, 
+                        points: { type: ID },
+                        type: { type: STRING },
                         states: { complexTypeName: 'ModelState', required: true, isScalar: false },
                         items: { complexTypeName: 'ModelItem', isScalar: false }
                     }
@@ -80,8 +81,9 @@ module App {
                     name: 'StateCollection',
                     dataProperties: {
                         
-                        id: { type: STRING, required: true },
+                        id: { type: GUID, required: true },
                         name: { type: STRING, required: true },
+                        type: { type: STRING },
                         events: { complexTypeName: 'State', required: true }
                     }
                 });

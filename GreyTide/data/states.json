@@ -1,26 +1,193 @@
 ﻿[
-    {
-        "name": "Default",
-        "events": [
-            { "order": 0,"name": "Dislike", "from": [ "none", "Completed" ], "to": "Requires Stripping" },
-            { "order": 5,"name": "Strip Weathering", "from": [ "none", "Weathered" ], "to": "Painted" },
-            { "order": 4,"name": "Strip Painting", "from": [ "none", "Painted", "Requires Stripping" ], "to": "Primed" },
-            { "order": 3,"name": "Strip Primer", "from": [ "none", "Primed" ], "to": "Assembled" },
-            { "order": 2,"name": "Strip Glue", "from": [ "none", "Assembled" ], "to": "Requires Assembly" },
-            { "order": 8,"name": "Complete", "from": [ "none", "Weathered", "Painted", "Primed", "Assembled", "NOS", "Varnished" ], "to": "Completed" },
-            { "order": 7,"name": "Finish Coat", "from": [ "none", "Painted", "Weathered" ], "to": "Varnished" },
-            { "order": 6,"name": "Weather", "from": [ "none", "Painted" ], "to": "Weathered" },
-            { "order": 5,"name": "Paint", "from": [ "none", "Primed" ], "to": "Painted" },
-            { "order": 4,"name": "Prime", "from": [ "none", "Assembled" ], "to": "Primed" },
-            { "order": 3,"name": "Assemble", "from": [ "none", "NOS", "Requires Assembly" ], "to": "Assembled" },
-            { "order": 8,"name": "Buy Completed", "from": [ "none", "Nothing", "Shopping For" ], "to": "Completed" },
-            { "order": 5,"name": "Buy Painted", "from": [ "none", "Nothing", "Shopping For" ], "to": "Painted" },
-            { "order": 4,"name": "Buy Primed", "from": [ "none", "Nothing", "Shopping For" ], "to": "Primed" },
-            { "order": 3,"name": "Buy Assembled", "from": [ "none", "Nothing", "Shopping For" ], "to": "Assembled" },
-            { "order": 2,"name": "Buy Broken", "from": [ "none", "Nothing", "Shopping For" ], "to": "Requires Assembly" },
-            { "order": 2,"name": "Buy New", "from": [ "none", "Nothing", "Shopping For" ], "to": "NOS" },
-            { "order": 1,"name": "Want", "from": [ "none", "Nothing" ], "to": "Shopping For" },
-            { "order": -1,"name": "Startup", "from": ["none"], "to": "Nothing" }
-        ]
-    }
+  {
+    "id": "696f3615-698a-4c49-af36-38b03c125817",
+    "Name": "Default",
+    "Events": [
+      {
+        "Order": 0,
+        "Name": "Dislike",
+        "From": [
+          "none",
+          "Completed"
+        ],
+        "To": "Requires Stripping"
+      },
+      {
+        "Order": 5,
+        "Name": "Strip Weathering",
+        "From": [
+          "none",
+          "Weathered"
+        ],
+        "To": "Painted"
+      },
+      {
+        "Order": 4,
+        "Name": "Strip Painting",
+        "From": [
+          "none",
+          "Painted",
+          "Requires Stripping"
+        ],
+        "To": "Primed"
+      },
+      {
+        "Order": 3,
+        "Name": "Strip Primer",
+        "From": [
+          "none",
+          "Primed"
+        ],
+        "To": "Assembled"
+      },
+      {
+        "Order": 2,
+        "Name": "Strip Glue",
+        "From": [
+          "none",
+          "Assembled"
+        ],
+        "To": "Requires Assembly"
+      },
+      {
+        "Order": 8,
+        "Name": "Complete",
+        "From": [
+          "none",
+          "Weathered",
+          "Painted",
+          "Primed",
+          "Assembled",
+          "NOS",
+          "Varnished"
+        ],
+        "To": "Completed"
+      },
+      {
+        "Order": 7,
+        "Name": "Finish Coat",
+        "From": [
+          "none",
+          "Painted",
+          "Weathered"
+        ],
+        "To": "Varnished"
+      },
+      {
+        "Order": 6,
+        "Name": "Weather",
+        "From": [
+          "none",
+          "Painted"
+        ],
+        "To": "Weathered"
+      },
+      {
+        "Order": 5,
+        "Name": "Paint",
+        "From": [
+          "none",
+          "Primed"
+        ],
+        "To": "Painted"
+      },
+      {
+        "Order": 4,
+        "Name": "Prime",
+        "From": [
+          "none",
+          "Assembled"
+        ],
+        "To": "Primed"
+      },
+      {
+        "Order": 3,
+        "Name": "Assemble",
+        "From": [
+          "none",
+          "NOS",
+          "Requires Assembly"
+        ],
+        "To": "Assembled"
+      },
+      {
+        "Order": 8,
+        "Name": "Buy Completed",
+        "From": [
+          "none",
+          "Nothing",
+          "Shopping For"
+        ],
+        "To": "Completed"
+      },
+      {
+        "Order": 5,
+        "Name": "Buy Painted",
+        "From": [
+          "none",
+          "Nothing",
+          "Shopping For"
+        ],
+        "To": "Painted"
+      },
+      {
+        "Order": 4,
+        "Name": "Buy Primed",
+        "From": [
+          "none",
+          "Nothing",
+          "Shopping For"
+        ],
+        "To": "Primed"
+      },
+      {
+        "Order": 3,
+        "Name": "Buy Assembled",
+        "From": [
+          "none",
+          "Nothing",
+          "Shopping For"
+        ],
+        "To": "Assembled"
+      },
+      {
+        "Order": 2,
+        "Name": "Buy Broken",
+        "From": [
+          "none",
+          "Nothing",
+          "Shopping For"
+        ],
+        "To": "Requires Assembly"
+      },
+      {
+        "Order": 2,
+        "Name": "Buy New",
+        "From": [
+          "none",
+          "Nothing",
+          "Shopping For"
+        ],
+        "To": "NOS"
+      },
+      {
+        "Order": 1,
+        "Name": "Want",
+        "From": [
+          "none",
+          "Nothing"
+        ],
+        "To": "Shopping For"
+      },
+      {
+        "Order": -1,
+        "Name": "Startup",
+        "From": [
+          "none"
+        ],
+        "To": "Nothing"
+      }
+    ],
+    "Type": "GreyTideDataService.Models.V2.StateCollection"
+  }
 ]
