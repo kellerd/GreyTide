@@ -2,15 +2,16 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-
-namespace GreyTideDataService.Models.V2
+namespace GreyTide.Models.V2
 {
-    public class Model : ModelItem
+    //"name": "Default", "events": []
+    public class StateCollection
     {
         [Key]
         public Guid Id { get; set; }
-        public string Faction { get; set; }
-        public List<ModelItem> Items { get; set; }
+        [Required]
+        public string Name { get; set ; }
+        public List<State> Events {get;set;}
         public string Type { get { return GetType().FullName; } }
     }
 }

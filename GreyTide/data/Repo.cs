@@ -5,14 +5,14 @@ using System.IO;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Breeze.ContextProvider;
-using GreyTideDataService.Models;
+
 using Newtonsoft.Json;
 using System.Linq;
 using System.Threading;
-using GreyTideDataService.Models.V2;
+using GreyTide.Models.V2;
 using GreyTide.data;
 
-namespace GreyTideDataService
+namespace GreyTide
 {
     public class Repo : ContextProvider
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace GreyTideDataService.Models.V2
+namespace GreyTide.Models.V2
 {
     public class ModelItem
     {

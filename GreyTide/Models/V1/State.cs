@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace GreyTideDataService.Models.V1
+namespace GreyTide.Models.V1
 {
     public class State
     {

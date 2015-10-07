@@ -1,12 +1,12 @@
 ﻿using System.Linq;
 using System.Web.Http;
-using GreyTideDataService;
-using GreyTideDataService.Models.V1;
+using GreyTide.Models.V1;
 using Breeze.WebApi2;
 using Breeze.ContextProvider;
 using Newtonsoft.Json.Linq;
 using AutoMapper;
 using System.Collections.Generic;
+using GreyTide;
 
 namespace Controllers.V1
 {

@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace GreyTideDataService.Models.V2
+namespace GreyTide.Models.V2
 {
    public class ModelState
    {

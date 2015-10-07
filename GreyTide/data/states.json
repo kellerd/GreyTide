@@ -188,6 +188,6 @@
         "To": "Nothing"
       }
     ],
-    "Type": "GreyTideDataService.Models.V2.StateCollection"
+    "Type": "GreyTide.Models.StateCollection"
   }
 ]
