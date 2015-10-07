@@ -144,8 +144,7 @@ declare module breeze {
         validators: Validator[];
         addProperty(dataProperty: DataProperty): ComplexType;
         getProperties(): DataProperty[];
-        createInstance<T>(data: any): T;
-        createInstance<T>(): T;
+        createInstance<T>(data:any):T
     }
 
     class DataProperty implements IProperty {
@@ -859,7 +858,7 @@ declare module breeze {
         tag: Object;
         static defaultInstance: SaveOptions;
 
-        constructor(config?: { allowConcurrentSaves?: boolean; });
+        constructor(config?: { allowConcurrentSaves?: boolean; resourceName?: string; dataService?: DataService; tag?: any});
 
         setAsDefault(): SaveOptions;
         using(config: SaveOptionsConfiguration): SaveOptions;

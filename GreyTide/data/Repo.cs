@@ -5,13 +5,14 @@ using System.IO;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Breeze.ContextProvider;
-using GreyTideDataService.Models;
+
 using Newtonsoft.Json;
 using System.Linq;
 using System.Threading;
-using GreyTideDataService.Models.V2;
+using GreyTide.Models.V2;
+using GreyTide.data;
 
-namespace GreyTideDataService
+namespace GreyTide
 {
     public class Repo : ContextProvider
     {
@@ -30,7 +31,7 @@ namespace GreyTideDataService
             public TaskAwaiter<T> GetAwaiter() { return Value.GetAwaiter(); }
         }
 
-        public static Lazy<IEnumerable<Model>> Tide =
+        public static Lazy<IEnumerable<Model>> Models =
            new Lazy<IEnumerable<Model>>(() =>
            {
                var models = JsonConvert.DeserializeObject<IEnumerable<Model>>(File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data/models.json")));
@@ -42,9 +43,10 @@ namespace GreyTideDataService
            new Lazy<IEnumerable<StateCollection>>(() =>
            {
                var states = JsonConvert.DeserializeObject<IEnumerable<StateCollection>>(File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data/states.json")));
-               states.ToList().ForEach(processStates);
+               states.ToList().ForEach(process);
                return states;
            }, LazyThreadSafetyMode.ExecutionAndPublication);
+
 
         public override IDbConnection GetDbConnection()
         {
@@ -73,17 +75,13 @@ namespace GreyTideDataService
         }
         private static void process(Model m)
         {
-            m.States = m.States.OrderByDescending((s) => s.Date).ToList();
-            var lastState = m.States.DefaultIfEmpty(new ModelState { Name = "Startup", Date = DateTime.Now }).FirstOrDefault();
-            m.CurrentState = lastState.Name;
-            m.CurrentDate = lastState.Date;
-            if (m is Model) {
-                ((Model)m).Id = Guid.NewGuid();
-            }
-
-            if (m.Items != null && m.Items.Any())
+            m.states = m.states.OrderByDescending((s) => s.date).ToList();
+            var lastState = m.states.DefaultIfEmpty(new ModelState { name = "Startup", date = DateTime.Now }).FirstOrDefault();
+            m.currentState = lastState.name;
+            m.currentDate = lastState.date;
+            if (m.items != null && m.items.Any())
             {
-                m.Items.ForEach((i) =>
+                m.items.ForEach((i) =>
                 {
                     process(i);
                 });
@@ -91,14 +89,14 @@ namespace GreyTideDataService
         }
         private static void process(ModelItem m)
         {
-            m.States = m.States.OrderByDescending((s) => s.Date).ToList();
-            var lastState = m.States.DefaultIfEmpty(new ModelState { Name = "Startup", Date = DateTime.Now }).FirstOrDefault();
-            m.CurrentState = lastState.Name;
-            m.CurrentDate = lastState.Date;
+            m.states = m.states.OrderByDescending((s) => s.date).ToList();
+            var lastState = m.states.DefaultIfEmpty(new ModelState { name = "Startup", date = DateTime.Now }).FirstOrDefault();
+            m.currentState = lastState.name;
+            m.currentDate = lastState.date;
         }
-        private static void processStates(StateCollection sc)
+
+        private static void process(StateCollection obj)
         {
-            sc.Id = Guid.NewGuid();
         }
     }
 }

@@ -1,12 +1,12 @@
 ﻿using System.Linq;
 using System.Web.Http;
-using GreyTideDataService;
-using GreyTideDataService.Models.V1;
+using GreyTide.Models.V1;
 using Breeze.WebApi2;
 using Breeze.ContextProvider;
 using Newtonsoft.Json.Linq;
 using AutoMapper;
 using System.Collections.Generic;
+using GreyTide;
 
 namespace Controllers.V1
 {
@@ -15,7 +15,7 @@ namespace Controllers.V1
     {
         static v1Controller()
         {
-            _Models = Mapper.Map<IEnumerable<Model>>(Repo.Tide.Value).AsQueryable();
+            _Models = Mapper.Map<IEnumerable<Model>>(Repo.Models.Value).AsQueryable();
             _States = Mapper.Map<IEnumerable<StateCollection>>(Repo.States.Value).AsQueryable();
         }
         static readonly Repo _contextProvider = new Repo();

@@ -53,6 +53,10 @@
       <HintPath>..\packages\Breeze.Server.WebApi2.1.5.4\lib\Breeze.WebApi2.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.Azure.Documents.Client, Version=1.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.DocumentDB.1.5.0\lib\net40\Microsoft.Azure.Documents.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Data.Edm, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Data.Edm.5.6.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
@@ -260,10 +264,6 @@
     <Content Include="data\states.json" />
     <Content Include="scripts\d3\LICENSE" />
     <Content Include="LICENSE.md" />
-    <Content Include="scripts\angular.min.js.map" />
-    <Content Include="scripts\angular-route.min.js.map" />
-    <Content Include="scripts\angular-animate.min.js.map" />
-    <Content Include="scripts\angular-sanitize.min.js.map" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -277,6 +277,10 @@
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="content\toastr.scss" />
     <Content Include="content\toastr.less" />
+    <Content Include="scripts\angular.min.js.map" />
+    <Content Include="scripts\angular-animate.min.js.map" />
+    <Content Include="scripts\angular-route.min.js.map" />
+    <Content Include="scripts\angular-sanitize.min.js.map" />
     <None Include="scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="scripts\jquery-2.1.4.js" />
     <Content Include="scripts\jquery-2.1.4.min.js" />
@@ -319,8 +323,21 @@
   <ItemGroup>
     <Compile Include="App_Start\AutoMapperConfig.cs" />
     <Compile Include="App_Start\BreezeWebApiConfig.cs" />
+    <Compile Include="Controllers\SaveChangesResult.cs" />
     <Compile Include="Controllers\v2Controller.cs" />
     <Compile Include="Controllers\v1Controller.cs" />
+    <Compile Include="data\AzureConStr.cs" />
+    <Compile Include="data\SaveBundleToSaveMap.cs" />
+    <Compile Include="Models\V1\FromState.cs" />
+    <Compile Include="Models\V1\Model.cs" />
+    <Compile Include="Models\V1\ModelState.cs" />
+    <Compile Include="Models\V1\State.cs" />
+    <Compile Include="Models\V1\StateCollection.cs" />
+    <Compile Include="Models\V2\Model.cs" />
+    <Compile Include="Models\V2\ModelItem.cs" />
+    <Compile Include="Models\V2\ModelState.cs" />
+    <Compile Include="Models\V2\State.cs" />
+    <Compile Include="Models\V2\StateCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="data\Repo.cs" />
   </ItemGroup>
@@ -372,12 +389,6 @@
     <TypeScriptCompile Include="scripts\typings\q\Q.d.ts" />
     <TypeScriptCompile Include="scripts\typings\statemachine\statemachine.d.ts" />
     <TypeScriptCompile Include="scripts\typings\toastr\toastr.d.ts" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Models\Models.csproj">
-      <Project>{41784ebd-baeb-49ab-89d9-a38be3af2cdc}</Project>
-      <Name>Models</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

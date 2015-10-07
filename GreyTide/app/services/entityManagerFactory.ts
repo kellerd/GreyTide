@@ -17,12 +17,13 @@ module App.Services {
         public static serviceId = 'entityManagerFactory';
         metadataStore: breeze.MetadataStore;
         serviceName: string;
-
-        constructor(private breeze, private config) {
+        log: (message: string, data?: any, source?: string, showToast?: boolean) => void;
+        constructor(private breeze, private config, private common:App.Shared.ICommon) {
             this.setNamingConventionToCamelCase();
             this.preventValidateOnAttach();
             this.metadataStore = new breeze.MetadataStore();
             this.serviceName = config.remoteServiceName;
+            this.log = common.logger.log;
             MetadataHelper.FillMetadataStore(this.metadataStore);
         }
 
@@ -41,14 +42,14 @@ module App.Services {
                 ModelItem: function ModelItem() { }
             };
             
-            //this.configureManagerToSaveModifiedItemImmediately(mgrAndModel.manager);
+            this.configureManagerToSaveModifiedItemImmediately(mgrAndModel.manager);
             this.configureConstructors(mgrAndModel);
             return mgrAndModel;
         }
 
         private setNamingConventionToCamelCase(): void {
             // Convert server - side PascalCase to client - side camelCase property names
-            breeze.NamingConvention.camelCase.setAsDefault();
+            breeze.NamingConvention.none.setAsDefault();
         }
 
         private preventValidateOnAttach() {
@@ -129,18 +130,19 @@ module App.Services {
             this.metadataStore.registerEntityTypeCtor('ModelItem', mgr.ModelItem, modelItemInitializer);
         }
         private configureManagerToSaveModifiedItemImmediately(mgr: breeze.EntityManager) {
-            function saveEntity(masterEntity) {
+            var _that = this;
+            function  saveEntity (masterEntity)  {
 
                 return mgr.saveChanges().catch(saveFailed);
 
-                function saveFailed(error) {
+                function saveFailed (error)  {
                     setErrorMessage(error);
                     // Let them see it "wrong" briefly before reverting"
-                    setTimeout(function () { mgr.rejectChanges(); }, 1000);
+                    setTimeout(function ()  { mgr.rejectChanges(); }, 1000);
                     throw error; // so caller can see failure
                 }
 
-                function setErrorMessage(error) {
+                function setErrorMessage  (error)  {
                     var statename = masterEntity.entityAspect.entityState.name.toLowerCase();
                     var typeName = masterEntity.entityType.shortName;
                     var msg = "Error saving " + statename + " " + typeName + ": ";
@@ -153,10 +155,10 @@ module App.Services {
                         reason =
                         "can't find " + typeName + "; another user may have deleted it.";
                     }
-                    masterEntity.errorMessage(msg + reason);
+                    _that.log(msg + reason, masterEntity, "Save changes", true);
                 }
 
-                function getValidationErrorMessage(error) {
+                function getValidationErrorMessage (error)  {
                     try { // return the first error message
                         var firstError = error.entityErrors[0];
                         return firstError.errorMessage;
@@ -165,7 +167,7 @@ module App.Services {
                     }
                 }
 
-                function isConcurrencyError(error) {
+                function isConcurrencyError (error)  {
                     var detail = error.detail;
                     return detail && detail.ExceptionMessage &&
                         detail.ExceptionMessage.match(/can't find/i);
@@ -173,12 +175,12 @@ module App.Services {
             }
 
 
-            mgr.entityChanged.subscribe(function (args) {
-                if (args.entityAction === breeze.EntityAction.EntityStateChange) {
+            mgr.entityChanged.subscribe(function (args)  {
+                if (args.entityAction === breeze.EntityAction.PropertyChange) {
                     var entity = args.entity;
-                    if (entity.entityAspect.entityState.isAddedModifiedOrDeleted()) {
-                        saveEntity(entity);
-                    }
+                    var propArgs:any = args.args;
+                    var propertyName = propArgs.propertyName;
+                    saveEntity(entity);
                 }
             });
         }
@@ -187,5 +189,5 @@ module App.Services {
     }
 
     app.factory(EntityManagerFactory.serviceId,
-        ['breeze', 'config', (b, c) => new EntityManagerFactory(b, c)]);
+        ['breeze', 'config', 'common', (b, c, cm) => new EntityManagerFactory(b, c, cm)]);
 }

@@ -1,2964 +1,2926 @@
 ﻿[
   {
-    "name": "Hive Tyrant",
-    "points": 255,
+    "id": "dfbbd000-67ba-4347-a7ea-99d9ade66234",
     "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Hive Tyrant",
+    "currentState": "Dislike",
+    "currentDate": "2015-01-01T12:50:46.822Z",
+    "points": 255,
     "states": [
       {
         "name": "Dislike",
-
         "date": "2015-01-01T12:50:46.822Z"
       },
       {
         "name": "Buy Completed",
-
         "date": "2015-01-01T12:50:26.082Z"
       },
       {
         "name": "Startup",
-
         "date": "2015-01-01T12:49:20.789Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Hive Tyrant",
-    "points": 255,
+    "id": "cf64c22e-e823-4ebc-990e-de6dc699fe1f",
     "faction": "Tyranids",
-    "states": [
-      {
-        "name": "Complete",
-
-        "date": "2015-01-01T23:00:00.000Z"
-      },
-      {
-        "name": "Finish Coat",
-
-        "date": "2015-01-01T22:00:00.000Z"
-      },
-      {
-        "name": "Paint",
-
-        "date": "2015-01-01T21:00:00.000Z"
-      },
-      {
-        "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
-      },
-      {
-        "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
-      }
-    ],
     "items": [
       {
         "name": "Model",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
         "points": 255,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
+            "date": "2015-01-01T23:00:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
+            "date": "2015-01-01T22:00:00Z"
           },
           {
             "name": "Paint",
-
-            "date": "2015-01-01T21:00:00.000Z"
+            "date": "2015-01-01T21:00:00Z"
           },
           {
             "name": "Prime",
-
-            "date": "2015-01-01T20:00:00.000Z"
+            "date": "2015-01-01T20:00:00Z"
           },
           {
             "name": "Assemble",
-
-            "date": "2015-01-01T19:00:00.000Z"
+            "date": "2015-01-01T19:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
       },
       {
         "name": "Base",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
         "points": 0,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
+            "date": "2015-01-01T23:00:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
+            "date": "2015-01-01T22:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
+      }
+    ],
+    "type": "GreyTide.Models.Model",
+    "name": "Hive Tyrant",
+    "currentState": "Complete",
+    "currentDate": "2015-01-01T23:00:00Z",
+    "points": 255,
+    "states": [
+      {
+        "name": "Complete",
+        "date": "2015-01-01T23:00:00Z"
+      },
+      {
+        "name": "Finish Coat",
+        "date": "2015-01-01T22:00:00Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2015-01-01T21:00:00Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2015-01-01T20:00:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2015-01-01T19:00:00Z"
       }
     ]
   },
   {
-    "name": "Tervigon",
-    "points": 220,
+    "id": "32b31f21-1993-4339-bbd8-667c62b7381a",
     "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Tervigon",
+    "currentState": "Complete",
+    "currentDate": "2015-01-01T23:00:00Z",
+    "points": 220,
     "states": [
       {
         "name": "Complete",
-
-        "date": "2015-01-01T23:00:00.000Z"
+        "date": "2015-01-01T23:00:00Z"
       },
       {
         "name": "Finish Coat",
-
-        "date": "2015-01-01T22:00:00.000Z"
+        "date": "2015-01-01T22:00:00Z"
       },
       {
         "name": "Paint",
-
-        "date": "2015-01-01T21:00:00.000Z"
+        "date": "2015-01-01T21:00:00Z"
       },
       {
         "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
+        "date": "2015-01-01T20:00:00Z"
       },
       {
         "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
+        "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
+    "id": "2a768ae0-7ba6-4d3f-acd5-8651d45d6cc6",
+    "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
     "name": "Venomthrope",
+    "currentState": "Prime",
+    "currentDate": "2015-01-01T20:00:00Z",
     "points": 45,
-    "faction": "Tyranids",
     "states": [
       {
         "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
+        "date": "2015-01-01T20:00:00Z"
       },
       {
         "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
+        "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Venomthrope Finecast",
-    "points": 45,
+    "id": "18a495a6-d26f-4227-b68a-58e8d6c43999",
     "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Venomthrope Finecast",
+    "currentState": "Prime",
+    "currentDate": "2015-05-17T02:16:02.106Z",
+    "points": 45,
     "states": [
       {
         "name": "Prime",
-
         "date": "2015-05-17T02:16:02.106Z"
       },
       {
         "name": "Assemble",
-
-        "date": "2015-04-29T19:00:00.000Z"
+        "date": "2015-04-29T19:00:00Z"
       },
       {
         "name": "Buy New",
-
-        "date": "2015-01-01T19:00:00.000Z"
-      }
-    ],
-    "items": [ ]
-  },
-  {
-    "name": "Zoanthrope",
-    "points": 100,
-    "faction": "Tyranids",
-    "states": [
-      {
-        "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
-      },
-      {
-        "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
-      }
-    ],
-    "items": [ ]
-  },
-  {
-    "name": "Zoanthrope",
-    "points": 100,
-    "faction": "Tyranids",
-    "states": [
-      {
-        "name": "Complete",
-
-        "date": "2015-01-01T23:00:00.000Z"
-      },
-      {
-        "name": "Finish Coat",
-
-        "date": "2015-01-01T22:00:00.000Z"
-      },
-      {
-        "name": "Paint",
-
-        "date": "2015-01-01T21:00:00.000Z"
-      },
-      {
-        "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
-      },
-      {
-        "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
-      }
-    ],
-    "items": [
-      {
-        "name": "Model",
-        "states": [
-          {
-            "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
-          },
-          {
-            "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
-          },
-          {
-            "name": "Paint",
-
-            "date": "2015-01-01T21:00:00.000Z"
-          },
-          {
-            "name": "Prime",
-
-            "date": "2015-01-01T20:00:00.000Z"
-          },
-          {
-            "name": "Assemble",
-
-            "date": "2015-01-01T19:00:00.000Z"
-          }
-        ],
-        "items": [ ]
-      },
-      {
-        "name": "Base",
-        "states": [
-          {
-            "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
-          },
-          {
-            "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
-          }
-        ],
-        "items": [ ]
+        "date": "2015-01-01T19:00:00Z"
       }
     ]
   },
   {
-    "name": "Zoanthrope Finecast",
-    "points": 50,
+    "id": "39798537-a9c7-4d47-9e46-054ccc0f7aae",
     "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Zoanthrope",
+    "currentState": "Prime",
+    "currentDate": "2015-01-01T20:00:00Z",
+    "points": 100,
     "states": [
       {
         "name": "Prime",
-
+        "date": "2015-01-01T20:00:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2015-01-01T19:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "4270e09b-5007-4744-b4a4-4e8c8169da7c",
+    "faction": "Tyranids",
+    "items": [
+      {
+        "name": "Model",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
+        "points": 0,
+        "states": [
+          {
+            "name": "Complete",
+            "date": "2015-01-01T23:00:00Z"
+          },
+          {
+            "name": "Finish Coat",
+            "date": "2015-01-01T22:00:00Z"
+          },
+          {
+            "name": "Paint",
+            "date": "2015-01-01T21:00:00Z"
+          },
+          {
+            "name": "Prime",
+            "date": "2015-01-01T20:00:00Z"
+          },
+          {
+            "name": "Assemble",
+            "date": "2015-01-01T19:00:00Z"
+          }
+        ]
+      },
+      {
+        "name": "Base",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
+        "points": 0,
+        "states": [
+          {
+            "name": "Complete",
+            "date": "2015-01-01T23:00:00Z"
+          },
+          {
+            "name": "Finish Coat",
+            "date": "2015-01-01T22:00:00Z"
+          }
+        ]
+      }
+    ],
+    "type": "GreyTide.Models.Model",
+    "name": "Zoanthrope",
+    "currentState": "Complete",
+    "currentDate": "2015-01-01T23:00:00Z",
+    "points": 100,
+    "states": [
+      {
+        "name": "Complete",
+        "date": "2015-01-01T23:00:00Z"
+      },
+      {
+        "name": "Finish Coat",
+        "date": "2015-01-01T22:00:00Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2015-01-01T21:00:00Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2015-01-01T20:00:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2015-01-01T19:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "adf5e368-1988-4339-a697-88580597e793",
+    "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Zoanthrope Finecast",
+    "currentState": "Prime",
+    "currentDate": "2015-04-15T12:52:02.949Z",
+    "points": 50,
+    "states": [
+      {
+        "name": "Prime",
         "date": "2015-04-15T12:52:02.949Z"
       },
       {
         "name": "Buy Assembled",
-
         "date": "2015-01-01T12:50:26.086Z"
       },
       {
         "name": "Startup",
-
         "date": "2015-01-01T12:49:20.793Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Hormagaunt",
-    "points": 20,
+    "id": "73cd563a-f2c6-4e3d-b81e-7db614e2593b",
     "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Hormagaunt",
+    "currentState": "Buy New",
+    "currentDate": "2015-01-01T12:50:26.086Z",
+    "points": 20,
     "states": [
       {
         "name": "Buy New",
-
         "date": "2015-01-01T12:50:26.086Z"
       },
       {
         "name": "Startup",
-
         "date": "2015-01-01T12:49:20.793Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
+    "id": "26d976e4-f737-4343-97f0-809124854ade",
+    "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
     "name": "Hormagaunt",
+    "currentState": "Complete",
+    "currentDate": "2015-01-01T23:00:00Z",
     "points": 80,
-    "faction": "Tyranids",
     "states": [
       {
         "name": "Complete",
-
-        "date": "2015-01-01T23:00:00.000Z"
+        "date": "2015-01-01T23:00:00Z"
       },
       {
         "name": "Finish Coat",
-
-        "date": "2015-01-01T22:00:00.000Z"
+        "date": "2015-01-01T22:00:00Z"
       },
       {
         "name": "Paint",
-
-        "date": "2015-01-01T21:00:00.000Z"
+        "date": "2015-01-01T21:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
+    "id": "cbc3c838-f6d2-44dc-b5ca-eeb0e2d58465",
+    "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
     "name": "Ripper Swarm",
+    "currentState": "Complete",
+    "currentDate": "2015-01-01T23:00:00Z",
     "points": 75,
-    "faction": "Tyranids",
     "states": [
       {
         "name": "Complete",
-
-        "date": "2015-01-01T23:00:00.000Z"
+        "date": "2015-01-01T23:00:00Z"
       },
       {
         "name": "Finish Coat",
-
-        "date": "2015-01-01T22:00:00.000Z"
+        "date": "2015-01-01T22:00:00Z"
       },
       {
         "name": "Paint",
-
-        "date": "2015-01-01T21:00:00.000Z"
+        "date": "2015-01-01T21:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Termagaunt",
-    "points": 200,
+    "id": "9a8acb9a-6b44-4463-b3d2-ce123589011b",
     "faction": "Tyranids",
-    "states": [
-      {
-        "name": "Complete",
-
-        "date": "2015-01-01T23:00:00.000Z"
-      },
-      {
-        "name": "Finish Coat",
-
-        "date": "2015-01-01T22:00:00.000Z"
-      },
-      {
-        "name": "Paint",
-
-        "date": "2015-01-01T21:00:00.000Z"
-      },
-      {
-        "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
-      },
-      {
-        "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
-      }
-    ],
     "items": [
       {
         "name": "Model",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
         "points": 200,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
+            "date": "2015-01-01T23:00:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
+            "date": "2015-01-01T22:00:00Z"
           },
           {
             "name": "Paint",
-
-            "date": "2015-01-01T21:00:00.000Z"
+            "date": "2015-01-01T21:00:00Z"
           },
           {
             "name": "Prime",
-
-            "date": "2015-01-01T20:00:00.000Z"
+            "date": "2015-01-01T20:00:00Z"
           },
           {
             "name": "Assemble",
-
-            "date": "2015-01-01T19:00:00.000Z"
+            "date": "2015-01-01T19:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
       },
       {
         "name": "Base",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
         "points": 0,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
+            "date": "2015-01-01T23:00:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
+            "date": "2015-01-01T22:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
+      }
+    ],
+    "type": "GreyTide.Models.Model",
+    "name": "Termagaunt",
+    "currentState": "Complete",
+    "currentDate": "2015-01-01T23:00:00Z",
+    "points": 200,
+    "states": [
+      {
+        "name": "Complete",
+        "date": "2015-01-01T23:00:00Z"
+      },
+      {
+        "name": "Finish Coat",
+        "date": "2015-01-01T22:00:00Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2015-01-01T21:00:00Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2015-01-01T20:00:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2015-01-01T19:00:00Z"
       }
     ]
   },
   {
-    "name": "Termagaunt",
-    "points": 64,
+    "id": "2c15951a-600c-4ee6-968d-6eca107a042d",
     "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Termagaunt",
+    "currentState": "Complete",
+    "currentDate": "2015-01-01T23:00:00Z",
+    "points": 64,
     "states": [
       {
         "name": "Complete",
-
-        "date": "2015-01-01T23:00:00.000Z"
+        "date": "2015-01-01T23:00:00Z"
       },
       {
         "name": "Finish Coat",
-
-        "date": "2015-01-01T22:00:00.000Z"
+        "date": "2015-01-01T22:00:00Z"
       },
       {
         "name": "Paint",
-
-        "date": "2015-01-01T21:00:00.000Z"
+        "date": "2015-01-01T21:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Gargoyle",
-    "points": 60,
+    "id": "8a335192-b4d7-4938-92b0-7bed0ee86542",
     "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Gargoyle",
+    "currentState": "Complete",
+    "currentDate": "2015-01-01T23:00:00Z",
+    "points": 60,
     "states": [
       {
         "name": "Complete",
-
-        "date": "2015-01-01T23:00:00.000Z"
+        "date": "2015-01-01T23:00:00Z"
       },
       {
         "name": "Finish Coat",
-
-        "date": "2015-01-01T22:00:00.000Z"
+        "date": "2015-01-01T22:00:00Z"
       },
       {
         "name": "Paint",
-
-        "date": "2015-01-01T21:00:00.000Z"
+        "date": "2015-01-01T21:00:00Z"
       },
       {
         "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
+        "date": "2015-01-01T20:00:00Z"
       },
       {
         "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
+        "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Hive Crone",
-    "points": 155,
+    "id": "8691980a-0288-4980-b170-fdbd93b1d8b6",
     "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Hive Crone",
+    "currentState": "Dislike",
+    "currentDate": "2015-01-01T12:52:28.375Z",
+    "points": 155,
     "states": [
       {
         "name": "Dislike",
-
         "date": "2015-01-01T12:52:28.375Z"
       },
       {
         "name": "Buy Completed",
-
         "date": "2015-01-01T12:50:26.088Z"
       },
       {
         "name": "Startup",
-
         "date": "2015-01-01T12:49:20.794Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Biovore",
-    "points": 80,
+    "id": "b75b25e0-3078-47d1-9acf-db0416fc5622",
     "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Biovore",
+    "currentState": "Prime",
+    "currentDate": "2015-01-01T20:00:00Z",
+    "points": 80,
     "states": [
       {
         "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
+        "date": "2015-01-01T20:00:00Z"
       },
       {
         "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
+        "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Exocrine",
-    "points": 170,
+    "id": "1c955f9a-db2f-49e1-b071-129843f75f17",
     "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Exocrine",
+    "currentState": "Complete",
+    "currentDate": "2015-09-12T21:06:00Z",
+    "points": 170,
     "states": [
       {
         "name": "Complete",
-
-        "date": "2015-09-12T21:06:00.000Z"
+        "date": "2015-09-12T21:06:00Z"
       },
       {
         "name": "Finish Coat",
-
-        "date": "2015-09-12T20:55:00.000Z"
+        "date": "2015-09-12T20:55:00Z"
       },
       {
         "name": "Paint",
-
-        "date": "2015-09-05T04:56:00.000Z"
+        "date": "2015-09-05T04:56:00Z"
       },
       {
         "name": "Prime",
-
         "date": "2015-05-17T02:16:02.111Z"
       },
       {
         "name": "Strip Primer",
-
         "date": "2015-04-17T12:52:38.391Z"
       },
       {
         "name": "Strip Painting",
-
         "date": "2015-04-17T12:52:36.221Z"
       },
       {
         "name": "Dislike",
-
         "date": "2015-01-01T12:52:35.229Z"
       },
       {
         "name": "Buy Completed",
-
         "date": "2015-01-01T12:50:26.088Z"
       },
       {
         "name": "Startup",
-
         "date": "2015-01-01T12:49:20.794Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Mawloc",
-    "points": 140,
+    "id": "83945504-0f12-47ae-9e79-3f7c268658d0",
     "faction": "Tyranids",
-    "states": [
-      {
-        "name": "Complete",
-
-        "date": "2015-01-01T23:00:00.000Z"
-      },
-      {
-        "name": "Finish Coat",
-
-        "date": "2015-01-01T22:00:00.000Z"
-      },
-      {
-        "name": "Paint",
-
-        "date": "2015-01-01T21:00:00.000Z"
-      },
-      {
-        "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
-      },
-      {
-        "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
-      }
-    ],
     "items": [
       {
         "name": "Model",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
         "points": 140,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
+            "date": "2015-01-01T23:00:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
+            "date": "2015-01-01T22:00:00Z"
           },
           {
             "name": "Paint",
-
-            "date": "2015-01-01T21:00:00.000Z"
+            "date": "2015-01-01T21:00:00Z"
           },
           {
             "name": "Prime",
-
-            "date": "2015-01-01T20:00:00.000Z"
+            "date": "2015-01-01T20:00:00Z"
           },
           {
             "name": "Assemble",
-
-            "date": "2015-01-01T19:00:00.000Z"
+            "date": "2015-01-01T19:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
       },
       {
         "name": "Base",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
         "points": 0,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
+            "date": "2015-01-01T23:00:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
+            "date": "2015-01-01T22:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
+      }
+    ],
+    "type": "GreyTide.Models.Model",
+    "name": "Mawloc",
+    "currentState": "Complete",
+    "currentDate": "2015-01-01T23:00:00Z",
+    "points": 140,
+    "states": [
+      {
+        "name": "Complete",
+        "date": "2015-01-01T23:00:00Z"
+      },
+      {
+        "name": "Finish Coat",
+        "date": "2015-01-01T22:00:00Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2015-01-01T21:00:00Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2015-01-01T20:00:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2015-01-01T19:00:00Z"
       }
     ]
   },
   {
-    "name": "Tyrant Guard",
-    "points": 260,
+    "id": "51cd55f9-9406-4049-8930-b47d8c84cc63",
     "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Tyrant Guard",
+    "currentState": "Dislike",
+    "currentDate": "2015-01-01T12:52:52.838Z",
+    "points": 260,
     "states": [
       {
         "name": "Dislike",
-
         "date": "2015-01-01T12:52:52.838Z"
       },
       {
         "name": "Buy Completed",
-
         "date": "2015-01-01T12:50:26.089Z"
       },
       {
         "name": "Startup",
-
         "date": "2015-01-01T12:49:20.794Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Hive Guard",
-    "points": 55,
+    "id": "bd02bcef-ab23-44c5-884a-940e67c9ac33",
     "faction": "Tyranids",
-    "states": [
-      {
-        "name": "Complete",
-
-        "date": "2015-01-01T23:00:00.000Z"
-      },
-      {
-        "name": "Finish Coat",
-
-        "date": "2015-01-01T22:00:00.000Z"
-      },
-      {
-        "name": "Paint",
-
-        "date": "2015-01-01T21:00:00.000Z"
-      },
-      {
-        "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
-      },
-      {
-        "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
-      }
-    ],
     "items": [
       {
         "name": "Model",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
         "points": 55,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
+            "date": "2015-01-01T23:00:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
+            "date": "2015-01-01T22:00:00Z"
           },
           {
             "name": "Paint",
-
-            "date": "2015-01-01T21:00:00.000Z"
+            "date": "2015-01-01T21:00:00Z"
           },
           {
             "name": "Prime",
-
-            "date": "2015-01-01T20:00:00.000Z"
+            "date": "2015-01-01T20:00:00Z"
           },
           {
             "name": "Assemble",
-
-            "date": "2015-01-01T19:00:00.000Z"
+            "date": "2015-01-01T19:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
       },
       {
         "name": "Base",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
         "points": 0,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
+            "date": "2015-01-01T23:00:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
+            "date": "2015-01-01T22:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
+      }
+    ],
+    "type": "GreyTide.Models.Model",
+    "name": "Hive Guard",
+    "currentState": "Complete",
+    "currentDate": "2015-01-01T23:00:00Z",
+    "points": 55,
+    "states": [
+      {
+        "name": "Complete",
+        "date": "2015-01-01T23:00:00Z"
+      },
+      {
+        "name": "Finish Coat",
+        "date": "2015-01-01T22:00:00Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2015-01-01T21:00:00Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2015-01-01T20:00:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2015-01-01T19:00:00Z"
       }
     ]
   },
   {
+    "id": "828c2347-3224-4bed-939a-3ee535b43ddd",
+    "faction": "Tyranids",
+    "items": [
+      {
+        "name": "Model",
+        "currentState": "Paint",
+        "currentDate": "2015-01-01T21:00:00Z",
+        "points": 130,
+        "states": [
+          {
+            "name": "Paint",
+            "date": "2015-01-01T21:00:00Z"
+          },
+          {
+            "name": "Prime",
+            "date": "2015-01-01T20:00:00Z"
+          },
+          {
+            "name": "Assemble",
+            "date": "2015-01-01T19:00:00Z"
+          }
+        ]
+      },
+      {
+        "name": "Base",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
+        "points": 0,
+        "states": [
+          {
+            "name": "Complete",
+            "date": "2015-01-01T23:00:00Z"
+          },
+          {
+            "name": "Finish Coat",
+            "date": "2015-01-01T22:00:00Z"
+          }
+        ]
+      }
+    ],
+    "type": "GreyTide.Models.Model",
     "name": "Deathleaper",
+    "currentState": "Complete",
+    "currentDate": "2015-09-12T21:06:00Z",
     "points": 130,
-    "faction": "Tyranids",
     "states": [
       {
         "name": "Complete",
-
-        "date": "2015-09-12T21:06:00.000Z"
+        "date": "2015-09-12T21:06:00Z"
       },
       {
         "name": "Finish Coat",
-
-        "date": "2015-09-12T20:55:00.000Z"
+        "date": "2015-09-12T20:55:00Z"
       },
       {
         "name": "Paint",
-
-        "date": "2015-01-01T21:00:00.000Z"
+        "date": "2015-01-01T21:00:00Z"
       },
       {
         "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
+        "date": "2015-01-01T20:00:00Z"
       },
       {
         "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
-      }
-    ],
-    "items": [
-      {
-        "name": "Model",
-        "points": 130,
-        "states": [
-          {
-            "name": "Paint",
-
-            "date": "2015-01-01T21:00:00.000Z"
-          },
-          {
-            "name": "Prime",
-
-            "date": "2015-01-01T20:00:00.000Z"
-          },
-          {
-            "name": "Assemble",
-
-            "date": "2015-01-01T19:00:00.000Z"
-          }
-        ],
-        "items": [ ]
-      },
-      {
-        "name": "Base",
-        "points": 0,
-        "states": [
-          {
-            "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
-          },
-          {
-            "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
-          }
-        ],
-        "items": [ ]
+        "date": "2015-01-01T19:00:00Z"
       }
     ]
   },
   {
+    "id": "ef68cfab-2a49-40a8-a7f7-3602774cf460",
+    "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
     "name": "Hive Tyrant",
+    "currentState": "Complete",
+    "currentDate": "2015-01-01T23:00:00Z",
     "points": 185,
-    "faction": "Tyranids",
     "states": [
       {
         "name": "Complete",
-
-        "date": "2015-01-01T23:00:00.000Z"
+        "date": "2015-01-01T23:00:00Z"
       },
       {
         "name": "Finish Coat",
-
-        "date": "2015-01-01T22:00:00.000Z"
+        "date": "2015-01-01T22:00:00Z"
       },
       {
         "name": "Paint",
-
-        "date": "2015-01-01T21:00:00.000Z"
-      }
-    ],
-    "items": [ ]
-  },
-  {
-    "name": "Tyranid Prime",
-    "points": 130,
-    "faction": "Tyranids",
-    "states": [
-      {
-        "name": "Complete",
-
-        "date": "2015-01-01T23:00:00.000Z"
-      },
-      {
-        "name": "Finish Coat",
-
-        "date": "2015-01-01T22:00:00.000Z"
-      },
-      {
-        "name": "Paint",
-
-        "date": "2015-01-01T21:00:00.000Z"
-      },
-      {
-        "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
-      },
-      {
-        "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
-      }
-    ],
-    "items": [
-      {
-        "name": "Model",
-        "points": 130,
-        "states": [
-          {
-            "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
-          },
-          {
-            "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
-          },
-          {
-            "name": "Paint",
-
-            "date": "2015-01-01T21:00:00.000Z"
-          },
-          {
-            "name": "Prime",
-
-            "date": "2015-01-01T20:00:00.000Z"
-          },
-          {
-            "name": "Assemble",
-
-            "date": "2015-01-01T19:00:00.000Z"
-          }
-        ],
-        "items": [ ]
-      },
-      {
-        "name": "Base",
-        "points": 0,
-        "states": [
-          {
-            "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
-          },
-          {
-            "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
-          }
-        ],
-        "items": [ ]
+        "date": "2015-01-01T21:00:00Z"
       }
     ]
   },
   {
-    "name": "Lictor",
-    "points": 100,
+    "id": "0180a770-e5a4-4787-bd5f-5569b5dd1ba6",
     "faction": "Tyranids",
-    "states": [
-      {
-        "name": "Complete",
-
-        "date": "2015-01-01T23:00:00.000Z"
-      },
-      {
-        "name": "Finish Coat",
-
-        "date": "2015-01-01T22:00:00.000Z"
-      },
-      {
-        "name": "Paint",
-
-        "date": "2015-01-01T21:00:00.000Z"
-      },
-      {
-        "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
-      },
-      {
-        "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
-      }
-    ],
     "items": [
       {
         "name": "Model",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
+        "points": 130,
+        "states": [
+          {
+            "name": "Complete",
+            "date": "2015-01-01T23:00:00Z"
+          },
+          {
+            "name": "Finish Coat",
+            "date": "2015-01-01T22:00:00Z"
+          },
+          {
+            "name": "Paint",
+            "date": "2015-01-01T21:00:00Z"
+          },
+          {
+            "name": "Prime",
+            "date": "2015-01-01T20:00:00Z"
+          },
+          {
+            "name": "Assemble",
+            "date": "2015-01-01T19:00:00Z"
+          }
+        ]
+      },
+      {
+        "name": "Base",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
+        "points": 0,
+        "states": [
+          {
+            "name": "Complete",
+            "date": "2015-01-01T23:00:00Z"
+          },
+          {
+            "name": "Finish Coat",
+            "date": "2015-01-01T22:00:00Z"
+          }
+        ]
+      }
+    ],
+    "type": "GreyTide.Models.Model",
+    "name": "Tyranid Prime",
+    "currentState": "Complete",
+    "currentDate": "2015-01-01T23:00:00Z",
+    "points": 130,
+    "states": [
+      {
+        "name": "Complete",
+        "date": "2015-01-01T23:00:00Z"
+      },
+      {
+        "name": "Finish Coat",
+        "date": "2015-01-01T22:00:00Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2015-01-01T21:00:00Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2015-01-01T20:00:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2015-01-01T19:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "71112d14-605e-467b-bfa0-0ca8bfc29c68",
+    "faction": "Tyranids",
+    "items": [
+      {
+        "name": "Model",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
         "points": 100,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
+            "date": "2015-01-01T23:00:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
+            "date": "2015-01-01T22:00:00Z"
           },
           {
             "name": "Paint",
-
-            "date": "2015-01-01T21:00:00.000Z"
+            "date": "2015-01-01T21:00:00Z"
           },
           {
             "name": "Prime",
-
-            "date": "2015-01-01T20:00:00.000Z"
+            "date": "2015-01-01T20:00:00Z"
           },
           {
             "name": "Assemble",
-
-            "date": "2015-01-01T19:00:00.000Z"
+            "date": "2015-01-01T19:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
       },
       {
         "name": "Base",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
         "points": 0,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
+            "date": "2015-01-01T23:00:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
+            "date": "2015-01-01T22:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
+      }
+    ],
+    "type": "GreyTide.Models.Model",
+    "name": "Lictor",
+    "currentState": "Complete",
+    "currentDate": "2015-01-01T23:00:00Z",
+    "points": 100,
+    "states": [
+      {
+        "name": "Complete",
+        "date": "2015-01-01T23:00:00Z"
+      },
+      {
+        "name": "Finish Coat",
+        "date": "2015-01-01T22:00:00Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2015-01-01T21:00:00Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2015-01-01T20:00:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2015-01-01T19:00:00Z"
       }
     ]
   },
   {
-    "name": "Genestealer",
-    "points": 112,
+    "id": "c8eb6286-7fbb-432d-bcd0-7a98619e56fd",
     "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Genestealer",
+    "currentState": "Complete",
+    "currentDate": "2015-01-01T23:00:00Z",
+    "points": 112,
     "states": [
       {
         "name": "Complete",
-
-        "date": "2015-01-01T23:00:00.000Z"
+        "date": "2015-01-01T23:00:00Z"
       },
       {
         "name": "Finish Coat",
-
-        "date": "2015-01-01T22:00:00.000Z"
+        "date": "2015-01-01T22:00:00Z"
       },
       {
         "name": "Paint",
-
-        "date": "2015-01-01T21:00:00.000Z"
+        "date": "2015-01-01T21:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Broodlord",
-    "points": 60,
+    "id": "2b8b206e-c955-40e6-a402-2f4821ee9d4f",
     "faction": "Tyranids",
-    "states": [
-      {
-        "name": "Complete",
-
-        "date": "2015-01-01T23:00:00.000Z"
-      },
-      {
-        "name": "Finish Coat",
-
-        "date": "2015-01-01T22:00:00.000Z"
-      },
-      {
-        "name": "Paint",
-
-        "date": "2015-01-01T21:00:00.000Z"
-      },
-      {
-        "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
-      },
-      {
-        "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
-      }
-    ],
     "items": [
       {
         "name": "Model",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
         "points": 60,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
+            "date": "2015-01-01T23:00:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
+            "date": "2015-01-01T22:00:00Z"
           },
           {
             "name": "Paint",
-
-            "date": "2015-01-01T21:00:00.000Z"
+            "date": "2015-01-01T21:00:00Z"
           },
           {
             "name": "Prime",
-
-            "date": "2015-01-01T20:00:00.000Z"
+            "date": "2015-01-01T20:00:00Z"
           },
           {
             "name": "Assemble",
-
-            "date": "2015-01-01T19:00:00.000Z"
+            "date": "2015-01-01T19:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
       },
       {
         "name": "Base",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
+        "points": 0,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
+            "date": "2015-01-01T23:00:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
+            "date": "2015-01-01T22:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
+      }
+    ],
+    "type": "GreyTide.Models.Model",
+    "name": "Broodlord",
+    "currentState": "Complete",
+    "currentDate": "2015-01-01T23:00:00Z",
+    "points": 60,
+    "states": [
+      {
+        "name": "Complete",
+        "date": "2015-01-01T23:00:00Z"
+      },
+      {
+        "name": "Finish Coat",
+        "date": "2015-01-01T22:00:00Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2015-01-01T21:00:00Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2015-01-01T20:00:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2015-01-01T19:00:00Z"
       }
     ]
   },
   {
-    "name": "Tyranid Warrior Old",
-    "points": 175,
+    "id": "e323b29f-f1a6-4d5a-b0b4-4b4d539412ce",
     "faction": "Tyranids",
-    "states": [
-      {
-        "name": "Complete",
-
-        "date": "2015-01-01T23:00:00.000Z"
-      },
-      {
-        "name": "Finish Coat",
-
-        "date": "2015-01-01T22:00:00.000Z"
-      },
-      {
-        "name": "Paint",
-
-        "date": "2015-01-01T21:00:00.000Z"
-      },
-      {
-        "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
-      },
-      {
-        "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
-      }
-    ],
     "items": [
       {
         "name": "Model",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
         "points": 175,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
+            "date": "2015-01-01T23:00:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
+            "date": "2015-01-01T22:00:00Z"
           },
           {
             "name": "Paint",
-
-            "date": "2015-01-01T21:00:00.000Z"
+            "date": "2015-01-01T21:00:00Z"
           },
           {
             "name": "Prime",
-
-            "date": "2015-01-01T20:00:00.000Z"
+            "date": "2015-01-01T20:00:00Z"
           },
           {
             "name": "Assemble",
-
-            "date": "2015-01-01T19:00:00.000Z"
+            "date": "2015-01-01T19:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
       },
       {
         "name": "Base",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
+        "points": 0,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
+            "date": "2015-01-01T23:00:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
+            "date": "2015-01-01T22:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
+      }
+    ],
+    "type": "GreyTide.Models.Model",
+    "name": "Tyranid Warrior Old",
+    "currentState": "Complete",
+    "currentDate": "2015-01-01T23:00:00Z",
+    "points": 175,
+    "states": [
+      {
+        "name": "Complete",
+        "date": "2015-01-01T23:00:00Z"
+      },
+      {
+        "name": "Finish Coat",
+        "date": "2015-01-01T22:00:00Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2015-01-01T21:00:00Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2015-01-01T20:00:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2015-01-01T19:00:00Z"
       }
     ]
   },
   {
-    "name": "Tyranid Warrior Boneswords",
-    "points": 150,
+    "id": "f9b353fc-3a78-47c9-a02b-beae44a5fa94",
     "faction": "Tyranids",
-    "states": [
-      {
-        "name": "Prime",
-
-        "date": "2015-04-10T12:53:48.518Z"
-      },
-      {
-        "name": "Buy Assembled",
-
-        "date": "2015-01-01T12:50:26.091Z"
-      },
-      {
-        "name": "Startup",
-
-        "date": "2015-01-01T12:49:20.796Z"
-      }
-    ],
     "items": [
       {
         "name": "Model",
+        "currentState": "Complete",
+        "currentDate": "2015-09-12T21:06:00Z",
         "points": 150,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-09-12T21:06:00.000Z"
+            "date": "2015-09-12T21:06:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-09-12T20:55:00.000Z"
+            "date": "2015-09-12T20:55:00Z"
           },
           {
             "name": "Paint",
-
             "date": "2015-05-16T12:53:48.518Z"
           },
           {
             "name": "Prime",
-
             "date": "2015-04-10T12:53:48.518Z"
           },
           {
             "name": "Buy Assembled",
-
             "date": "2015-01-01T12:50:26.091Z"
           },
           {
             "name": "Startup",
-
             "date": "2015-01-01T12:49:20.796Z"
           }
-        ],
-        "items": [ ]
+        ]
       },
       {
         "name": "Base",
+        "currentState": "Prime",
+        "currentDate": "2015-04-10T12:53:48.518Z",
+        "points": 0,
         "states": [
           {
             "name": "Prime",
-
             "date": "2015-04-10T12:53:48.518Z"
           },
           {
             "name": "Buy Assembled",
-
             "date": "2015-01-01T12:50:26.091Z"
           },
           {
             "name": "Startup",
-
             "date": "2015-01-01T12:49:20.796Z"
           }
-        ],
-        "items": [ ]
+        ]
+      }
+    ],
+    "type": "GreyTide.Models.Model",
+    "name": "Tyranid Warrior Boneswords",
+    "currentState": "Prime",
+    "currentDate": "2015-04-10T12:53:48.518Z",
+    "points": 150,
+    "states": [
+      {
+        "name": "Prime",
+        "date": "2015-04-10T12:53:48.518Z"
+      },
+      {
+        "name": "Buy Assembled",
+        "date": "2015-01-01T12:50:26.091Z"
+      },
+      {
+        "name": "Startup",
+        "date": "2015-01-01T12:49:20.796Z"
       }
     ]
   },
   {
-    "name": "Tyranid Warrior Rending Claws",
-    "points": 120,
+    "id": "88ad4634-72b2-41d0-8554-c2fadbb9c9ac",
     "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Tyranid Warrior Rending Claws",
+    "currentState": "Buy Primed",
+    "currentDate": "2015-01-01T12:50:26.091Z",
+    "points": 120,
     "states": [
       {
         "name": "Buy Primed",
-
         "date": "2015-01-01T12:50:26.091Z"
       },
       {
         "name": "Startup",
-
         "date": "2015-01-01T12:49:20.796Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Tyranid Warrior New",
-    "points": 150,
+    "id": "6d0b14ce-c81b-48ae-9fb5-b7eb73d2d38c",
     "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Tyranid Warrior New",
+    "currentState": "Buy New",
+    "currentDate": "2015-01-01T12:50:26.091Z",
+    "points": 150,
     "states": [
       {
         "name": "Buy New",
-
         "date": "2015-01-01T12:50:26.091Z"
       },
       {
         "name": "Startup",
-
         "date": "2015-01-01T12:49:20.796Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Carnifex Old",
-    "points": 420,
+    "id": "b2018a56-bc67-4a0e-9697-a7d6dcfacf60",
     "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Carnifex Old",
+    "currentState": "Complete",
+    "currentDate": "2015-01-01T23:00:00Z",
+    "points": 420,
     "states": [
       {
         "name": "Complete",
-
-        "date": "2015-01-01T23:00:00.000Z"
+        "date": "2015-01-01T23:00:00Z"
       },
       {
         "name": "Finish Coat",
-
-        "date": "2015-01-01T22:00:00.000Z"
+        "date": "2015-01-01T22:00:00Z"
       },
       {
         "name": "Paint",
-
-        "date": "2015-01-01T21:00:00.000Z"
+        "date": "2015-01-01T21:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Carnifex VC",
-    "points": 140,
+    "id": "b038fa14-e13d-419d-85e7-38dc38edc98c",
     "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Carnifex VC",
+    "currentState": "Dislike",
+    "currentDate": "2015-01-01T12:54:15.085Z",
+    "points": 140,
     "states": [
       {
         "name": "Dislike",
-
         "date": "2015-01-01T12:54:15.085Z"
       },
       {
         "name": "Buy Completed",
-
         "date": "2015-01-01T12:50:26.091Z"
       },
       {
         "name": "Startup",
-
         "date": "2015-01-01T12:49:20.797Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Carnifex CC",
-    "points": 135,
+    "id": "9e3f09ca-4f3c-4ff9-bfd3-2f805d55bc5f",
     "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Carnifex CC",
+    "currentState": "Dislike",
+    "currentDate": "2015-01-01T12:54:19.758Z",
+    "points": 135,
     "states": [
       {
         "name": "Dislike",
-
         "date": "2015-01-01T12:54:19.758Z"
       },
       {
         "name": "Buy Completed",
-
         "date": "2015-01-01T12:50:26.091Z"
       },
       {
         "name": "Startup",
-
         "date": "2015-01-01T12:49:20.797Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Carnifex New",
-    "points": 140,
+    "id": "8428ab22-d813-4fe7-8b5b-6f536353fdbe",
     "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Carnifex New",
+    "currentState": "Buy New",
+    "currentDate": "2015-01-01T12:50:26.092Z",
+    "points": 140,
     "states": [
       {
         "name": "Buy New",
-
         "date": "2015-01-01T12:50:26.092Z"
       },
       {
         "name": "Startup",
-
         "date": "2015-01-01T12:49:20.797Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Spawn of Cryptus",
-    "points": 70,
+    "id": "e5dc7168-d2f3-4a6e-8b31-17a4ab62498f",
     "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Spawn of Cryptus",
+    "currentState": "Prime",
+    "currentDate": "2015-04-06T23:00:00Z",
+    "points": 70,
     "states": [
       {
         "name": "Prime",
-
-        "date": "2015-04-06T23:00:00.000Z"
+        "date": "2015-04-06T23:00:00Z"
       },
       {
         "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
+        "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Children of Cryptus",
-    "points": 145,
+    "id": "5d9aef0c-ebc9-4bf6-8cee-8fe6f95978bb",
     "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Children of Cryptus",
+    "currentState": "Prime",
+    "currentDate": "2015-05-17T02:16:02.117Z",
+    "points": 145,
     "states": [
       {
         "name": "Prime",
-
         "date": "2015-05-17T02:16:02.117Z"
       },
       {
         "name": "Assemble",
-
         "date": "2015-02-20T12:54:35.535Z"
       },
       {
         "name": "Buy New",
-
         "date": "2015-01-01T12:50:26.092Z"
       },
       {
         "name": "Startup",
-
         "date": "2015-01-01T12:49:20.797Z"
-      }
-    ],
-    "items": [ ]
-  },
-  {
-    "name": "Exocrine",
-    "points": 170,
-    "faction": "Tyranids",
-    "states": [
-      {
-        "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
-      },
-      {
-        "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
-      }
-    ],
-    "items": [ ]
-  },
-  {
-    "name": "Krom Dragongaze",
-    "points": 135,
-    "faction": "Space Wolves",
-    "states": [
-      {
-        "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
-      },
-      {
-        "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
-      }
-    ],
-    "items": [ ]
-  },
-  {
-    "name": "Njal",
-    "points": 180,
-    "faction": "Space Wolves",
-    "states": [{
-        "name": "Complete",
-
-        "date": "2015-09-14T23:20:52.924Z"
-      },
-      {
-        "name": "Finish Coat",
-
-        "date": "2015-09-14T22:20:52.924Z"
-      },
-      {
-        "name": "Weather",
-
-        "date": "2015-01-01T21:30:00.000Z"
-      },
-      {
-        "name": "Paint",
-
-        "date": "2015-01-01T21:00:00.000Z"
-      },
-      {
-        "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
-      },
-      {
-        "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
-      }
-    ],
-    "items": [
-      {
-        "name": "Model",
-        "points": 180,
-        "states": [{
-        "name": "Complete",
-
-        "date": "2015-09-14T23:20:52.924Z"
-      },
-      {
-        "name": "Finish Coat",
-
-        "date": "2015-09-14T22:20:52.924Z"
-      },
-          {
-            "name": "Weather",
-
-            "date": "2015-01-01T21:30:00.000Z"
-          },
-          {
-            "name": "Paint",
-
-            "date": "2015-01-01T21:00:00.000Z"
-          },
-          {
-            "name": "Prime",
-
-            "date": "2015-01-01T20:00:00.000Z"
-          },
-          {
-            "name": "Assemble",
-
-            "date": "2015-01-01T19:00:00.000Z"
-          }
-        ],
-        "items": [ ]
-      },
-      {
-        "name": "Base",
-        "states": [
-          {
-            "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
-          },
-          {
-            "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
-          }
-        ],
-        "items": [ ]
       }
     ]
   },
   {
-    "name": "Rune Priest 1",
-    "points": 60,
-    "faction": "Space Wolves",
+    "id": "02dacec4-ea60-4ee3-b213-d70bf4d1655b",
+    "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Exocrine",
+    "currentState": "Prime",
+    "currentDate": "2015-01-01T20:00:00Z",
+    "points": 170,
     "states": [
       {
         "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
+        "date": "2015-01-01T20:00:00Z"
       },
       {
         "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
-      },
-      {
-        "name": "Paint",
-
-        "date": "2015-07-19T19:20:52.924Z"
-      },
-      {
-        "name": "Weather",
-
-        "date": "2015-07-19T20:20:52.924Z"
-      },
-      {
-        "name": "Complete",
-
-        "date": "2015-09-14T23:20:52.924Z"
-      },
-      {
-        "name": "Finish Coat",
-
-        "date": "2015-09-14T22:20:52.924Z"
+        "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Rune Priest 2",
-    "points": 60,
+    "id": "7b47c935-7c44-45a8-b2be-144a556f51e8",
     "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Krom Dragongaze",
+    "currentState": "Prime",
+    "currentDate": "2015-01-01T20:00:00Z",
+    "points": 135,
     "states": [
       {
         "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
+        "date": "2015-01-01T20:00:00Z"
       },
       {
         "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
-      },
-      {
-        "name": "Paint",
-
-        "date": "2015-07-19T19:20:52.924Z"
-      },
-      {
-        "name": "Weather",
-
-        "date": "2015-07-19T20:20:52.924Z"
-      },
-      {
-        "name": "Complete",
-
-        "date": "2015-09-14T23:20:52.924Z"
-      },
-      {
-        "name": "Finish Coat",
-
-        "date": "2015-09-14T22:20:52.924Z"
+        "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Rune Priest 3",
-    "points": 60,
+    "id": "23e411e5-74da-4184-aeae-de896569cc75",
     "faction": "Space Wolves",
-    "states": [
-      {
-        "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
-      },
-      {
-        "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
-      },
-      {
-        "name": "Paint",
-
-        "date": "2015-07-19T19:20:52.924Z"
-      },
-      {
-        "name": "Weather",
-
-        "date": "2015-07-19T20:20:52.924Z"
-      },
-      {
-        "name": "Complete",
-
-        "date": "2015-09-14T23:20:52.924Z"
-      },
-      {
-        "name": "Finish Coat",
-
-        "date": "2015-09-14T22:20:52.924Z"
-      }
-    ],
-    "items": [ ]
-  },
-  {
-    "name": "Ulrik",
-    "points": 145,
-    "faction": "Space Wolves",
-    "states": [
-      {
-        "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
-      },
-      {
-        "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
-      }
-    ],
-    "items": [ ]
-  },
-  {
-    "name": "Battle Leader",
-    "points": 75,
-    "faction": "Space Wolves",
-    "states": [
-      {
-        "name": "Complete",
-
-        "date": "2015-01-01T23:00:00.000Z"
-      },
-      {
-        "name": "Finish Coat",
-
-        "date": "2015-01-01T22:00:00.000Z"
-      },
-      {
-        "name": "Weather",
-
-        "date": "2015-01-01T21:30:00.000Z"
-      },
-      {
-        "name": "Paint",
-
-        "date": "2015-01-01T21:00:00.000Z"
-      },
-      {
-        "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
-      },
-      {
-        "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
-      }
-    ],
     "items": [
       {
         "name": "Model",
+        "currentState": "Complete",
+        "currentDate": "2015-09-14T23:20:52.924Z",
+        "points": 180,
+        "states": [
+          {
+            "name": "Complete",
+            "date": "2015-09-14T23:20:52.924Z"
+          },
+          {
+            "name": "Finish Coat",
+            "date": "2015-09-14T22:20:52.924Z"
+          },
+          {
+            "name": "Weather",
+            "date": "2015-01-01T21:30:00Z"
+          },
+          {
+            "name": "Paint",
+            "date": "2015-01-01T21:00:00Z"
+          },
+          {
+            "name": "Prime",
+            "date": "2015-01-01T20:00:00Z"
+          },
+          {
+            "name": "Assemble",
+            "date": "2015-01-01T19:00:00Z"
+          }
+        ]
+      },
+      {
+        "name": "Base",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
+        "points": 0,
+        "states": [
+          {
+            "name": "Complete",
+            "date": "2015-01-01T23:00:00Z"
+          },
+          {
+            "name": "Finish Coat",
+            "date": "2015-01-01T22:00:00Z"
+          }
+        ]
+      }
+    ],
+    "type": "GreyTide.Models.Model",
+    "name": "Njal",
+    "currentState": "Complete",
+    "currentDate": "2015-09-14T23:20:52.924Z",
+    "points": 180,
+    "states": [
+      {
+        "name": "Complete",
+        "date": "2015-09-14T23:20:52.924Z"
+      },
+      {
+        "name": "Finish Coat",
+        "date": "2015-09-14T22:20:52.924Z"
+      },
+      {
+        "name": "Weather",
+        "date": "2015-01-01T21:30:00Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2015-01-01T21:00:00Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2015-01-01T20:00:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2015-01-01T19:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "280b7923-b4fb-4c04-bff8-3c3f793a05fd",
+    "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Rune Priest 1",
+    "currentState": "Complete",
+    "currentDate": "2015-09-14T23:20:52.924Z",
+    "points": 60,
+    "states": [
+      {
+        "name": "Complete",
+        "date": "2015-09-14T23:20:52.924Z"
+      },
+      {
+        "name": "Finish Coat",
+        "date": "2015-09-14T22:20:52.924Z"
+      },
+      {
+        "name": "Weather",
+        "date": "2015-07-19T20:20:52.924Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2015-07-19T19:20:52.924Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2015-01-01T20:00:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2015-01-01T19:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "8013cc8d-23e8-4d23-8edb-2e43a39a7104",
+    "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Rune Priest 2",
+    "currentState": "Complete",
+    "currentDate": "2015-09-14T23:20:52.924Z",
+    "points": 60,
+    "states": [
+      {
+        "name": "Complete",
+        "date": "2015-09-14T23:20:52.924Z"
+      },
+      {
+        "name": "Finish Coat",
+        "date": "2015-09-14T22:20:52.924Z"
+      },
+      {
+        "name": "Weather",
+        "date": "2015-07-19T20:20:52.924Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2015-07-19T19:20:52.924Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2015-01-01T20:00:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2015-01-01T19:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "5b43eeeb-be0b-487c-b406-dafd5a453567",
+    "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Rune Priest 3",
+    "currentState": "Complete",
+    "currentDate": "2015-09-14T23:20:52.924Z",
+    "points": 60,
+    "states": [
+      {
+        "name": "Complete",
+        "date": "2015-09-14T23:20:52.924Z"
+      },
+      {
+        "name": "Finish Coat",
+        "date": "2015-09-14T22:20:52.924Z"
+      },
+      {
+        "name": "Weather",
+        "date": "2015-07-19T20:20:52.924Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2015-07-19T19:20:52.924Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2015-01-01T20:00:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2015-01-01T19:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "3b5883d4-ce89-4701-a163-801129d414c1",
+    "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Ulrik",
+    "currentState": "Prime",
+    "currentDate": "2015-01-01T20:00:00Z",
+    "points": 145,
+    "states": [
+      {
+        "name": "Prime",
+        "date": "2015-01-01T20:00:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2015-01-01T19:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "f70ce5f7-0235-4b74-8b47-531ffd4714b3",
+    "faction": "Space Wolves",
+    "items": [
+      {
+        "name": "Model",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
         "points": 75,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
+            "date": "2015-01-01T23:00:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
+            "date": "2015-01-01T22:00:00Z"
           },
           {
             "name": "Weather",
-
-            "date": "2015-01-01T21:30:00.000Z"
+            "date": "2015-01-01T21:30:00Z"
           },
           {
             "name": "Paint",
-
-            "date": "2015-01-01T21:00:00.000Z"
+            "date": "2015-01-01T21:00:00Z"
           },
           {
             "name": "Prime",
-
-            "date": "2015-01-01T20:00:00.000Z"
+            "date": "2015-01-01T20:00:00Z"
           },
           {
             "name": "Assemble",
-
-            "date": "2015-01-01T19:00:00.000Z"
+            "date": "2015-01-01T19:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
       },
       {
         "name": "Base",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
+        "points": 0,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
+            "date": "2015-01-01T23:00:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
+            "date": "2015-01-01T22:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
+      }
+    ],
+    "type": "GreyTide.Models.Model",
+    "name": "Battle Leader",
+    "currentState": "Complete",
+    "currentDate": "2015-01-01T23:00:00Z",
+    "points": 75,
+    "states": [
+      {
+        "name": "Complete",
+        "date": "2015-01-01T23:00:00Z"
+      },
+      {
+        "name": "Finish Coat",
+        "date": "2015-01-01T22:00:00Z"
+      },
+      {
+        "name": "Weather",
+        "date": "2015-01-01T21:30:00Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2015-01-01T21:00:00Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2015-01-01T20:00:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2015-01-01T19:00:00Z"
       }
     ]
   },
   {
-    "name": "Wolf Lord on Thunderwolf",
-    "points": 210,
+    "id": "b1ec2d0c-9baf-4d39-bedb-497a4e4c478a",
     "faction": "Space Wolves",
-    "states": [
-      {
-        "name": "Prime",
-
-        "date": "2015-04-15T23:00:00.000Z"
-      },
-      {
-        "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
-      }
-    ],
     "items": [
       {
         "name": "Model",
+        "currentState": "Prime",
+        "currentDate": "2015-04-15T23:00:00Z",
         "points": 210,
         "states": [
           {
             "name": "Prime",
-
-            "date": "2015-04-15T23:00:00.000Z"
+            "date": "2015-04-15T23:00:00Z"
           },
           {
             "name": "Assemble",
-
-            "date": "2015-01-01T19:00:00.000Z"
+            "date": "2015-01-01T19:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
       },
       {
         "name": "Wolf Mount",
+        "currentState": "Complete",
+        "currentDate": "2015-03-02T23:00:00Z",
+        "points": 0,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-03-02T23:00:00.000Z"
+            "date": "2015-03-02T23:00:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-03-02T22:00:00.000Z"
+            "date": "2015-03-02T22:00:00Z"
           },
           {
             "name": "Prime",
-
-            "date": "2015-01-01T20:00:00.000Z"
+            "date": "2015-01-01T20:00:00Z"
           },
           {
             "name": "Assemble",
-
-            "date": "2015-01-01T19:00:00.000Z"
+            "date": "2015-01-01T19:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
       },
       {
         "name": "Base",
+        "currentState": "Complete",
+        "currentDate": "2015-03-02T23:00:00Z",
+        "points": 0,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-03-02T23:00:00.000Z"
+            "date": "2015-03-02T23:00:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-03-02T22:00:00.000Z"
+            "date": "2015-03-02T22:00:00Z"
           },
           {
             "name": "Prime",
-
-            "date": "2015-01-01T20:00:00.000Z"
+            "date": "2015-01-01T20:00:00Z"
           },
           {
             "name": "Assemble",
-
-            "date": "2015-01-01T19:00:00.000Z"
+            "date": "2015-01-01T19:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
+      }
+    ],
+    "type": "GreyTide.Models.Model",
+    "name": "Wolf Lord on Thunderwolf",
+    "currentState": "Prime",
+    "currentDate": "2015-04-15T23:00:00Z",
+    "points": 210,
+    "states": [
+      {
+        "name": "Prime",
+        "date": "2015-04-15T23:00:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2015-01-01T19:00:00Z"
       }
     ]
   },
   {
+    "id": "b99dda40-8a23-4f1f-840e-9e355ebea7aa",
+    "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
     "name": "Wolf Priest on Jump",
+    "currentState": "Prime",
+    "currentDate": "2015-01-01T20:00:00Z",
     "points": 125,
-    "faction": "Space Wolves",
     "states": [
       {
         "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
+        "date": "2015-01-01T20:00:00Z"
       },
       {
         "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
+        "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
+    "id": "dd5b831a-e65d-4bdd-a2bb-84925785de33",
+    "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
     "name": "Terminators",
+    "currentState": "Prime",
+    "currentDate": "2015-01-01T20:00:00Z",
     "points": 250,
-    "faction": "Space Wolves",
     "states": [
       {
         "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
+        "date": "2015-01-01T20:00:00Z"
       },
       {
         "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
+        "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Terminators",
-    "points": 190,
+    "id": "be2a99d4-28be-4284-9dfb-427885398d29",
     "faction": "Space Wolves",
-    "states": [
-      {
-        "name": "Complete",
-
-        "date": "2015-01-01T23:00:00.000Z"
-      },
-      {
-        "name": "Finish Coat",
-
-        "date": "2015-01-01T22:00:00.000Z"
-      },
-      {
-        "name": "Weather",
-
-        "date": "2015-01-01T21:30:00.000Z"
-      },
-      {
-        "name": "Paint",
-
-        "date": "2015-01-01T21:00:00.000Z"
-      },
-      {
-        "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
-      },
-      {
-        "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
-      }
-    ],
     "items": [
       {
         "name": "Model",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
         "points": 190,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
+            "date": "2015-01-01T23:00:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
+            "date": "2015-01-01T22:00:00Z"
           },
           {
             "name": "Weather",
-
-            "date": "2015-01-01T21:30:00.000Z"
+            "date": "2015-01-01T21:30:00Z"
           },
           {
             "name": "Paint",
-
-            "date": "2015-01-01T21:00:00.000Z"
+            "date": "2015-01-01T21:00:00Z"
           },
           {
             "name": "Prime",
-
-            "date": "2015-01-01T20:00:00.000Z"
+            "date": "2015-01-01T20:00:00Z"
           },
           {
             "name": "Assemble",
-
-            "date": "2015-01-01T19:00:00.000Z"
+            "date": "2015-01-01T19:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
       },
       {
         "name": "Base",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
+        "points": 0,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
+            "date": "2015-01-01T23:00:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
+            "date": "2015-01-01T22:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
+      }
+    ],
+    "type": "GreyTide.Models.Model",
+    "name": "Terminators",
+    "currentState": "Complete",
+    "currentDate": "2015-01-01T23:00:00Z",
+    "points": 190,
+    "states": [
+      {
+        "name": "Complete",
+        "date": "2015-01-01T23:00:00Z"
+      },
+      {
+        "name": "Finish Coat",
+        "date": "2015-01-01T22:00:00Z"
+      },
+      {
+        "name": "Weather",
+        "date": "2015-01-01T21:30:00Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2015-01-01T21:00:00Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2015-01-01T20:00:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2015-01-01T19:00:00Z"
       }
     ]
   },
   {
-    "name": "Scouts",
-    "points": 120,
+    "id": "ede33a63-d53c-48ac-b2b4-f33aa57a7ef9",
     "faction": "Space Wolves",
-    "states": [
-      {
-        "name": "Complete",
-
-        "date": "2015-01-01T23:00:00.000Z"
-      },
-      {
-        "name": "Finish Coat",
-
-        "date": "2015-01-01T22:00:00.000Z"
-      },
-      {
-        "name": "Weather",
-
-        "date": "2015-01-01T21:30:00.000Z"
-      },
-      {
-        "name": "Paint",
-
-        "date": "2015-01-01T21:00:00.000Z"
-      },
-      {
-        "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
-      },
-      {
-        "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
-      }
-    ],
     "items": [
       {
         "name": "Model",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
         "points": 120,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
+            "date": "2015-01-01T23:00:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
+            "date": "2015-01-01T22:00:00Z"
           },
           {
             "name": "Weather",
-
-            "date": "2015-01-01T21:30:00.000Z"
+            "date": "2015-01-01T21:30:00Z"
           },
           {
             "name": "Paint",
-
-            "date": "2015-01-01T21:00:00.000Z"
+            "date": "2015-01-01T21:00:00Z"
           },
           {
             "name": "Prime",
-
-            "date": "2015-01-01T20:00:00.000Z"
+            "date": "2015-01-01T20:00:00Z"
           },
           {
             "name": "Assemble",
-
-            "date": "2015-01-01T19:00:00.000Z"
+            "date": "2015-01-01T19:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
       },
       {
         "name": "Base",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
+        "points": 0,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
+            "date": "2015-01-01T23:00:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
+            "date": "2015-01-01T22:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
+      }
+    ],
+    "type": "GreyTide.Models.Model",
+    "name": "Scouts",
+    "currentState": "Complete",
+    "currentDate": "2015-01-01T23:00:00Z",
+    "points": 120,
+    "states": [
+      {
+        "name": "Complete",
+        "date": "2015-01-01T23:00:00Z"
+      },
+      {
+        "name": "Finish Coat",
+        "date": "2015-01-01T22:00:00Z"
+      },
+      {
+        "name": "Weather",
+        "date": "2015-01-01T21:30:00Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2015-01-01T21:00:00Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2015-01-01T20:00:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2015-01-01T19:00:00Z"
       }
     ]
   },
   {
-    "name": "Blood Claws",
-    "points": 115,
+    "id": "e5187d4e-7204-4083-9d6b-9e6dbad5a608",
     "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Blood Claws",
+    "currentState": "Prime",
+    "currentDate": "2015-01-01T20:00:00Z",
+    "points": 115,
     "states": [
       {
         "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
+        "date": "2015-01-01T20:00:00Z"
       },
       {
         "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
+        "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Sky Claws 1",
-    "points": 135,
+    "id": "21e721fd-f092-41fa-932e-2d7fd2f18d0a",
     "faction": "Space Wolves",
-    "states": [
-
-      {
-        "name": "Startup",
-
-        "date": "2015-01-01T12:49:20.789Z"
-      },
-          {
-            "name": "Prime",
-
-            "date": "2015-01-01T20:00:00.000Z"
-          },
-          {
-            "name": "Assemble",
-
-            "date": "2015-01-01T19:00:00.000Z"
-          }
-    ],
     "items": [
       {
         "name": "Model",
+        "currentState": "Paint",
+        "currentDate": "2015-09-29T20:00:00Z",
         "points": 135,
         "states": [
           {
             "name": "Paint",
-
-            "date": "2015-09-29T20:00:00.000Z"
+            "date": "2015-09-29T20:00:00Z"
           },
           {
             "name": "Prime",
-
-            "date": "2015-01-01T20:00:00.000Z"
+            "date": "2015-01-01T20:00:00Z"
           },
           {
             "name": "Assemble",
-
-            "date": "2015-01-01T19:00:00.000Z"
+            "date": "2015-01-01T19:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
       },
       {
         "name": "Base",
+        "currentState": "Startup",
+        "currentDate": "2015-01-01T12:49:20.789Z",
+        "points": 0,
         "states": [
           {
             "name": "Startup",
-
             "date": "2015-01-01T12:49:20.789Z"
           }
-        ],
-        "items": [ ]
+        ]
+      }
+    ],
+    "type": "GreyTide.Models.Model",
+    "name": "Sky Claws 1",
+    "currentState": "Prime",
+    "currentDate": "2015-01-01T20:00:00Z",
+    "points": 135,
+    "states": [
+      {
+        "name": "Prime",
+        "date": "2015-01-01T20:00:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2015-01-01T19:00:00Z"
+      },
+      {
+        "name": "Startup",
+        "date": "2015-01-01T12:49:20.789Z"
       }
     ]
   },
   {
-    "name": "Sky Claws 2",
-    "points": 145,
+    "id": "c89c6372-55eb-48c1-b1de-dceba452c989",
     "faction": "Space Wolves",
-    "states": [
-      {
-              "name": "Startup",
-
-              "date": "2015-01-01T12:49:20.789Z"
-            },
-          {
-            "name": "Prime",
-
-            "date": "2015-01-01T20:00:00.000Z"
-          },
-          {
-            "name": "Assemble",
-
-            "date": "2015-01-01T19:00:00.000Z"
-          }
-    ],
     "items": [
       {
         "name": "Model",
+        "currentState": "Paint",
+        "currentDate": "2015-09-29T20:00:00Z",
         "points": 145,
         "states": [
           {
             "name": "Paint",
-
-            "date": "2015-09-29T20:00:00.000Z"
+            "date": "2015-09-29T20:00:00Z"
           },
           {
             "name": "Prime",
-
-            "date": "2015-01-01T20:00:00.000Z"
+            "date": "2015-01-01T20:00:00Z"
           },
           {
             "name": "Assemble",
-
-            "date": "2015-01-01T19:00:00.000Z"
+            "date": "2015-01-01T19:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
       },
       {
         "name": "Base",
+        "currentState": "Startup",
+        "currentDate": "2015-01-01T12:49:20.789Z",
+        "points": 0,
         "states": [
-            {
-              "name": "Startup",
-
-              "date": "2015-01-01T12:49:20.789Z"
-            }
-        ],
-        "items": [ ]
+          {
+            "name": "Startup",
+            "date": "2015-01-01T12:49:20.789Z"
+          }
+        ]
+      }
+    ],
+    "type": "GreyTide.Models.Model",
+    "name": "Sky Claws 2",
+    "currentState": "Prime",
+    "currentDate": "2015-01-01T20:00:00Z",
+    "points": 145,
+    "states": [
+      {
+        "name": "Prime",
+        "date": "2015-01-01T20:00:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2015-01-01T19:00:00Z"
+      },
+      {
+        "name": "Startup",
+        "date": "2015-01-01T12:49:20.789Z"
       }
     ]
   },
   {
+    "id": "0aef645a-4113-4b54-85cd-dae9ab5aceb9",
+    "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
     "name": "Grey Hunters 1",
+    "currentState": "Prime",
+    "currentDate": "2015-01-01T20:00:00Z",
     "points": 130,
-    "faction": "Space Wolves",
     "states": [
       {
         "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
+        "date": "2015-01-01T20:00:00Z"
       },
       {
         "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
+        "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
+    "id": "d12f2774-5be8-44d1-976a-8d64e24cf1f2",
+    "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
     "name": "Grey Hunters 2",
+    "currentState": "Prime",
+    "currentDate": "2015-01-01T20:00:00Z",
     "points": 130,
-    "faction": "Space Wolves",
     "states": [
       {
         "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
+        "date": "2015-01-01T20:00:00Z"
       },
       {
         "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
+        "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
+    "id": "847e9408-b847-4f44-9116-7200eea396c0",
+    "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
     "name": "Grey Hunters 3",
+    "currentState": "Prime",
+    "currentDate": "2015-01-01T20:00:00Z",
     "points": 130,
-    "faction": "Space Wolves",
     "states": [
       {
         "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
+        "date": "2015-01-01T20:00:00Z"
       },
       {
         "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
+        "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
+    "id": "95d19255-f037-45c8-8cc7-d2867438f4b1",
+    "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
     "name": "Grey Hunters 4",
+    "currentState": "Prime",
+    "currentDate": "2015-01-01T20:00:00Z",
     "points": 130,
-    "faction": "Space Wolves",
     "states": [
       {
         "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
+        "date": "2015-01-01T20:00:00Z"
       },
       {
         "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
+        "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
+    "id": "e33c9462-e25a-4522-b7cf-855d61c73cb1",
+    "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
     "name": "Grey Hunters 5",
+    "currentState": "Prime",
+    "currentDate": "2015-01-01T20:00:00Z",
     "points": 130,
-    "faction": "Space Wolves",
     "states": [
       {
         "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
+        "date": "2015-01-01T20:00:00Z"
       },
       {
         "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
+        "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
+    "id": "923d7b44-7aa8-4d80-a159-a9252e8a62e0",
+    "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
     "name": "Grey Hunters 6",
+    "currentState": "Prime",
+    "currentDate": "2015-01-01T20:00:00Z",
     "points": 130,
-    "faction": "Space Wolves",
     "states": [
       {
         "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
+        "date": "2015-01-01T20:00:00Z"
       },
       {
         "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
+        "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
+    "id": "87c8038a-e599-49bb-a9c0-ed3dc929af9a",
+    "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
     "name": "Land Speeder",
+    "currentState": "Prime",
+    "currentDate": "2015-01-01T20:00:00Z",
     "points": 85,
-    "faction": "Space Wolves",
     "states": [
       {
         "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
+        "date": "2015-01-01T20:00:00Z"
       },
       {
         "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
+        "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Thunderwolf",
-    "points": 260,
+    "id": "d01c7417-c3cd-4cba-bd97-5ca63e7105d2",
     "faction": "Space Wolves",
-    "states": [
-      {
-        "name": "Prime",
-
-        "date": "2015-04-15T23:00:00.000Z"
-      },
-      {
-        "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
-      }
-    ],
     "items": [
       {
         "name": "Model",
+        "currentState": "Prime",
+        "currentDate": "2015-04-15T23:00:00Z",
         "points": 260,
         "states": [
           {
             "name": "Prime",
-
-            "date": "2015-04-15T23:00:00.000Z"
+            "date": "2015-04-15T23:00:00Z"
           },
           {
             "name": "Assemble",
-
-            "date": "2015-01-01T19:00:00.000Z"
+            "date": "2015-01-01T19:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
       },
       {
         "name": "Wolf Mount",
+        "currentState": "Complete",
+        "currentDate": "2015-03-02T23:00:00Z",
+        "points": 0,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-03-02T23:00:00.000Z"
+            "date": "2015-03-02T23:00:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-03-02T22:00:00.000Z"
+            "date": "2015-03-02T22:00:00Z"
           },
           {
             "name": "Prime",
-
-            "date": "2015-01-01T20:00:00.000Z"
+            "date": "2015-01-01T20:00:00Z"
           },
           {
             "name": "Assemble",
-
-            "date": "2015-01-01T19:00:00.000Z"
+            "date": "2015-01-01T19:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
       },
       {
         "name": "Base",
+        "currentState": "Complete",
+        "currentDate": "2015-03-02T23:00:00Z",
+        "points": 0,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-03-02T23:00:00.000Z"
+            "date": "2015-03-02T23:00:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-03-02T22:00:00.000Z"
+            "date": "2015-03-02T22:00:00Z"
           },
           {
             "name": "Prime",
-
-            "date": "2015-01-01T20:00:00.000Z"
+            "date": "2015-01-01T20:00:00Z"
           },
           {
             "name": "Assemble",
-
-            "date": "2015-01-01T19:00:00.000Z"
+            "date": "2015-01-01T19:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
+      }
+    ],
+    "type": "GreyTide.Models.Model",
+    "name": "Thunderwolf",
+    "currentState": "Prime",
+    "currentDate": "2015-04-15T23:00:00Z",
+    "points": 260,
+    "states": [
+      {
+        "name": "Prime",
+        "date": "2015-04-15T23:00:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2015-01-01T19:00:00Z"
       }
     ]
   },
   {
-    "name": "Long Fangs 1",
-    "points": 145,
+    "id": "413ba460-0ed5-4165-b5ee-25068c231c9d",
     "faction": "Space Wolves",
-    "states": [
-      {
-        "name": "Complete",
-
-        "date": "2015-01-01T23:00:00.000Z"
-      },
-      {
-        "name": "Finish Coat",
-
-        "date": "2015-01-01T22:00:00.000Z"
-      },
-      {
-        "name": "Weather",
-
-        "date": "2015-01-01T21:30:00.000Z"
-      },
-      {
-        "name": "Paint",
-
-        "date": "2015-01-01T21:00:00.000Z"
-      },
-      {
-        "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
-      },
-      {
-        "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
-      }
-    ],
     "items": [
       {
         "name": "Model",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
         "points": 145,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
+            "date": "2015-01-01T23:00:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
+            "date": "2015-01-01T22:00:00Z"
           },
           {
             "name": "Weather",
-
-            "date": "2015-01-01T21:30:00.000Z"
+            "date": "2015-01-01T21:30:00Z"
           },
           {
             "name": "Paint",
-
-            "date": "2015-01-01T21:00:00.000Z"
+            "date": "2015-01-01T21:00:00Z"
           },
           {
             "name": "Prime",
-
-            "date": "2015-01-01T20:00:00.000Z"
+            "date": "2015-01-01T20:00:00Z"
           },
           {
             "name": "Assemble",
-
-            "date": "2015-01-01T19:00:00.000Z"
+            "date": "2015-01-01T19:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
       },
       {
         "name": "Base",
+        "currentState": "Complete",
+        "currentDate": "2015-01-01T23:00:00Z",
+        "points": 0,
         "states": [
           {
             "name": "Complete",
-
-            "date": "2015-01-01T23:00:00.000Z"
+            "date": "2015-01-01T23:00:00Z"
           },
           {
             "name": "Finish Coat",
-
-            "date": "2015-01-01T22:00:00.000Z"
+            "date": "2015-01-01T22:00:00Z"
           }
-        ],
-        "items": [ ]
+        ]
+      }
+    ],
+    "type": "GreyTide.Models.Model",
+    "name": "Long Fangs 1",
+    "currentState": "Complete",
+    "currentDate": "2015-01-01T23:00:00Z",
+    "points": 145,
+    "states": [
+      {
+        "name": "Complete",
+        "date": "2015-01-01T23:00:00Z"
+      },
+      {
+        "name": "Finish Coat",
+        "date": "2015-01-01T22:00:00Z"
+      },
+      {
+        "name": "Weather",
+        "date": "2015-01-01T21:30:00Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2015-01-01T21:00:00Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2015-01-01T20:00:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2015-01-01T19:00:00Z"
       }
     ]
   },
   {
+    "id": "d33418ee-d1c0-4aa7-a8ee-e613e68ef51d",
+    "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
     "name": "Long Fangs 2",
+    "currentState": "Prime",
+    "currentDate": "2015-01-01T20:00:00Z",
     "points": 180,
-    "faction": "Space Wolves",
     "states": [
       {
         "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
+        "date": "2015-01-01T20:00:00Z"
       },
       {
         "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
+        "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
+    "id": "18b46e2f-6522-426d-8a84-9f346aa3f8e9",
+    "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
     "name": "Long Fangs 3",
+    "currentState": "Prime",
+    "currentDate": "2015-01-01T20:00:00Z",
     "points": 245,
-    "faction": "Space Wolves",
     "states": [
       {
         "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
+        "date": "2015-01-01T20:00:00Z"
       },
       {
         "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
+        "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Razorback",
-    "points": 75,
+    "id": "99ee5104-99cb-4814-8bb1-88e43f50d53f",
     "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Razorback",
+    "currentState": "Complete",
+    "currentDate": "2015-01-01T23:00:00Z",
+    "points": 75,
     "states": [
       {
         "name": "Complete",
-
-        "date": "2015-01-01T23:00:00.000Z"
+        "date": "2015-01-01T23:00:00Z"
       },
       {
         "name": "Finish Coat",
-
-        "date": "2015-01-01T22:00:00.000Z"
+        "date": "2015-01-01T22:00:00Z"
       },
       {
         "name": "Weather",
-
-        "date": "2015-01-01T21:30:00.000Z"
+        "date": "2015-01-01T21:30:00Z"
       },
       {
         "name": "Paint",
-
-        "date": "2015-01-01T21:00:00.000Z"
+        "date": "2015-01-01T21:00:00Z"
       },
       {
         "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
+        "date": "2015-01-01T20:00:00Z"
       },
       {
         "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
+        "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Rhino",
-    "points": 35,
+    "id": "ab1b7847-b9d4-4657-a652-d2fdc305a9b3",
     "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Rhino",
+    "currentState": "Complete",
+    "currentDate": "2015-09-14T23:20:52.924Z",
+    "points": 35,
     "states": [
       {
         "name": "Complete",
-
         "date": "2015-09-14T23:20:52.924Z"
       },
       {
         "name": "Finish Coat",
-
         "date": "2015-09-14T22:20:52.924Z"
       },
       {
         "name": "Weather",
-
-        "date": "2015-07-24T18:00:00.000Z"
+        "date": "2015-07-24T18:00:00Z"
       },
       {
         "name": "Paint",
-
-        "date": "2015-07-23T16:00:00.000Z"
+        "date": "2015-07-23T16:00:00Z"
       },
-
       {
         "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
+        "date": "2015-01-01T20:00:00Z"
       },
       {
         "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
+        "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
+    "id": "566798ca-6ef1-4892-891c-5af9902fa772",
+    "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
     "name": "Rhino",
+    "currentState": "Prime",
+    "currentDate": "2015-01-01T20:00:00Z",
     "points": 35,
-    "faction": "Space Wolves",
     "states": [
       {
         "name": "Prime",
-
-        "date": "2015-01-01T20:00:00.000Z"
+        "date": "2015-01-01T20:00:00Z"
       },
       {
         "name": "Assemble",
-
-        "date": "2015-01-01T19:00:00.000Z"
+        "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Toxicrene",
-    "points": 210,
+    "id": "5eb82ddb-43d0-45c5-b148-f5015c6b18d7",
     "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Toxicrene",
+    "currentState": "Prime",
+    "currentDate": "2015-03-20T23:00:00Z",
+    "points": 210,
     "states": [
       {
         "name": "Prime",
-
-        "date": "2015-03-20T23:00:00.000Z"
+        "date": "2015-03-20T23:00:00Z"
       },
       {
         "name": "Assemble",
-
-        "date": "2015-01-31T23:00:00.000Z"
+        "date": "2015-01-31T23:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
+    "id": "c83b5a3a-b265-4491-8068-c04c95973e93",
+    "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
     "name": "Stormwolf",
+    "currentState": "Prime",
+    "currentDate": "2015-03-20T23:00:00Z",
     "points": 235,
-    "faction": "Space Wolves",
     "states": [
       {
         "name": "Prime",
-
-        "date": "2015-03-20T23:00:00.000Z"
+        "date": "2015-03-20T23:00:00Z"
       },
       {
         "name": "Assemble",
-
-        "date": "2015-01-31T23:00:00.000Z"
+        "date": "2015-01-31T23:00:00Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Land Raider",
-    "points": 250,
+    "id": "48307bd2-71e8-4f22-b22d-02cfcd93ec7b",
     "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Land Raider",
+    "currentState": "Buy New",
+    "currentDate": "2015-05-13T13:19:48.819Z",
+    "points": 250,
     "states": [
       {
         "name": "Buy New",
-
         "date": "2015-05-13T13:19:48.819Z"
       },
       {
         "name": "Startup",
-
         "date": "2015-05-13T13:19:48.814Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Predator",
-    "points": 140,
+    "id": "06665ed8-e4bd-425b-a0c8-dc8604fb32ca",
     "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Predator",
+    "currentState": "Buy New",
+    "currentDate": "2015-05-13T13:20:35.527Z",
+    "points": 140,
     "states": [
       {
         "name": "Buy New",
-
         "date": "2015-05-13T13:20:35.527Z"
       },
       {
         "name": "Startup",
-
         "date": "2015-05-13T13:20:35.525Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Dreadnaught",
-    "points": 110,
+    "id": "3b42c762-60f9-4441-8ccc-24076fbe10e6",
     "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Dreadnaught",
+    "currentState": "Complete",
+    "currentDate": "2015-09-14T23:20:52.924Z",
+    "points": 110,
     "states": [
       {
-        "name": "Buy New",
-
-        "date": "2015-05-13T13:20:52.925Z"
-      },
-      {
-        "name": "Startup",
-
-        "date": "2015-05-13T13:20:52.924Z"
-      },
-      {
-        "name": "Assemble",
-
-        "date": "2015-06-13T13:20:52.924Z"
-      },
-      {
-        "name": "Prime",
-
-        "date": "2015-06-14T13:20:52.924Z"
-      },
-      {
-        "name": "Paint",
-
-        "date": "2015-06-22T13:20:52.924Z"
-      },
-      {
-        "name": "Weather",
-
-        "date": "2015-06-23T13:20:52.924Z"
-      },
-      {
         "name": "Complete",
-
         "date": "2015-09-14T23:20:52.924Z"
       },
       {
         "name": "Finish Coat",
-
         "date": "2015-09-14T22:20:52.924Z"
+      },
+      {
+        "name": "Weather",
+        "date": "2015-06-23T13:20:52.924Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2015-06-22T13:20:52.924Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2015-06-14T13:20:52.924Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2015-06-13T13:20:52.924Z"
+      },
+      {
+        "name": "Buy New",
+        "date": "2015-05-13T13:20:52.925Z"
+      },
+      {
+        "name": "Startup",
+        "date": "2015-05-13T13:20:52.924Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Tac Squad",
-    "points": 160,
+    "id": "4b621902-1688-44b9-81e1-77fcd815a077",
     "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Tac Squad",
+    "currentState": "Buy New",
+    "currentDate": "2015-05-13T13:21:27.103Z",
+    "points": 160,
     "states": [
       {
         "name": "Buy New",
-
         "date": "2015-05-13T13:21:27.103Z"
       },
       {
         "name": "Startup",
-
         "date": "2015-05-13T13:21:27.102Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Terminators",
-    "points": 205,
+    "id": "56f846ad-99e7-44b2-a6e5-04ad0d5f9232",
     "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Terminators",
+    "currentState": "Buy New",
+    "currentDate": "2015-05-13T13:23:12.549Z",
+    "points": 205,
     "states": [
       {
         "name": "Buy New",
-
         "date": "2015-05-13T13:23:12.549Z"
       },
       {
         "name": "Startup",
-
         "date": "2015-05-13T13:23:12.548Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Battle Leader",
-    "points": 75,
+    "id": "3008febb-57b2-40a8-a712-bc7c93a99ae1",
     "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Battle Leader",
+    "currentState": "Buy New",
+    "currentDate": "2015-05-13T13:24:25.605Z",
+    "points": 75,
     "states": [
       {
         "name": "Buy New",
-
         "date": "2015-05-13T13:24:25.605Z"
       },
       {
         "name": "Startup",
-
         "date": "2015-05-13T13:24:25.603Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Warboss",
-    "points": 85,
+    "id": "ca140681-a0e6-4be7-95c7-35fff7b6617d",
     "faction": "Ork",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Warboss",
+    "currentState": "Buy New",
+    "currentDate": "2015-05-13T13:28:50.032Z",
+    "points": 85,
     "states": [
       {
         "name": "Buy New",
-
         "date": "2015-05-13T13:28:50.032Z"
       },
       {
         "name": "Startup",
-
         "date": "2015-05-13T13:28:50.031Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Nobs",
-    "points": 215,
+    "id": "c39eb11c-2803-4fb9-b3c0-9cab3b83b192",
     "faction": "Ork",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Nobs",
+    "currentState": "Buy New",
+    "currentDate": "2015-05-13T13:28:56.332Z",
+    "points": 215,
     "states": [
       {
         "name": "Buy New",
-
         "date": "2015-05-13T13:28:56.332Z"
       },
       {
         "name": "Startup",
-
         "date": "2015-05-13T13:28:56.327Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Boys",
-    "points": 120,
+    "id": "7ed2ce70-c3dc-4c96-ba81-1ff7f56895dd",
     "faction": "Ork",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Boys",
+    "currentState": "Buy New",
+    "currentDate": "2015-05-13T13:29:01.491Z",
+    "points": 120,
     "states": [
       {
         "name": "Buy New",
-
         "date": "2015-05-13T13:29:01.491Z"
       },
       {
         "name": "Startup",
-
         "date": "2015-05-13T13:29:01.489Z"
       }
-    ],
-    "items": [ ]
+    ]
   },
   {
-    "name": "Deffkoptas",
-    "points": 90,
+    "id": "594f50ea-9dd3-40bc-92bb-dfdf9b6f7ef1",
     "faction": "Ork",
+    "items": [],
+    "type": "GreyTide.Models.Model",
+    "name": "Deffkoptas",
+    "currentState": "Buy New",
+    "currentDate": "2015-05-13T13:29:12.592Z",
+    "points": 90,
     "states": [
       {
         "name": "Buy New",
-
         "date": "2015-05-13T13:29:12.592Z"
       },
       {
         "name": "Startup",
-
         "date": "2015-05-13T13:29:12.591Z"
       }
-    ],
-    "items": [ ]
+    ]
   }
 ]
