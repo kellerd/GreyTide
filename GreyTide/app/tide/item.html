@@ -17,7 +17,7 @@
         Recede Tide:
         <ul>
             <li ng-repeat="state in child.allStates|filter:{active:false}">
-                <button ng-click="setActive(child, state)">{{state.name}}</button>
+                <button ng-click="vm.setActive(child, state)">{{state.name}}</button>
             </li>
         </ul>
         

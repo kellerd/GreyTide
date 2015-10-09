@@ -1,4 +1,4 @@
-﻿<button ng-click="AddItem(item,item==Tide)">{{item.items.length==0 ? 'Split into Items' : 'Add item'}}</button>
+﻿<button ng-click="vm.addItem(item)">{{item.items.length==0 ? 'Split into Items' : 'Add item'}}</button>
 <ul>
     <li ng-repeat="child in item.items| filter:vm.criteriaMatch | orderBy:orderProp" ng-include="'app/tide/item.html'"></li>
 </ul>

@@ -104,6 +104,8 @@ module App.Services {
                                     }
                                 }
                             })
+                        _model.currentState = to;
+                        _model.currentDate = new Date(Date.now());
                     } else {
                         _model.allStates = Enumerable.From(_model.transitions()).Select(function (x) { return { name: x, active: false, date: new Date().toISOString() }; }).Union(Enumerable.From(_model.states).Select(function (x: any) { return { name: x.name, active: true, date: x.date }; })).ToArray();
                     }

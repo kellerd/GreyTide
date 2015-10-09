@@ -47,7 +47,18 @@ module App.Controllers {
                 return this.tide = data;
             });
         }
-
+        setActive(item, state) {
+            item[state.name].call(item);
+        }
+        addItem(item) {
+            if (item.items == this.tide) {
+                item.items.push(this.datacontext.create("Model", { "id": App.Services.GuidGenerator.newGuid(), "name": "--New Item--","currentState":"Startup", "currentDate":new Date(Date.now()).toJSON(), "faction": "--choose faction--", "points": 0 }));
+            }
+            else {
+                item.items.push(this.datacontext.create("ModelItem", { "name": "--New Item--", "currentState": "Startup", "currentDate": new Date(Date.now()).toJSON(),"points": 0 }));
+            }
+            this.log("--New Item-- has been added");
+        }
         //#endregion
     }
 
