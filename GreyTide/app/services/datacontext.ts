@@ -1,13 +1,10 @@
-﻿/// <reference path="../../scripts/typings/angularjs/angular.d.ts" />
-/// <reference path="../../scripts/typings/statemachine/statemachine.d.ts" />
-/// <reference path="../../scripts/typings/breeze/breeze.d.ts" />
-module App.Services {
+﻿module App.Services {
 
     export interface IDatacontext {
         getTideAndState(): ng.IPromise<ITideAndState>;
         getTide(): ng.IPromise<any>;
         getStates(): ng.IPromise<any>;
-        prime(): Function;
+        prime(): void;
         create(localModelName: string, initialValues?: {}, entityState?: breeze.EntityStateSymbol, mergeStrategy?: breeze.MergeStrategySymbol) : breeze.Entity
     }
 
@@ -16,7 +13,7 @@ module App.Services {
         tide: any;
     }
 
-    export class Datacontext {
+    export class Datacontext implements IDatacontext {
         public static serviceId: string = 'datacontext';
         private $q: ng.IQService;
 
@@ -106,6 +103,6 @@ module App.Services {
     }
 
     // Register with angular
-    app.factory(Datacontext.serviceId, ['common', 'entityManagerFactory', 'config', (common, entityManagerFactory, config) => new Datacontext(common, entityManagerFactory, config)]);
+    app.factory(Datacontext.serviceId, ['common', EntityManagerFactory.serviceId, 'config', (common, entityManagerFactory, config) => new Datacontext(common, entityManagerFactory, config)]);
 
 }
