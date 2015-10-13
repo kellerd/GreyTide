@@ -67,6 +67,7 @@ module App.Controllers {
             } else {
                 let index = item.complexAspect.parent.items.indexOf(item);
                 item.complexAspect.parent.items.splice(index);
+                this.datacontext.saveEntity(item.complexAspect.parent);
             }
         }
         //#endregion

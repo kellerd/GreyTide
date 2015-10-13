@@ -26,7 +26,7 @@ module App.Services {
             this.log = common.logger.log;
             MetadataHelper.FillMetadataStore(this.metadataStore);
         }
-        public newManager(): IManagerAndMetaModels {
+        public newManager(saveEntity: any): IManagerAndMetaModels {
             var dataService = new breeze.DataService({
                 serviceName: this.serviceName,
                 hasServerMetadata: false
@@ -41,7 +41,7 @@ module App.Services {
                 ModelItem: function ModelItem() { }
             };
 
-            this.configureManagerToSaveModifiedItemImmediately(mgrAndModel.manager);
+            this.configureManagerToSaveModifiedItemImmediately(mgrAndModel.manager, saveEntity);
             this.configureConstructors(mgrAndModel);
             return mgrAndModel;
         }
@@ -132,51 +132,9 @@ module App.Services {
 
             this.metadataStore.registerEntityTypeCtor('ModelItem', mgr.ModelItem, modelItemInitializer);
         }
-        private configureManagerToSaveModifiedItemImmediately(mgr: breeze.EntityManager) {
+        private configureManagerToSaveModifiedItemImmediately(mgr: breeze.EntityManager, saveEntity: Function) {
             var _that = this;
-            function saveEntity(masterEntity) {
-
-                return mgr.saveChanges().catch(saveFailed);
-
-                function saveFailed(error) {
-                    setErrorMessage(error);
-                    // Let them see it "wrong" briefly before reverting"
-                    setTimeout(function () { mgr.rejectChanges(); }, 1000);
-                    throw error; // so caller can see failure
-                }
-
-                function setErrorMessage(error) {
-                    var statename = masterEntity.entityAspect.entityState.name.toLowerCase();
-                    var typeName = masterEntity.entityType.shortName;
-                    var msg = "Error saving " + statename + " " + typeName + ": ";
-
-                    var reason = error.message;
-
-                    if (error.entityErrors) {
-                        reason = getValidationErrorMessage(error);
-                    } else if (isConcurrencyError(error)) {
-                        reason =
-                        "can't find " + typeName + "; another user may have deleted it.";
-                    }
-                    _that.log(msg + reason, masterEntity, "Save changes", true);
-                }
-
-                function getValidationErrorMessage(error) {
-                    try { // return the first error message
-                        var firstError = error.entityErrors[0];
-                        return firstError.errorMessage;
-                    } catch (e) { // ignore problem extracting error message 
-                        return "validation error";
-                    }
-                }
-
-                function isConcurrencyError(error) {
-                    var detail = error.detail;
-                    return detail && detail.ExceptionMessage &&
-                        detail.ExceptionMessage.match(/can't find/i);
-                }
-
-            }
+            
 
             mgr.entityChanged.subscribe(function (args) {
                 if (args.entityAction === breeze.EntityAction.PropertyChange) {
@@ -193,7 +151,7 @@ module App.Services {
                     return;
                 }
                 if (args.entityAction === breeze.EntityAction.EntityStateChange) {
-                    if (args.entity.entityAspect.entityState.isAddedModifiedOrDeleted()) {
+                    if (args.entity.entityAspect.entityState.isDeleted()) {
                         return mgr.saveChanges().catch(function (error) {
                             _that.log("Error deleting entity", args.entity, "Save changes", true);
                             // Let them see it "wrong" briefly before reverting"
@@ -201,6 +159,7 @@ module App.Services {
                             throw error; // so caller can see failure
                         });
                     }
+                    return;
                 }
             });
 

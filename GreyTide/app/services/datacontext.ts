@@ -7,7 +7,7 @@ module App.Services {
         getStates(): ng.IPromise<any>;
         prime(): void;
         create(localModelName: string, initialValues?: {}, isComplexType?: boolean, entityState?: breeze.EntityStateSymbol, mergeStrategy?: breeze.MergeStrategySymbol): any
-            
+        saveEntity(masterEntity: any): void;
     }
 
     export interface ITideAndState {
@@ -32,7 +32,7 @@ module App.Services {
             this.logError = common.logger.logError;
             this.logSuccess = common.logger.logSuccess;
             this.EntityQuery = breeze.EntityQuery;
-            this.manager = entityManagerFactory.newManager();
+            this.manager = entityManagerFactory.newManager(this.saveEntity);
         }
         create(localModelName: string, initialValues?: {}, isComplexType?: boolean, entityState?: breeze.EntityStateSymbol, mergeStrategy?: breeze.MergeStrategySymbol): any {
             if (isComplexType) {
@@ -54,6 +54,50 @@ module App.Services {
                 .using(this.manager.manager).execute()
                 .then(getSucceeded)
                 .catch(this.getFailed);
+
+        }
+
+        public  saveEntity(masterEntity) {
+
+            return this.manager.manager.saveChanges().catch(saveFailed);
+
+            function saveFailed(error) {
+                setErrorMessage(error);
+                // Let them see it "wrong" briefly before reverting"
+                setTimeout(function () { this.manager.manager.rejectChanges(); }, 1000);
+                throw error; // so caller can see failure
+            }
+
+            function setErrorMessage(error) {
+                var statename = masterEntity.entityAspect.entityState.name.toLowerCase();
+                var typeName = masterEntity.entityType.shortName;
+                var msg = "Error saving " + statename + " " + typeName + ": ";
+
+                var reason = error.message;
+
+                if (error.entityErrors) {
+                    reason = getValidationErrorMessage(error);
+                } else if (isConcurrencyError(error)) {
+                    reason =
+                    "can't find " + typeName + "; another user may have deleted it.";
+                }
+                this.log(msg + reason, masterEntity, "Save changes", true);
+            }
+
+            function getValidationErrorMessage(error) {
+                try { // return the first error message
+                    var firstError = error.entityErrors[0];
+                    return firstError.errorMessage;
+                } catch (e) { // ignore problem extracting error message 
+                    return "validation error";
+                }
+            }
+
+            function isConcurrencyError(error) {
+                var detail = error.detail;
+                return detail && detail.ExceptionMessage &&
+                    detail.ExceptionMessage.match(/can't find/i);
+            }
 
         }
 
