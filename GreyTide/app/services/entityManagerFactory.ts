@@ -18,7 +18,7 @@ module App.Services {
         metadataStore: breeze.MetadataStore;
         serviceName: string;
         log: (message: string, data?: any, source?: string, showToast?: boolean) => void;
-        constructor(private breeze, private config, private common: App.Shared.ICommon, private transactionScope: ITransactionScope) {
+        constructor(private breeze, private config, private common: App.Shared.ICommon) {
             this.setNamingConventionToCamelCase();
             this.preventValidateOnAttach();
             this.metadataStore = new breeze.MetadataStore();
@@ -65,27 +65,37 @@ module App.Services {
             };
             function handleChangeChildStates(_model, event, from, to) {
                 if (_model.states != undefined) {
-                    _that.transactionScope.BeginTransaction(() => {
-                        if (_model.states.length == 0 || _model.states[0].name != event) {
+                    if (_model.states.length == 0 || _model.states[0].name != event) {
 
-                            let type = <breeze.ComplexType>mgr.manager.metadataStore.getEntityType("ModelState");
-                            let newType = type.createInstance(
-                                {
-                                    name: event,
-                                    date: new Date().toISOString()
-                                });
-                            _model.states.push(newType);
-                            _model.allStates =
-                            Enumerable.
-                                From(_model.transitions()).
-                                Select(function (x) { return { name: x, active: false, date: new Date().toISOString() }; }).
-                                Union(
-                                Enumerable.From(_model.states).
-                                    Select(function (x: any) { return { name: x.name, active: true, date: x.date }; })
-                                ).ToArray();
-                            if (_model.parentEntity != null) {
-                                var p = _model.parentEntity;
-                                if (Enumerable.From(_model.parentEntity.items).Select(function (item: any) { return item.current; }).Distinct().Count() == 1) {
+                        let type = <breeze.ComplexType>mgr.manager.metadataStore.getEntityType("ModelState");
+                        let newType = type.createInstance(
+                            {
+                                name: event,
+                                date: new Date().toISOString()
+                            });
+                        _model.states.push(newType);
+                        _model.allStates =
+                        Enumerable.
+                            From(_model.transitions()).
+                            Select(function (x) { return { name: x, active: false, date: new Date().toISOString() }; }).
+                            Union(
+                            Enumerable.From(_model.states).
+                                Select(function (x: any) { return { name: x.name, active: true, date: x.date }; })
+                            ).ToArray();
+                        if (_model.parentEntity != null) {
+                            var p = _model.parentEntity;
+                            if (Enumerable.From(_model.parentEntity.items).Select(function (item: any) { return item.current; }).Distinct().Count() == 1) {
+                                var state: any = Enumerable.From(p.allStates).Where(function (d: any) { return d.active == false && d.name == event; }).FirstOrDefault(null);
+                                if (!(state != null)) {
+                                    state.active = true;
+                                    state.date = new Date().toISOString();
+                                    p[event].call(p);
+                                }
+                            }
+                        }
+                        if (_model.items != null && _model.items.length > 0)
+                            Enumerable.From(_model.items).ForEach(function (p: any) {
+                                if (Enumerable.From(p.transitions()).Contains(event)) {
                                     var state: any = Enumerable.From(p.allStates).Where(function (d: any) { return d.active == false && d.name == event; }).FirstOrDefault(null);
                                     if (!(state != null)) {
                                         state.active = true;
@@ -93,26 +103,13 @@ module App.Services {
                                         p[event].call(p);
                                     }
                                 }
-                            }
-                            if (_model.items != null && _model.items.length > 0)
-                                Enumerable.From(_model.items).ForEach(function (p: any) {
-                                    if (Enumerable.From(p.transitions()).Contains(event)) {
-                                        var state: any = Enumerable.From(p.allStates).Where(function (d: any) { return d.active == false && d.name == event; }).FirstOrDefault(null);
-                                        if (!(state != null)) {
-                                            state.active = true;
-                                            state.date = new Date().toISOString();
-                                            p[event].call(p);
-                                        }
-                                    }
-                                })
+                            })
 
-                            _model.currentState = to;
-                            _model.currentDate = new Date(Date.now());
-                        } else {
-                            _model.allStates = Enumerable.From(_model.transitions()).Select(function (x) { return { name: x, active: false, date: new Date().toISOString() }; }).Union(Enumerable.From(_model.states).Select(function (x: any) { return { name: x.name, active: true, date: x.date }; })).ToArray();
-                        }
-                        return _model;
-                    });
+                        _model.currentState = (<any>newType).name;
+                        _model.currentDate = (<any>newType).date;
+                    } else {
+                        _model.allStates = Enumerable.From(_model.transitions()).Select(function (x) { return { name: x, active: false, date: new Date().toISOString() }; }).Union(Enumerable.From(_model.states).Select(function (x: any) { return { name: x.name, active: true, date: x.date }; })).ToArray();
+                    }
                 }
             }
             mgr.ModelItem.prototype = {
@@ -178,26 +175,41 @@ module App.Services {
                     return detail && detail.ExceptionMessage &&
                         detail.ExceptionMessage.match(/can't find/i);
                 }
-            }
 
+            }
 
             mgr.entityChanged.subscribe(function (args) {
                 if (args.entityAction === breeze.EntityAction.PropertyChange) {
-                    _that.transactionScope.Transaction.then(function () {
-                        if (args.entity.entityAspect.entityState.isAddedModifiedOrDeleted()) {
+                    _that.common.debouncedThrottle("entityChanges", function () {
+                        if (args.entity.entityAspect.entityState.isAdded() || args.entity.entityAspect.entityState.isModified()) {
                             var entity = args.entity;
                             var propArgs: any = args.args;
                             var propertyName = propArgs.propertyName;
                             saveEntity(entity);
+                            _that.common.logger.log("Saved item", entity, "", true);
+                            return true;
                         }
-                    }, function (err) { alert(err); });
+                    }, 300, false);
+                    return;
+                }
+                if (args.entityAction === breeze.EntityAction.EntityStateChange) {
+                    if (args.entity.entityAspect.entityState.isAddedModifiedOrDeleted()) {
+                        return mgr.saveChanges().catch(function (error) {
+                            _that.log("Error deleting entity", args.entity, "Save changes", true);
+                            // Let them see it "wrong" briefly before reverting"
+                            setTimeout(function () { mgr.rejectChanges(); }, 1000);
+                            throw error; // so caller can see failure
+                        });
+                    }
                 }
             });
+
+
         }
 
 
     }
 
     app.factory(EntityManagerFactory.serviceId,
-        ['breeze', 'config', App.Shared.Common.serviceId, TransactionScope.serviceId, (b, c, cm, ts) => new EntityManagerFactory(b, c, cm, ts)]);
+        ['breeze', 'config', App.Shared.Common.serviceId, (b, c, cm) => new EntityManagerFactory(b, c, cm)]);
 }

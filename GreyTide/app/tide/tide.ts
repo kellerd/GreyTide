@@ -55,9 +55,19 @@ module App.Controllers {
                 item.items.push(this.datacontext.create("Model", { "id": App.Services.GuidGenerator.newGuid(), "name": "--New Item--","currentState":"Startup", "currentDate":new Date(Date.now()).toJSON(), "faction": "--choose faction--", "points": 0 }));
             }
             else {
-                item.items.push(this.datacontext.create("ModelItem", { "name": "--New Item--", "currentState": "Startup", "currentDate": new Date(Date.now()).toJSON(),"points": 0 }));
+                item.items.push(this.datacontext.create("ModelItem", { "name": "--New Item--", "currentState": item.currentState, "currentDate": item.currentDate,"points": 0 }, true));
             }
             this.log("--New Item-- has been added");
+        }
+        removeItem = (item) => {
+            if (item.entityAspect !== undefined) {
+                let index = this.tide.indexOf(item);
+                item.entityAspect.setDeleted();
+                this.tide.splice(index);
+            } else {
+                let index = item.complexAspect.parent.items.indexOf(item);
+                item.complexAspect.parent.items.splice(index);
+            }
         }
         //#endregion
     }

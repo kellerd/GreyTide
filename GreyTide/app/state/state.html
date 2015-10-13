@@ -1,33 +1,20 @@
-﻿<button ng-click="RefreshFromStore()">Restore from default</button>
-
-<section id="state-view" class="mainbar" data-ng-controller="state as vm">
-
-
+﻿<section id="state-view" class="mainbar" data-ng-controller="state as vm">
     <div ng-repeat="stateMachine in vm.states">
-        <p>{{stateMachine.name}}</p>
+        <p editable-text="stateMachine.name">{{stateMachine.name}}</p>
         <ul>
             <li ng-repeat="state in stateMachine.events">
-                <button ng-click="Remove(stateMachine,state)">-</button>
-                <label>Name: <span>{{state.name}}</span></label>
+                <button ng-click="vm.remove(stateMachine, state)">-</button>
+                <label>Name: <span  editable-text="state.name">{{state.name}}</span></label>
                 <ul>
                     <li>
                         <ul>
                             <li ng-repeat="f in state.from">
-                                <label>From: <span>{{f}}</span></label>
+                                <label>From: <span editable-text="f">{{f}}</span></label>
                             </li>
                         </ul>
                     </li>
-                    <li><label>To: <span>{{state.to}}</span></label>    </li>
+                    <li><label>To: <span editable-text="state.to">{{state.to}}</span></label>    </li>
                 </ul>
-            </li>
-            <li>
-                <button ng-click="insertvisible = true" ng-show="!insertvisible">+</button>
-                <span ng-show="insertvisible">
-                    <label>Name<input ng-model="newName" /></label>
-                    <label>From<input ng-model="newFrom" /></label>
-                    <label>To<input ng-model="newTo" /></label>
-                    <button ng-click="insertvisible = false; Insert(stateMachine,newName,newFrom,newTo)">Insert</button>
-                </span>
             </li>
         </ul>
     </div>

@@ -1,11 +1,13 @@
-﻿module App.Services {
+﻿'use strict'
+module App.Services {
 
     export interface IDatacontext {
         getTideAndState(): ng.IPromise<ITideAndState>;
         getTide(): ng.IPromise<any>;
         getStates(): ng.IPromise<any>;
         prime(): void;
-        create(localModelName: string, initialValues?: {}, entityState?: breeze.EntityStateSymbol, mergeStrategy?: breeze.MergeStrategySymbol) : breeze.Entity
+        create(localModelName: string, initialValues?: {}, isComplexType?: boolean, entityState?: breeze.EntityStateSymbol, mergeStrategy?: breeze.MergeStrategySymbol): any
+            
     }
 
     export interface ITideAndState {
@@ -32,7 +34,11 @@
             this.EntityQuery = breeze.EntityQuery;
             this.manager = entityManagerFactory.newManager();
         }
-        create(localModelName: string, initialValues?: {}, entityState?: breeze.EntityStateSymbol, mergeStrategy?: breeze.MergeStrategySymbol): breeze.Entity {
+        create(localModelName: string, initialValues?: {}, isComplexType?: boolean, entityState?: breeze.EntityStateSymbol, mergeStrategy?: breeze.MergeStrategySymbol): any {
+            if (isComplexType) {
+                let type = <breeze.ComplexType>this.manager.manager.metadataStore.getEntityType(localModelName);
+                return type.createInstance(initialValues);
+            }
             return this.manager.manager.createEntity(localModelName, initialValues, entityState, mergeStrategy);
         }
 

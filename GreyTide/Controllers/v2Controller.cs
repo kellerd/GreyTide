@@ -97,7 +97,7 @@ namespace Controllers.V2
                 }
                 else if (item.EntityState == EntityState.Deleted)
                 {
-                    var doc = Client.CreateDocumentQuery(documentCollection.SelfLink).First();
+                    var doc = Client.CreateDocumentQuery(documentCollection.SelfLink).Where(sc=> sc.Id == ((IIdentifyable)(item.Entity)).id.ToString()).ToArray().First();
                     var result =  Client.DeleteDocumentAsync(doc.SelfLink).Result;
                     return new SaveChangesResult { Document = null, StatusCode = result.StatusCode };
                 }
@@ -109,8 +109,8 @@ namespace Controllers.V2
 
             // Construct the save result to inform the client that the server has completed the save operation
             var keyMappings = new List<KeyMapping>();
-            var entitiesList = entities.Select(e => JsonConvert.DeserializeObject(e.Document.ToString(), Type.GetType(e.Document.GetPropertyValue<string>("type")))).Where(e => e != null).Cast<object>().ToList();
-            var errors = entities.Where(result => result.StatusCode != System.Net.HttpStatusCode.Created && result.StatusCode != System.Net.HttpStatusCode.OK).Select(e => e.Document).Cast<object>().ToList();
+            var entitiesList = entities.Select(e => e.Document == null ? e.Document : JsonConvert.DeserializeObject(e.Document.ToString(), Type.GetType(e.Document.GetPropertyValue<string>("type")))).Where(e => e != null).Cast<object>().ToList();
+            var errors = entities.Where(result => result.StatusCode != System.Net.HttpStatusCode.Created && result.StatusCode != System.Net.HttpStatusCode.OK && result.StatusCode != System.Net.HttpStatusCode.NoContent).Select(e => e.Document).Cast<object>().ToList();
 
             return new SaveResult()
             {

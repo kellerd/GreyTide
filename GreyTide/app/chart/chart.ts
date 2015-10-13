@@ -54,7 +54,7 @@ module App.Controllers
                                 "points": u.points,
                                 "currentState": orderedStates[0].name,
                                 "states": [orderedStates[0]]
-                            }, breeze.EntityState.Detached);
+                            }, false, breeze.EntityState.Detached);
                         //Push the object through each state to select next states
                         var states =
                             Enumerable.
