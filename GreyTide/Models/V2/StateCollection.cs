@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 namespace GreyTide.Models.V2
 {
     //"name": "Default", "events": []
-    public class StateCollection : IIdentifyable
+    public class StateCollection : IIdentifyable, ITypeable
     {
         [Key]
         public Guid id { get; set; }

@@ -333,6 +333,7 @@
     <Compile Include="Models\V1\ModelState.cs" />
     <Compile Include="Models\V1\State.cs" />
     <Compile Include="Models\V1\StateCollection.cs" />
+    <Compile Include="Models\V2\ITypeable.cs" />
     <Compile Include="Models\V2\IIdentifyable.cs" />
     <Compile Include="Models\V2\Model.cs" />
     <Compile Include="Models\V2\ModelItem.cs" />

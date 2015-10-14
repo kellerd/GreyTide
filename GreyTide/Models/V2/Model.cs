@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace GreyTide.Models.V2
 {
-    public class Model : ModelItem, IIdentifyable
+    public class Model : ModelItem, IIdentifyable, ITypeable
     {
         [Key]
         public Guid id { get; set; }
