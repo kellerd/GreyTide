@@ -86,13 +86,11 @@ module App.Services {
                             Enumerable.From(_model.states).
                                 Select(function (x: any) { return { name: x.name, active: true, date: x.date }; })
                             ).ToArray();
-                        if (_model.parentEntity != null) {
-                            var p = _model.parentEntity;
-                            if (Enumerable.From(_model.parentEntity.items).Select(function (item: any) { return item.current; }).Distinct().Count() == 1) {
+                        if (_model.complexAspect != null && _model.complexAspect.parent != null) {
+                            var p = _model.complexAspect.parent;
+                            if (Enumerable.From(p.items).Select(function (item: any) { return item.current; }).Distinct().Count() == 1) {
                                 var state: any = Enumerable.From(p.allStates).Where(function (d: any) { return d.active == false && d.name == event; }).FirstOrDefault(null);
-                                if (!(state != null)) {
-                                    state.active = true;
-                                    state.date = new Date().toISOString();
+                                if (state != null) {
                                     p[event].call(p);
                                 }
                             }
@@ -101,9 +99,7 @@ module App.Services {
                             Enumerable.From(_model.items).ForEach(function (p: any) {
                                 if (Enumerable.From(p.transitions()).Contains(event)) {
                                     var state: any = Enumerable.From(p.allStates).Where(function (d: any) { return d.active == false && d.name == event; }).FirstOrDefault(null);
-                                    if (!(state != null)) {
-                                        state.active = true;
-                                        state.date = new Date().toISOString();
+                                    if (state != null) {
                                         p[event].call(p);
                                     }
                                 }
