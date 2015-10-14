@@ -55,7 +55,7 @@ namespace Controllers.V2
         [HttpGet]
         public IQueryable<Model> Models()
         {
-            return GetItems<Model>();
+            return GetItems<Model>().ToArray().AsQueryable().Take(3);
         }
 
         public static IQueryable<T> GetItems<T>() where T : ITypeable
@@ -92,9 +92,13 @@ namespace Controllers.V2
                 }
                 else if (item.EntityState == EntityState.Deleted)
                 {
-                    var doc = Client.CreateDocumentQuery(documentCollection.SelfLink).Where(sc=> sc.Id == ((IIdentifyable)(item.Entity)).id.ToString()).ToArray().First();
-                    var result =  Client.DeleteDocumentAsync(doc.SelfLink).Result;
-                    return new SaveChangesResult { Document = null, StatusCode = result.StatusCode };
+                    var doc = Client.CreateDocumentQuery(documentCollection.SelfLink).Where(sc=> sc.Id == ((IIdentifyable)(item.Entity)).id.ToString()).ToArray().FirstOrDefault();
+                    if (doc != null) {
+                        var result = Client.DeleteDocumentAsync(doc.SelfLink).Result;
+                        return new SaveChangesResult { Document = null, StatusCode = result.StatusCode };
+                    }  else {
+                        return new SaveChangesResult { Document = null, StatusCode = System.Net.HttpStatusCode.NoContent };
+                    }
                 }
                 else
                 {

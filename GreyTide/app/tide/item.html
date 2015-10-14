@@ -11,7 +11,7 @@
         <span editable-number="child.points">{{child.points || 0}}</span> Points
     </li>
     <li>
-        {{child.name}} is currently {{child.current}} as of {{child.currentDate | date : 'short' : '+0430' }}
+        {{child.name}} is currently {{child.current}} as of {{child.currentDate | date : 'short' : '-0500' }}
     </li>
     <li>
         Recede Tide:
@@ -20,8 +20,8 @@
                 <button ng-click="vm.setActive(child, state)">{{state.name}}</button>
             </li>
         </ul>
-        
+
     </li>
     {{ item = child; '' }}
-    <li ng-include="'app/tide/items.html'"></li>
+    <li  ng-if="item.items != undefined" ng-include="'app/tide/items.html'"></li>
 </ul>

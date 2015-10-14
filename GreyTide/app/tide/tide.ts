@@ -63,11 +63,12 @@ module App.Controllers {
             if (item.entityAspect !== undefined) {
                 let index = this.tide.indexOf(item);
                 item.entityAspect.setDeleted();
-                this.tide.splice(index);
+                this.tide.splice(index, 1);
             } else {
-                let index = item.complexAspect.parent.items.indexOf(item);
-                item.complexAspect.parent.items.splice(index);
-                this.datacontext.saveEntity(item.complexAspect.parent);
+                let parent = item.complexAspect.parent;
+                let index = parent.items.indexOf(item);
+                parent.items.splice(index, 1);
+                this.datacontext.saveEntity(parent);
             }
         }
         //#endregion

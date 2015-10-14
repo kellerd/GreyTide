@@ -57,7 +57,7 @@ module App.Services {
 
         }
 
-        public  saveEntity(masterEntity) {
+        public  saveEntity = (masterEntity) => {
 
             return this.manager.manager.saveChanges().catch(saveFailed);
 
