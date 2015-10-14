@@ -4,12 +4,16 @@ module App.Services {
 
 
     export interface IEntityManagerFactory {
-        newManager(): IManagerAndMetaModels
+        newManager(saveEntity:SaveEntityCallback): IManagerAndMetaModels
     }
     export interface IManagerAndMetaModels {
         manager: breeze.EntityManager
         Model: Function
         ModelItem: Function
+    }
+
+    export interface SaveEntityCallback {
+        (masterEntity: any): void;
     }
 
 
@@ -26,7 +30,7 @@ module App.Services {
             this.log = common.logger.log;
             MetadataHelper.FillMetadataStore(this.metadataStore);
         }
-        public newManager(saveEntity: any): IManagerAndMetaModels {
+        public newManager(saveEntity: SaveEntityCallback): IManagerAndMetaModels {
             var dataService = new breeze.DataService({
                 serviceName: this.serviceName,
                 hasServerMetadata: false
@@ -132,7 +136,7 @@ module App.Services {
 
             this.metadataStore.registerEntityTypeCtor('ModelItem', mgr.ModelItem, modelItemInitializer);
         }
-        private configureManagerToSaveModifiedItemImmediately(mgr: breeze.EntityManager, saveEntity: Function) {
+        private configureManagerToSaveModifiedItemImmediately(mgr: breeze.EntityManager, saveEntity:SaveEntityCallback) {
             var _that = this;
             
 
