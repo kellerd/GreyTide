@@ -24,7 +24,7 @@ namespace Controllers.V2
         static v2Controller()
         {
             Uri endpointUri = HardDriveAzureConnectionStr.ConnectionUri;
-            Client = new DocumentClient(endpointUri, HardDriveAzureConnectionStr.ConnectionKey, new ConnectionPolicy() { ConnectionMode = ConnectionMode.Direct, ConnectionProtocol = Protocol.Tcp });
+            Client = new DocumentClient(endpointUri, HardDriveAzureConnectionStr.ConnectionKey, new ConnectionPolicy() { ConnectionProtocol = Protocol.Tcp });
             Database database = Client.CreateDatabaseQuery().Where(db => db.Id == HardDriveAzureConnectionStr.DatabaseId).ToArray().FirstOrDefault();
             if (database == null)
                 database = Client.CreateDatabaseAsync(new Database { Id = HardDriveAzureConnectionStr.DatabaseId }).Result;

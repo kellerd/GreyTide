@@ -4,7 +4,7 @@ module App.Services {
 
 
     export interface IEntityManagerFactory {
-        newManager(saveEntity:SaveEntityCallback): IManagerAndMetaModels
+        newManager(saveEntity: SaveEntityCallback): IManagerAndMetaModels
     }
     export interface IManagerAndMetaModels {
         manager: breeze.EntityManager
@@ -13,7 +13,7 @@ module App.Services {
     }
 
     export interface SaveEntityCallback {
-        (masterEntity: any): void;
+        (masterEntity: any): ng.IPromise<any>;
     }
 
 
@@ -136,41 +136,20 @@ module App.Services {
 
             this.metadataStore.registerEntityTypeCtor('ModelItem', mgr.ModelItem, modelItemInitializer);
         }
-        private configureManagerToSaveModifiedItemImmediately(mgr: breeze.EntityManager, saveEntity:SaveEntityCallback) {
+        private configureManagerToSaveModifiedItemImmediately(mgr: breeze.EntityManager, saveEntity: SaveEntityCallback) {
             var _that = this;
-            
+
 
             mgr.entityChanged.subscribe(function (args) {
-                if (args.entityAction === breeze.EntityAction.PropertyChange) {
-                    _that.common.debouncedThrottle("entityChanges", function () {
-                        if (args.entity.entityAspect.entityState.isAdded() || args.entity.entityAspect.entityState.isModified()) {
-                            var entity = args.entity;
-                            var propArgs: any = args.args;
-                            var propertyName = propArgs.propertyName;
-                            saveEntity(entity);
-                            _that.common.logger.log("Saved item", entity, "", true);
-                            return true;
-                        }
-                    }, 300, false);
-                    return;
-                }
-                if (args.entityAction === breeze.EntityAction.EntityStateChange) {
-                    if (args.entity.entityAspect.entityState.isDeleted()) {
-                        return mgr.saveChanges().catch(function (error) {
-                            _that.log("Error deleting entity", args.entity, "Save changes", true);
-                            // Let them see it "wrong" briefly before reverting"
-                            setTimeout(function () { mgr.rejectChanges(); }, 1000);
-                            throw error; // so caller can see failure
-                        });
-                    }
-                    return;
+                if ((args.entityAction === breeze.EntityAction.PropertyChange && (args.entity.entityAspect.entityState.isAdded() || args.entity.entityAspect.entityState.isModified())) ||
+                    (args.entityAction === breeze.EntityAction.EntityStateChange && args.entity.entityAspect.entityState.isDeleted())) {
+                    let entity = args.entity;
+                    saveEntity(entity).
+                        then(function () { return _that.common.logger.logSuccess("Saved item", entity, "", true); }).
+                        catch(function (reason) { return _that.common.logger.logError("Error saving item", entity, reason, true); });
                 }
             });
-
-
         }
-
-
     }
 
     app.factory(EntityManagerFactory.serviceId,

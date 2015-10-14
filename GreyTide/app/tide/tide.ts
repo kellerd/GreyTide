@@ -60,6 +60,7 @@ module App.Controllers {
             this.log("--New Item-- has been added");
         }
         removeItem = (item) => {
+            let _that = this;
             if (item.entityAspect !== undefined) {
                 let index = this.tide.indexOf(item);
                 item.entityAspect.setDeleted();
@@ -68,7 +69,9 @@ module App.Controllers {
                 let parent = item.complexAspect.parent;
                 let index = parent.items.indexOf(item);
                 parent.items.splice(index, 1);
-                this.datacontext.saveEntity(parent);
+                this.datacontext.saveEntity(parent).
+                    then(function () { return _that.common.logger.logSuccess("Saved item", parent, "", true); }).
+                    catch(function (reason) { return _that.common.logger.logError("Error saving item", parent, reason, true); });;
             }
         }
         //#endregion
