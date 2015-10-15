@@ -69,7 +69,7 @@ module App.Services {
             };
             function handleChangeChildStates(_model, event, from, to) {
                 if (_model.states != undefined) {
-                    var first = Enumerable.From(_model.states).OrderByDescending("$.date").Select("$.name").First();
+                    var first = Enumerable.From(_model.states).OrderByDescending("$.date").Select("$.name").FirstOrDefault("");
                     if (_model.states.length == 0 || first != event) {
 
                         let type = <breeze.ComplexType>mgr.manager.metadataStore.getEntityType("ModelState");
