@@ -7,6 +7,7 @@ module App.Shared {
         $broadcast(event: string, data: any);
         createSearchThrottle(viewmodel: any, list: string, filteredList: string, filter: string, delay: number): Function;
         debouncedThrottle(key: string, callback: Function, delay: number, immediate: boolean): void;
+        queuePromise<T>(key: string, callback: (...args: any[]) => T, delay: number, immediate: boolean): ng.IPromise < T >
         isNumber(val: any): boolean;
         textContains(text: string, searchText: string): boolean
         $q: ng.IQService;
@@ -26,7 +27,7 @@ module App.Shared {
         $rootScope: ng.IRootScopeService;
         $timeout: ng.ITimeoutService;
         $q: ng.IQService;
-       
+        queue: Object;
         //#endregion
 
         constructor($q, $rootScope, $timeout, commonConfig, logger) {
@@ -36,6 +37,7 @@ module App.Shared {
             this.$rootScope = $rootScope;
             this.$timeout = $timeout;
             this.$q = $q;
+            this.queue = $q.when();
         }
 
         //#region public methods
@@ -114,6 +116,20 @@ module App.Shared {
             } else {
                 this.throttles[key] = this.$timeout(callback, delay);
             }
+        }
+
+        public queuePromise = <T> (key: string, callback: (...args: any[]) => T, delay: number, immediate: boolean): ng.IPromise<T> => {
+            if (!this.queue[key]) {
+                this.queue[key] = this.$q.when();
+            }
+            this.queue[key] = (<ng.IPromise<any>>(this.queue[key])).then(function () {
+                if (immediate) {
+                    return callback();
+                } else {
+                    return this.$timeout(callback, delay);
+                }
+            });
+            return this.queue[key];
         }
 
         isNumber(val: any): boolean {

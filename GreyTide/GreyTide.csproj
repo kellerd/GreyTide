@@ -333,6 +333,8 @@
     <Compile Include="Models\V1\ModelState.cs" />
     <Compile Include="Models\V1\State.cs" />
     <Compile Include="Models\V1\StateCollection.cs" />
+    <Compile Include="Models\V2\ITypeable.cs" />
+    <Compile Include="Models\V2\IIdentifyable.cs" />
     <Compile Include="Models\V2\Model.cs" />
     <Compile Include="Models\V2\ModelItem.cs" />
     <Compile Include="Models\V2\ModelState.cs" />
@@ -397,7 +399,7 @@
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptTarget>ES6</TypeScriptTarget>
     <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
     <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
     <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>

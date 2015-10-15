@@ -47,7 +47,33 @@ module App.Controllers {
                 return this.tide = data;
             });
         }
-
+        setActive(item, state) {
+            item[state.name].call(item);
+        }
+        addItem(item) {
+            if (item.items == this.tide) {
+                item.items.push(this.datacontext.create("Model", { "id": App.Services.GuidGenerator.newGuid(), "name": "--New Item--","currentState":"Startup", "currentDate":new Date(Date.now()).toJSON(), "faction": "--choose faction--", "points": 0 }));
+            }
+            else {
+                item.items.push(this.datacontext.create("ModelItem", { "name": "--New Item--", "currentState": item.currentState, "currentDate": item.currentDate,"points": 0 }, true));
+            }
+            this.log("--New Item-- has been added");
+        }
+        removeItem = (item) => {
+            let _that = this;
+            if (item.entityAspect !== undefined) {
+                let index = this.tide.indexOf(item);
+                item.entityAspect.setDeleted();
+                this.tide.splice(index, 1);
+            } else {
+                let parent = item.complexAspect.parent;
+                let index = parent.items.indexOf(item);
+                parent.items.splice(index, 1);
+                this.datacontext.saveEntity(parent).
+                    then(function () { return _that.common.logger.logSuccess("Saved item", parent, "", true); }).
+                    catch(function (reason) { return _that.common.logger.logError("Error saving item", parent, reason, true); });;
+            }
+        }
         //#endregion
     }
 

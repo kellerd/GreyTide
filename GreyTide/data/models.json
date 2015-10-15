@@ -3,7 +3,7 @@
     "id": "dfbbd000-67ba-4347-a7ea-99d9ade66234",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Hive Tyrant",
     "currentState": "Dislike",
     "currentDate": "2015-01-01T12:50:46.822Z",
@@ -72,7 +72,7 @@
         ]
       }
     ],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Hive Tyrant",
     "currentState": "Complete",
     "currentDate": "2015-01-01T23:00:00Z",
@@ -104,7 +104,7 @@
     "id": "32b31f21-1993-4339-bbd8-667c62b7381a",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Tervigon",
     "currentState": "Complete",
     "currentDate": "2015-01-01T23:00:00Z",
@@ -136,7 +136,7 @@
     "id": "2a768ae0-7ba6-4d3f-acd5-8651d45d6cc6",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Venomthrope",
     "currentState": "Prime",
     "currentDate": "2015-01-01T20:00:00Z",
@@ -156,7 +156,7 @@
     "id": "18a495a6-d26f-4227-b68a-58e8d6c43999",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Venomthrope Finecast",
     "currentState": "Prime",
     "currentDate": "2015-05-17T02:16:02.106Z",
@@ -180,11 +180,11 @@
     "id": "39798537-a9c7-4d47-9e46-054ccc0f7aae",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Zoanthrope",
     "currentState": "Prime",
     "currentDate": "2015-01-01T20:00:00Z",
-    "points": 100,
+    "points": 50,
     "states": [
       {
         "name": "Prime",
@@ -245,7 +245,7 @@
         ]
       }
     ],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Zoanthrope",
     "currentState": "Complete",
     "currentDate": "2015-01-01T23:00:00Z",
@@ -277,7 +277,7 @@
     "id": "adf5e368-1988-4339-a697-88580597e793",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Zoanthrope Finecast",
     "currentState": "Prime",
     "currentDate": "2015-04-15T12:52:02.949Z",
@@ -301,7 +301,7 @@
     "id": "73cd563a-f2c6-4e3d-b81e-7db614e2593b",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Hormagaunt",
     "currentState": "Buy New",
     "currentDate": "2015-01-01T12:50:26.086Z",
@@ -321,7 +321,7 @@
     "id": "26d976e4-f737-4343-97f0-809124854ade",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Hormagaunt",
     "currentState": "Complete",
     "currentDate": "2015-01-01T23:00:00Z",
@@ -345,7 +345,7 @@
     "id": "cbc3c838-f6d2-44dc-b5ca-eeb0e2d58465",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Ripper Swarm",
     "currentState": "Complete",
     "currentDate": "2015-01-01T23:00:00Z",
@@ -414,7 +414,7 @@
         ]
       }
     ],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Termagaunt",
     "currentState": "Complete",
     "currentDate": "2015-01-01T23:00:00Z",
@@ -446,7 +446,7 @@
     "id": "2c15951a-600c-4ee6-968d-6eca107a042d",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Termagaunt",
     "currentState": "Complete",
     "currentDate": "2015-01-01T23:00:00Z",
@@ -470,7 +470,7 @@
     "id": "8a335192-b4d7-4938-92b0-7bed0ee86542",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Gargoyle",
     "currentState": "Complete",
     "currentDate": "2015-01-01T23:00:00Z",
@@ -502,7 +502,7 @@
     "id": "8691980a-0288-4980-b170-fdbd93b1d8b6",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Hive Crone",
     "currentState": "Dislike",
     "currentDate": "2015-01-01T12:52:28.375Z",
@@ -526,7 +526,7 @@
     "id": "b75b25e0-3078-47d1-9acf-db0416fc5622",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Biovore",
     "currentState": "Prime",
     "currentDate": "2015-01-01T20:00:00Z",
@@ -546,7 +546,7 @@
     "id": "1c955f9a-db2f-49e1-b071-129843f75f17",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Exocrine",
     "currentState": "Complete",
     "currentDate": "2015-09-12T21:06:00Z",
@@ -639,7 +639,7 @@
         ]
       }
     ],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Mawloc",
     "currentState": "Complete",
     "currentDate": "2015-01-01T23:00:00Z",
@@ -671,7 +671,7 @@
     "id": "51cd55f9-9406-4049-8930-b47d8c84cc63",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Tyrant Guard",
     "currentState": "Dislike",
     "currentDate": "2015-01-01T12:52:52.838Z",
@@ -740,7 +740,7 @@
         ]
       }
     ],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Hive Guard",
     "currentState": "Complete",
     "currentDate": "2015-01-01T23:00:00Z",
@@ -809,7 +809,7 @@
         ]
       }
     ],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Deathleaper",
     "currentState": "Complete",
     "currentDate": "2015-09-12T21:06:00Z",
@@ -841,7 +841,7 @@
     "id": "ef68cfab-2a49-40a8-a7f7-3602774cf460",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Hive Tyrant",
     "currentState": "Complete",
     "currentDate": "2015-01-01T23:00:00Z",
@@ -910,7 +910,7 @@
         ]
       }
     ],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Tyranid Prime",
     "currentState": "Complete",
     "currentDate": "2015-01-01T23:00:00Z",
@@ -987,7 +987,7 @@
         ]
       }
     ],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Lictor",
     "currentState": "Complete",
     "currentDate": "2015-01-01T23:00:00Z",
@@ -1019,7 +1019,7 @@
     "id": "c8eb6286-7fbb-432d-bcd0-7a98619e56fd",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Genestealer",
     "currentState": "Complete",
     "currentDate": "2015-01-01T23:00:00Z",
@@ -1088,7 +1088,7 @@
         ]
       }
     ],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Broodlord",
     "currentState": "Complete",
     "currentDate": "2015-01-01T23:00:00Z",
@@ -1165,7 +1165,7 @@
         ]
       }
     ],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Tyranid Warrior Old",
     "currentState": "Complete",
     "currentDate": "2015-01-01T23:00:00Z",
@@ -1250,7 +1250,7 @@
         ]
       }
     ],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Tyranid Warrior Boneswords",
     "currentState": "Prime",
     "currentDate": "2015-04-10T12:53:48.518Z",
@@ -1274,7 +1274,7 @@
     "id": "88ad4634-72b2-41d0-8554-c2fadbb9c9ac",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Tyranid Warrior Rending Claws",
     "currentState": "Buy Primed",
     "currentDate": "2015-01-01T12:50:26.091Z",
@@ -1294,7 +1294,7 @@
     "id": "6d0b14ce-c81b-48ae-9fb5-b7eb73d2d38c",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Tyranid Warrior New",
     "currentState": "Buy New",
     "currentDate": "2015-01-01T12:50:26.091Z",
@@ -1314,7 +1314,7 @@
     "id": "b2018a56-bc67-4a0e-9697-a7d6dcfacf60",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Carnifex Old",
     "currentState": "Complete",
     "currentDate": "2015-01-01T23:00:00Z",
@@ -1338,7 +1338,7 @@
     "id": "b038fa14-e13d-419d-85e7-38dc38edc98c",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Carnifex VC",
     "currentState": "Dislike",
     "currentDate": "2015-01-01T12:54:15.085Z",
@@ -1362,7 +1362,7 @@
     "id": "9e3f09ca-4f3c-4ff9-bfd3-2f805d55bc5f",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Carnifex CC",
     "currentState": "Dislike",
     "currentDate": "2015-01-01T12:54:19.758Z",
@@ -1386,7 +1386,7 @@
     "id": "8428ab22-d813-4fe7-8b5b-6f536353fdbe",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Carnifex New",
     "currentState": "Buy New",
     "currentDate": "2015-01-01T12:50:26.092Z",
@@ -1406,7 +1406,7 @@
     "id": "e5dc7168-d2f3-4a6e-8b31-17a4ab62498f",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Spawn of Cryptus",
     "currentState": "Prime",
     "currentDate": "2015-04-06T23:00:00Z",
@@ -1426,7 +1426,7 @@
     "id": "5d9aef0c-ebc9-4bf6-8cee-8fe6f95978bb",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Children of Cryptus",
     "currentState": "Prime",
     "currentDate": "2015-05-17T02:16:02.117Z",
@@ -1454,7 +1454,7 @@
     "id": "02dacec4-ea60-4ee3-b213-d70bf4d1655b",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Exocrine",
     "currentState": "Prime",
     "currentDate": "2015-01-01T20:00:00Z",
@@ -1474,7 +1474,7 @@
     "id": "7b47c935-7c44-45a8-b2be-144a556f51e8",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Krom Dragongaze",
     "currentState": "Prime",
     "currentDate": "2015-01-01T20:00:00Z",
@@ -1543,7 +1543,7 @@
         ]
       }
     ],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Njal",
     "currentState": "Complete",
     "currentDate": "2015-09-14T23:20:52.924Z",
@@ -1579,7 +1579,7 @@
     "id": "280b7923-b4fb-4c04-bff8-3c3f793a05fd",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Rune Priest 1",
     "currentState": "Complete",
     "currentDate": "2015-09-14T23:20:52.924Z",
@@ -1615,7 +1615,7 @@
     "id": "8013cc8d-23e8-4d23-8edb-2e43a39a7104",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Rune Priest 2",
     "currentState": "Complete",
     "currentDate": "2015-09-14T23:20:52.924Z",
@@ -1651,7 +1651,7 @@
     "id": "5b43eeeb-be0b-487c-b406-dafd5a453567",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Rune Priest 3",
     "currentState": "Complete",
     "currentDate": "2015-09-14T23:20:52.924Z",
@@ -1687,7 +1687,7 @@
     "id": "3b5883d4-ce89-4701-a163-801129d414c1",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Ulrik",
     "currentState": "Prime",
     "currentDate": "2015-01-01T20:00:00Z",
@@ -1756,7 +1756,7 @@
         ]
       }
     ],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Battle Leader",
     "currentState": "Complete",
     "currentDate": "2015-01-01T23:00:00Z",
@@ -1857,7 +1857,7 @@
         ]
       }
     ],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Wolf Lord on Thunderwolf",
     "currentState": "Prime",
     "currentDate": "2015-04-15T23:00:00Z",
@@ -1877,7 +1877,7 @@
     "id": "b99dda40-8a23-4f1f-840e-9e355ebea7aa",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Wolf Priest on Jump",
     "currentState": "Prime",
     "currentDate": "2015-01-01T20:00:00Z",
@@ -1897,7 +1897,7 @@
     "id": "dd5b831a-e65d-4bdd-a2bb-84925785de33",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Terminators",
     "currentState": "Prime",
     "currentDate": "2015-01-01T20:00:00Z",
@@ -1966,7 +1966,7 @@
         ]
       }
     ],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Terminators",
     "currentState": "Complete",
     "currentDate": "2015-01-01T23:00:00Z",
@@ -2051,7 +2051,7 @@
         ]
       }
     ],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Scouts",
     "currentState": "Complete",
     "currentDate": "2015-01-01T23:00:00Z",
@@ -2087,7 +2087,7 @@
     "id": "e5187d4e-7204-4083-9d6b-9e6dbad5a608",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Blood Claws",
     "currentState": "Prime",
     "currentDate": "2015-01-01T20:00:00Z",
@@ -2140,7 +2140,7 @@
         ]
       }
     ],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Sky Claws 1",
     "currentState": "Prime",
     "currentDate": "2015-01-01T20:00:00Z",
@@ -2197,7 +2197,7 @@
         ]
       }
     ],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Sky Claws 2",
     "currentState": "Prime",
     "currentDate": "2015-01-01T20:00:00Z",
@@ -2221,7 +2221,7 @@
     "id": "0aef645a-4113-4b54-85cd-dae9ab5aceb9",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Grey Hunters 1",
     "currentState": "Prime",
     "currentDate": "2015-01-01T20:00:00Z",
@@ -2241,7 +2241,7 @@
     "id": "d12f2774-5be8-44d1-976a-8d64e24cf1f2",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Grey Hunters 2",
     "currentState": "Prime",
     "currentDate": "2015-01-01T20:00:00Z",
@@ -2261,7 +2261,7 @@
     "id": "847e9408-b847-4f44-9116-7200eea396c0",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Grey Hunters 3",
     "currentState": "Prime",
     "currentDate": "2015-01-01T20:00:00Z",
@@ -2281,7 +2281,7 @@
     "id": "95d19255-f037-45c8-8cc7-d2867438f4b1",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Grey Hunters 4",
     "currentState": "Prime",
     "currentDate": "2015-01-01T20:00:00Z",
@@ -2301,7 +2301,7 @@
     "id": "e33c9462-e25a-4522-b7cf-855d61c73cb1",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Grey Hunters 5",
     "currentState": "Prime",
     "currentDate": "2015-01-01T20:00:00Z",
@@ -2321,7 +2321,7 @@
     "id": "923d7b44-7aa8-4d80-a159-a9252e8a62e0",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Grey Hunters 6",
     "currentState": "Prime",
     "currentDate": "2015-01-01T20:00:00Z",
@@ -2341,7 +2341,7 @@
     "id": "87c8038a-e599-49bb-a9c0-ed3dc929af9a",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Land Speeder",
     "currentState": "Prime",
     "currentDate": "2015-01-01T20:00:00Z",
@@ -2426,7 +2426,7 @@
         ]
       }
     ],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Thunderwolf",
     "currentState": "Prime",
     "currentDate": "2015-04-15T23:00:00Z",
@@ -2495,7 +2495,7 @@
         ]
       }
     ],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Long Fangs 1",
     "currentState": "Complete",
     "currentDate": "2015-01-01T23:00:00Z",
@@ -2531,7 +2531,7 @@
     "id": "d33418ee-d1c0-4aa7-a8ee-e613e68ef51d",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Long Fangs 2",
     "currentState": "Prime",
     "currentDate": "2015-01-01T20:00:00Z",
@@ -2551,7 +2551,7 @@
     "id": "18b46e2f-6522-426d-8a84-9f346aa3f8e9",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Long Fangs 3",
     "currentState": "Prime",
     "currentDate": "2015-01-01T20:00:00Z",
@@ -2571,7 +2571,7 @@
     "id": "99ee5104-99cb-4814-8bb1-88e43f50d53f",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Razorback",
     "currentState": "Complete",
     "currentDate": "2015-01-01T23:00:00Z",
@@ -2607,7 +2607,7 @@
     "id": "ab1b7847-b9d4-4657-a652-d2fdc305a9b3",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Rhino",
     "currentState": "Complete",
     "currentDate": "2015-09-14T23:20:52.924Z",
@@ -2643,7 +2643,7 @@
     "id": "566798ca-6ef1-4892-891c-5af9902fa772",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Rhino",
     "currentState": "Prime",
     "currentDate": "2015-01-01T20:00:00Z",
@@ -2663,7 +2663,7 @@
     "id": "5eb82ddb-43d0-45c5-b148-f5015c6b18d7",
     "faction": "Tyranids",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Toxicrene",
     "currentState": "Prime",
     "currentDate": "2015-03-20T23:00:00Z",
@@ -2683,7 +2683,7 @@
     "id": "c83b5a3a-b265-4491-8068-c04c95973e93",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Stormwolf",
     "currentState": "Prime",
     "currentDate": "2015-03-20T23:00:00Z",
@@ -2703,7 +2703,7 @@
     "id": "48307bd2-71e8-4f22-b22d-02cfcd93ec7b",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Land Raider",
     "currentState": "Buy New",
     "currentDate": "2015-05-13T13:19:48.819Z",
@@ -2723,7 +2723,7 @@
     "id": "06665ed8-e4bd-425b-a0c8-dc8604fb32ca",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Predator",
     "currentState": "Buy New",
     "currentDate": "2015-05-13T13:20:35.527Z",
@@ -2743,7 +2743,7 @@
     "id": "3b42c762-60f9-4441-8ccc-24076fbe10e6",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Dreadnaught",
     "currentState": "Complete",
     "currentDate": "2015-09-14T23:20:52.924Z",
@@ -2787,7 +2787,7 @@
     "id": "4b621902-1688-44b9-81e1-77fcd815a077",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Tac Squad",
     "currentState": "Buy New",
     "currentDate": "2015-05-13T13:21:27.103Z",
@@ -2807,7 +2807,7 @@
     "id": "56f846ad-99e7-44b2-a6e5-04ad0d5f9232",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Terminators",
     "currentState": "Buy New",
     "currentDate": "2015-05-13T13:23:12.549Z",
@@ -2827,7 +2827,7 @@
     "id": "3008febb-57b2-40a8-a712-bc7c93a99ae1",
     "faction": "Space Wolves",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Battle Leader",
     "currentState": "Buy New",
     "currentDate": "2015-05-13T13:24:25.605Z",
@@ -2847,7 +2847,7 @@
     "id": "ca140681-a0e6-4be7-95c7-35fff7b6617d",
     "faction": "Ork",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Warboss",
     "currentState": "Buy New",
     "currentDate": "2015-05-13T13:28:50.032Z",
@@ -2867,7 +2867,7 @@
     "id": "c39eb11c-2803-4fb9-b3c0-9cab3b83b192",
     "faction": "Ork",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Nobs",
     "currentState": "Buy New",
     "currentDate": "2015-05-13T13:28:56.332Z",
@@ -2887,7 +2887,7 @@
     "id": "7ed2ce70-c3dc-4c96-ba81-1ff7f56895dd",
     "faction": "Ork",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Boys",
     "currentState": "Buy New",
     "currentDate": "2015-05-13T13:29:01.491Z",
@@ -2907,7 +2907,7 @@
     "id": "594f50ea-9dd3-40bc-92bb-dfdf9b6f7ef1",
     "faction": "Ork",
     "items": [],
-    "type": "GreyTide.Models.Model",
+    "type": "GreyTide.Models.V2.Model",
     "name": "Deffkoptas",
     "currentState": "Buy New",
     "currentDate": "2015-05-13T13:29:12.592Z",
@@ -2920,6 +2920,103 @@
       {
         "name": "Startup",
         "date": "2015-05-13T13:29:12.591Z"
+      }
+    ]
+  },
+  {
+    "id": "730a445d-ed9c-d3d6-cb52-03838c3a1de3",
+    "faction": "Tyranids",
+    "items": [
+      {
+        "name": "Zoanthrope",
+        "currentState": "Prime",
+        "currentDate": "2015-10-05T02:39:05.727Z",
+        "points": 100,
+        "states": [
+          {
+            "name": "Buy New",
+            "date": "2015-01-15T02:38:15.684Z"
+          },
+          {
+            "name": "Assemble",
+            "date": "2015-10-02T02:39:04.149Z"
+          },
+          {
+            "name": "Prime",
+            "date": "2015-10-05T02:39:05.727Z"
+          }
+        ]
+      },
+      {
+        "name": "Neurothrope",
+        "currentState": "Prime",
+        "currentDate": "2015-10-05T02:39:05.727Z",
+        "points": 75,
+        "states": [
+          {
+            "name": "Buy New",
+            "date": "2015-01-15T02:38:35.909Z"
+          },
+          {
+            "name": "Assemble",
+            "date": "2015-10-02T02:39:04.151Z"
+          },
+          {
+            "name": "Prime",
+            "date": "2015-10-05T02:39:05.727Z"
+          }
+        ]
+      }
+    ],
+    "type": "GreyTide.Models.V2.Model",
+    "name": "Zoanthropes",
+    "currentState": "Prime",
+    "currentDate": "2015-10-05T02:39:05.727Z",
+    "points": 175,
+    "states": [
+      {
+        "name": "Startup",
+        "date": "2015-01-15T02:37:01.068Z"
+      },
+      {
+        "name": "Buy New",
+        "date": "2015-01-15T02:38:12.103Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2015-10-02T02:39:04.147Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2015-10-05T02:39:05.727Z"
+      }
+    ]
+  },
+  {
+    "id": "101e291d-9ce5-13b5-20f0-cc8c35371fe8",
+    "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.V2.Model",
+    "name": "Venomthropes",
+    "currentState": "Prime",
+    "currentDate": "2015-10-05T02:39:50.707Z",
+    "points": 170,
+    "states": [
+      {
+        "name": "Startup",
+        "date": "2015-01-15T02:39:17.342Z"
+      },
+      {
+        "name": "Buy New",
+        "date": "2015-01-15T02:39:48.836Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2015-10-02T02:39:49.78Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2015-10-05T02:39:50.707Z"
       }
     ]
   }

@@ -24,36 +24,28 @@ namespace Controllers.V2
         static v2Controller()
         {
             Uri endpointUri = HardDriveAzureConnectionStr.ConnectionUri;
-            Client = new DocumentClient(endpointUri, HardDriveAzureConnectionStr.ConnectionKey);
+            Client = new DocumentClient(endpointUri, HardDriveAzureConnectionStr.ConnectionKey, new ConnectionPolicy() { ConnectionProtocol = Protocol.Tcp });
             Database database = Client.CreateDatabaseQuery().Where(db => db.Id == HardDriveAzureConnectionStr.DatabaseId).ToArray().FirstOrDefault();
             if (database == null)
-                database = Client.CreateDatabaseAsync(new Database
-                {
-                    Id = HardDriveAzureConnectionStr.DatabaseId
-                }).Result;
+                database = Client.CreateDatabaseAsync(new Database { Id = HardDriveAzureConnectionStr.DatabaseId }).Result;
 
             DocumentCollection documentCollection = Client.CreateDocumentCollectionQuery(database.SelfLink).Where(c => c.Id == HardDriveAzureConnectionStr.UserToken.ToString("N")).AsEnumerable().FirstOrDefault();
-
             if (documentCollection == null)
                 documentCollection = Client.CreateDocumentCollectionAsync(database.SelfLink, new DocumentCollection { Id = HardDriveAzureConnectionStr.UserToken.ToString("N") }).Result;
-            //Init from .json document if empty
-            //Will change to create on account approval/creation
-            var documentState = Client.CreateDocumentQuery<StateCollection>(documentCollection.SelfLink).Where(sc => sc.type == typeof(StateCollection).FullName).AsEnumerable().FirstOrDefault();
-            if (documentState == null)
-                Repo.States.Value.ToList().ForEach(sc =>
-                {
-                    var result = Client.UpsertDocumentAsync(documentCollection.SelfLink, sc).Result;
-                    if (result.StatusCode != System.Net.HttpStatusCode.Created && result.StatusCode != System.Net.HttpStatusCode.Accepted)
-                        throw new Exception($"{sc.name} is not migrated");
-                });
 
-            var documentModel = Client.CreateDocumentQuery<Model>(documentCollection.SelfLink).Where(sc => sc.type == typeof(Model).FullName).AsEnumerable().FirstOrDefault();
+            LoadFromFilesIfTheyDontExist<StateCollection>(documentCollection, Repo.States.Value.ToList());
+            LoadFromFilesIfTheyDontExist<Model>(documentCollection, Repo.Models.Value.ToList());
+        }
+
+        private static void LoadFromFilesIfTheyDontExist<T>(DocumentCollection documentCollection, List<T> listOfValuesIfMissing)
+        {
+            var documentModel = Client.CreateDocumentQuery<Model>(documentCollection.SelfLink).Where(sc => sc.type == typeof(T).FullName).AsEnumerable().FirstOrDefault();
             if (documentModel == null)
-                Repo.Models.Value.ToList().ForEach(sc =>
+                listOfValuesIfMissing.ForEach(sc =>
                 {
                     var result = Client.UpsertDocumentAsync(documentCollection.SelfLink, sc).Result;
                     if (result.StatusCode != System.Net.HttpStatusCode.Created && result.StatusCode != System.Net.HttpStatusCode.OK)
-                        throw new Exception($"{sc.name} is not migrated");
+                        throw new Exception($"List did not migrate");
                 });
         }
 
@@ -63,9 +55,14 @@ namespace Controllers.V2
         [HttpGet]
         public IQueryable<Model> Models()
         {
+            return GetItems<Model>();
+        }
+
+        public static IQueryable<T> GetItems<T>() where T : ITypeable
+        {
             Database database = Client.CreateDatabaseQuery().Where(db => db.Id == HardDriveAzureConnectionStr.DatabaseId).ToArray().FirstOrDefault();
             DocumentCollection documentCollection = Client.CreateDocumentCollectionQuery(database.SelfLink).Where(c => c.Id == HardDriveAzureConnectionStr.UserToken.ToString("N")).ToArray().FirstOrDefault();
-            return Client.CreateDocumentQuery<Model>(documentCollection.SelfLink).Where(sc => sc.type == typeof(Model).FullName);
+            return Client.CreateDocumentQuery<T>(documentCollection.SelfLink).Where(sc => sc.type == typeof(T).FullName);
         }
 
         // ~/tide/v2/States
@@ -73,9 +70,7 @@ namespace Controllers.V2
         [HttpGet]
         public IQueryable<StateCollection> States()
         {
-            Database database = Client.CreateDatabaseQuery().Where(db => db.Id == HardDriveAzureConnectionStr.DatabaseId).ToArray().FirstOrDefault();
-            DocumentCollection documentCollection = Client.CreateDocumentCollectionQuery(database.SelfLink).Where(c => c.Id == HardDriveAzureConnectionStr.UserToken.ToString("N")).ToArray().FirstOrDefault();
-            return Client.CreateDocumentQuery<StateCollection>(documentCollection.SelfLink).Where(sc => sc.type == typeof(StateCollection).FullName);
+            return GetItems<StateCollection>();
         }
 
         // ~/tide/v2/SaveChanges
@@ -97,9 +92,13 @@ namespace Controllers.V2
                 }
                 else if (item.EntityState == EntityState.Deleted)
                 {
-                    var doc = Client.CreateDocumentQuery(documentCollection.SelfLink).First();
-                    var result =  Client.DeleteDocumentAsync(doc.SelfLink).Result;
-                    return new SaveChangesResult { Document = null, StatusCode = result.StatusCode };
+                    var doc = Client.CreateDocumentQuery(documentCollection.SelfLink).Where(sc=> sc.Id == ((IIdentifyable)(item.Entity)).id.ToString()).ToArray().FirstOrDefault();
+                    if (doc != null) {
+                        var result = Client.DeleteDocumentAsync(doc.SelfLink).Result;
+                        return new SaveChangesResult { Document = null, StatusCode = result.StatusCode };
+                    }  else {
+                        return new SaveChangesResult { Document = null, StatusCode = System.Net.HttpStatusCode.NoContent };
+                    }
                 }
                 else
                 {
@@ -109,8 +108,8 @@ namespace Controllers.V2
 
             // Construct the save result to inform the client that the server has completed the save operation
             var keyMappings = new List<KeyMapping>();
-            var entitiesList = entities.Select(e => JsonConvert.DeserializeObject(e.Document.ToString(), Type.GetType(e.Document.GetPropertyValue<string>("type")))).Where(e => e != null).Cast<object>().ToList();
-            var errors = entities.Where(result => result.StatusCode != System.Net.HttpStatusCode.Created && result.StatusCode != System.Net.HttpStatusCode.OK).Select(e => e.Document).Cast<object>().ToList();
+            var entitiesList = entities.Select(e => e.Document == null ? e.Document : JsonConvert.DeserializeObject(e.Document.ToString(), Type.GetType(e.Document.GetPropertyValue<string>("type")))).Where(e => e != null).Cast<object>().ToList();
+            var errors = entities.Where(result => result.StatusCode != System.Net.HttpStatusCode.Created && result.StatusCode != System.Net.HttpStatusCode.OK && result.StatusCode != System.Net.HttpStatusCode.NoContent).Select(e => e.Document).Cast<object>().ToList();
 
             return new SaveResult()
             {

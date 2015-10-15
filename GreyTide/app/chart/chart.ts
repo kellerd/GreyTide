@@ -31,11 +31,9 @@ module App.Controllers
 
 //#region Public Methods
 
-        getLineChart = () => 
-        {
+        getLineChart = () => {
             var dc = this.datacontext;
-            return dc.getTideAndState().then(data =>
-            {
+            return dc.getTideAndState().then(data => {
                 var raw = Enumerable.From(data.tide).
                     SelectMany(function (u) {
 
@@ -47,45 +45,46 @@ module App.Controllers
                                 Select(function (s: any) { return { name: s.name, date: s.date } }).
                                 ToArray();
                         //Init an object with the starting state
-                        var currentObject:any = dc.create("Model",
+                        var currentObject: any = dc.create("Model",
                             {
                                 "id:": App.Services.GuidGenerator.newGuid(),
                                 "name": u.name,
                                 "points": u.points,
                                 "currentState": orderedStates[0].name,
                                 "states": [orderedStates[0]]
-                            }, breeze.EntityState.Detached);
+                            }, false, breeze.EntityState.Detached);
                         //Push the object through each state to select next states
                         var states =
                             Enumerable.
-                            From(orderedStates).
-                            Select(function (s, i) {if (i != 0)
-                                                        currentObject[s.name].call(currentObject);
-                                                    return {
-                                                        points: currentObject.points,
-                                                        date: new Date(s.date),
-                                                        name: currentObject.current
-                                                    }
+                                From(orderedStates).
+                                Select(function (s, i) {
+                                    if (i != 0)
+                                        currentObject[s.name].call(currentObject);
+                                    return {
+                                        points: currentObject.points,
+                                        date: new Date(s.date),
+                                        name: currentObject.current
+                                    }
                                 }).
-                            ToArray();
+                                ToArray();
                         return Enumerable.
-                                From(states).
-                                SelectMany(function (s, idx) {
-                                    return (idx + 1) == states.length ? [s] :
-                                        [s, {
-                                            points: -s.points,
-                                            date: new Date(states[idx + 1].date.valueOf() - 1000),
-                                            name: s.name
-                                        }]
+                            From(states).
+                            SelectMany(function (s, idx) {
+                                return (idx + 1) == states.length ? [s] :
+                                    [s, {
+                                        points: -s.points,
+                                        date: new Date(states[idx + 1].date.valueOf() - 1000),
+                                        name: s.name
+                                    }]
                             });
-                        });
+                    });
 
-                var statesOrder = Enumerable.From(data.states[0].events).ToDictionary("$.to",null);
+                var statesOrder = Enumerable.From(data.states[0].events).ToDictionary("$.to", null);
 
                 var dateUnion = raw.GroupBy(
                     function (s) { return new Date(s.date).setHours(0, 0, 0, 0); },
                     null,
-                    function (key, d) { return { points: 0, date: key }});
+                    function (key, d) { return { points: 0, date: key } });
 
                 var groups = raw.GroupBy(
                     (m: any) => { return m.name; },
