@@ -19,9 +19,9 @@ module App.Directives {
 
     class TideChart {
 
-        constructor(private config: IConfigurations) {
+        constructor(private config: IConfigurations, private common:App.Shared.ICommon, private directiveId:string) {
         }
-        protected static initChart = (chart, svgSelector: string, chartdata:() => ng.IPromise<any[]>) => {
+        protected initChart = (chart, svgSelector: string, chartdata:() => ng.IPromise<any[]>) => {
             chartdata().then(data => {
                 var updateSize = () => {
                     var width = nv.utils.windowSize().width - 220,
@@ -36,7 +36,7 @@ module App.Directives {
                 d3.select(svgSelector).datum(data).call(chart);
                 updateSize();
                 nv.utils.windowResize(updateSize);
-            });
+            }).catch((error) => { this.common.logger.logError(error, null, this.directiveId, true) });
         }
     }
 
@@ -44,8 +44,8 @@ module App.Directives {
         static directiveId: string = 'chartbar';
         restrict: string = "A";
 
-        constructor(config: IConfigurations) {
-            super(config);
+        constructor(config: IConfigurations, common: App.Shared.ICommon) {
+            super(config, common, ChartBar.directiveId);
         }
 
         link = (scope: IChartScope, el, attrs) => {
@@ -55,7 +55,7 @@ module App.Directives {
                     var chart;
                     chart = nv.models.multiBarChart();
                     chart.yAxis.tickFormat(d3.format(',.0f'));
-                    TideChart.initChart(chart, svgSelector, scope.vm.getBarChart);
+                    this.initChart(chart, svgSelector, scope.vm.getBarChart);
                     return chart;
                 });
             });
@@ -65,8 +65,8 @@ module App.Directives {
         static directiveId: string = 'chartline';
         restrict: string = "A";
 
-        constructor(config: IConfigurations) {
-            super(config);
+        constructor(config: IConfigurations, common:App.Shared.ICommon) {
+            super(config, common, ChartLine.directiveId);
         }
 
         link = (scope: IChartScope, el, attrs) => {
@@ -90,7 +90,7 @@ module App.Directives {
                         tickFormat(function (d) {
                             return d3.format(',.0f')(d);
                         });
-                    TideChart.initChart(chart, svgSelector, scope.vm.getLineChart);
+                    this.initChart(chart, svgSelector, scope.vm.getLineChart);
                     return chart;
                 });
             });
@@ -98,6 +98,6 @@ module App.Directives {
     }
 
     // Register in angular app
-    app.directive(ChartBar.directiveId, ['config', c => new ChartBar(c)]);
-    app.directive(ChartLine.directiveId, ['config', c => new ChartLine(c)]);
+    app.directive(ChartBar.directiveId, ['config', 'common', (c,cm) => new ChartBar(c,cm)]);
+    app.directive(ChartLine.directiveId, ['config', 'common', (c, cm) => new ChartLine(c,cm)]);
 }
