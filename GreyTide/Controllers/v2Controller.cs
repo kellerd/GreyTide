@@ -55,7 +55,7 @@ namespace Controllers.V2
         [HttpGet]
         public IQueryable<Model> Models()
         {
-            return GetItems<Model>().ToArray().AsQueryable().Take(3);
+            return GetItems<Model>();
         }
 
         public static IQueryable<T> GetItems<T>() where T : ITypeable
