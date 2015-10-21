@@ -19,9 +19,8 @@ module App {
     ]);
     
     // Handle routing errors and success events
-    app.run(['$route', 'datacontext', 'editableOptions', function ($route, datacontext: App.Services.IDatacontext, editableOptions) {
+    app.run(['$route', 'editableOptions', function ($route, editableOptions) {
         // Include $route to kick start the router.
-        datacontext.prime();
         editableOptions.theme = 'bs3';
     }]);
 

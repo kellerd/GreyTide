@@ -15,14 +15,35 @@ module App {
 
 
     export class RouteConfigurator {
-        constructor($routeProvider: ng.route.IRouteProvider, routes, $locationProvider:ng.ILocationProvider) {
+        constructor($routeProvider: ng.route.IRouteProvider, routes) {
+            //#region testing
+            // Learning Point:
+            // If we are testing, we do NOT want to se the routes. 
+            // We did this to prevent the route changes from happening during tests
+            if ((<any>window).testing) return;
+            // some tests fail if this is EVER executed during ANY test in the run
+            //#endregion
             routes.forEach(r => {
-                $routeProvider.when(r.url, r.config);
+                setRoute(r.url, r.config);
             });
             $routeProvider.otherwise({ redirectTo: '/' });
+            function setRoute(url, definition) {
+                // Sets resolvers for all of the routes
+                // 1. Anything you need to do prior to going to a new route
+                // 2. Any logic that might prevent the new route ($q.reject)
+                definition.resolve = angular.extend(definition.resolve || {}, {
+                    prime: prime //Learning Point: do not prime as a test
+                });
+                $routeProvider.when(url, definition);
+
+                return $routeProvider;
+            }
         }
 
     }
+    // prime the core data for the app
+    prime.$inject = ['datacontext'];
+    function prime(dc:App.Services.IDatacontext) { return dc.prime(); }
 
     // Define the routes - since this goes right to an app.constant, no use for a class
     // Could make it a static property of the RouteConfigurator class
@@ -70,9 +91,9 @@ module App {
 
     // Configure the routes and route resolvers
     app.config([
-        '$routeProvider', 'routes','$locationProvider',
-        ($routeProvider, routes, $locationProvider) =>
-            new RouteConfigurator($routeProvider, routes, $locationProvider)
+        '$routeProvider', 'routes',
+        ($routeProvider, routes) =>
+            new RouteConfigurator($routeProvider, routes)
     ]);
 
 }
