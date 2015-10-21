@@ -23,8 +23,6 @@ module App.Services {
         serviceName: string;
         log: (message: string, data?: any, source?: string, showToast?: boolean) => void;
         constructor(private breeze, private config, private common: App.Shared.ICommon) {
-            this.setNamingConventionToCamelCase();
-            this.preventValidateOnAttach();
             this.metadataStore = new breeze.MetadataStore();
             this.serviceName = config.remoteServiceName;
             this.log = common.logger.log;
@@ -50,14 +48,7 @@ module App.Services {
             return mgrAndModel;
         }
 
-        private setNamingConventionToCamelCase(): void {
-            // Convert server - side PascalCase to client - side camelCase property names
-            breeze.NamingConvention.none.setAsDefault();
-        }
 
-        private preventValidateOnAttach() {
-            new breeze.ValidationOptions({ validateOnAttach: false }).setAsDefault();
-        }
         private configureConstructors(mgr: IManagerAndMetaModels) {
             var _that = this;
             mgr.Model.prototype = {
@@ -152,3 +143,5 @@ module App.Services {
     app.factory(EntityManagerFactory.serviceId,
         ['breeze', 'config', App.Shared.Common.serviceId, (b, c, cm) => new EntityManagerFactory(b, c, cm)]);
 }
+
+

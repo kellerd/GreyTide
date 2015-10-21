@@ -354,6 +354,7 @@
     <TypeScriptCompile Include="app\common\commonModule.ts" />
     <TypeScriptCompile Include="app\common\logger.ts" />
     <TypeScriptCompile Include="app\common\spinner.ts" />
+    <TypeScriptCompile Include="app\config.breeze.ts" />
     <TypeScriptCompile Include="app\config.exceptionHandler.ts" />
     <TypeScriptCompile Include="app\config.route.ts" />
     <TypeScriptCompile Include="app\config.ts" />
