@@ -123,7 +123,6 @@
     <Content Include="app\layout\widgetheader.html" />
     <TypeScriptCompile Include="app\wip\wip.ts" />
     <Content Include="app\wip\wip.html" />
-    <Content Include="app\wip\wip.js" />
     <Content Include="app\wip\wipwidget.html" />
     <Content Include="content\bootstrap-theme.css" />
     <Content Include="content\bootstrap-theme.min.css" />

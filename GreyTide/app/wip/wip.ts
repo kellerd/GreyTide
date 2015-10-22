@@ -3,53 +3,47 @@ module App.Controllers {
     export class Wip {
         public static controllerId: string = 'wip';
 
+        predicate = '';
+        reverse = false;
+        title = 'Work In Progress';
+        wip = [];
+        isDeleting: boolean;
+
         constructor(private $scope, private $location, private bsDialog, private common, private config, private datacontext) {
-            var vm = this;
-
-            vm.cancelAllWip = cancelAllWip;
-            vm.gotoWip = gotoWip;
-            vm.predicate = '';
-            vm.reverse = false;
-            vm.setSort = setSort;
-            vm.title = 'Work in Progress';
-            vm.wip = [];
-
             activate();
 
             function activate() {
-                common.activateController([getWipSummary()], controllerId);
+                common.activateController([getWipSummary()], Wip.controllerId);
 
                 $scope.$on(config.events.storage.wipChanged, function (event, data) {
-                    vm.wip = data;
+                    this.wip = data;
                 });
             }
 
-            function cancelAllWip() {
-                vm.isDeleting = true;
+            function getWipSummary() { this.wip = datacontext.zStorageWip.getWipSummary(); }
 
-                return bsDialog.deleteDialog('Work in Progress')
-                    .then(confirmDelete, cancelDelete);
+           
+        }
+        gotoWip(wipData) {
+            this.$location.path('/' + wipData.routeState + '/' + wipData.key);
+        }
+        cancelAllWip() {
+            this.isDeleting = true;
 
-                function cancelDelete() { vm.isDeleting = false; }
+            return this.bsDialog.deleteDialog('Work in Progress')
+                .then(confirmDelete, cancelDelete);
 
-                function confirmDelete() {
-                    datacontext.zStorageWip.clearAllWip();
-                    vm.isDeleting = false;
-                }
-            }
+            function cancelDelete() { this.isDeleting = false; }
 
-            function getWipSummary() { vm.wip = datacontext.zStorageWip.getWipSummary(); }
-
-            function gotoWip(wipData) {
-                $location.path('/' + wipData.routeState + '/' + wipData.key);
-            }
-
-            function setSort(prop) {
-                vm.predicate = prop;
-                vm.reverse = !vm.reverse;
+            function confirmDelete() {
+                this.datacontext.zStorageWip.clearAllWip();
+                this.isDeleting = false;
             }
         }
-        public wip = [];
+        setSort(prop) {
+            this.predicate = prop;
+            this.reverse = !this.reverse;
+        }
     }
 
 
@@ -59,15 +53,3 @@ module App.Controllers {
             ($scope, $location, bsDialog, common, config, datacontext) => new App.Controllers.Wip($scope, $location, bsDialog, common, config, datacontext)
     ]);
 }
-
-
-(function () {
-    'use strict';
-    
-    var controllerId = ;
-    angular.module('app').controller(controllerId,
-        ['$scope', '$location',
-            'bootstrap.dialog', 'common', 'config', 'datacontext', wip]);
-
-    
-})();
