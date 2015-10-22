@@ -121,6 +121,10 @@
     <Content Include="app\layout\sidebar.html" />
     <Content Include="app\layout\topnav.html" />
     <Content Include="app\layout\widgetheader.html" />
+    <TypeScriptCompile Include="app\wip\wip.ts" />
+    <Content Include="app\wip\wip.html" />
+    <Content Include="app\wip\wip.js" />
+    <Content Include="app\wip\wipwidget.html" />
     <Content Include="content\bootstrap-theme.css" />
     <Content Include="content\bootstrap-theme.min.css" />
     <Content Include="content\bootstrap.css" />
@@ -248,6 +252,7 @@
     <Content Include="scripts\angular-route.min.js" />
     <Content Include="scripts\angular-sanitize.js" />
     <Content Include="scripts\angular-sanitize.min.js" />
+    <Content Include="scripts\angular.breeze.storagewip.js" />
     <Content Include="scripts\angular.js" />
     <Content Include="scripts\angular.min.js" />
     <Content Include="scripts\bootstrap.js" />

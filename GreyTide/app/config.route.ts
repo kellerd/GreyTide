@@ -75,11 +75,21 @@ module App {
                 title: 'chart',
                 url: '/chart',
                 settings: {
-                    nav: 4,
+                    nav: 3,
                     content: '<i class="fa fa-lock"></i> Chart'
                 },
                 config: {
                     templateUrl: 'app/chart/chart.html'                  
+                }
+            }, {
+                title: 'workinprogress',
+                url: '/workinprogress',
+                settings: {
+                    nav: 4,
+                    content: '<i class="fa fa-asterisk"></i> Work In Progress'
+                },
+                config: {
+                    templateUrl: 'app/wip/wip.html'
                 }
             }
 
