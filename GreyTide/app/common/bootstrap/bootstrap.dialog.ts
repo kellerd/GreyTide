@@ -1,13 +1,13 @@
 ﻿'use strict';
 module App.Shared
 {
-    interface IBootstrapDialog
+    export interface IBootstrapDialog
     {
         deleteDialog(itemName:string)
         confirmationDialog(title: string, msg: string, okText?: string, cancelText?: string)
     }
 
-    interface IModalOptions
+    export interface IModalOptions
     {
         title: string;
         message: string;
@@ -15,7 +15,7 @@ module App.Shared
         cancelText: string;
     }
 
-    interface IModalScope extends ng.IScope
+    export interface IModalScope extends ng.IScope
     {
         title: string;
         message: string;
@@ -25,7 +25,7 @@ module App.Shared
         cancel:()=>void;
     }
 
-    class BootstrapDialog implements IBootstrapDialog
+    export class BootstrapDialog implements IBootstrapDialog
     {
         public static serviceId: string = 'bootstrap.dialog';
 

@@ -42,8 +42,6 @@ module App.Services {
                 Model: function Model() { },
                 ModelItem: function ModelItem() { }
             };
-
-            this.configureManagerToSaveModifiedItemImmediately(mgrAndModel.manager, saveEntity);
             this.configureConstructors(mgrAndModel);
             return mgrAndModel;
         }
@@ -123,20 +121,6 @@ module App.Services {
             };
 
             this.metadataStore.registerEntityTypeCtor('ModelItem', mgr.ModelItem, modelItemInitializer);
-        }
-        private configureManagerToSaveModifiedItemImmediately(mgr: breeze.EntityManager, saveEntity: SaveEntityCallback) {
-            var _that = this;
-
-
-            mgr.entityChanged.subscribe(function (args) {
-                if ((args.entityAction === breeze.EntityAction.PropertyChange && (args.entity.entityAspect.entityState.isAdded() || args.entity.entityAspect.entityState.isModified())) ||
-                    (args.entityAction === breeze.EntityAction.EntityStateChange && args.entity.entityAspect.entityState.isDeleted())) {
-                    let entity = args.entity;
-                    saveEntity(entity).
-                        then(function () { return _that.common.logger.logSuccess("Saved item", entity, "", true); }).
-                        catch(function (reason) { return _that.common.logger.logError("Error saving item", entity, reason, true); });
-                }
-            });
         }
     }
 

@@ -9,21 +9,22 @@ module App.Controllers {
         wip = [];
         isDeleting: boolean;
 
-        constructor(private $scope, private $location, private bsDialog, private common, private config, private datacontext) {
+        constructor(private $scope: ng.IScope, private $location: ng.ILocationService, private bsDialog: App.Shared.IBootstrapDialog, private common: App.Shared.ICommon, private config: App.IConfigurations, private datacontext:App.Services.Datacontext) {
             activate();
 
             function activate() {
-                common.activateController([getWipSummary()], Wip.controllerId);
+                common.activateController([this.getWipSummary()], Wip.controllerId);
 
                 $scope.$on(config.events.storage.wipChanged, function (event, data) {
                     this.wip = data;
                 });
             }
 
-            function getWipSummary() { this.wip = datacontext.zStorageWip.getWipSummary(); }
+            
 
            
         }
+        private getWipSummary() { return this.common.$q.when(this.datacontext.zStorageWip.getWipSummary()).then((data) => { this.wip = data); }
         gotoWip(wipData) {
             this.$location.path('/' + wipData.routeState + '/' + wipData.key);
         }

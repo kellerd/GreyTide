@@ -11,7 +11,7 @@ module App.Controllers {
         tide: Array<any> = [];
         orderProp: string;
         //#endregion
-        constructor(common: App.Shared.ICommon, datacontext: App.Services.IDatacontext, private $scope) {
+        constructor(common: App.Shared.ICommon, datacontext: App.Services.IDatacontext, private $scope:ng.IScope) {
             this.common = common;
             this.datacontext = datacontext;
             this.log = common.logger.log;
@@ -22,24 +22,61 @@ module App.Controllers {
 
         // TODO: is there a more elegant way of activating the controller - base class?
         activate(promises: Array<ng.IPromise<any>>) {
+            this.onDestroy();
+            this.onHasChanges();
             this.common.activateController(promises, this.controllerId)
-                .then(() => { this.log('Activated Tide View'); });
+                .then(() => { this.log('Activated Tide View'); })
+                .then(this.onEveryChange);
         }
+
+        onEveryChange() {
+            this.$scope.$on(this.common.commonConfig.events.entitiesChanged, (event, data) => { this.autoStoreWip(data,false); });
+        }
+
+        onDestroy() {
+            this.$scope.$on('$destroy', () => {
+                this.autoStoreWip(null,true);
+                this.datacontext.cancel();
+            });
+        }
+
+        hasChanges = false;
+        onHasChanges() {
+            this.$scope.$on(this.common.commonConfig.events.hasChangesChanged,
+                (event, data) => { this.hasChanges = data.hasChanges; });
+        }
+
+        autoStoreWip(data, immediate: boolean) {
+            let _that = this;
+            let entity = data.entity;
+            this.datacontext.saveEntity(entity).
+                then(function () { return _that.common.logger.logSuccess("Saved item", entity, "", true); }).
+                catch(function (reason) { return _that.common.logger.logError("Error saving item", entity, reason, true); });
+            //common.debouncedThrottle(controllerId, storeWipEntity, 1000, immediate);
+        }
+
+
+
+
+
+
+
         criteriaMatch = (item) => {
             var strCheck = (str) => {
-                return (this.$scope.query1 == undefined || (str && str.indexOf(this.$scope.query1) > -1)) && (this.$scope.query2 == undefined || (str && str.indexOf(this.$scope.query2) > -1));
+                return ((<any>this.$scope).query1 == undefined || (str && str.indexOf((<any>this.$scope).query1) > -1)) && ((<any>this.$scope).query2 == undefined || (str && str.indexOf((<any>this.$scope).query2) > -1));
             }
             return item.parent ||
                 (
-                    (this.$scope.query5 || item.current != "Completed") &&
+                    ((<any>this.$scope).query5 || item.current != "Completed") &&
                     (strCheck(item.name) || strCheck(item.faction) || strCheck((item.points | 0).toString())) &&
-                    (!this.$scope.query3 || item.current.indexOf(this.$scope.query3) > -1)
+                    (!(<any>this.$scope).query3 || item.current.indexOf((<any>this.$scope).query3) > -1)
                 );
         };
+
         //#region Public Methods
         getStates() {
             return this.datacontext.getStates().then((data: any) => {
-                return this.$scope.query3data = data[0].events.map((s) => s.to).filter(function (item, i, ar) { return ar.indexOf(item) === i; }).sort();
+                return (<any>this.$scope).query3data = data[0].events.map((s) => s.to).filter(function (item, i, ar) { return ar.indexOf(item) === i; }).sort();
             });
         }
         getTide() {

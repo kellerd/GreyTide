@@ -10,12 +10,15 @@ module App {
     // Custom modules 
         'common',           // common functions, logger, spinner
         'common.bootstrap', // bootstrap dialog wrapper functions
-
+        'environment',      // the environment we are running in
+        
     // 3rd Party Modules
         'breeze.angular',    // configures breeze for an angular app
         'breeze.directives', // contains the breeze validation directive (zValidate)
         'ui.bootstrap',       // ui-bootstrap (ex: carousel, pagination, dialog)
-        'xeditable'         //editable items in tide
+        'xeditable',         //editable items in tide
+        'ngplus',           // ngplus utilities
+        'ngzWip'            // zStorage and zStorageWip
     ]);
     
     // Handle routing errors and success events
