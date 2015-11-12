@@ -89,7 +89,7 @@ module App.Controllers {
         }
         addItem(item) {
             if (item.items == this.tide) {
-                item.items.push(this.datacontext.create("Model", { "id": App.Services.GuidGenerator.newGuid(), "name": "--New Item--","currentState":"Startup", "currentDate":new Date(Date.now()).toJSON(), "faction": "--choose faction--", "points": 0 }));
+                item.items.push(this.datacontext.create("Model", { "id": breeze.core.getUuid(), "name": "--New Item--","currentState":"Startup", "currentDate":new Date(Date.now()).toJSON(), "faction": "--choose faction--", "points": 0 }));
             }
             else {
                 item.items.push(this.datacontext.create("ModelItem", { "name": "--New Item--", "currentState": item.currentState, "currentDate": item.currentDate,"points": 0 }, true));

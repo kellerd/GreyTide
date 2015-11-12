@@ -122,6 +122,7 @@
     <Content Include="app\layout\topnav.html" />
     <Content Include="app\layout\widgetheader.html" />
     <TypeScriptCompile Include="app\directives\cc-wip.ts" />
+    <TypeScriptCompile Include="app\services\model.ts" />
     <TypeScriptCompile Include="app\wip\wip.ts" />
     <Content Include="app\wip\wip.html" />
     <Content Include="app\wip\wipwidget.html" />
@@ -240,10 +241,10 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="index.html" />
     <Content Include="app\chart\chart.html" />
     <Content Include="app\tide\item.html" />
     <Content Include="app\tide\items.html" />
+    <Content Include="index.html" />
     <Content Include="packages.config" />
     <Content Include="scripts\angular-animate.js" />
     <Content Include="scripts\angular-animate.min.js" />
@@ -376,7 +377,6 @@
     <TypeScriptCompile Include="app\layout\sidebarCtrl.ts" />
     <TypeScriptCompile Include="app\services\entityManagerFactory.ts" />
     <TypeScriptCompile Include="app\services\entityMetadata.ts" />
-    <TypeScriptCompile Include="app\services\guid.ts" />
     <TypeScriptCompile Include="app\services\datacontext.ts" />
     <TypeScriptCompile Include="app\state\state.ts" />
     <TypeScriptCompile Include="app\tide\tide.ts" />

@@ -24,7 +24,7 @@ module App.Controllers {
 
            
         }
-        private getWipSummary() { return this.common.$q.when(this.datacontext.zStorageWip.getWipSummary()).then((data) => { this.wip = data); }
+        private getWipSummary() { return this.common.$q.when(this.datacontext.zStorageWip.getWipSummary()).then((data) => { this.wip = data; }) }
         gotoWip(wipData) {
             this.$location.path('/' + wipData.routeState + '/' + wipData.key);
         }

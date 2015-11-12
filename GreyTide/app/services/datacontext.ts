@@ -23,9 +23,9 @@ module App.Services {
 
         private logger: App.Shared.ILogger;
         private EntityQuery: typeof breeze.EntityQuery;
-        private manager: IManagerAndMetaModels;
+        private manager: breeze.EntityManager;
 
-        constructor(private $injector: ng.auto.IInjectorService, private $rootScope: ng.IRootScopeService, private common: App.Shared.ICommon, entityManagerFactory: IEntityManagerFactory, private config: IConfigurations, private zStorage, public zStorageWip) {
+        constructor(private $injector: ng.auto.IInjectorService, private $rootScope: ng.IRootScopeService, private common: App.Shared.ICommon, entityManagerFactory: IEntityManagerFactory, private config: IConfigurations, private model:App.Services.Model,private zStorage, public zStorageWip) {
             this.$q = common.$q;
             this.logger = common.logger;
             this.EntityQuery = breeze.EntityQuery;
@@ -34,10 +34,10 @@ module App.Services {
         }
         create(localModelName: string, initialValues?: {}, isComplexType?: boolean, entityState?: breeze.EntityStateSymbol, mergeStrategy?: breeze.MergeStrategySymbol): any {
             if (isComplexType) {
-                let type = <breeze.ComplexType>this.manager.manager.metadataStore.getEntityType(localModelName);
+                let type = <breeze.ComplexType>this.manager.metadataStore.getEntityType(localModelName);
                 return type.createInstance(initialValues);
             }
-            return this.manager.manager.createEntity(localModelName, initialValues, entityState, mergeStrategy);
+            return this.manager.createEntity(localModelName, initialValues, entityState, mergeStrategy);
         }
 
         getTide(): ng.IPromise<any> {
@@ -49,15 +49,15 @@ module App.Services {
                 return tide;
             }
             return this.EntityQuery.from("Models")
-                .using(this.manager.manager).execute()
+                .using(this.manager).execute()
                 .then(getSucceeded)
                 .catch(this.getFailed);
 
         }
 
         cancel() {
-            if (this.manager.manager.hasChanges()) {
-                this.manager.manager.rejectChanges();
+            if (this.manager.hasChanges()) {
+                this.manager.rejectChanges();
                 this.logger.logSuccess('Canceled changes', null, Datacontext.serviceId, true);
             }
         }
@@ -75,13 +75,13 @@ module App.Services {
         saveEntity = (masterEntity) => {
             var _that = this;
             return _that.common.queuePromise("entityChanges", function () {
-                return _that.manager.manager.saveChanges().catch(saveFailed);
+                return _that.manager.saveChanges().catch(saveFailed);
             }, 0, true);
 
             function saveFailed(error) {
                 setErrorMessage(error);
                 // Let them see it "wrong" briefly before reverting"
-                setTimeout(function () { _that.manager.manager.rejectChanges(); }, 1000);
+                setTimeout(function () { _that.manager.rejectChanges(); }, 1000);
                 throw error; // so caller can see failure
             }
 
@@ -133,7 +133,7 @@ module App.Services {
                 return states;
             }
             return this.EntityQuery.from("States")
-                .using(this.manager.manager).execute()
+                .using(this.manager).execute()
                 .then(getSucceeded)
                 .catch(this.getFailed);
 
@@ -145,7 +145,7 @@ module App.Services {
         }
 
         private primePromise: ng.IPromise<any>;
-        public prime(): ng.IPromise<any> {
+        public prime = (): ng.IPromise<any> => {
             // There are many paths through here, all must return a promise.
 
             // This function can only be called once.
@@ -161,7 +161,7 @@ module App.Services {
             this.primePromise = promise.then(success);
             return this.primePromise;
 
-            function loadLookupsFromRemote() {
+            var loadLookupsFromRemote = () => {
                 // get lookups and speakers from remote data source, in parallel
                 var promise = this.$q.all([getStatesAndProcess(), this.getTide()]);
                 //if (!model.useManualMetadata) {
@@ -189,12 +189,12 @@ module App.Services {
                         }
                     });
                     StateMachine.create({
-                        target: this.manager.Model.prototype,
+                        target: this.model.Model.prototype,
                         initial: { state: 'None', event: 'init', defer: true },
                         events: events
                     });
                     StateMachine.create({
-                        target: this.manager.ModelItem.prototype,
+                        target: this.model.ModelItem.prototype,
                         initial: { state: 'None', event: 'init', defer: true },
                         events: events
                     });
@@ -275,7 +275,7 @@ module App.Services {
 
         private setupEventForEntitiesChanged() {
             // We use this for detecting changes of any kind so we can save them to local storage
-            this.manager.manager.entityChanged.subscribe((args) => {
+            this.manager.entityChanged.subscribe((args) => {
                 if ((args.entityAction === breeze.EntityAction.PropertyChange && (args.entity.entityAspect.entityState.isAdded() || args.entity.entityAspect.entityState.isModified())) ||
                     (args.entityAction === breeze.EntityAction.EntityStateChange && args.entity.entityAspect.entityState.isDeleted())) {
                     this.interceptPropertyChange(args);
@@ -296,7 +296,7 @@ module App.Services {
         }
 
         private setupEventForHasChangesChanged() {
-            this.manager.manager.hasChangesChanged.subscribe((eventArgs) => {
+            this.manager.hasChangesChanged.subscribe((eventArgs) => {
                 var data = { hasChanges: eventArgs.hasChanges };
                 this.common.$broadcast(this.config.events.hasChangesChanged, data);
             });
@@ -305,6 +305,6 @@ module App.Services {
     }
 
     // Register with angular
-    app.factory(Datacontext.serviceId, ['$injector', '$rootScope', 'common', EntityManagerFactory.serviceId, 'config', 'zStorage', 'zStorageWip', (injector, rootScope, common, entityManagerFactory, config, zStorage, zStorageWip) => new Datacontext(injector, rootScope, common, entityManagerFactory, config, zStorage, zStorageWip)]);
+    app.factory(Datacontext.serviceId, ['$injector', '$rootScope', 'common', EntityManagerFactory.serviceId, 'config', Model.serviceId, 'zStorage', 'zStorageWip', (injector, rootScope, common, entityManagerFactory, config, m, zStorage, zStorageWip) => new Datacontext(injector, rootScope, common, entityManagerFactory, config, m, zStorage, zStorageWip)]);
 
 }

@@ -47,7 +47,7 @@ module App.Controllers
                         //Init an object with the starting state
                         var currentObject: any = dc.create("Model",
                             {
-                                "id:": App.Services.GuidGenerator.newGuid(),
+                                "id:": breeze.core.getUuid(),
                                 "name": u.name,
                                 "points": u.points,
                                 "currentState": orderedStates[0].name,

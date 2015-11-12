@@ -17,7 +17,6 @@ module App {
         'breeze.directives', // contains the breeze validation directive (zValidate)
         'ui.bootstrap',       // ui-bootstrap (ex: carousel, pagination, dialog)
         'xeditable',         //editable items in tide
-        'ngplus',           // ngplus utilities
         'ngzWip'            // zStorage and zStorageWip
     ]);
     
