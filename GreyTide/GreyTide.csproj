@@ -326,7 +326,6 @@
     <Compile Include="Controllers\SaveChangesResult.cs" />
     <Compile Include="Controllers\v2Controller.cs" />
     <Compile Include="Controllers\v1Controller.cs" />
-    <Compile Include="data\AzureConStr.cs" />
     <Compile Include="data\SaveBundleToSaveMap.cs" />
     <Compile Include="Models\V1\FromState.cs" />
     <Compile Include="Models\V1\Model.cs" />

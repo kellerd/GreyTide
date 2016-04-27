@@ -157,3 +157,4 @@ $RECYCLE.BIN/
 /packages/
 /GreyTide/app/*.js
 /GreyTide/app/*.js.map
+/GreyTide/app

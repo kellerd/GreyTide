@@ -13,6 +13,7 @@ using GreyTide;
 using GreyTide.Controllers;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Configuration;
 
 namespace Controllers.V2
 {
@@ -23,15 +24,15 @@ namespace Controllers.V2
 
         static v2Controller()
         {
-            Uri endpointUri = HardDriveAzureConnectionStr.ConnectionUri;
-            Client = new DocumentClient(endpointUri, HardDriveAzureConnectionStr.ConnectionKey, new ConnectionPolicy() { ConnectionProtocol = Protocol.Tcp });
-            Database database = Client.CreateDatabaseQuery().Where(db => db.Id == HardDriveAzureConnectionStr.DatabaseId).ToArray().FirstOrDefault();
+            Uri endpointUri =new Uri( ConfigurationManager.AppSettings["ConnectionUri"]);
+            Client = new DocumentClient(endpointUri, ConfigurationManager.AppSettings["ConnectionKey"], new ConnectionPolicy() { ConnectionProtocol = Protocol.Tcp });
+            Database database = Client.CreateDatabaseQuery().Where(db => db.Id == ConfigurationManager.AppSettings["DatabaseId"]).ToArray().FirstOrDefault();
             if (database == null)
-                database = Client.CreateDatabaseAsync(new Database { Id = HardDriveAzureConnectionStr.DatabaseId }).Result;
+                database = Client.CreateDatabaseAsync(new Database { Id = ConfigurationManager.AppSettings["DatabaseId"] }).Result;
 
-            DocumentCollection documentCollection = Client.CreateDocumentCollectionQuery(database.SelfLink).Where(c => c.Id == HardDriveAzureConnectionStr.UserToken.ToString("N")).AsEnumerable().FirstOrDefault();
+            DocumentCollection documentCollection = Client.CreateDocumentCollectionQuery(database.SelfLink).Where(c => c.Id == new Guid(ConfigurationManager.AppSettings["UserToken"]).ToString("N")).AsEnumerable().FirstOrDefault();
             if (documentCollection == null)
-                documentCollection = Client.CreateDocumentCollectionAsync(database.SelfLink, new DocumentCollection { Id = HardDriveAzureConnectionStr.UserToken.ToString("N") }).Result;
+                documentCollection = Client.CreateDocumentCollectionAsync(database.SelfLink, new DocumentCollection { Id = new Guid(ConfigurationManager.AppSettings["UserToken"]).ToString("N") }).Result;
 
             LoadFromFilesIfTheyDontExist<StateCollection>(documentCollection, Repo.States.Value.ToList());
             LoadFromFilesIfTheyDontExist<Model>(documentCollection, Repo.Models.Value.ToList());
@@ -60,8 +61,8 @@ namespace Controllers.V2
 
         public static IQueryable<T> GetItems<T>() where T : ITypeable
         {
-            Database database = Client.CreateDatabaseQuery().Where(db => db.Id == HardDriveAzureConnectionStr.DatabaseId).ToArray().FirstOrDefault();
-            DocumentCollection documentCollection = Client.CreateDocumentCollectionQuery(database.SelfLink).Where(c => c.Id == HardDriveAzureConnectionStr.UserToken.ToString("N")).ToArray().FirstOrDefault();
+            Database database = Client.CreateDatabaseQuery().Where(db => db.Id == ConfigurationManager.AppSettings["DatabaseId"]).ToArray().FirstOrDefault();
+            DocumentCollection documentCollection = Client.CreateDocumentCollectionQuery(database.SelfLink).Where(c => c.Id == new Guid(ConfigurationManager.AppSettings["UserToken"]).ToString("N")).ToArray().FirstOrDefault();
             return Client.CreateDocumentQuery<T>(documentCollection.SelfLink).Where(sc => sc.type == typeof(T).FullName);
         }
 
@@ -79,8 +80,8 @@ namespace Controllers.V2
         {
             var entityInfo = SaveBundleToSaveMap.Convert(saveBundle);
             var saveOptions = SaveBundleToSaveMap.ExtractSaveOptions(saveBundle);
-            Database database = Client.CreateDatabaseQuery().Where(db => db.Id == HardDriveAzureConnectionStr.DatabaseId).ToArray().FirstOrDefault();
-            DocumentCollection documentCollection = Client.CreateDocumentCollectionQuery(database.SelfLink).Where(c => c.Id == HardDriveAzureConnectionStr.UserToken.ToString("N")).ToArray().FirstOrDefault();
+            Database database = Client.CreateDatabaseQuery().Where(db => db.Id == ConfigurationManager.AppSettings["DatabaseId"]).ToArray().FirstOrDefault();
+            DocumentCollection documentCollection = Client.CreateDocumentCollectionQuery(database.SelfLink).Where(c => c.Id == new Guid(ConfigurationManager.AppSettings["UserToken"]).ToString("N")).ToArray().FirstOrDefault();
 
             //Store in azure
             var entities =  entityInfo.SelectMany(f => f.Value).Select( item =>
