@@ -85,8 +85,10 @@ namespace Controllers.V2
         {
             var entityInfo = SaveBundleToSaveMap.Convert(saveBundle);
             var saveOptions = SaveBundleToSaveMap.ExtractSaveOptions(saveBundle);
-            Database database = Client.CreateDatabaseQuery().Where(db => db.Id == ConfigurationManager.AppSettings["DatabaseId"]).ToArray().FirstOrDefault();
-            DocumentCollection documentCollection = Client.CreateDocumentCollectionQuery(database.SelfLink).Where(c => c.Id == new Guid(ConfigurationManager.AppSettings["UserToken"]).ToString("N")).ToArray().FirstOrDefault();
+            string databaseId = ConfigurationManager.AppSettings["DatabaseId"];
+            Database database = Client.CreateDatabaseQuery().Where(db => db.Id == databaseId).ToArray().FirstOrDefault();
+            string userToken = new Guid(ConfigurationManager.AppSettings["UserToken"]).ToString("N");
+            DocumentCollection documentCollection = Client.CreateDocumentCollectionQuery(database.SelfLink).Where(c => c.Id == userToken).ToArray().FirstOrDefault();
 
             //Store in azure
             var entities =  entityInfo.SelectMany(f => f.Value).Select( item =>
