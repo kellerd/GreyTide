@@ -25,19 +25,22 @@ namespace Controllers.V2
         static v2Controller()
         {
             Uri endpointUri =new Uri( ConfigurationManager.AppSettings["ConnectionUri"]);
-            Client = new DocumentClient(endpointUri, ConfigurationManager.AppSettings["ConnectionKey"], new ConnectionPolicy() { ConnectionProtocol = Protocol.Tcp });
-            Database database = Client.CreateDatabaseQuery().Where(db => db.Id == ConfigurationManager.AppSettings["DatabaseId"]).ToArray().FirstOrDefault();
-            if (database == null)
-                database = Client.CreateDatabaseAsync(new Database { Id = ConfigurationManager.AppSettings["DatabaseId"] }).Result;
+            string connectionKey = ConfigurationManager.AppSettings["ConnectionKey"];
+            string databaseId = ConfigurationManager.AppSettings["DatabaseId"];
+            string userToken = new Guid(ConfigurationManager.AppSettings["UserToken"]).ToString("N");
 
-            DocumentCollection documentCollection = Client.CreateDocumentCollectionQuery(database.SelfLink).Where(c => c.Id == new Guid(ConfigurationManager.AppSettings["UserToken"]).ToString("N")).AsEnumerable().FirstOrDefault();
+            Client = new DocumentClient(endpointUri, connectionKey, new ConnectionPolicy() { ConnectionProtocol = Protocol.Tcp });
+            Database database = Client.CreateDatabaseQuery().Where(db => db.Id == databaseId).ToArray().FirstOrDefault();
+            if (database == null)
+                database = Client.CreateDatabaseAsync(new Database { Id = databaseId }).Result;
+            DocumentCollection documentCollection = Client.CreateDocumentCollectionQuery(database.SelfLink).Where(c => c.Id == userToken).AsEnumerable().FirstOrDefault();
             if (documentCollection == null)
-                documentCollection = Client.CreateDocumentCollectionAsync(database.SelfLink, new DocumentCollection { Id = new Guid(ConfigurationManager.AppSettings["UserToken"]).ToString("N") }).Result;
+                documentCollection = Client.CreateDocumentCollectionAsync(database.SelfLink, new DocumentCollection { Id = userToken }).Result;
 
             LoadFromFilesIfTheyDontExist<StateCollection>(documentCollection, Repo.States.Value.ToList());
             LoadFromFilesIfTheyDontExist<Model>(documentCollection, Repo.Models.Value.ToList());
         }
-
+        public v2Controller() { }
         private static void LoadFromFilesIfTheyDontExist<T>(DocumentCollection documentCollection, List<T> listOfValuesIfMissing)
         {
             var documentModel = Client.CreateDocumentQuery<Model>(documentCollection.SelfLink).Where(sc => sc.type == typeof(T).FullName).AsEnumerable().FirstOrDefault();
@@ -61,8 +64,10 @@ namespace Controllers.V2
 
         public static IQueryable<T> GetItems<T>() where T : ITypeable
         {
-            Database database = Client.CreateDatabaseQuery().Where(db => db.Id == ConfigurationManager.AppSettings["DatabaseId"]).ToArray().FirstOrDefault();
-            DocumentCollection documentCollection = Client.CreateDocumentCollectionQuery(database.SelfLink).Where(c => c.Id == new Guid(ConfigurationManager.AppSettings["UserToken"]).ToString("N")).ToArray().FirstOrDefault();
+            string databaseId = ConfigurationManager.AppSettings["DatabaseId"];
+            Database database = Client.CreateDatabaseQuery().Where(db => db.Id == databaseId).ToArray().FirstOrDefault();
+            string userToken = new Guid(ConfigurationManager.AppSettings["UserToken"]).ToString("N");
+            DocumentCollection documentCollection = Client.CreateDocumentCollectionQuery(database.SelfLink).Where(c => c.Id == userToken).ToArray().FirstOrDefault();
             return Client.CreateDocumentQuery<T>(documentCollection.SelfLink).Where(sc => sc.type == typeof(T).FullName);
         }
 
