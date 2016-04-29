@@ -281,6 +281,8 @@
     <Content Include="scripts\angular-animate.min.js.map" />
     <Content Include="scripts\angular-route.min.js.map" />
     <Content Include="scripts\angular-sanitize.min.js.map" />
+    <None Include="Properties\PublishProfiles\GreyTide - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\GreyTide - Web Deploy.pubxml" />
     <None Include="scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="scripts\jquery-2.1.4.js" />
     <Content Include="scripts\jquery-2.1.4.min.js" />
