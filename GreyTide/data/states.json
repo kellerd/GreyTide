@@ -188,6 +188,11 @@
         "to": "Nothing"
       }
     ],
-    "Type": "GreyTide.Models.StateCollection"
+    "type": "GreyTide.Models.V2.StateCollection",
+    "_rid": "n9wIAJNqDQABAAAAAAAAAA==",
+    "_ts": 1444876354,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQABAAAAAAAAAA==/",
+    "_etag": "00006004-0000-0000-0000-561f10420000",
+    "_attachments": "attachments/"
   }
 ]

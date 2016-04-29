@@ -12,6 +12,12 @@
     </li>
     <li>
         {{child.name}} is currently {{child.current}} as of {{child.currentDate | date : 'short' : '-0500' }}
+        <a ng-click="detailedStates = !detailedStates">Show Detailed</a>
+        <ul ng-show="detailedStates" id="detailedStates">
+            <li ng-repeat="state in child.states">
+                {{state.name}} as of <span editable-datetime="state.date" data-format="yyyy-mm-dd hh" data-viewformat="yyyy-mm-ddThh:iiZ">{{state.date}}</span>
+            </li>
+        </ul>
     </li>
     <li>
         Recede Tide:
@@ -23,5 +29,5 @@
 
     </li>
     {{ item = child; '' }}
-    <li  ng-if="item.items != undefined" ng-include="'app/tide/items.html'"></li>
+    <li ng-if="item.items != undefined" ng-include="'app/tide/items.html'"></li>
 </ul>

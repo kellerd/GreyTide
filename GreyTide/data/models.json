@@ -1,5 +1,5 @@
 ﻿[
-  {
+   {
     "id": "dfbbd000-67ba-4347-a7ea-99d9ade66234",
     "faction": "Tyranids",
     "items": [],
@@ -21,7 +21,12 @@
         "name": "Startup",
         "date": "2015-01-01T12:49:20.789Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQACAAAAAAAAAA==",
+    "_ts": 1444876354,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQACAAAAAAAAAA==/",
+    "_etag": "\"00006104-0000-0000-0000-561f10420000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "cf64c22e-e823-4ebc-990e-de6dc699fe1f",
@@ -98,7 +103,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQADAAAAAAAAAA==",
+    "_ts": 1444876354,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQADAAAAAAAAAA==/",
+    "_etag": "\"00006204-0000-0000-0000-561f10420000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "32b31f21-1993-4339-bbd8-667c62b7381a",
@@ -130,7 +140,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAEAAAAAAAAAA==",
+    "_ts": 1444876354,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAEAAAAAAAAAA==/",
+    "_etag": "\"00006304-0000-0000-0000-561f10420000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "2a768ae0-7ba6-4d3f-acd5-8651d45d6cc6",
@@ -150,7 +165,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAFAAAAAAAAAA==",
+    "_ts": 1444876355,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAFAAAAAAAAAA==/",
+    "_etag": "\"00006404-0000-0000-0000-561f10430000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "18a495a6-d26f-4227-b68a-58e8d6c43999",
@@ -174,7 +194,12 @@
         "name": "Buy New",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAGAAAAAAAAAA==",
+    "_ts": 1444876355,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAGAAAAAAAAAA==/",
+    "_etag": "\"00006504-0000-0000-0000-561f10430000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "39798537-a9c7-4d47-9e46-054ccc0f7aae",
@@ -194,7 +219,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAHAAAAAAAAAA==",
+    "_ts": 1444876355,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAHAAAAAAAAAA==/",
+    "_etag": "\"00006604-0000-0000-0000-561f10430000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "4270e09b-5007-4744-b4a4-4e8c8169da7c",
@@ -271,7 +301,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAIAAAAAAAAAA==",
+    "_ts": 1444876355,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAIAAAAAAAAAA==/",
+    "_etag": "\"00006704-0000-0000-0000-561f10430000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "adf5e368-1988-4339-a697-88580597e793",
@@ -295,7 +330,12 @@
         "name": "Startup",
         "date": "2015-01-01T12:49:20.793Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAJAAAAAAAAAA==",
+    "_ts": 1444876355,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAJAAAAAAAAAA==/",
+    "_etag": "\"00006804-0000-0000-0000-561f10430000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "73cd563a-f2c6-4e3d-b81e-7db614e2593b",
@@ -315,7 +355,12 @@
         "name": "Startup",
         "date": "2015-01-01T12:49:20.793Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAKAAAAAAAAAA==",
+    "_ts": 1444876355,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAKAAAAAAAAAA==/",
+    "_etag": "\"00006904-0000-0000-0000-561f10430000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "26d976e4-f737-4343-97f0-809124854ade",
@@ -339,7 +384,12 @@
         "name": "Paint",
         "date": "2015-01-01T21:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQALAAAAAAAAAA==",
+    "_ts": 1444876355,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQALAAAAAAAAAA==/",
+    "_etag": "\"00006a04-0000-0000-0000-561f10430000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "cbc3c838-f6d2-44dc-b5ca-eeb0e2d58465",
@@ -363,7 +413,12 @@
         "name": "Paint",
         "date": "2015-01-01T21:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAMAAAAAAAAAA==",
+    "_ts": 1444876355,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAMAAAAAAAAAA==/",
+    "_etag": "\"00006b04-0000-0000-0000-561f10430000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "9a8acb9a-6b44-4463-b3d2-ce123589011b",
@@ -440,7 +495,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQANAAAAAAAAAA==",
+    "_ts": 1444876356,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQANAAAAAAAAAA==/",
+    "_etag": "\"00006c04-0000-0000-0000-561f10440000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "2c15951a-600c-4ee6-968d-6eca107a042d",
@@ -464,7 +524,12 @@
         "name": "Paint",
         "date": "2015-01-01T21:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAOAAAAAAAAAA==",
+    "_ts": 1444876356,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAOAAAAAAAAAA==/",
+    "_etag": "\"00006d04-0000-0000-0000-561f10440000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "8a335192-b4d7-4938-92b0-7bed0ee86542",
@@ -496,7 +561,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAPAAAAAAAAAA==",
+    "_ts": 1444876356,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAPAAAAAAAAAA==/",
+    "_etag": "\"00006e04-0000-0000-0000-561f10440000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "8691980a-0288-4980-b170-fdbd93b1d8b6",
@@ -520,7 +590,12 @@
         "name": "Startup",
         "date": "2015-01-01T12:49:20.794Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAQAAAAAAAAAA==",
+    "_ts": 1444876356,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAQAAAAAAAAAA==/",
+    "_etag": "\"00006f04-0000-0000-0000-561f10440000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "b75b25e0-3078-47d1-9acf-db0416fc5622",
@@ -540,7 +615,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQARAAAAAAAAAA==",
+    "_ts": 1444876356,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQARAAAAAAAAAA==/",
+    "_etag": "\"00007004-0000-0000-0000-561f10440000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "1c955f9a-db2f-49e1-b071-129843f75f17",
@@ -588,7 +668,12 @@
         "name": "Startup",
         "date": "2015-01-01T12:49:20.794Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQASAAAAAAAAAA==",
+    "_ts": 1444876356,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQASAAAAAAAAAA==/",
+    "_etag": "\"00007104-0000-0000-0000-561f10440000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "83945504-0f12-47ae-9e79-3f7c268658d0",
@@ -665,7 +750,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQATAAAAAAAAAA==",
+    "_ts": 1444876356,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQATAAAAAAAAAA==/",
+    "_etag": "\"00007204-0000-0000-0000-561f10440000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "51cd55f9-9406-4049-8930-b47d8c84cc63",
@@ -689,7 +779,12 @@
         "name": "Startup",
         "date": "2015-01-01T12:49:20.794Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAUAAAAAAAAAA==",
+    "_ts": 1444876357,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAUAAAAAAAAAA==/",
+    "_etag": "\"00007304-0000-0000-0000-561f10450000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "bd02bcef-ab23-44c5-884a-940e67c9ac33",
@@ -766,7 +861,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAVAAAAAAAAAA==",
+    "_ts": 1444876357,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAVAAAAAAAAAA==/",
+    "_etag": "\"00007404-0000-0000-0000-561f10450000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "828c2347-3224-4bed-939a-3ee535b43ddd",
@@ -835,7 +935,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAWAAAAAAAAAA==",
+    "_ts": 1444876357,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAWAAAAAAAAAA==/",
+    "_etag": "\"00007504-0000-0000-0000-561f10450000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "ef68cfab-2a49-40a8-a7f7-3602774cf460",
@@ -859,7 +964,12 @@
         "name": "Paint",
         "date": "2015-01-01T21:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAXAAAAAAAAAA==",
+    "_ts": 1444876357,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAXAAAAAAAAAA==/",
+    "_etag": "\"00007604-0000-0000-0000-561f10450000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "0180a770-e5a4-4787-bd5f-5569b5dd1ba6",
@@ -936,7 +1046,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAYAAAAAAAAAA==",
+    "_ts": 1444876357,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAYAAAAAAAAAA==/",
+    "_etag": "\"00007704-0000-0000-0000-561f10450000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "71112d14-605e-467b-bfa0-0ca8bfc29c68",
@@ -1013,7 +1128,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAZAAAAAAAAAA==",
+    "_ts": 1444876357,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAZAAAAAAAAAA==/",
+    "_etag": "\"00007804-0000-0000-0000-561f10450000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "c8eb6286-7fbb-432d-bcd0-7a98619e56fd",
@@ -1037,7 +1157,12 @@
         "name": "Paint",
         "date": "2015-01-01T21:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAaAAAAAAAAAA==",
+    "_ts": 1444876358,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAaAAAAAAAAAA==/",
+    "_etag": "\"00007904-0000-0000-0000-561f10460000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "2b8b206e-c955-40e6-a402-2f4821ee9d4f",
@@ -1114,7 +1239,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAbAAAAAAAAAA==",
+    "_ts": 1444876358,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAbAAAAAAAAAA==/",
+    "_etag": "\"00007a04-0000-0000-0000-561f10460000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "e323b29f-f1a6-4d5a-b0b4-4b4d539412ce",
@@ -1191,7 +1321,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAcAAAAAAAAAA==",
+    "_ts": 1444876358,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAcAAAAAAAAAA==/",
+    "_etag": "\"00007b04-0000-0000-0000-561f10460000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "f9b353fc-3a78-47c9-a02b-beae44a5fa94",
@@ -1231,8 +1366,8 @@
       },
       {
         "name": "Base",
-        "currentState": "Prime",
-        "currentDate": "2015-04-10T12:53:48.518Z",
+        "currentState": "Complete",
+        "currentDate": "2015-12-16T03:11:41.02Z",
         "points": 0,
         "states": [
           {
@@ -1246,14 +1381,18 @@
           {
             "name": "Startup",
             "date": "2015-01-01T12:49:20.796Z"
+          },
+          {
+            "name": "Complete",
+            "date": "2015-12-16T03:11:41.02Z"
           }
         ]
       }
     ],
     "type": "GreyTide.Models.V2.Model",
     "name": "Tyranid Warrior Boneswords",
-    "currentState": "Prime",
-    "currentDate": "2015-04-10T12:53:48.518Z",
+    "currentState": "Complete",
+    "currentDate": "2015-12-16T03:11:41.022Z",
     "points": 150,
     "states": [
       {
@@ -1267,13 +1406,51 @@
       {
         "name": "Startup",
         "date": "2015-01-01T12:49:20.796Z"
+      },
+      {
+        "name": "Complete",
+        "date": "2015-12-16T03:11:41.022Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAdAAAAAAAAAA==",
+    "_ts": 1450235512,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAdAAAAAAAAAA==/",
+    "_etag": "\"0000010d-0000-0000-0000-5670d6780000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "88ad4634-72b2-41d0-8554-c2fadbb9c9ac",
     "faction": "Tyranids",
-    "items": [],
+    "items": [
+      {
+        "name": "Model",
+        "currentState": "Buy Primed",
+        "currentDate": "2015-12-16T03:12:10.407Z",
+        "points": 0,
+        "states": [
+          {
+            "name": "Buy Primed",
+            "date": "2015-12-16T03:12:10.407Z"
+          }
+        ]
+      },
+      {
+        "name": "Base",
+        "currentState": "Complete",
+        "currentDate": "2015-12-16T03:12:28.133Z",
+        "points": 0,
+        "states": [
+          {
+            "name": "Buy Primed",
+            "date": "2015-12-16T03:12:20.116Z"
+          },
+          {
+            "name": "Complete",
+            "date": "2015-12-16T03:12:28.133Z"
+          }
+        ]
+      }
+    ],
     "type": "GreyTide.Models.V2.Model",
     "name": "Tyranid Warrior Rending Claws",
     "currentState": "Buy Primed",
@@ -1288,7 +1465,12 @@
         "name": "Startup",
         "date": "2015-01-01T12:49:20.796Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAeAAAAAAAAAA==",
+    "_ts": 1450235559,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAeAAAAAAAAAA==/",
+    "_etag": "\"0000040d-0000-0000-0000-5670d6a70000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "6d0b14ce-c81b-48ae-9fb5-b7eb73d2d38c",
@@ -1308,7 +1490,12 @@
         "name": "Startup",
         "date": "2015-01-01T12:49:20.796Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAfAAAAAAAAAA==",
+    "_ts": 1444876359,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAfAAAAAAAAAA==/",
+    "_etag": "\"00007e04-0000-0000-0000-561f10470000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "b2018a56-bc67-4a0e-9697-a7d6dcfacf60",
@@ -1332,7 +1519,12 @@
         "name": "Paint",
         "date": "2015-01-01T21:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAgAAAAAAAAAA==",
+    "_ts": 1444876359,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAgAAAAAAAAAA==/",
+    "_etag": "\"00007f04-0000-0000-0000-561f10470000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "b038fa14-e13d-419d-85e7-38dc38edc98c",
@@ -1356,7 +1548,12 @@
         "name": "Startup",
         "date": "2015-01-01T12:49:20.797Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAhAAAAAAAAAA==",
+    "_ts": 1444876359,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAhAAAAAAAAAA==/",
+    "_etag": "\"00008004-0000-0000-0000-561f10470000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "9e3f09ca-4f3c-4ff9-bfd3-2f805d55bc5f",
@@ -1380,7 +1577,12 @@
         "name": "Startup",
         "date": "2015-01-01T12:49:20.797Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAiAAAAAAAAAA==",
+    "_ts": 1444876359,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAiAAAAAAAAAA==/",
+    "_etag": "\"00008104-0000-0000-0000-561f10470000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "8428ab22-d813-4fe7-8b5b-6f536353fdbe",
@@ -1400,7 +1602,12 @@
         "name": "Startup",
         "date": "2015-01-01T12:49:20.797Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAjAAAAAAAAAA==",
+    "_ts": 1444876359,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAjAAAAAAAAAA==/",
+    "_etag": "\"00008204-0000-0000-0000-561f10470000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "e5dc7168-d2f3-4a6e-8b31-17a4ab62498f",
@@ -1420,7 +1627,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAkAAAAAAAAAA==",
+    "_ts": 1444876359,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAkAAAAAAAAAA==/",
+    "_etag": "\"00008304-0000-0000-0000-561f10470000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "5d9aef0c-ebc9-4bf6-8cee-8fe6f95978bb",
@@ -1448,7 +1660,12 @@
         "name": "Startup",
         "date": "2015-01-01T12:49:20.797Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAlAAAAAAAAAA==",
+    "_ts": 1444876359,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAlAAAAAAAAAA==/",
+    "_etag": "\"00008404-0000-0000-0000-561f10470000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "02dacec4-ea60-4ee3-b213-d70bf4d1655b",
@@ -1468,7 +1685,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAmAAAAAAAAAA==",
+    "_ts": 1444876360,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAmAAAAAAAAAA==/",
+    "_etag": "\"00008504-0000-0000-0000-561f10480000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "7b47c935-7c44-45a8-b2be-144a556f51e8",
@@ -1488,7 +1710,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAnAAAAAAAAAA==",
+    "_ts": 1444876360,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAnAAAAAAAAAA==/",
+    "_etag": "\"00008604-0000-0000-0000-561f10480000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "23e411e5-74da-4184-aeae-de896569cc75",
@@ -1573,7 +1800,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAoAAAAAAAAAA==",
+    "_ts": 1444876360,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAoAAAAAAAAAA==/",
+    "_etag": "\"00008704-0000-0000-0000-561f10480000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "280b7923-b4fb-4c04-bff8-3c3f793a05fd",
@@ -1609,7 +1841,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQApAAAAAAAAAA==",
+    "_ts": 1444876360,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQApAAAAAAAAAA==/",
+    "_etag": "\"00008804-0000-0000-0000-561f10480000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "8013cc8d-23e8-4d23-8edb-2e43a39a7104",
@@ -1645,7 +1882,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAqAAAAAAAAAA==",
+    "_ts": 1444876360,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAqAAAAAAAAAA==/",
+    "_etag": "\"00008904-0000-0000-0000-561f10480000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "5b43eeeb-be0b-487c-b406-dafd5a453567",
@@ -1681,7 +1923,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQArAAAAAAAAAA==",
+    "_ts": 1444876360,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQArAAAAAAAAAA==/",
+    "_etag": "\"00008a04-0000-0000-0000-561f10480000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "3b5883d4-ce89-4701-a163-801129d414c1",
@@ -1701,7 +1948,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAsAAAAAAAAAA==",
+    "_ts": 1444876360,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAsAAAAAAAAAA==/",
+    "_etag": "\"00008b04-0000-0000-0000-561f10480000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "f70ce5f7-0235-4b74-8b47-531ffd4714b3",
@@ -1786,7 +2038,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAtAAAAAAAAAA==",
+    "_ts": 1444876361,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAtAAAAAAAAAA==/",
+    "_etag": "\"00008c04-0000-0000-0000-561f10490000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "b1ec2d0c-9baf-4d39-bedb-497a4e4c478a",
@@ -1871,7 +2128,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAuAAAAAAAAAA==",
+    "_ts": 1444876361,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAuAAAAAAAAAA==/",
+    "_etag": "\"00008d04-0000-0000-0000-561f10490000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "b99dda40-8a23-4f1f-840e-9e355ebea7aa",
@@ -1891,7 +2153,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAvAAAAAAAAAA==",
+    "_ts": 1444876361,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAvAAAAAAAAAA==/",
+    "_etag": "\"00008e04-0000-0000-0000-561f10490000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "dd5b831a-e65d-4bdd-a2bb-84925785de33",
@@ -1911,7 +2178,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAwAAAAAAAAAA==",
+    "_ts": 1444876361,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAwAAAAAAAAAA==/",
+    "_etag": "\"00008f04-0000-0000-0000-561f10490000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "be2a99d4-28be-4284-9dfb-427885398d29",
@@ -1996,7 +2268,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAxAAAAAAAAAA==",
+    "_ts": 1444876361,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAxAAAAAAAAAA==/",
+    "_etag": "\"00009004-0000-0000-0000-561f10490000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "ede33a63-d53c-48ac-b2b4-f33aa57a7ef9",
@@ -2081,7 +2358,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAyAAAAAAAAAA==",
+    "_ts": 1444876361,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAyAAAAAAAAAA==/",
+    "_etag": "\"00009104-0000-0000-0000-561f10490000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "e5187d4e-7204-4083-9d6b-9e6dbad5a608",
@@ -2101,7 +2383,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQAzAAAAAAAAAA==",
+    "_ts": 1444876361,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAzAAAAAAAAAA==/",
+    "_etag": "\"00009204-0000-0000-0000-561f10490000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "21e721fd-f092-41fa-932e-2d7fd2f18d0a",
@@ -2109,8 +2396,8 @@
     "items": [
       {
         "name": "Model",
-        "currentState": "Paint",
-        "currentDate": "2015-09-29T20:00:00Z",
+        "currentState": "Weather",
+        "currentDate": "2015-12-17T04:03:30.704Z",
         "points": 135,
         "states": [
           {
@@ -2124,26 +2411,38 @@
           {
             "name": "Assemble",
             "date": "2015-01-01T19:00:00Z"
+          },
+          {
+            "name": "Weather",
+            "date": "2015-12-17T04:03:30.704Z"
           }
         ]
       },
       {
         "name": "Base",
-        "currentState": "Startup",
-        "currentDate": "2015-01-01T12:49:20.789Z",
+        "currentState": "Assemble",
+        "currentDate": "2015-11-28T20:45:26.084Z",
         "points": 0,
         "states": [
           {
             "name": "Startup",
             "date": "2015-01-01T12:49:20.789Z"
+          },
+          {
+            "name": "Buy New",
+            "date": "2015-11-28T20:45:24.953Z"
+          },
+          {
+            "name": "Assemble",
+            "date": "2015-11-28T20:45:26.084Z"
           }
         ]
       }
     ],
     "type": "GreyTide.Models.V2.Model",
     "name": "Sky Claws 1",
-    "currentState": "Prime",
-    "currentDate": "2015-01-01T20:00:00Z",
+    "currentState": "Weather",
+    "currentDate": "2015-12-17T04:03:30.703Z",
     "points": 135,
     "states": [
       {
@@ -2157,8 +2456,21 @@
       {
         "name": "Startup",
         "date": "2015-01-01T12:49:20.789Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2015-12-17T04:03:25.979Z"
+      },
+      {
+        "name": "Weather",
+        "date": "2015-12-17T04:03:30.703Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQA0AAAAAAAAAA==",
+    "_ts": 1450325028,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA0AAAAAAAAAA==/",
+    "_etag": "\"00000519-0000-0000-0000-567234240000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "c89c6372-55eb-48c1-b1de-dceba452c989",
@@ -2166,8 +2478,8 @@
     "items": [
       {
         "name": "Model",
-        "currentState": "Paint",
-        "currentDate": "2015-09-29T20:00:00Z",
+        "currentState": "Weather",
+        "currentDate": "2015-12-17T04:03:36.293Z",
         "points": 145,
         "states": [
           {
@@ -2181,26 +2493,38 @@
           {
             "name": "Assemble",
             "date": "2015-01-01T19:00:00Z"
+          },
+          {
+            "name": "Weather",
+            "date": "2015-12-17T04:03:36.293Z"
           }
         ]
       },
       {
         "name": "Base",
-        "currentState": "Startup",
-        "currentDate": "2015-01-01T12:49:20.789Z",
+        "currentState": "Assemble",
+        "currentDate": "2015-11-28T20:45:22.107Z",
         "points": 0,
         "states": [
           {
             "name": "Startup",
             "date": "2015-01-01T12:49:20.789Z"
+          },
+          {
+            "name": "Buy New",
+            "date": "2015-11-28T20:45:18.933Z"
+          },
+          {
+            "name": "Assemble",
+            "date": "2015-11-28T20:45:22.107Z"
           }
         ]
       }
     ],
     "type": "GreyTide.Models.V2.Model",
     "name": "Sky Claws 2",
-    "currentState": "Prime",
-    "currentDate": "2015-01-01T20:00:00Z",
+    "currentState": "Weather",
+    "currentDate": "2015-12-17T04:03:36.293Z",
     "points": 145,
     "states": [
       {
@@ -2214,18 +2538,72 @@
       {
         "name": "Startup",
         "date": "2015-01-01T12:49:20.789Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2015-12-17T04:03:33.444Z"
+      },
+      {
+        "name": "Weather",
+        "date": "2015-12-17T04:03:36.293Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQA1AAAAAAAAAA==",
+    "_ts": 1450325033,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA1AAAAAAAAAA==/",
+    "_etag": "\"00000719-0000-0000-0000-567234290000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "0aef645a-4113-4b54-85cd-dae9ab5aceb9",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [
+      {
+        "name": "Model",
+        "currentState": "Weather",
+        "currentDate": "2015-12-17T04:05:13.629Z",
+        "points": 0,
+        "states": [
+          {
+            "name": "Prime",
+            "date": "2015-01-01T20:00:00Z"
+          },
+          {
+            "name": "Paint",
+            "date": "2015-11-28T20:46:58.545Z"
+          },
+          {
+            "name": "Weather",
+            "date": "2015-12-17T04:05:13.629Z"
+          }
+        ]
+      },
+      {
+        "name": "Base",
+        "currentState": "Weather",
+        "currentDate": "2015-12-17T04:05:13.629Z",
+        "points": 0,
+        "states": [
+          {
+            "name": "Prime",
+            "date": "2015-01-01T20:00:00Z"
+          },
+          {
+            "name": "Paint",
+            "date": "2015-12-17T04:05:08.371Z"
+          },
+          {
+            "name": "Weather",
+            "date": "2015-12-17T04:05:13.629Z"
+          }
+        ]
+      }
+    ],
     "type": "GreyTide.Models.V2.Model",
     "name": "Grey Hunters 1",
-    "currentState": "Prime",
-    "currentDate": "2015-01-01T20:00:00Z",
-    "points": 130,
+    "currentState": "Weather",
+    "currentDate": "2015-12-17T04:05:13.628Z",
+    "points": 117,
     "states": [
       {
         "name": "Prime",
@@ -2234,18 +2612,72 @@
       {
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2015-12-17T04:05:08.371Z"
+      },
+      {
+        "name": "Weather",
+        "date": "2015-12-17T04:05:13.628Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQA2AAAAAAAAAA==",
+    "_ts": 1450351430,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA2AAAAAAAAAA==/",
+    "_etag": "\"0000541a-0000-0000-0000-56729b460000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "d12f2774-5be8-44d1-976a-8d64e24cf1f2",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [
+      {
+        "name": "Model",
+        "currentState": "Weather",
+        "currentDate": "2015-12-17T04:05:20.41Z",
+        "points": 0,
+        "states": [
+          {
+            "name": "Prime",
+            "date": "2015-01-01T20:00:00Z"
+          },
+          {
+            "name": "Paint",
+            "date": "2015-11-28T20:46:36.849Z"
+          },
+          {
+            "name": "Weather",
+            "date": "2015-12-17T04:05:20.41Z"
+          }
+        ]
+      },
+      {
+        "name": "Base",
+        "currentState": "Weather",
+        "currentDate": "2015-12-17T04:05:20.411Z",
+        "points": 0,
+        "states": [
+          {
+            "name": "Prime",
+            "date": "2015-01-01T20:00:00Z"
+          },
+          {
+            "name": "Paint",
+            "date": "2015-12-17T04:05:16.864Z"
+          },
+          {
+            "name": "Weather",
+            "date": "2015-12-17T04:05:20.411Z"
+          }
+        ]
+      }
+    ],
     "type": "GreyTide.Models.V2.Model",
     "name": "Grey Hunters 2",
-    "currentState": "Prime",
-    "currentDate": "2015-01-01T20:00:00Z",
-    "points": 130,
+    "currentState": "Weather",
+    "currentDate": "2015-12-17T04:05:20.41Z",
+    "points": 117,
     "states": [
       {
         "name": "Prime",
@@ -2254,8 +2686,21 @@
       {
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2015-12-17T04:05:16.864Z"
+      },
+      {
+        "name": "Weather",
+        "date": "2015-12-17T04:05:20.41Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQA3AAAAAAAAAA==",
+    "_ts": 1450351405,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA3AAAAAAAAAA==/",
+    "_etag": "\"0000521a-0000-0000-0000-56729b2d0000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "847e9408-b847-4f44-9116-7200eea396c0",
@@ -2265,7 +2710,7 @@
     "name": "Grey Hunters 3",
     "currentState": "Prime",
     "currentDate": "2015-01-01T20:00:00Z",
-    "points": 130,
+    "points": 117,
     "states": [
       {
         "name": "Prime",
@@ -2275,7 +2720,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQA4AAAAAAAAAA==",
+    "_ts": 1450351392,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA4AAAAAAAAAA==/",
+    "_etag": "\"0000511a-0000-0000-0000-56729b200000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "95d19255-f037-45c8-8cc7-d2867438f4b1",
@@ -2283,10 +2733,22 @@
     "items": [],
     "type": "GreyTide.Models.V2.Model",
     "name": "Grey Hunters 4",
-    "currentState": "Prime",
-    "currentDate": "2015-01-01T20:00:00Z",
-    "points": 130,
+    "currentState": "Complete",
+    "currentDate": "2015-01-01T23:00:00Z",
+    "points": 117,
     "states": [
+      {
+        "name": "Complete",
+        "date": "2015-01-01T23:00:00Z"
+      },
+      {
+        "name": "Weather",
+        "date": "2015-01-01T22:00:00Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2015-01-01T21:00:00Z"
+      },
       {
         "name": "Prime",
         "date": "2015-01-01T20:00:00Z"
@@ -2295,7 +2757,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQA5AAAAAAAAAA==",
+    "_ts": 1450351601,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA5AAAAAAAAAA==/",
+    "_etag": "\"00005c1a-0000-0000-0000-56729bf10000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "e33c9462-e25a-4522-b7cf-855d61c73cb1",
@@ -2303,10 +2770,22 @@
     "items": [],
     "type": "GreyTide.Models.V2.Model",
     "name": "Grey Hunters 5",
-    "currentState": "Prime",
-    "currentDate": "2015-01-01T20:00:00Z",
-    "points": 130,
+    "currentState": "Complete",
+    "currentDate": "2015-01-01T23:00:00Z",
+    "points": 117,
     "states": [
+      {
+        "name": "Complete",
+        "date": "2015-01-01T23:00:00Z"
+      },
+      {
+        "name": "Weather",
+        "date": "2015-01-01T22:00:00Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2015-01-01T21:00:00Z"
+      },
       {
         "name": "Prime",
         "date": "2015-01-01T20:00:00Z"
@@ -2315,17 +2794,22 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQA6AAAAAAAAAA==",
+    "_ts": 1450351573,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA6AAAAAAAAAA==/",
+    "_etag": "\"00005b1a-0000-0000-0000-56729bd50000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "923d7b44-7aa8-4d80-a159-a9252e8a62e0",
     "faction": "Space Wolves",
     "items": [],
     "type": "GreyTide.Models.V2.Model",
-    "name": "Grey Hunters 6",
-    "currentState": "Prime",
-    "currentDate": "2015-01-01T20:00:00Z",
-    "points": 130,
+    "name": "Wolf Guard",
+    "currentState": "Paint",
+    "currentDate": "2015-11-28T02:31:47.061Z",
+    "points": 105,
     "states": [
       {
         "name": "Prime",
@@ -2334,8 +2818,17 @@
       {
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2015-11-28T02:31:47.061Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQA7AAAAAAAAAA==",
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA7AAAAAAAAAA==/",
+    "_etag": "\"0000dd35-0000-0000-0000-572176ba0000\"",
+    "_attachments": "attachments/",
+    "_ts": 1461810873
   },
   {
     "id": "87c8038a-e599-49bb-a9c0-ed3dc929af9a",
@@ -2355,7 +2848,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQA8AAAAAAAAAA==",
+    "_ts": 1444876363,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA8AAAAAAAAAA==/",
+    "_etag": "\"00009b04-0000-0000-0000-561f104b0000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "d01c7417-c3cd-4cba-bd97-5ca63e7105d2",
@@ -2440,7 +2938,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQA9AAAAAAAAAA==",
+    "_ts": 1444876363,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA9AAAAAAAAAA==/",
+    "_etag": "\"00009c04-0000-0000-0000-561f104b0000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "413ba460-0ed5-4165-b5ee-25068c231c9d",
@@ -2525,7 +3028,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQA+AAAAAAAAAA==",
+    "_ts": 1444876363,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA+AAAAAAAAAA==/",
+    "_etag": "\"00009d04-0000-0000-0000-561f104b0000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "d33418ee-d1c0-4aa7-a8ee-e613e68ef51d",
@@ -2545,7 +3053,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQA-AAAAAAAAAA==",
+    "_ts": 1444876363,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA-AAAAAAAAAA==/",
+    "_etag": "\"00009e04-0000-0000-0000-561f104b0000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "18b46e2f-6522-426d-8a84-9f346aa3f8e9",
@@ -2565,7 +3078,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQBAAAAAAAAAAA==",
+    "_ts": 1444876363,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBAAAAAAAAAAA==/",
+    "_etag": "\"00009f04-0000-0000-0000-561f104b0000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "99ee5104-99cb-4814-8bb1-88e43f50d53f",
@@ -2601,7 +3119,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQBBAAAAAAAAAA==",
+    "_ts": 1444876363,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBBAAAAAAAAAA==/",
+    "_etag": "\"0000a004-0000-0000-0000-561f104b0000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "ab1b7847-b9d4-4657-a652-d2fdc305a9b3",
@@ -2637,7 +3160,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQBCAAAAAAAAAA==",
+    "_ts": 1444876363,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBCAAAAAAAAAA==/",
+    "_etag": "\"0000a104-0000-0000-0000-561f104b0000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "566798ca-6ef1-4892-891c-5af9902fa772",
@@ -2657,7 +3185,12 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQBDAAAAAAAAAA==",
+    "_ts": 1444876364,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBDAAAAAAAAAA==/",
+    "_etag": "\"0000a204-0000-0000-0000-561f104c0000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "5eb82ddb-43d0-45c5-b148-f5015c6b18d7",
@@ -2677,7 +3210,12 @@
         "name": "Assemble",
         "date": "2015-01-31T23:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQBEAAAAAAAAAA==",
+    "_ts": 1444876364,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBEAAAAAAAAAA==/",
+    "_etag": "\"0000a304-0000-0000-0000-561f104c0000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "c83b5a3a-b265-4491-8068-c04c95973e93",
@@ -2697,7 +3235,12 @@
         "name": "Assemble",
         "date": "2015-01-31T23:00:00Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQBFAAAAAAAAAA==",
+    "_ts": 1444876364,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBFAAAAAAAAAA==/",
+    "_etag": "\"0000a404-0000-0000-0000-561f104c0000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "48307bd2-71e8-4f22-b22d-02cfcd93ec7b",
@@ -2717,7 +3260,12 @@
         "name": "Startup",
         "date": "2015-05-13T13:19:48.814Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQBGAAAAAAAAAA==",
+    "_ts": 1444876364,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBGAAAAAAAAAA==/",
+    "_etag": "\"0000a504-0000-0000-0000-561f104c0000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "06665ed8-e4bd-425b-a0c8-dc8604fb32ca",
@@ -2737,7 +3285,12 @@
         "name": "Startup",
         "date": "2015-05-13T13:20:35.525Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQBHAAAAAAAAAA==",
+    "_ts": 1444876364,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBHAAAAAAAAAA==/",
+    "_etag": "\"0000a604-0000-0000-0000-561f104c0000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "3b42c762-60f9-4441-8ccc-24076fbe10e6",
@@ -2781,7 +3334,12 @@
         "name": "Startup",
         "date": "2015-05-13T13:20:52.924Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQBIAAAAAAAAAA==",
+    "_ts": 1444876364,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBIAAAAAAAAAA==/",
+    "_etag": "\"0000a704-0000-0000-0000-561f104c0000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "4b621902-1688-44b9-81e1-77fcd815a077",
@@ -2801,7 +3359,12 @@
         "name": "Startup",
         "date": "2015-05-13T13:21:27.102Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQBJAAAAAAAAAA==",
+    "_ts": 1444876364,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBJAAAAAAAAAA==/",
+    "_etag": "\"0000a804-0000-0000-0000-561f104c0000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "56f846ad-99e7-44b2-a6e5-04ad0d5f9232",
@@ -2821,7 +3384,12 @@
         "name": "Startup",
         "date": "2015-05-13T13:23:12.548Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQBKAAAAAAAAAA==",
+    "_ts": 1444876365,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBKAAAAAAAAAA==/",
+    "_etag": "\"0000a904-0000-0000-0000-561f104d0000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "3008febb-57b2-40a8-a712-bc7c93a99ae1",
@@ -2841,7 +3409,12 @@
         "name": "Startup",
         "date": "2015-05-13T13:24:25.603Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQBLAAAAAAAAAA==",
+    "_ts": 1444876365,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBLAAAAAAAAAA==/",
+    "_etag": "\"0000aa04-0000-0000-0000-561f104d0000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "ca140681-a0e6-4be7-95c7-35fff7b6617d",
@@ -2861,7 +3434,12 @@
         "name": "Startup",
         "date": "2015-05-13T13:28:50.031Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQBMAAAAAAAAAA==",
+    "_ts": 1444876365,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBMAAAAAAAAAA==/",
+    "_etag": "\"0000ab04-0000-0000-0000-561f104d0000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "c39eb11c-2803-4fb9-b3c0-9cab3b83b192",
@@ -2881,7 +3459,12 @@
         "name": "Startup",
         "date": "2015-05-13T13:28:56.327Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQBNAAAAAAAAAA==",
+    "_ts": 1444876365,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBNAAAAAAAAAA==/",
+    "_etag": "\"0000ac04-0000-0000-0000-561f104d0000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "7ed2ce70-c3dc-4c96-ba81-1ff7f56895dd",
@@ -2901,7 +3484,12 @@
         "name": "Startup",
         "date": "2015-05-13T13:29:01.489Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQBOAAAAAAAAAA==",
+    "_ts": 1444876365,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBOAAAAAAAAAA==/",
+    "_etag": "\"0000ad04-0000-0000-0000-561f104d0000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "594f50ea-9dd3-40bc-92bb-dfdf9b6f7ef1",
@@ -2921,7 +3509,12 @@
         "name": "Startup",
         "date": "2015-05-13T13:29:12.591Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQBPAAAAAAAAAA==",
+    "_ts": 1444876365,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBPAAAAAAAAAA==/",
+    "_etag": "\"0000ae04-0000-0000-0000-561f104d0000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "730a445d-ed9c-d3d6-cb52-03838c3a1de3",
@@ -2990,7 +3583,12 @@
         "name": "Prime",
         "date": "2015-10-05T02:39:05.727Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQBQAAAAAAAAAA==",
+    "_ts": 1444877258,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBQAAAAAAAAAA==/",
+    "_etag": "\"0000c004-0000-0000-0000-561f13ca0000\"",
+    "_attachments": "attachments/"
   },
   {
     "id": "101e291d-9ce5-13b5-20f0-cc8c35371fe8",
@@ -3018,6 +3616,61 @@
         "name": "Prime",
         "date": "2015-10-05T02:39:50.707Z"
       }
-    ]
+    ],
+    "_rid": "n9wIAJNqDQBRAAAAAAAAAA==",
+    "_ts": 1444877279,
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBRAAAAAAAAAA==/",
+    "_etag": "\"0000c104-0000-0000-0000-561f13df0000\"",
+    "_attachments": "attachments/"
+  },
+  {
+    "id": "48a55311-5803-4f83-848e-ca15ab6beb3c",
+    "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.V2.Model",
+    "name": "Tyrannocyte",
+    "currentState": "Buy New",
+    "currentDate": "2016-04-26T17:28:14.377Z",
+    "points": 75,
+    "states": [
+      {
+        "name": "Startup",
+        "date": "2016-04-26T17:28:14.377Z"
+      },
+      {
+        "name": "Buy New",
+        "date": "2016-04-26T17:28:14.377Z"
+      }
+    ],
+    "_rid": "n9wIAJNqDQBSAAAAAAAAAA==",
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBSAAAAAAAAAA==/",
+    "_etag": "\"0000db35-0000-0000-0000-572176900000\"",
+    "_attachments": "attachments/",
+    "_ts": 1461810831
+  },
+  {
+    "id": "90e3c5da-aae7-dccd-a05a-6743a147523b",
+    "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.V2.Model",
+    "name": "Wolf Lord on Thunderwolf",
+    "currentState": "Buy New",
+    "currentDate": "2015-12-25T02:28:36.489Z",
+    "points": 205,
+    "states": [
+      {
+        "name": "Startup",
+        "date": "2015-12-25T02:28:36.489Z"
+      },
+      {
+        "name": "Buy New",
+        "date": "2015-12-25T02:28:36.489Z"
+      }
+    ],
+    "_rid": "n9wIAJNqDQBTAAAAAAAAAA==",
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBTAAAAAAAAAA==/",
+    "_etag": "\"0000da35-0000-0000-0000-572176780000\"",
+    "_attachments": "attachments/",
+    "_ts": 1461810807
   }
 ]

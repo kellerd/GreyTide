@@ -317,6 +317,7 @@
     <Content Include="scripts\ui-bootstrap-tpls-0.10.0.min.js" />
     <Content Include="scripts\x-editable\xeditable.css" />
     <Content Include="scripts\x-editable\xeditable.js" />
+    <Content Include="scripts\x-editable\xeditable.min.css" />
     <Content Include="scripts\x-editable\xeditable.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
