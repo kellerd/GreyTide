@@ -11,11 +11,11 @@
         <span editable-number="child.points">{{child.points || 0}}</span> Points
     </li>
     <li>
-        {{child.name}} is currently {{child.current}} as of <span editable-datetime="child.currentDate" data-format="yyyy-mm-ddThh:iiZ" data-viewformat="mm/dd/yyyy hh:ii">{{child.currentDate | date : 'short' : '-0500' }}</span>
+        {{child.name}} is currently {{child.current}} as of <span editable-combodate="child.currentDate" data-format="yyyy-mm-ddThh:iiZ" data-viewformat="mm/dd/yyyy hh:ii">{{child.currentDate | date : 'short' : '-0500' }}</span>
     <a ng-click="detailedStates = !detailedStates">Show Detailed</a>
     <ul ng-show="detailedStates" id="detailedStates">
         <li ng-repeat="state in child.states">
-            {{state.name}} as of <span editable-datetime="state.date" data-format="yyyy-mm-ddThh:iiZ" data-viewformat="mm/dd/yyyy hh:ii">{{state.date | date : 'short' : '-0500' }}</span>
+            {{state.name}} as of <span editable-combodate="state.date" data-format="yyyy-mm-ddThh:iiZ" data-viewformat="mm/dd/yyyy hh:ii">{{state.date | date : 'short' : '-0500' }}</span>
         </li>
     </ul>
 </li>
