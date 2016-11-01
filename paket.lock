@@ -1,0 +1,89 @@
+NUGET
+  remote: https://www.nuget.org/api/v2
+    AngularJS.Animate (1.4.7) - framework: >= net45
+      AngularJS.Core (>= 1.4.7)
+    AngularJS.Core (1.4.7) - framework: >= net45
+    AngularJS.Route (1.4.7) - framework: >= net45
+      AngularJS.Core (>= 1.4.7)
+    AngularJS.Sanitize (1.4.7) - framework: >= net45
+      AngularJS.Core (>= 1.4.7)
+    angularjs.TypeScript.DefinitelyTyped (4.2.7) - framework: >= net45
+      jquery.TypeScript.DefinitelyTyped
+    AutoMapper (4.0.4) - framework: >= net45
+    bootstrap (3.3.5) - framework: >= net45
+      jQuery (>= 1.9.1)
+    Breeze.Angular (1.1.1) - framework: >= net45
+      Breeze.Angular.Directives (>= 1.3.10)
+      Breeze.Client (>= 1.5.3)
+    Breeze.Angular.Directives (1.3.10) - framework: >= net45
+    Breeze.Client (1.5.4) - framework: >= net45
+      Q
+    Breeze.Metadata.Helper (1.0.8) - framework: >= net45
+      Breeze.Client (>= 1.5)
+    Breeze.Server.ContextProvider (1.5.4) - framework: >= net45
+      Newtonsoft.Json (>= 6.0.4)
+    Breeze.Server.WebApi2 (1.5.4) - framework: >= net45
+      Breeze.Server.ContextProvider (1.5.4)
+      Microsoft.AspNet.WebApi.OData (>= 5.2.2 < 6.0)
+      Microsoft.AspNet.WebApi.WebHost (>= 5.2.2 < 6.0)
+      WebActivator
+    breeze.TypeScript.DefinitelyTyped (2.5.3) - framework: >= net45
+    d3 (3.5.6) - framework: >= net45
+    d3.TypeScript.DefinitelyTyped (1.9.8) - framework: >= net45
+    FontAwesome (4.4) - framework: >= net45
+    FSharp.Core (4.0.0.1) - framework: >= net452
+    HotTowelTypescript (2.2.2) - framework: >= net45
+      AngularJS.Animate (>= 1.2.19)
+      AngularJS.Core (>= 1.2.19)
+      AngularJS.Route (>= 1.2.19)
+      AngularJS.Sanitize (>= 1.2.19)
+      angularjs.TypeScript.DefinitelyTyped (>= 1.9.3)
+      bootstrap (>= 3.2)
+      Breeze.Angular (>= 0.8.7)
+      Breeze.Server.WebApi2 (>= 1.5.3)
+      breeze.TypeScript.DefinitelyTyped (>= 0.2.5)
+      FontAwesome (>= 4.1)
+      jQuery (>= 2.1.1)
+      jquery.TypeScript.DefinitelyTyped (>= 1.3.5)
+      Moment.js (>= 2.7)
+      Q.TypeScript.DefinitelyTyped (>= 0.2.6)
+      Spin.js (>= 2.0.1)
+      toastr (>= 2.0.3)
+      toastr.TypeScript.DefinitelyTyped (>= 0.1)
+    jQuery (2.1.4) - framework: >= net45
+    jquery.TypeScript.DefinitelyTyped (2.3) - framework: >= net45
+    linq.js (2.2.0.2) - framework: >= net45
+    linq.TypeScript.DefinitelyTyped (0.1.8) - framework: >= net45
+      jquery.TypeScript.DefinitelyTyped
+    Microsoft.AspNet.WebApi.Client (5.2.3) - framework: >= net45
+      Newtonsoft.Json (>= 6.0.4) - framework: >= net45, portable-wp80+win+net45+wp81+wpa81
+    Microsoft.AspNet.WebApi.Core (5.2.3) - framework: >= net45
+      Microsoft.AspNet.WebApi.Client (>= 5.2.3)
+    Microsoft.AspNet.WebApi.OData (5.7) - framework: >= net45
+      Microsoft.AspNet.WebApi.Client (>= 5.2.2)
+      Microsoft.AspNet.WebApi.Core (>= 5.2.2 < 5.3)
+      Microsoft.Data.OData (>= 5.6)
+    Microsoft.AspNet.WebApi.WebHost (5.2.3) - framework: >= net45
+      Microsoft.AspNet.WebApi.Core (>= 5.2.3 < 5.3)
+    Microsoft.Azure.DocumentDB (1.5) - framework: >= net45
+      Newtonsoft.Json (>= 5.0.7)
+    Microsoft.Data.Edm (5.6.4) - framework: >= net45
+    Microsoft.Data.OData (5.6.4) - framework: >= net45
+      Microsoft.Data.Edm (5.6.4)
+      System.Spatial (5.6.4)
+    Microsoft.Web.Infrastructure (1.0) - framework: >= net45
+    Moment.js (2.10.6) - framework: >= net45
+    Newtonsoft.Json (7.0.1) - framework: >= net45
+    NuGet.CommandLine (3.4.3)
+    nvd3.js (1.8.1) - framework: >= net45
+      d3 (>= 3.5)
+    Q (2.0.2) - framework: >= net45
+    Q.TypeScript.DefinitelyTyped (0.7.6) - framework: >= net45
+    Spin.js (2.0.1) - framework: >= net45
+    Suave (2.0.0-alpha7) - framework: >= net452
+    System.Spatial (5.6.4) - framework: >= net45
+    toastr (2.1.1) - framework: >= net45
+      jQuery (>= 1.6.3)
+    toastr.TypeScript.DefinitelyTyped (0.1.5) - framework: >= net45
+      jquery.TypeScript.DefinitelyTyped
+    WebActivator (1.0) - framework: >= net45
