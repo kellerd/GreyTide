@@ -56,9 +56,13 @@
   <ItemGroup>
     <None Include="data/models.json" />
     <None Include="data/states.json" />
+    <None Include="loadData.fsx" />
     <None Include="app.fsx" />
     <None Include="App.config" />
     <Content Include="paket.references" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config" />
+    <Content Include="Web.Release.config" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />

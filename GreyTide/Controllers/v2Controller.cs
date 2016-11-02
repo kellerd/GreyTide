@@ -84,7 +84,7 @@ namespace Controllers.V2
         public SaveResult SaveChanges(JObject saveBundle)
         {
             var entityInfo = SaveBundleToSaveMap.Convert(saveBundle);
-            var saveOptions = SaveBundleToSaveMap.ExtractSaveOptions(saveBundle);
+            //var saveOptions = SaveBundleToSaveMap.ExtractSaveOptions(saveBundle);
             string databaseId = ConfigurationManager.AppSettings["DatabaseId"];
             Database database = Client.CreateDatabaseQuery().Where(db => db.Id == databaseId).ToArray().FirstOrDefault();
             string userToken = new Guid(ConfigurationManager.AppSettings["UserToken"]).ToString("N");
