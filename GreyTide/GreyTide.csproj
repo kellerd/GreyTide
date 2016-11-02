@@ -41,7 +41,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="paket.references" />
+    <Content Include="app\chart\chart.html" />
+    <Content Include="app\state\state.html" />
+    <Content Include="app\tide\item.html" />
+    <Content Include="app\tide\items.html" />
+    <Content Include="app\tide\tide.html" />
     <Content Include="Scripts\angular-animate.js">
       <Paket>True</Paket>
     </Content>
@@ -81,27 +85,6 @@
     <Content Include="Scripts\angular-sanitize.min.js.map">
       <Paket>True</Paket>
     </Content>
-    <Content Include="Scripts\typings\angularjs\angular-animate.d.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\typings\angularjs\angular-cookies.d.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\typings\angularjs\angular-mocks.d.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\typings\angularjs\angular-resource.d.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\typings\angularjs\angular-route.d.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\typings\angularjs\angular-sanitize.d.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\typings\angularjs\angular.d.ts">
-      <Paket>True</Paket>
-    </Content>
     <Content Include="Scripts\bootstrap.js">
       <Paket>True</Paket>
     </Content>
@@ -117,9 +100,7 @@
     <Content Include="Scripts\breeze.min.js">
       <Paket>True</Paket>
     </Content>
-    <Content Include="Scripts\typings\breeze\breeze.d.ts">
-      <Paket>True</Paket>
-    </Content>
+    <Content Include="Scripts\breezeOdataV4Adapter.js" />
     <Content Include="Scripts\d3\d3.js">
       <Paket>True</Paket>
     </Content>
@@ -129,93 +110,12 @@
     <Content Include="Scripts\d3\LICENSE">
       <Paket>True</Paket>
     </Content>
-    <Content Include="Scripts\typings\d3\d3.d.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\typings\d3\plugins\d3.superformula.d.ts">
-      <Paket>True</Paket>
-    </Content>
     <Resource Include="fonts\glyphicons-halflings-regular.ttf">
       <Paket>True</Paket>
     </Resource>
     <Resource Include="fonts\fontawesome-webfont.ttf">
       <Paket>True</Paket>
     </Resource>
-    <Content Include="app\app.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\config.exceptionHandler.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\config.route.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\config.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\admin\admin.html">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\admin\admin.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\common\common.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\common\commonConfig.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\common\commonModule.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\common\logger.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\common\spinner.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\common\bootstrap\bootstrap.dialog.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\common\bootstrap\common.bootstapModule.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\dashboard\dashboard.html">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\dashboard\dashboardCtrl.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\directives\cc-img-person.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\directives\cc-menu-item-rendered.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\directives\cc-scroll-to-top.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\directives\cc-sidebar.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\directives\cc-spinner.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\directives\cc-widget-close.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\directives\cc-widget-header.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\directives\cc-widget-minimize.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\services\datacontext.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\services\entityManagerFactory.ts">
-      <Paket>True</Paket>
-    </Content>
     <Content Include="Content\bootstrap-theme.css">
       <Paket>True</Paket>
     </Content>
@@ -267,9 +167,6 @@
     <Content Include="Content\widgets.css">
       <Paket>True</Paket>
     </Content>
-    <Resource Include="favicon.ico">
-      <Paket>True</Paket>
-    </Resource>
     <Resource Include="Content\images\AngularJS-small.png">
       <Paket>True</Paket>
     </Resource>
@@ -546,9 +443,6 @@
     <Resource Include="Content\themeimages\prettyPhoto\light_square\sprite.png">
       <Paket>True</Paket>
     </Resource>
-    <Content Include="Scripts\jquery-2.1.4-vsdoc.js">
-      <Paket>True</Paket>
-    </Content>
     <Content Include="Scripts\jquery-2.1.4.js">
       <Paket>True</Paket>
     </Content>
@@ -558,9 +452,6 @@
     <Content Include="Scripts\jquery-2.1.4.min.map">
       <Paket>True</Paket>
     </Content>
-    <Content Include="Scripts\typings\jquery\jquery.d.ts">
-      <Paket>True</Paket>
-    </Content>
     <Content Include="Scripts\linq-vsdoc.js">
       <Paket>True</Paket>
     </Content>
@@ -568,15 +459,6 @@
       <Paket>True</Paket>
     </Content>
     <Content Include="Scripts\linq.min.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\typings\linq\linq.3.0.3-Beta4.d.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\typings\linq\linq.d.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\typings\linq\linq.jquery.d.ts">
       <Paket>True</Paket>
     </Content>
     <Content Include="Scripts\moment-with-locales.js">
@@ -591,22 +473,18 @@
     <Content Include="Scripts\moment.min.js">
       <Paket>True</Paket>
     </Content>
+    <Content Include="Scripts\nv.d3.css" />
+    <Content Include="Scripts\odatajs-4.0.0.js" />
     <Content Include="Scripts\q.js">
       <Paket>True</Paket>
     </Content>
     <Content Include="Scripts\q.min.js">
       <Paket>True</Paket>
     </Content>
-    <Content Include="Scripts\typings\q\Q.d.ts">
-      <Paket>True</Paket>
-    </Content>
     <Content Include="Scripts\spin.js">
       <Paket>True</Paket>
     </Content>
     <Content Include="Scripts\spin.min.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\typings\toastr\toastr.d.ts">
       <Paket>True</Paket>
     </Content>
     <Reference Include="Microsoft.CSharp" />
@@ -629,12 +507,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\layout\shellCtrl.ts">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\layout\sidebarCtrl.ts">
-      <Paket>True</Paket>
-    </Content>
     <Content Include="app\layout\shell.html">
       <Paket>True</Paket>
     </Content>
@@ -647,129 +519,21 @@
     <Content Include="app\layout\widgetheader.html">
       <Paket>True</Paket>
     </Content>
-    <Content Include="content\bootstrap-theme.css" />
-    <Content Include="content\bootstrap-theme.min.css" />
-    <Content Include="content\bootstrap.css" />
-    <Content Include="content\bootstrap.min.css" />
     <Content Include="content\breeze.directives.css">
       <Paket>True</Paket>
     </Content>
-    <Content Include="content\customtheme.css" />
-    <Content Include="content\font-awesome.css" />
-    <Content Include="content\font-awesome.min.css" />
-    <Content Include="content\fullcalendar.css" />
-    <Content Include="content\ie10mobile.css" />
-    <Content Include="content\images\AngularJS-small.png" />
-    <Content Include="content\images\animated-overlay.gif" />
-    <Content Include="content\images\breezelogo.png" />
-    <Content Include="content\images\icon.png" />
-    <Content Include="content\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <Content Include="content\images\ui-bg_flat_75_ffffff_40x100.png" />
-    <Content Include="content\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <Content Include="content\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="content\images\ui-bg_glass_75_dadada_1x400.png" />
-    <Content Include="content\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <Content Include="content\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <Content Include="content\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <Content Include="content\images\ui-icons_222222_256x240.png" />
-    <Content Include="content\images\ui-icons_2e83ff_256x240.png" />
-    <Content Include="content\images\ui-icons_454545_256x240.png" />
-    <Content Include="content\images\ui-icons_888888_256x240.png" />
-    <Content Include="content\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="content\jquery-ui.css" />
-    <Content Include="content\jquery.gritter.css" />
     <Content Include="content\nv.d3.css">
       <Paket>True</Paket>
     </Content>
     <Content Include="content\nv.d3.min.css">
       <Paket>True</Paket>
     </Content>
-    <Content Include="content\prettyPhoto.css" />
-    <Content Include="content\rateit.css" />
-    <Content Include="content\styles.css" />
-    <Content Include="content\themeimages\delete.gif" />
-    <Content Include="content\themeimages\favicon\favicon.png" />
-    <Content Include="content\themeimages\gritter\gritter.png" />
-    <Content Include="content\themeimages\gritter\ie-spacer.gif" />
-    <Content Include="content\themeimages\icons\android.png" />
-    <Content Include="content\themeimages\icons\chrome.png" />
-    <Content Include="content\themeimages\icons\firefox.png" />
-    <Content Include="content\themeimages\icons\ie.png" />
-    <Content Include="content\themeimages\icons\ios.png" />
-    <Content Include="content\themeimages\icons\linux.png" />
-    <Content Include="content\themeimages\icons\mac.png" />
-    <Content Include="content\themeimages\icons\metro.png" />
-    <Content Include="content\themeimages\icons\opera.png" />
-    <Content Include="content\themeimages\icons\safari.png" />
-    <Content Include="content\themeimages\icons\windows.png" />
-    <Content Include="content\themeimages\photos\s1.jpg" />
-    <Content Include="content\themeimages\photos\s10.jpg" />
-    <Content Include="content\themeimages\photos\s2.jpg" />
-    <Content Include="content\themeimages\photos\s3.jpg" />
-    <Content Include="content\themeimages\photos\s4.jpg" />
-    <Content Include="content\themeimages\photos\s5.jpg" />
-    <Content Include="content\themeimages\photos\s6.jpg" />
-    <Content Include="content\themeimages\photos\s7.jpg" />
-    <Content Include="content\themeimages\photos\s8.jpg" />
-    <Content Include="content\themeimages\photos\s9.jpg" />
-    <Content Include="content\themeimages\photos\t1.jpg" />
-    <Content Include="content\themeimages\photos\t10.jpg" />
-    <Content Include="content\themeimages\photos\t2.jpg" />
-    <Content Include="content\themeimages\photos\t3.jpg" />
-    <Content Include="content\themeimages\photos\t4.jpg" />
-    <Content Include="content\themeimages\photos\t5.jpg" />
-    <Content Include="content\themeimages\photos\t6.jpg" />
-    <Content Include="content\themeimages\photos\t7.jpg" />
-    <Content Include="content\themeimages\photos\t8.jpg" />
-    <Content Include="content\themeimages\photos\t9.jpg" />
-    <Content Include="content\themeimages\prettyPhoto\dark_rounded\btnNext.png" />
-    <Content Include="content\themeimages\prettyPhoto\dark_rounded\btnPrevious.png" />
-    <Content Include="content\themeimages\prettyPhoto\dark_rounded\contentPattern.png" />
-    <Content Include="content\themeimages\prettyPhoto\dark_rounded\default_thumbnail.gif" />
-    <Content Include="content\themeimages\prettyPhoto\dark_rounded\loader.gif" />
-    <Content Include="content\themeimages\prettyPhoto\dark_rounded\sprite.png" />
-    <Content Include="content\themeimages\prettyPhoto\dark_square\btnNext.png" />
-    <Content Include="content\themeimages\prettyPhoto\dark_square\btnPrevious.png" />
-    <Content Include="content\themeimages\prettyPhoto\dark_square\contentPattern.png" />
-    <Content Include="content\themeimages\prettyPhoto\dark_square\default_thumbnail.gif" />
-    <Content Include="content\themeimages\prettyPhoto\dark_square\loader.gif" />
-    <Content Include="content\themeimages\prettyPhoto\dark_square\sprite.png" />
-    <Content Include="content\themeimages\prettyPhoto\default\default_thumb.png" />
-    <Content Include="content\themeimages\prettyPhoto\default\loader.gif" />
-    <Content Include="content\themeimages\prettyPhoto\default\sprite.png" />
-    <Content Include="content\themeimages\prettyPhoto\default\sprite_next.png" />
-    <Content Include="content\themeimages\prettyPhoto\default\sprite_prev.png" />
-    <Content Include="content\themeimages\prettyPhoto\default\sprite_x.png" />
-    <Content Include="content\themeimages\prettyPhoto\default\sprite_y.png" />
-    <Content Include="content\themeimages\prettyPhoto\facebook\btnNext.png" />
-    <Content Include="content\themeimages\prettyPhoto\facebook\btnPrevious.png" />
-    <Content Include="content\themeimages\prettyPhoto\facebook\contentPatternBottom.png" />
-    <Content Include="content\themeimages\prettyPhoto\facebook\contentPatternLeft.png" />
-    <Content Include="content\themeimages\prettyPhoto\facebook\contentPatternRight.png" />
-    <Content Include="content\themeimages\prettyPhoto\facebook\contentPatternTop.png" />
-    <Content Include="content\themeimages\prettyPhoto\facebook\default_thumbnail.gif" />
-    <Content Include="content\themeimages\prettyPhoto\facebook\loader.gif" />
-    <Content Include="content\themeimages\prettyPhoto\facebook\sprite.png" />
-    <Content Include="content\themeimages\prettyPhoto\light_rounded\btnNext.png" />
-    <Content Include="content\themeimages\prettyPhoto\light_rounded\btnPrevious.png" />
-    <Content Include="content\themeimages\prettyPhoto\light_rounded\default_thumbnail.gif" />
-    <Content Include="content\themeimages\prettyPhoto\light_rounded\loader.gif" />
-    <Content Include="content\themeimages\prettyPhoto\light_rounded\sprite.png" />
-    <Content Include="content\themeimages\prettyPhoto\light_square\btnNext.png" />
-    <Content Include="content\themeimages\prettyPhoto\light_square\btnPrevious.png" />
-    <Content Include="content\themeimages\prettyPhoto\light_square\default_thumbnail.gif" />
-    <Content Include="content\themeimages\prettyPhoto\light_square\loader.gif" />
-    <Content Include="content\themeimages\prettyPhoto\light_square\sprite.png" />
-    <Content Include="content\themeimages\star.gif" />
-    <Content Include="content\themeimages\user.jpg" />
     <Content Include="content\toastr.css">
       <Paket>True</Paket>
     </Content>
     <Content Include="content\toastr.min.css">
       <Paket>True</Paket>
     </Content>
-    <Content Include="content\widgets.css" />
-    <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg">
       <Paket>True</Paket>
     </Content>
@@ -779,38 +543,13 @@
     <Content Include="index.html">
       <Paket>True</Paket>
     </Content>
-    <Content Include="app\chart\chart.html" />
-    <Content Include="app\tide\item.html" />
-    <Content Include="app\tide\items.html" />
-    <Content Include="scripts\angular-animate.js" />
-    <Content Include="scripts\angular-animate.min.js" />
-    <Content Include="scripts\angular-mocks.js" />
-    <Content Include="scripts\angular-route.js" />
-    <Content Include="scripts\angular-route.min.js" />
-    <Content Include="scripts\angular-sanitize.js" />
-    <Content Include="scripts\angular-sanitize.min.js" />
-    <Content Include="scripts\angular.js" />
-    <Content Include="scripts\angular.min.js" />
-    <Content Include="scripts\bootstrap.js" />
-    <Content Include="scripts\bootstrap.min.js" />
-    <Content Include="scripts\breeze.bridge.angular.js" />
-    <Content Include="scripts\breeze.debug.js" />
     <Content Include="scripts\breeze.directives.js">
       <Paket>True</Paket>
     </Content>
     <Content Include="scripts\breeze.metadata-helper.js">
       <Paket>True</Paket>
     </Content>
-    <Content Include="scripts\breeze.min.js" />
     <Content Include="scripts\breeze.saveErrorExtensions.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="scripts\d3\d3.js" />
-    <Content Include="scripts\d3\d3.min.js" />
-    <Content Include="data\models.json" />
-    <Content Include="data\states.json" />
-    <Content Include="scripts\d3\LICENSE" />
-    <Content Include="LICENSE.md">
       <Paket>True</Paket>
     </Content>
     <Content Include="fonts\glyphicons-halflings-regular.woff2">
@@ -819,12 +558,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff">
       <Paket>True</Paket>
     </Content>
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot">
       <Paket>True</Paket>
     </Content>
-    <Content Include="content\bootstrap.css.map" />
-    <Content Include="content\bootstrap-theme.css.map" />
     <Content Include="fonts\FontAwesome.otf">
       <Paket>True</Paket>
     </Content>
@@ -834,7 +570,6 @@
     <Content Include="fonts\fontawesome-webfont.woff">
       <Paket>True</Paket>
     </Content>
-    <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot">
       <Paket>True</Paket>
     </Content>
@@ -844,23 +579,19 @@
     <Content Include="content\toastr.less">
       <Paket>True</Paket>
     </Content>
-    <Content Include="scripts\angular.min.js.map" />
-    <Content Include="scripts\angular-animate.min.js.map" />
-    <Content Include="scripts\angular-route.min.js.map" />
-    <Content Include="scripts\angular-sanitize.min.js.map" />
+    <Content Include="paket.references" />
     <None Include="Properties\PublishProfiles\GreyTide - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\GreyTide - Web Deploy.pubxml" />
     <None Include="scripts\jquery-2.1.4.intellisense.js" />
-    <Content Include="scripts\jquery-2.1.4.js" />
-    <Content Include="scripts\jquery-2.1.4.min.js" />
-    <Content Include="scripts\moment-with-locales.js" />
-    <Content Include="scripts\moment-with-locales.min.js" />
-    <Content Include="scripts\moment.js" />
-    <Content Include="scripts\moment.min.js" />
+    <Content Include="Scripts\state-machine.js" />
     <Content Include="scripts\theme\customtheme.js">
       <Paket>True</Paket>
     </Content>
-    <Content Include="scripts\jquery-2.1.4.min.map" />
+    <Content Include="Scripts\x-editable\xeditable.css" />
+    <Content Include="Scripts\x-editable\xeditable.js" />
+    <Content Include="Scripts\x-editable\xeditable.min.css" />
+    <Content Include="Scripts\x-editable\xeditable.min.js" />
+    <Content Include="Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -869,23 +600,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\state\state.html" />
-    <Content Include="app\tide\tide.html" />
-    <Content Include="scripts\state-machine.js" />
     <None Include="scripts\linq-vsdoc.js" />
-    <Content Include="scripts\linq.js" />
-    <Content Include="scripts\linq.min.js" />
-    <Content Include="scripts\nv.d3.css" />
     <Content Include="scripts\nv.d3.js">
       <Paket>True</Paket>
     </Content>
     <Content Include="scripts\nv.d3.min.js">
       <Paket>True</Paket>
     </Content>
-    <Content Include="scripts\q.js" />
-    <Content Include="scripts\q.min.js" />
-    <Content Include="scripts\spin.js" />
-    <Content Include="scripts\spin.min.js" />
     <Content Include="scripts\toastr.js">
       <Paket>True</Paket>
     </Content>
@@ -898,16 +619,11 @@
     <Content Include="scripts\ui-bootstrap-tpls-0.10.0.min.js">
       <Paket>True</Paket>
     </Content>
-    <Content Include="scripts\x-editable\xeditable.css" />
-    <Content Include="scripts\x-editable\xeditable.js" />
-    <Content Include="scripts\x-editable\xeditable.min.css" />
-    <Content Include="scripts\x-editable\xeditable.min.js" />
-    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AutoMapperConfig.cs" />
     <Compile Include="App_Start\BreezeWebApiConfig.cs" />
-    <Compile Include="Controllers\SaveChangesResult.cs" />
+    <Compile Include="Models\SaveChangesResult.cs" />
     <Compile Include="Controllers\v2Controller.cs" />
     <Compile Include="Controllers\v1Controller.cs" />
     <Compile Include="data\SaveBundleToSaveMap.cs" />
