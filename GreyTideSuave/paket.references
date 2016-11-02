@@ -1,2 +1,5 @@
 FSharp.Core
 Suave
+Microsoft.Azure.DocumentDB
+Newtonsoft.Json
+Breeze.Server.ContextProvider

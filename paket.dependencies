@@ -19,7 +19,6 @@ nuget d3 3.5.6 framework: >= net45
 nuget d3.TypeScript.DefinitelyTyped 1.9.8 framework: >= net45
 nuget FontAwesome 4.4.0 framework: >= net45
 nuget FSharp.Core 4.0.0.1 framework: >= net452
-nuget HotTowelTypescript 2.2.2 framework: >= net45
 nuget jQuery 2.1.4 framework: >= net45
 nuget jquery.TypeScript.DefinitelyTyped 2.3.0 framework: >= net45
 nuget linq.js 2.2.0.2 framework: >= net45
@@ -43,3 +42,6 @@ nuget System.Spatial 5.6.4 framework: >= net45
 nuget toastr 2.1.1 framework: >= net45
 nuget toastr.TypeScript.DefinitelyTyped 0.1.5 framework: >= net45
 nuget WebActivator 1.0.0.0 framework: >= net45
+
+content none
+nuget HotTowelTypescript 2.2.2 framework: >= net45

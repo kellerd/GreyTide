@@ -1,3 +1,4 @@
+CONTENT: NONE
 NUGET
   remote: https://www.nuget.org/api/v2
     AngularJS.Animate (1.4.7) - framework: >= net45
@@ -56,7 +57,7 @@ NUGET
     linq.TypeScript.DefinitelyTyped (0.1.8) - framework: >= net45
       jquery.TypeScript.DefinitelyTyped
     Microsoft.AspNet.WebApi.Client (5.2.3) - framework: >= net45
-      Newtonsoft.Json (>= 6.0.4) - framework: >= net45, portable-wp80+win+net45+wp81+wpa81
+      Newtonsoft.Json (>= 6.0.4) - framework: >= net45, portable-wp80+win+wp81+wpa81
     Microsoft.AspNet.WebApi.Core (5.2.3) - framework: >= net45
       Microsoft.AspNet.WebApi.Client (>= 5.2.3)
     Microsoft.AspNet.WebApi.OData (5.7) - framework: >= net45
@@ -81,6 +82,7 @@ NUGET
     Q.TypeScript.DefinitelyTyped (0.7.6) - framework: >= net45
     Spin.js (2.0.1) - framework: >= net45
     Suave (2.0.0-alpha7) - framework: >= net452
+      FSharp.Core (>= 4.0.0.1) - framework: >= net10, netstandard10, netstandard11, netstandard12, netstandard13, netstandard14, netstandard15
     System.Spatial (5.6.4) - framework: >= net45
     toastr (2.1.1) - framework: >= net45
       jQuery (>= 1.6.3)
