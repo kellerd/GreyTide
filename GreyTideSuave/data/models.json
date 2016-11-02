@@ -1,12 +1,12 @@
 ﻿[
-   {
+  {
     "id": "dfbbd000-67ba-4347-a7ea-99d9ade66234",
     "faction": "Tyranids",
     "items": [],
     "type": "GreyTide.Models.V2.Model",
     "name": "Hive Tyrant",
-    "currentState": "Dislike",
-    "currentDate": "2015-01-01T12:50:46.822Z",
+    "currentState": "Prime",
+    "currentDate": "2016-06-02T03:50:02.651Z",
     "points": 255,
     "states": [
       {
@@ -20,13 +20,33 @@
       {
         "name": "Startup",
         "date": "2015-01-01T12:49:20.789Z"
+      },
+      {
+        "name": "Strip Painting",
+        "date": "2015-09-01T02:10:00Z"
+      },
+      {
+        "name": "Strip Primer",
+        "date": "2015-09-01T02:15:00Z"
+      },
+      {
+        "name": "Strip Glue",
+        "date": "2015-09-01T02:30:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2016-05-19T00:37:57.943Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2016-06-02T03:50:02.651Z"
       }
     ],
     "_rid": "n9wIAJNqDQACAAAAAAAAAA==",
-    "_ts": 1444876354,
     "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQACAAAAAAAAAA==/",
-    "_etag": "\"00006104-0000-0000-0000-561f10420000\"",
-    "_attachments": "attachments/"
+    "_etag": "\"00000100-0000-0000-0000-574faceb0000\"",
+    "_attachments": "attachments/",
+    "_ts": 1464839402
   },
   {
     "id": "cf64c22e-e823-4ebc-990e-de6dc699fe1f",
@@ -343,8 +363,8 @@
     "items": [],
     "type": "GreyTide.Models.V2.Model",
     "name": "Hormagaunt",
-    "currentState": "Buy New",
-    "currentDate": "2015-01-01T12:50:26.086Z",
+    "currentState": "Prime",
+    "currentDate": "2016-09-11T03:03:48.239Z",
     "points": 20,
     "states": [
       {
@@ -354,13 +374,21 @@
       {
         "name": "Startup",
         "date": "2015-01-01T12:49:20.793Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2016-08-11T14:16:50.466Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2016-09-11T03:03:48.239Z"
       }
     ],
     "_rid": "n9wIAJNqDQAKAAAAAAAAAA==",
-    "_ts": 1444876355,
     "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAKAAAAAAAAAA==/",
-    "_etag": "\"00006904-0000-0000-0000-561f10430000\"",
-    "_attachments": "attachments/"
+    "_etag": "\"0100c72f-0000-0000-0000-57d4c99e0000\"",
+    "_attachments": "attachments/",
+    "_ts": 1473563009
   },
   {
     "id": "26d976e4-f737-4343-97f0-809124854ade",
@@ -574,8 +602,8 @@
     "items": [],
     "type": "GreyTide.Models.V2.Model",
     "name": "Hive Crone",
-    "currentState": "Dislike",
-    "currentDate": "2015-01-01T12:52:28.375Z",
+    "currentState": "Prime",
+    "currentDate": "2016-06-02T03:50:16.085Z",
     "points": 155,
     "states": [
       {
@@ -589,13 +617,33 @@
       {
         "name": "Startup",
         "date": "2015-01-01T12:49:20.794Z"
+      },
+      {
+        "name": "Strip Painting",
+        "date": "2015-04-23T10:25:00Z"
+      },
+      {
+        "name": "Strip Primer",
+        "date": "2015-04-23T13:10:00Z"
+      },
+      {
+        "name": "Strip Glue",
+        "date": "2015-08-23T13:10:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2016-05-23T13:12:46.734Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2016-06-02T03:50:16.085Z"
       }
     ],
     "_rid": "n9wIAJNqDQAQAAAAAAAAAA==",
-    "_ts": 1444876356,
     "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAQAAAAAAAAAA==/",
-    "_etag": "\"00006f04-0000-0000-0000-561f10440000\"",
-    "_attachments": "attachments/"
+    "_etag": "\"00000200-0000-0000-0000-574facf80000\"",
+    "_attachments": "attachments/",
+    "_ts": 1464839415
   },
   {
     "id": "b75b25e0-3078-47d1-9acf-db0416fc5622",
@@ -763,8 +811,8 @@
     "items": [],
     "type": "GreyTide.Models.V2.Model",
     "name": "Tyrant Guard",
-    "currentState": "Dislike",
-    "currentDate": "2015-01-01T12:52:52.838Z",
+    "currentState": "Prime",
+    "currentDate": "2016-06-02T03:50:23.519Z",
     "points": 260,
     "states": [
       {
@@ -778,13 +826,33 @@
       {
         "name": "Startup",
         "date": "2015-01-01T12:49:20.794Z"
+      },
+      {
+        "name": "Strip Painting",
+        "date": "2015-09-01T00:25:00Z"
+      },
+      {
+        "name": "Strip Primer",
+        "date": "2015-09-01T00:30:00Z"
+      },
+      {
+        "name": "Strip Glue",
+        "date": "2015-09-01T00:35:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2016-05-19T00:37:59.863Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2016-06-02T03:50:23.519Z"
       }
     ],
     "_rid": "n9wIAJNqDQAUAAAAAAAAAA==",
-    "_ts": 1444876357,
     "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAUAAAAAAAAAA==/",
-    "_etag": "\"00007304-0000-0000-0000-561f10450000\"",
-    "_attachments": "attachments/"
+    "_etag": "\"00000300-0000-0000-0000-574fad000000\"",
+    "_attachments": "attachments/",
+    "_ts": 1464839422
   },
   {
     "id": "bd02bcef-ab23-44c5-884a-940e67c9ac33",
@@ -1478,8 +1546,8 @@
     "items": [],
     "type": "GreyTide.Models.V2.Model",
     "name": "Tyranid Warrior New",
-    "currentState": "Buy New",
-    "currentDate": "2015-01-01T12:50:26.091Z",
+    "currentState": "Prime",
+    "currentDate": "2016-09-11T03:03:49.774Z",
     "points": 150,
     "states": [
       {
@@ -1489,13 +1557,21 @@
       {
         "name": "Startup",
         "date": "2015-01-01T12:49:20.796Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2016-08-27T00:00:16.996Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2016-09-11T03:03:49.774Z"
       }
     ],
     "_rid": "n9wIAJNqDQAfAAAAAAAAAA==",
-    "_ts": 1444876359,
     "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAfAAAAAAAAAA==/",
-    "_etag": "\"00007e04-0000-0000-0000-561f10470000\"",
-    "_attachments": "attachments/"
+    "_etag": "\"0100c82f-0000-0000-0000-57d4c99f0000\"",
+    "_attachments": "attachments/",
+    "_ts": 1473563010
   },
   {
     "id": "b2018a56-bc67-4a0e-9697-a7d6dcfacf60",
@@ -1532,8 +1608,8 @@
     "items": [],
     "type": "GreyTide.Models.V2.Model",
     "name": "Carnifex VC",
-    "currentState": "Dislike",
-    "currentDate": "2015-01-01T12:54:15.085Z",
+    "currentState": "Prime",
+    "currentDate": "2016-06-02T03:50:26.62Z",
     "points": 140,
     "states": [
       {
@@ -1547,13 +1623,33 @@
       {
         "name": "Startup",
         "date": "2015-01-01T12:49:20.797Z"
+      },
+      {
+        "name": "Strip Painting",
+        "date": "2015-09-01T00:25:00Z"
+      },
+      {
+        "name": "Strip Primer",
+        "date": "2015-09-01T00:30:00Z"
+      },
+      {
+        "name": "Strip Glue",
+        "date": "2015-09-01T00:35:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2016-05-19T00:38:05.116Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2016-06-02T03:50:26.62Z"
       }
     ],
     "_rid": "n9wIAJNqDQAhAAAAAAAAAA==",
-    "_ts": 1444876359,
     "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAhAAAAAAAAAA==/",
-    "_etag": "\"00008004-0000-0000-0000-561f10470000\"",
-    "_attachments": "attachments/"
+    "_etag": "\"00000400-0000-0000-0000-574fad030000\"",
+    "_attachments": "attachments/",
+    "_ts": 1464839426
   },
   {
     "id": "9e3f09ca-4f3c-4ff9-bfd3-2f805d55bc5f",
@@ -1561,8 +1657,8 @@
     "items": [],
     "type": "GreyTide.Models.V2.Model",
     "name": "Carnifex CC",
-    "currentState": "Dislike",
-    "currentDate": "2015-01-01T12:54:19.758Z",
+    "currentState": "Prime",
+    "currentDate": "2016-06-02T03:50:29.032Z",
     "points": 135,
     "states": [
       {
@@ -1576,13 +1672,33 @@
       {
         "name": "Startup",
         "date": "2015-01-01T12:49:20.797Z"
+      },
+      {
+        "name": "Strip Painting",
+        "date": "2015-09-01T00:25:00Z"
+      },
+      {
+        "name": "Strip Primer",
+        "date": "2015-09-01T00:30:00Z"
+      },
+      {
+        "name": "Strip Glue",
+        "date": "2015-09-01T00:35:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2016-05-19T00:38:07.456Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2016-06-02T03:50:29.032Z"
       }
     ],
     "_rid": "n9wIAJNqDQAiAAAAAAAAAA==",
-    "_ts": 1444876359,
     "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAiAAAAAAAAAA==/",
-    "_etag": "\"00008104-0000-0000-0000-561f10470000\"",
-    "_attachments": "attachments/"
+    "_etag": "\"00000500-0000-0000-0000-574fad050000\"",
+    "_attachments": "attachments/",
+    "_ts": 1464839428
   },
   {
     "id": "8428ab22-d813-4fe7-8b5b-6f536353fdbe",
@@ -1590,8 +1706,8 @@
     "items": [],
     "type": "GreyTide.Models.V2.Model",
     "name": "Carnifex New",
-    "currentState": "Buy New",
-    "currentDate": "2015-01-01T12:50:26.092Z",
+    "currentState": "Prime",
+    "currentDate": "2016-06-02T03:50:32.149Z",
     "points": 140,
     "states": [
       {
@@ -1601,13 +1717,21 @@
       {
         "name": "Startup",
         "date": "2015-01-01T12:49:20.797Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2016-05-17T00:26:35.351Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2016-06-02T03:50:32.149Z"
       }
     ],
     "_rid": "n9wIAJNqDQAjAAAAAAAAAA==",
-    "_ts": 1444876359,
     "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAjAAAAAAAAAA==/",
-    "_etag": "\"00008204-0000-0000-0000-561f10470000\"",
-    "_attachments": "attachments/"
+    "_etag": "\"00000600-0000-0000-0000-574fad080000\"",
+    "_attachments": "attachments/",
+    "_ts": 1464839431
   },
   {
     "id": "e5dc7168-d2f3-4a6e-8b31-17a4ab62498f",
@@ -2368,11 +2492,68 @@
   {
     "id": "e5187d4e-7204-4083-9d6b-9e6dbad5a608",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [
+      {
+        "name": "Model",
+        "currentState": "Complete",
+        "currentDate": "2016-05-26T02:41:13.397Z",
+        "points": 115,
+        "states": [
+          {
+            "name": "Prime",
+            "date": "2016-05-10T02:07:29.359Z"
+          },
+          {
+            "name": "Paint",
+            "date": "2016-05-10T02:07:44.727Z"
+          },
+          {
+            "name": "Weather",
+            "date": "2016-05-21T18:47:28.662Z"
+          },
+          {
+            "name": "Finish Coat",
+            "date": "2016-05-26T02:39:34.16Z"
+          },
+          {
+            "name": "Complete",
+            "date": "2016-05-26T02:41:13.397Z"
+          }
+        ]
+      },
+      {
+        "name": "Base",
+        "currentState": "Complete",
+        "currentDate": "2016-05-26T02:41:13.4Z",
+        "points": 0,
+        "states": [
+          {
+            "name": "Prime",
+            "date": "2016-05-10T02:07:36.244Z"
+          },
+          {
+            "name": "Paint",
+            "date": "2016-05-21T18:47:27.223Z"
+          },
+          {
+            "name": "Weather",
+            "date": "2016-05-21T18:47:28.664Z"
+          },
+          {
+            "name": "Finish Coat",
+            "date": "2016-05-26T02:39:34.174Z"
+          },
+          {
+            "name": "Complete",
+            "date": "2016-05-26T02:41:13.4Z"
+          }
+        ]
+      }
+    ],
     "type": "GreyTide.Models.V2.Model",
     "name": "Blood Claws",
-    "currentState": "Prime",
-    "currentDate": "2015-01-01T20:00:00Z",
+    "currentState": "Complete",
+    "currentDate": "2016-05-26T02:41:13.393Z",
     "points": 115,
     "states": [
       {
@@ -2382,13 +2563,29 @@
       {
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2016-05-18T18:45:00Z"
+      },
+      {
+        "name": "Weather",
+        "date": "2016-05-21T18:47:28.659Z"
+      },
+      {
+        "name": "Finish Coat",
+        "date": "2016-05-26T02:39:34.131Z"
+      },
+      {
+        "name": "Complete",
+        "date": "2016-05-26T02:41:13.393Z"
       }
     ],
     "_rid": "n9wIAJNqDQAzAAAAAAAAAA==",
-    "_ts": 1444876361,
     "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAzAAAAAAAAAA==/",
-    "_etag": "\"00009204-0000-0000-0000-561f10490000\"",
-    "_attachments": "attachments/"
+    "_etag": "\"1300a064-0000-0000-0000-574662580000\"",
+    "_attachments": "attachments/",
+    "_ts": 1464230469
   },
   {
     "id": "21e721fd-f092-41fa-932e-2d7fd2f18d0a",
@@ -2396,8 +2593,8 @@
     "items": [
       {
         "name": "Model",
-        "currentState": "Weather",
-        "currentDate": "2015-12-17T04:03:30.704Z",
+        "currentState": "Complete",
+        "currentDate": "2016-05-26T02:41:14.204Z",
         "points": 135,
         "states": [
           {
@@ -2415,13 +2612,21 @@
           {
             "name": "Weather",
             "date": "2015-12-17T04:03:30.704Z"
+          },
+          {
+            "name": "Finish Coat",
+            "date": "2016-05-26T02:39:36.073Z"
+          },
+          {
+            "name": "Complete",
+            "date": "2016-05-26T02:41:14.204Z"
           }
         ]
       },
       {
         "name": "Base",
-        "currentState": "Assemble",
-        "currentDate": "2015-11-28T20:45:26.084Z",
+        "currentState": "Complete",
+        "currentDate": "2016-05-10T02:10:03.623Z",
         "points": 0,
         "states": [
           {
@@ -2435,14 +2640,18 @@
           {
             "name": "Assemble",
             "date": "2015-11-28T20:45:26.084Z"
+          },
+          {
+            "name": "Complete",
+            "date": "2015-12-16T03:10:00Z"
           }
         ]
       }
     ],
     "type": "GreyTide.Models.V2.Model",
     "name": "Sky Claws 1",
-    "currentState": "Weather",
-    "currentDate": "2015-12-17T04:03:30.703Z",
+    "currentState": "Complete",
+    "currentDate": "2016-05-26T02:41:14.204Z",
     "points": 135,
     "states": [
       {
@@ -2464,13 +2673,21 @@
       {
         "name": "Weather",
         "date": "2015-12-17T04:03:30.703Z"
+      },
+      {
+        "name": "Finish Coat",
+        "date": "2016-05-26T02:39:36.07Z"
+      },
+      {
+        "name": "Complete",
+        "date": "2016-05-26T02:41:14.204Z"
       }
     ],
     "_rid": "n9wIAJNqDQA0AAAAAAAAAA==",
-    "_ts": 1450325028,
     "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA0AAAAAAAAAA==/",
-    "_etag": "\"00000519-0000-0000-0000-567234240000\"",
-    "_attachments": "attachments/"
+    "_etag": "\"1300a264-0000-0000-0000-574662580000\"",
+    "_attachments": "attachments/",
+    "_ts": 1464230470
   },
   {
     "id": "c89c6372-55eb-48c1-b1de-dceba452c989",
@@ -2478,8 +2695,8 @@
     "items": [
       {
         "name": "Model",
-        "currentState": "Weather",
-        "currentDate": "2015-12-17T04:03:36.293Z",
+        "currentState": "Complete",
+        "currentDate": "2016-05-26T02:41:14.914Z",
         "points": 145,
         "states": [
           {
@@ -2497,13 +2714,21 @@
           {
             "name": "Weather",
             "date": "2015-12-17T04:03:36.293Z"
+          },
+          {
+            "name": "Finish Coat",
+            "date": "2016-05-26T02:39:38.032Z"
+          },
+          {
+            "name": "Complete",
+            "date": "2016-05-26T02:41:14.914Z"
           }
         ]
       },
       {
         "name": "Base",
-        "currentState": "Assemble",
-        "currentDate": "2015-11-28T20:45:22.107Z",
+        "currentState": "Complete",
+        "currentDate": "2016-05-10T02:09:12.434Z",
         "points": 0,
         "states": [
           {
@@ -2517,14 +2742,22 @@
           {
             "name": "Assemble",
             "date": "2015-11-28T20:45:22.107Z"
+          },
+          {
+            "name": "Prime",
+            "date": "2015-12-15T03:10:00Z"
+          },
+          {
+            "name": "Complete",
+            "date": "2015-12-16T03:10:00Z"
           }
         ]
       }
     ],
     "type": "GreyTide.Models.V2.Model",
     "name": "Sky Claws 2",
-    "currentState": "Weather",
-    "currentDate": "2015-12-17T04:03:36.293Z",
+    "currentState": "Complete",
+    "currentDate": "2016-05-26T02:41:14.914Z",
     "points": 145,
     "states": [
       {
@@ -2546,13 +2779,21 @@
       {
         "name": "Weather",
         "date": "2015-12-17T04:03:36.293Z"
+      },
+      {
+        "name": "Finish Coat",
+        "date": "2016-05-26T02:39:38.03Z"
+      },
+      {
+        "name": "Complete",
+        "date": "2016-05-26T02:41:14.914Z"
       }
     ],
     "_rid": "n9wIAJNqDQA1AAAAAAAAAA==",
-    "_ts": 1450325033,
     "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA1AAAAAAAAAA==/",
-    "_etag": "\"00000719-0000-0000-0000-567234290000\"",
-    "_attachments": "attachments/"
+    "_etag": "\"1300a564-0000-0000-0000-574662590000\"",
+    "_attachments": "attachments/",
+    "_ts": 1464230471
   },
   {
     "id": "0aef645a-4113-4b54-85cd-dae9ab5aceb9",
@@ -2560,8 +2801,8 @@
     "items": [
       {
         "name": "Model",
-        "currentState": "Weather",
-        "currentDate": "2015-12-17T04:05:13.629Z",
+        "currentState": "Complete",
+        "currentDate": "2016-05-26T02:41:15.365Z",
         "points": 0,
         "states": [
           {
@@ -2575,13 +2816,21 @@
           {
             "name": "Weather",
             "date": "2015-12-17T04:05:13.629Z"
+          },
+          {
+            "name": "Finish Coat",
+            "date": "2016-05-26T02:39:44.81Z"
+          },
+          {
+            "name": "Complete",
+            "date": "2016-05-26T02:41:15.365Z"
           }
         ]
       },
       {
         "name": "Base",
-        "currentState": "Weather",
-        "currentDate": "2015-12-17T04:05:13.629Z",
+        "currentState": "Complete",
+        "currentDate": "2016-05-26T02:41:15.366Z",
         "points": 0,
         "states": [
           {
@@ -2595,14 +2844,22 @@
           {
             "name": "Weather",
             "date": "2015-12-17T04:05:13.629Z"
+          },
+          {
+            "name": "Finish Coat",
+            "date": "2016-05-26T02:39:44.813Z"
+          },
+          {
+            "name": "Complete",
+            "date": "2016-05-26T02:41:15.366Z"
           }
         ]
       }
     ],
     "type": "GreyTide.Models.V2.Model",
     "name": "Grey Hunters 1",
-    "currentState": "Weather",
-    "currentDate": "2015-12-17T04:05:13.628Z",
+    "currentState": "Complete",
+    "currentDate": "2016-05-26T02:41:15.365Z",
     "points": 117,
     "states": [
       {
@@ -2620,13 +2877,21 @@
       {
         "name": "Weather",
         "date": "2015-12-17T04:05:13.628Z"
+      },
+      {
+        "name": "Finish Coat",
+        "date": "2016-05-26T02:39:44.808Z"
+      },
+      {
+        "name": "Complete",
+        "date": "2016-05-26T02:41:15.365Z"
       }
     ],
     "_rid": "n9wIAJNqDQA2AAAAAAAAAA==",
-    "_ts": 1450351430,
     "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA2AAAAAAAAAA==/",
-    "_etag": "\"0000541a-0000-0000-0000-56729b460000\"",
-    "_attachments": "attachments/"
+    "_etag": "\"1300a664-0000-0000-0000-5746625a0000\"",
+    "_attachments": "attachments/",
+    "_ts": 1464230471
   },
   {
     "id": "d12f2774-5be8-44d1-976a-8d64e24cf1f2",
@@ -2634,8 +2899,8 @@
     "items": [
       {
         "name": "Model",
-        "currentState": "Weather",
-        "currentDate": "2015-12-17T04:05:20.41Z",
+        "currentState": "Complete",
+        "currentDate": "2016-05-26T02:41:16.222Z",
         "points": 0,
         "states": [
           {
@@ -2649,13 +2914,21 @@
           {
             "name": "Weather",
             "date": "2015-12-17T04:05:20.41Z"
+          },
+          {
+            "name": "Finish Coat",
+            "date": "2016-05-26T02:39:50.512Z"
+          },
+          {
+            "name": "Complete",
+            "date": "2016-05-26T02:41:16.222Z"
           }
         ]
       },
       {
         "name": "Base",
-        "currentState": "Weather",
-        "currentDate": "2015-12-17T04:05:20.411Z",
+        "currentState": "Complete",
+        "currentDate": "2016-05-26T02:41:16.222Z",
         "points": 0,
         "states": [
           {
@@ -2669,14 +2942,22 @@
           {
             "name": "Weather",
             "date": "2015-12-17T04:05:20.411Z"
+          },
+          {
+            "name": "Finish Coat",
+            "date": "2016-05-26T02:39:50.514Z"
+          },
+          {
+            "name": "Complete",
+            "date": "2016-05-26T02:41:16.222Z"
           }
         ]
       }
     ],
     "type": "GreyTide.Models.V2.Model",
     "name": "Grey Hunters 2",
-    "currentState": "Weather",
-    "currentDate": "2015-12-17T04:05:20.41Z",
+    "currentState": "Complete",
+    "currentDate": "2016-05-26T02:41:16.221Z",
     "points": 117,
     "states": [
       {
@@ -2694,22 +2975,87 @@
       {
         "name": "Weather",
         "date": "2015-12-17T04:05:20.41Z"
+      },
+      {
+        "name": "Finish Coat",
+        "date": "2016-05-26T02:39:50.507Z"
+      },
+      {
+        "name": "Complete",
+        "date": "2016-05-26T02:41:16.221Z"
       }
     ],
     "_rid": "n9wIAJNqDQA3AAAAAAAAAA==",
-    "_ts": 1450351405,
     "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA3AAAAAAAAAA==/",
-    "_etag": "\"0000521a-0000-0000-0000-56729b2d0000\"",
-    "_attachments": "attachments/"
+    "_etag": "\"1300a764-0000-0000-0000-5746625a0000\"",
+    "_attachments": "attachments/",
+    "_ts": 1464230472
   },
   {
     "id": "847e9408-b847-4f44-9116-7200eea396c0",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [
+      {
+        "name": "Model",
+        "currentState": "Complete",
+        "currentDate": "2016-05-26T02:41:17.066Z",
+        "points": 117,
+        "states": [
+          {
+            "name": "Prime",
+            "date": "2016-05-10T02:06:23.476Z"
+          },
+          {
+            "name": "Paint",
+            "date": "2016-05-10T02:07:15.376Z"
+          },
+          {
+            "name": "Weather",
+            "date": "2016-05-21T18:46:47.187Z"
+          },
+          {
+            "name": "Finish Coat",
+            "date": "2016-05-26T02:39:53.959Z"
+          },
+          {
+            "name": "Complete",
+            "date": "2016-05-26T02:41:17.066Z"
+          }
+        ]
+      },
+      {
+        "name": "Base",
+        "currentState": "Complete",
+        "currentDate": "2016-05-26T02:41:17.066Z",
+        "points": 0,
+        "states": [
+          {
+            "name": "Prime",
+            "date": "2016-05-10T02:06:45.261Z"
+          },
+          {
+            "name": "Paint",
+            "date": "2016-05-21T18:46:12.511Z"
+          },
+          {
+            "name": "Weather",
+            "date": "2016-05-21T18:46:47.19Z"
+          },
+          {
+            "name": "Finish Coat",
+            "date": "2016-05-26T02:39:53.96Z"
+          },
+          {
+            "name": "Complete",
+            "date": "2016-05-26T02:41:17.066Z"
+          }
+        ]
+      }
+    ],
     "type": "GreyTide.Models.V2.Model",
     "name": "Grey Hunters 3",
-    "currentState": "Prime",
-    "currentDate": "2015-01-01T20:00:00Z",
+    "currentState": "Complete",
+    "currentDate": "2016-05-26T02:41:17.066Z",
     "points": 117,
     "states": [
       {
@@ -2719,13 +3065,29 @@
       {
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
+      },
+      {
+        "name": "Paint",
+        "date": "2016-05-18T18:45:00Z"
+      },
+      {
+        "name": "Weather",
+        "date": "2016-05-21T18:46:47.184Z"
+      },
+      {
+        "name": "Finish Coat",
+        "date": "2016-05-26T02:39:53.955Z"
+      },
+      {
+        "name": "Complete",
+        "date": "2016-05-26T02:41:17.066Z"
       }
     ],
     "_rid": "n9wIAJNqDQA4AAAAAAAAAA==",
-    "_ts": 1450351392,
     "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA4AAAAAAAAAA==/",
-    "_etag": "\"0000511a-0000-0000-0000-56729b200000\"",
-    "_attachments": "attachments/"
+    "_etag": "\"1300a864-0000-0000-0000-5746625b0000\"",
+    "_attachments": "attachments/",
+    "_ts": 1464230473
   },
   {
     "id": "95d19255-f037-45c8-8cc7-d2867438f4b1",
@@ -2807,8 +3169,8 @@
     "items": [],
     "type": "GreyTide.Models.V2.Model",
     "name": "Wolf Guard",
-    "currentState": "Paint",
-    "currentDate": "2015-11-28T02:31:47.061Z",
+    "currentState": "Complete",
+    "currentDate": "2016-05-26T02:41:21.543Z",
     "points": 105,
     "states": [
       {
@@ -2822,13 +3184,25 @@
       {
         "name": "Paint",
         "date": "2015-11-28T02:31:47.061Z"
+      },
+      {
+        "name": "Weather",
+        "date": "2016-05-23T22:09:24.819Z"
+      },
+      {
+        "name": "Finish Coat",
+        "date": "2016-05-26T02:39:59.549Z"
+      },
+      {
+        "name": "Complete",
+        "date": "2016-05-26T02:41:21.543Z"
       }
     ],
     "_rid": "n9wIAJNqDQA7AAAAAAAAAA==",
     "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA7AAAAAAAAAA==/",
-    "_etag": "\"0000dd35-0000-0000-0000-572176ba0000\"",
+    "_etag": "\"1300ba64-0000-0000-0000-574662600000\"",
     "_attachments": "attachments/",
-    "_ts": 1461810873
+    "_ts": 1464230477
   },
   {
     "id": "87c8038a-e599-49bb-a9c0-ed3dc929af9a",
@@ -3248,8 +3622,8 @@
     "items": [],
     "type": "GreyTide.Models.V2.Model",
     "name": "Land Raider",
-    "currentState": "Buy New",
-    "currentDate": "2015-05-13T13:19:48.819Z",
+    "currentState": "Assemble",
+    "currentDate": "2016-10-21T00:44:20.752Z",
     "points": 250,
     "states": [
       {
@@ -3259,13 +3633,17 @@
       {
         "name": "Startup",
         "date": "2015-05-13T13:19:48.814Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2016-10-21T00:44:20.752Z"
       }
     ],
     "_rid": "n9wIAJNqDQBGAAAAAAAAAA==",
-    "_ts": 1444876364,
     "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBGAAAAAAAAAA==/",
-    "_etag": "\"0000a504-0000-0000-0000-561f104c0000\"",
-    "_attachments": "attachments/"
+    "_etag": "\"00002ad2-0000-0000-0000-580964ea0000\"",
+    "_attachments": "attachments/",
+    "_ts": 1477010659
   },
   {
     "id": "06665ed8-e4bd-425b-a0c8-dc8604fb32ca",
@@ -3629,8 +4007,8 @@
     "items": [],
     "type": "GreyTide.Models.V2.Model",
     "name": "Tyrannocyte",
-    "currentState": "Buy New",
-    "currentDate": "2016-04-26T17:28:14.377Z",
+    "currentState": "Prime",
+    "currentDate": "2016-09-11T03:03:50.874Z",
     "points": 75,
     "states": [
       {
@@ -3639,14 +4017,22 @@
       },
       {
         "name": "Buy New",
-        "date": "2016-04-26T17:28:14.377Z"
+        "date": "2016-04-26T17:35:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2016-07-01T02:25:19.314Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2016-09-11T03:03:50.874Z"
       }
     ],
     "_rid": "n9wIAJNqDQBSAAAAAAAAAA==",
     "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBSAAAAAAAAAA==/",
-    "_etag": "\"0000db35-0000-0000-0000-572176900000\"",
+    "_etag": "\"0100c92f-0000-0000-0000-57d4c9a00000\"",
     "_attachments": "attachments/",
-    "_ts": 1461810831
+    "_ts": 1473563011
   },
   {
     "id": "90e3c5da-aae7-dccd-a05a-6743a147523b",
@@ -3654,9 +4040,9 @@
     "items": [],
     "type": "GreyTide.Models.V2.Model",
     "name": "Wolf Lord on Thunderwolf",
-    "currentState": "Buy New",
-    "currentDate": "2015-12-25T02:28:36.489Z",
-    "points": 205,
+    "currentState": "Prime",
+    "currentDate": "2016-09-11T03:03:52.222Z",
+    "points": 210,
     "states": [
       {
         "name": "Startup",
@@ -3665,12 +4051,465 @@
       {
         "name": "Buy New",
         "date": "2015-12-25T02:28:36.489Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2016-05-02T01:48:23.907Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2016-09-11T03:03:52.222Z"
       }
     ],
     "_rid": "n9wIAJNqDQBTAAAAAAAAAA==",
     "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBTAAAAAAAAAA==/",
-    "_etag": "\"0000da35-0000-0000-0000-572176780000\"",
+    "_etag": "\"0100ca2f-0000-0000-0000-57d4c9a10000\"",
     "_attachments": "attachments/",
-    "_ts": 1461810807
+    "_ts": 1473563013
+  },
+  {
+    "id": "6f3bd92f-8670-749d-47d4-7d7cddd94651",
+    "faction": "Deathwatch",
+    "items": [],
+    "type": "GreyTide.Models.V2.Model",
+    "name": "Deathwatch",
+    "currentState": "Prime",
+    "currentDate": "2016-09-11T03:03:54.453Z",
+    "points": 535,
+    "states": [
+      {
+        "name": "Startup",
+        "date": "2016-06-01T11:02:23.386Z"
+      },
+      {
+        "name": "Want",
+        "date": "2016-06-01T11:03:03.656Z"
+      },
+      {
+        "name": "Buy New",
+        "date": "2016-06-20T11:51:24.95Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2016-06-29T02:25:00Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2016-09-11T03:03:54.453Z"
+      }
+    ],
+    "_rid": "n9wIAJNqDQBVAAAAAAAAAA==",
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBVAAAAAAAAAA==/",
+    "_etag": "\"0100cb2f-0000-0000-0000-57d4c9a40000\"",
+    "_attachments": "attachments/",
+    "_ts": 1473563016
+  },
+  {
+    "id": "796eebad-5892-5c93-b29e-02d7eba0f67a",
+    "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.V2.Model",
+    "name": "Mucolid Spore",
+    "currentState": "Prime",
+    "currentDate": "2016-09-11T03:03:55.354Z",
+    "points": 15,
+    "states": [
+      {
+        "name": "Startup",
+        "date": "2016-06-01T11:03:54.12Z"
+      },
+      {
+        "name": "Buy New",
+        "date": "2016-06-01T11:05:07.819Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2016-06-01T11:06:32.937Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2016-09-11T03:03:55.354Z"
+      }
+    ],
+    "_rid": "n9wIAJNqDQBWAAAAAAAAAA==",
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBWAAAAAAAAAA==/",
+    "_etag": "\"0100cc2f-0000-0000-0000-57d4c9a50000\"",
+    "_attachments": "attachments/",
+    "_ts": 1473563017
+  },
+  {
+    "id": "cec264cb-17a3-994d-a30a-301328fc28fc",
+    "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.V2.Model",
+    "name": "Spore Mine Cluster",
+    "currentState": "Prime",
+    "currentDate": "2016-09-11T03:03:57.428Z",
+    "points": 15,
+    "states": [
+      {
+        "name": "Startup",
+        "date": "2016-04-26T11:05:00Z"
+      },
+      {
+        "name": "Buy New",
+        "date": "2016-04-26T12:05:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2016-06-01T11:07:57.306Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2016-09-11T03:03:57.428Z"
+      }
+    ],
+    "_rid": "n9wIAJNqDQBXAAAAAAAAAA==",
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBXAAAAAAAAAA==/",
+    "_etag": "\"0100cd2f-0000-0000-0000-57d4c9a70000\"",
+    "_attachments": "attachments/",
+    "_ts": 1473563018
+  },
+  {
+    "id": "6b530ec1-0481-9ea3-3af6-6aa8c3690ce1",
+    "faction": "Gene Cult",
+    "items": [],
+    "type": "GreyTide.Models.V2.Model",
+    "name": "Acolyte Hybrid",
+    "currentState": "Prime",
+    "currentDate": "2016-09-11T03:04:02.863Z",
+    "points": 85,
+    "states": [
+      {
+        "name": "Startup",
+        "date": "2016-06-01T11:08:28.534Z"
+      },
+      {
+        "name": "Want",
+        "date": "2016-06-01T11:08:55.944Z"
+      },
+      {
+        "name": "Buy New",
+        "date": "2016-06-20T11:51:07.487Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2016-06-22T05:26:12.207Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2016-09-11T03:04:02.863Z"
+      }
+    ],
+    "_rid": "n9wIAJNqDQBYAAAAAAAAAA==",
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBYAAAAAAAAAA==/",
+    "_etag": "\"0100ce2f-0000-0000-0000-57d4c9ac0000\"",
+    "_attachments": "attachments/",
+    "_ts": 1473563024
+  },
+  {
+    "id": "766b4f47-f77b-c79b-bb39-ce200819a79f",
+    "faction": "Gene Cult",
+    "items": [],
+    "type": "GreyTide.Models.V2.Model",
+    "name": "Neophyte Hybrid",
+    "currentState": "Prime",
+    "currentDate": "2016-09-27T03:36:08.876Z",
+    "points": 110,
+    "states": [
+      {
+        "name": "Startup",
+        "date": "2016-06-01T11:09:45.489Z"
+      },
+      {
+        "name": "Want",
+        "date": "2016-06-01T11:10:26.114Z"
+      },
+      {
+        "name": "Buy New",
+        "date": "2016-06-20T11:51:10.4Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2016-06-24T15:43:02.356Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2016-09-27T03:36:08.876Z"
+      }
+    ],
+    "_rid": "n9wIAJNqDQBZAAAAAAAAAA==",
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBZAAAAAAAAAA==/",
+    "_etag": "\"00000801-0000-0000-0000-57e9e9280000\"",
+    "_attachments": "attachments/",
+    "_ts": 1474947359
+  },
+  {
+    "id": "868ace9f-cb25-223a-11a5-38b5cc7fb218",
+    "faction": "Gene Cult",
+    "items": [],
+    "type": "GreyTide.Models.V2.Model",
+    "name": "Purestrain Princelings",
+    "currentState": "Prime",
+    "currentDate": "2016-09-11T03:04:05.479Z",
+    "points": 30,
+    "states": [
+      {
+        "name": "Startup",
+        "date": "2016-06-01T11:10:51.613Z"
+      },
+      {
+        "name": "Want",
+        "date": "2016-06-01T11:11:54.022Z"
+      },
+      {
+        "name": "Buy New",
+        "date": "2016-06-20T11:51:11.63Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2016-06-21T05:25:00Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2016-09-11T03:04:05.479Z"
+      }
+    ],
+    "_rid": "n9wIAJNqDQBaAAAAAAAAAA==",
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBaAAAAAAAAAA==/",
+    "_etag": "\"0100cf2f-0000-0000-0000-57d4c9af0000\"",
+    "_attachments": "attachments/",
+    "_ts": 1473563027
+  },
+  {
+    "id": "8a21645d-526f-30a7-09b7-be4f24bbd535",
+    "faction": "Gene Cult",
+    "items": [],
+    "type": "GreyTide.Models.V2.Model",
+    "name": "Aberant",
+    "currentState": "Prime",
+    "currentDate": "2016-09-11T03:04:07.534Z",
+    "points": 120,
+    "states": [
+      {
+        "name": "Startup",
+        "date": "2016-06-01T11:12:17.368Z"
+      },
+      {
+        "name": "Want",
+        "date": "2016-06-01T11:12:55.063Z"
+      },
+      {
+        "name": "Buy New",
+        "date": "2016-06-20T11:51:13.767Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2016-06-21T05:25:00Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2016-09-11T03:04:07.534Z"
+      }
+    ],
+    "_rid": "n9wIAJNqDQBbAAAAAAAAAA==",
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBbAAAAAAAAAA==/",
+    "_etag": "\"0100d02f-0000-0000-0000-57d4c9b10000\"",
+    "_attachments": "attachments/",
+    "_ts": 1473563029
+  },
+  {
+    "id": "b03eb7e3-1fb0-c976-06be-9accf74361e3",
+    "faction": "Gene Cult",
+    "items": [],
+    "type": "GreyTide.Models.V2.Model",
+    "name": "Primus",
+    "currentState": "Prime",
+    "currentDate": "2016-09-11T03:04:10.871Z",
+    "points": 75,
+    "states": [
+      {
+        "name": "Startup",
+        "date": "2016-06-01T11:13:05.626Z"
+      },
+      {
+        "name": "Want",
+        "date": "2016-06-01T11:16:22.004Z"
+      },
+      {
+        "name": "Buy New",
+        "date": "2016-06-20T11:51:15.51Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2016-06-24T18:09:23.532Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2016-09-11T03:04:10.871Z"
+      }
+    ],
+    "_rid": "n9wIAJNqDQBcAAAAAAAAAA==",
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBcAAAAAAAAAA==/",
+    "_etag": "\"0100d12f-0000-0000-0000-57d4c9b50000\"",
+    "_attachments": "attachments/",
+    "_ts": 1473563032
+  },
+  {
+    "id": "0f6faa75-d489-6fda-b839-90d7a0956c2c",
+    "faction": "Gene Cult",
+    "items": [],
+    "type": "GreyTide.Models.V2.Model",
+    "name": "Patriarch",
+    "currentState": "Prime",
+    "currentDate": "2016-09-11T03:04:13.605Z",
+    "points": 115,
+    "states": [
+      {
+        "name": "Startup",
+        "date": "2016-06-01T11:16:27.901Z"
+      },
+      {
+        "name": "Want",
+        "date": "2016-06-01T11:16:47.27Z"
+      },
+      {
+        "name": "Buy New",
+        "date": "2016-06-20T11:51:17.247Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2016-06-24T12:47:58.083Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2016-09-11T03:04:13.605Z"
+      }
+    ],
+    "_rid": "n9wIAJNqDQBdAAAAAAAAAA==",
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBdAAAAAAAAAA==/",
+    "_etag": "\"0100d22f-0000-0000-0000-57d4c9b70000\"",
+    "_attachments": "attachments/",
+    "_ts": 1473563035
+  },
+  {
+    "id": "af3a52fe-8069-b8cc-fd6d-6f3905a03e55",
+    "faction": "Gene Cult",
+    "items": [],
+    "type": "GreyTide.Models.V2.Model",
+    "name": "Magus",
+    "currentState": "Prime",
+    "currentDate": "2016-09-11T03:04:15.118Z",
+    "points": 65,
+    "states": [
+      {
+        "name": "Startup",
+        "date": "2016-06-01T11:17:11.107Z"
+      },
+      {
+        "name": "Want",
+        "date": "2016-06-01T11:17:36.128Z"
+      },
+      {
+        "name": "Buy New",
+        "date": "2016-06-20T11:51:18.741Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2016-06-24T18:09:24.817Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2016-09-11T03:04:15.118Z"
+      }
+    ],
+    "_rid": "n9wIAJNqDQBeAAAAAAAAAA==",
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBeAAAAAAAAAA==/",
+    "_etag": "\"0100d32f-0000-0000-0000-57d4c9b90000\"",
+    "_attachments": "attachments/",
+    "_ts": 1473563037
+  },
+  {
+    "id": "611d3883-8a48-1b97-1548-9c3ca70d00b0",
+    "faction": "Tyranids",
+    "items": [],
+    "type": "GreyTide.Models.V2.Model",
+    "name": "Ripper Swarm",
+    "currentState": "Prime",
+    "currentDate": "2016-09-11T03:04:17.205Z",
+    "points": 30,
+    "states": [
+      {
+        "name": "Startup",
+        "date": "2015-01-04T02:30:00Z"
+      },
+      {
+        "name": "Buy New",
+        "date": "2015-01-04T02:30:00Z"
+      },
+      {
+        "name": "Assemble",
+        "date": "2016-08-04T01:31:27.325Z"
+      },
+      {
+        "name": "Prime",
+        "date": "2016-09-11T03:04:17.205Z"
+      }
+    ],
+    "_rid": "n9wIAJNqDQBfAAAAAAAAAA==",
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBfAAAAAAAAAA==/",
+    "_etag": "\"0100d42f-0000-0000-0000-57d4c9bb0000\"",
+    "_attachments": "attachments/",
+    "_ts": 1473563038
+  },
+  {
+    "id": "1cb691ed-323c-fe8b-7039-fbaaa125e0ef",
+    "faction": "Ork",
+    "items": [],
+    "type": "GreyTide.Models.V2.Model",
+    "name": "Warboss",
+    "currentState": "Buy New",
+    "currentDate": "2016-08-27T02:02:26.974Z",
+    "points": 95,
+    "states": [
+      {
+        "name": "Startup",
+        "date": "2016-08-27T02:02:01.628Z"
+      },
+      {
+        "name": "Buy New",
+        "date": "2016-08-27T02:02:26.974Z"
+      }
+    ],
+    "_rid": "n9wIAJNqDQBgAAAAAAAAAA==",
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBgAAAAAAAAAA==/",
+    "_etag": "\"0b00a229-0000-0000-0000-57c0f79b0000\"",
+    "_attachments": "attachments/",
+    "_ts": 1472264072
+  },
+  {
+    "id": "3f9eddca-8c63-7fa0-3df6-88928763c316",
+    "faction": "Space Wolves",
+    "items": [],
+    "type": "GreyTide.Models.V2.Model",
+    "name": "Venerable Dread",
+    "currentState": "Buy New",
+    "currentDate": "2016-08-27T02:02:49.067Z",
+    "points": 165,
+    "states": [
+      {
+        "name": "Startup",
+        "date": "2016-08-27T02:02:30.674Z"
+      },
+      {
+        "name": "Buy New",
+        "date": "2016-08-27T02:02:49.067Z"
+      }
+    ],
+    "_rid": "n9wIAJNqDQBhAAAAAAAAAA==",
+    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBhAAAAAAAAAA==/",
+    "_etag": "\"0b00a029-0000-0000-0000-57c0f4de0000\"",
+    "_attachments": "attachments/",
+    "_ts": 1472263372
   }
 ]

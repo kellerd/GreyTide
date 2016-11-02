@@ -3,3 +3,4 @@ Suave
 Microsoft.Azure.DocumentDB
 Newtonsoft.Json
 Breeze.Server.ContextProvider
+AutoMapper

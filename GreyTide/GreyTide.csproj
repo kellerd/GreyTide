@@ -46,447 +46,9 @@
     <Content Include="app\tide\item.html" />
     <Content Include="app\tide\items.html" />
     <Content Include="app\tide\tide.html" />
-    <Content Include="Scripts\angular-animate.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\angular-animate.min.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\angular-animate.min.js.map">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\angular-mocks.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\angular.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\angular.min.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\angular.min.js.map">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\angular-route.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\angular-route.min.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\angular-route.min.js.map">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\angular-sanitize.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\angular-sanitize.min.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\angular-sanitize.min.js.map">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\bootstrap.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\bootstrap.min.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\breeze.bridge.angular.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\breeze.debug.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\breeze.min.js">
-      <Paket>True</Paket>
-    </Content>
     <Content Include="Scripts\breezeOdataV4Adapter.js" />
-    <Content Include="Scripts\d3\d3.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\d3\d3.min.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\d3\LICENSE">
-      <Paket>True</Paket>
-    </Content>
-    <Resource Include="fonts\glyphicons-halflings-regular.ttf">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="fonts\fontawesome-webfont.ttf">
-      <Paket>True</Paket>
-    </Resource>
-    <Content Include="Content\bootstrap-theme.css">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Content\bootstrap-theme.css.map">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Content\bootstrap-theme.min.css">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Content\bootstrap.css">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Content\bootstrap.css.map">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Content\bootstrap.min.css">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Content\font-awesome.css">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Content\font-awesome.min.css">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Content\customtheme.css">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Content\fullcalendar.css">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Content\ie10mobile.css">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Content\jquery-ui.css">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Content\jquery.gritter.css">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Content\prettyPhoto.css">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Content\rateit.css">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Content\styles.css">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Content\widgets.css">
-      <Paket>True</Paket>
-    </Content>
-    <Resource Include="Content\images\AngularJS-small.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\images\animated-overlay.gif">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\images\breezelogo.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\images\icon.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\images\ui-bg_flat_0_aaaaaa_40x100.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\images\ui-bg_flat_75_ffffff_40x100.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\images\ui-bg_glass_55_fbf9ee_1x400.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\images\ui-bg_glass_65_ffffff_1x400.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\images\ui-bg_glass_75_dadada_1x400.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\images\ui-bg_glass_75_e6e6e6_1x400.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\images\ui-bg_glass_95_fef1ec_1x400.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\images\ui-bg_highlight-soft_75_cccccc_1x100.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\images\ui-icons_222222_256x240.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\images\ui-icons_2e83ff_256x240.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\images\ui-icons_454545_256x240.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\images\ui-icons_888888_256x240.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\images\ui-icons_cd0a0a_256x240.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\delete.gif">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\star.gif">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\user.jpg">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\favicon\favicon.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\gritter\gritter.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\gritter\ie-spacer.gif">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\icons\android.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\icons\chrome.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\icons\firefox.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\icons\ie.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\icons\ios.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\icons\linux.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\icons\mac.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\icons\metro.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\icons\opera.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\icons\safari.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\icons\windows.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\photos\s1.jpg">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\photos\s10.jpg">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\photos\s2.jpg">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\photos\s3.jpg">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\photos\s4.jpg">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\photos\s5.jpg">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\photos\s6.jpg">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\photos\s7.jpg">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\photos\s8.jpg">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\photos\s9.jpg">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\photos\t1.jpg">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\photos\t10.jpg">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\photos\t2.jpg">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\photos\t3.jpg">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\photos\t4.jpg">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\photos\t5.jpg">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\photos\t6.jpg">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\photos\t7.jpg">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\photos\t8.jpg">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\photos\t9.jpg">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\dark_rounded\btnNext.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\dark_rounded\btnPrevious.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\dark_rounded\contentPattern.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\dark_rounded\default_thumbnail.gif">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\dark_rounded\loader.gif">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\dark_rounded\sprite.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\dark_square\btnNext.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\dark_square\btnPrevious.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\dark_square\contentPattern.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\dark_square\default_thumbnail.gif">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\dark_square\loader.gif">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\dark_square\sprite.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\default\default_thumb.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\default\loader.gif">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\default\sprite.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\default\sprite_next.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\default\sprite_prev.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\default\sprite_x.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\default\sprite_y.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\facebook\btnNext.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\facebook\btnPrevious.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\facebook\contentPatternBottom.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\facebook\contentPatternLeft.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\facebook\contentPatternRight.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\facebook\contentPatternTop.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\facebook\default_thumbnail.gif">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\facebook\loader.gif">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\facebook\sprite.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\light_rounded\btnNext.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\light_rounded\btnPrevious.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\light_rounded\default_thumbnail.gif">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\light_rounded\loader.gif">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\light_rounded\sprite.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\light_square\btnNext.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\light_square\btnPrevious.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\light_square\default_thumbnail.gif">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\light_square\loader.gif">
-      <Paket>True</Paket>
-    </Resource>
-    <Resource Include="Content\themeimages\prettyPhoto\light_square\sprite.png">
-      <Paket>True</Paket>
-    </Resource>
-    <Content Include="Scripts\jquery-2.1.4.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\jquery-2.1.4.min.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\jquery-2.1.4.min.map">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\linq-vsdoc.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\linq.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\linq.min.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\moment-with-locales.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\moment-with-locales.min.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\moment.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\moment.min.js">
-      <Paket>True</Paket>
-    </Content>
     <Content Include="Scripts\nv.d3.css" />
     <Content Include="Scripts\odatajs-4.0.0.js" />
-    <Content Include="Scripts\q.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\q.min.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\spin.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="Scripts\spin.min.js">
-      <Paket>True</Paket>
-    </Content>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.DynamicData" />
@@ -507,86 +69,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\layout\shell.html">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\layout\sidebar.html">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\layout\topnav.html">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="app\layout\widgetheader.html">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="content\breeze.directives.css">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="content\nv.d3.css">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="content\nv.d3.min.css">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="content\toastr.css">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="content\toastr.min.css">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="fonts\fontawesome-webfont.svg">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="fonts\glyphicons-halflings-regular.svg">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="index.html">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="scripts\breeze.directives.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="scripts\breeze.metadata-helper.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="scripts\breeze.saveErrorExtensions.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="fonts\glyphicons-halflings-regular.woff2">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="fonts\glyphicons-halflings-regular.woff">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="fonts\glyphicons-halflings-regular.eot">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="fonts\FontAwesome.otf">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="fonts\fontawesome-webfont.woff2">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="fonts\fontawesome-webfont.woff">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="fonts\fontawesome-webfont.eot">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="content\toastr.scss">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="content\toastr.less">
-      <Paket>True</Paket>
-    </Content>
     <Content Include="paket.references" />
     <None Include="Properties\PublishProfiles\GreyTide - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\GreyTide - Web Deploy.pubxml" />
     <None Include="scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\state-machine.js" />
-    <Content Include="scripts\theme\customtheme.js">
-      <Paket>True</Paket>
-    </Content>
     <Content Include="Scripts\x-editable\xeditable.css" />
     <Content Include="Scripts\x-editable\xeditable.js" />
     <Content Include="Scripts\x-editable\xeditable.min.css" />
@@ -601,24 +88,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="scripts\linq-vsdoc.js" />
-    <Content Include="scripts\nv.d3.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="scripts\nv.d3.min.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="scripts\toastr.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="scripts\toastr.min.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="scripts\ui-bootstrap-tpls-0.10.0.js">
-      <Paket>True</Paket>
-    </Content>
-    <Content Include="scripts\ui-bootstrap-tpls-0.10.0.min.js">
-      <Paket>True</Paket>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AutoMapperConfig.cs" />
@@ -741,7 +210,7 @@
   -->
   <Import Project="..\.paket\paket.targets" />
   <Choose>
-    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2')">
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')">
       <ItemGroup>
         <Reference Include="AutoMapper">
           <HintPath>..\packages\AutoMapper\lib\net45\AutoMapper.dll</HintPath>
@@ -755,7 +224,7 @@
     </When>
   </Choose>
   <Choose>
-    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2')">
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')">
       <ItemGroup>
         <Reference Include="Breeze.ContextProvider">
           <HintPath>..\packages\Breeze.Server.ContextProvider\lib\Breeze.ContextProvider.dll</HintPath>
@@ -766,7 +235,7 @@
     </When>
   </Choose>
   <Choose>
-    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2')">
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')">
       <ItemGroup>
         <Reference Include="Breeze.WebApi2">
           <HintPath>..\packages\Breeze.Server.WebApi2\lib\Breeze.WebApi2.dll</HintPath>
@@ -777,7 +246,7 @@
     </When>
   </Choose>
   <Choose>
-    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2')">
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')">
       <ItemGroup>
         <Reference Include="System.Net.Http.Formatting">
           <HintPath>..\packages\Microsoft.AspNet.WebApi.Client\lib\net45\System.Net.Http.Formatting.dll</HintPath>
@@ -788,7 +257,7 @@
     </When>
   </Choose>
   <Choose>
-    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2')">
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')">
       <ItemGroup>
         <Reference Include="System.Web.Http">
           <HintPath>..\packages\Microsoft.AspNet.WebApi.Core\lib\net45\System.Web.Http.dll</HintPath>
@@ -799,7 +268,7 @@
     </When>
   </Choose>
   <Choose>
-    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2')">
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')">
       <ItemGroup>
         <Reference Include="System.Web.Http.OData">
           <HintPath>..\packages\Microsoft.AspNet.WebApi.OData\lib\net45\System.Web.Http.OData.dll</HintPath>
@@ -810,7 +279,7 @@
     </When>
   </Choose>
   <Choose>
-    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2')">
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')">
       <ItemGroup>
         <Reference Include="System.Web.Http.WebHost">
           <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost\lib\net45\System.Web.Http.WebHost.dll</HintPath>
@@ -821,7 +290,7 @@
     </When>
   </Choose>
   <Choose>
-    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2')">
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')">
       <ItemGroup>
         <Reference Include="Microsoft.Azure.Documents.Client">
           <HintPath>..\packages\Microsoft.Azure.DocumentDB\lib\net40\Microsoft.Azure.Documents.Client.dll</HintPath>
@@ -832,7 +301,7 @@
     </When>
   </Choose>
   <Choose>
-    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2')">
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')">
       <ItemGroup>
         <Reference Include="Microsoft.Data.Edm">
           <HintPath>..\packages\Microsoft.Data.Edm\lib\net40\Microsoft.Data.Edm.dll</HintPath>
@@ -843,7 +312,7 @@
     </When>
   </Choose>
   <Choose>
-    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2')">
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')">
       <ItemGroup>
         <Reference Include="Microsoft.Data.OData">
           <HintPath>..\packages\Microsoft.Data.OData\lib\net40\Microsoft.Data.OData.dll</HintPath>
@@ -854,7 +323,7 @@
     </When>
   </Choose>
   <Choose>
-    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2')">
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')">
       <ItemGroup>
         <Reference Include="Microsoft.Web.Infrastructure">
           <HintPath>..\packages\Microsoft.Web.Infrastructure\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -865,7 +334,7 @@
     </When>
   </Choose>
   <Choose>
-    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2')">
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')">
       <ItemGroup>
         <Reference Include="Newtonsoft.Json">
           <HintPath>..\packages\Newtonsoft.Json\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -876,7 +345,7 @@
     </When>
   </Choose>
   <Choose>
-    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2')">
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')">
       <ItemGroup>
         <Reference Include="System.Spatial">
           <HintPath>..\packages\System.Spatial\lib\net40\System.Spatial.dll</HintPath>
@@ -887,7 +356,7 @@
     </When>
   </Choose>
   <Choose>
-    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2')">
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')">
       <ItemGroup>
         <Reference Include="WebActivator">
           <HintPath>..\packages\WebActivator\lib\WebActivator.dll</HintPath>

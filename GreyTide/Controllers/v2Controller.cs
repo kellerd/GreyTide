@@ -10,10 +10,10 @@ using Microsoft.Azure.Documents;
 using Microsoft.Azure.Documents.Linq;
 using Microsoft.Azure.Documents.Client;
 using GreyTide;
-using GreyTide.Controllers;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Configuration;
+using GreyTide.Models;
 
 namespace Controllers.V2
 {
