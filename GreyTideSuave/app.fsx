@@ -2,7 +2,7 @@
 #r @"Suave\lib\net40\Suave.dll"
 #r "System.Configuration.dll"
 #r @"Microsoft.Azure.DocumentDB\lib\net40\Microsoft.Azure.Documents.Client.dll"
-#r @"C:\Users\diese\Source\Repos\GreyTide\GreyTide\bin\GreyTide.dll"
+#r @"C:\Users\kellerd\Source\Repos\GreyTide\GreyTide\bin\GreyTide.dll"
 #r @"Breeze.Server.ContextProvider\lib\Breeze.ContextProvider.dll"
 #r @"Newtonsoft.Json\lib\net45\Newtonsoft.Json.dll"
 
@@ -125,4 +125,4 @@ let greyTide client =
 loadFilesIfTheyDontExist client (GreyTide.Repo.States.Value.ToList())
 loadFilesIfTheyDontExist client (GreyTide.Repo.Models.Value.ToList())
 
-startWebServer {defaultConfig with homeFolder = Some @"C:\Users\diese\Source\Repos\GreyTide\GreyTide\" } (greyTide client)
+startWebServer {defaultConfig with homeFolder = Some @"C:\Users\kellerd\Source\Repos\GreyTide\GreyTide\" } (greyTide client)
