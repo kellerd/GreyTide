@@ -155,7 +155,8 @@ $RECYCLE.BIN/
 .DS_Store
 /.vs/config/
 /packages/
-/GreyTide/app/*.js
-/GreyTide/app/*.js.map
-/GreyTide/app
+/GreyTide/app/**/*.js
+/GreyTide/app/**/*.js.map
+/GreyTideSuave/app/**/*.js
+/GreyTideSuave/app/**/*.js.map
 /GreyTide/Properties/PublishProfiles

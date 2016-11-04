@@ -31,6 +31,7 @@ NUGET
     breeze.TypeScript.DefinitelyTyped (2.5.3) - framework: >= net45
     d3 (3.5.6) - framework: >= net45
     d3.TypeScript.DefinitelyTyped (1.9.8) - framework: >= net45
+    FAKE (4.44.2)
     FontAwesome (4.4) - framework: >= net45
     FSharp.Core (4.0.0.1) - framework: >= net452
     HotTowelTypescript (2.2.2) - framework: >= net45
