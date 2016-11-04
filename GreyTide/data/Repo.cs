@@ -16,7 +16,7 @@ namespace GreyTide
 {
     public class Repo : ContextProvider
     {
-        
+        public static string dir = AppDomain.CurrentDomain.BaseDirectory;
 
         public class AsyncLazy<T> : Lazy<Task<T>>
         {
@@ -34,7 +34,7 @@ namespace GreyTide
         public static Lazy<IEnumerable<Model>> Models =
            new Lazy<IEnumerable<Model>>(() =>
            {
-               var models = JsonConvert.DeserializeObject<IEnumerable<Model>>(File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data/models.json")));
+               var models = JsonConvert.DeserializeObject<IEnumerable<Model>>(File.ReadAllText(Path.Combine(dir, "data/models.json")));
                models.ToList().ForEach(process);
                return models;
            }, LazyThreadSafetyMode.ExecutionAndPublication);
@@ -42,7 +42,7 @@ namespace GreyTide
         public static Lazy<IEnumerable<StateCollection>> States =
            new Lazy<IEnumerable<StateCollection>>(() =>
            {
-               var states = JsonConvert.DeserializeObject<IEnumerable<StateCollection>>(File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data/states.json")));
+               var states = JsonConvert.DeserializeObject<IEnumerable<StateCollection>>(File.ReadAllText(Path.Combine(dir, "data/states.json")));
                states.ToList().ForEach(process);
                return states;
            }, LazyThreadSafetyMode.ExecutionAndPublication);

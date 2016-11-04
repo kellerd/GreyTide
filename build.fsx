@@ -12,35 +12,22 @@ Target "Clean" (fun _ ->
 )
 
 Target "BuildApp" (fun _ ->
-    !! "GreyTide/*.csproj"
-    ++ "GreyTideSuave/*.fsproj"
+    !! "./**/*.csproj"
+    ++ "./**/*.fsproj"
         |> MSBuildRelease buildDir "Build"
-        |> Log "AppBuild-Output: "
+        |> Log "HostBuild-Output: "
 )
 
-Target "TypeScript" (fun _ ->
-    !! "GreyTide/**/*.ts"
-        |> TypeScriptCompiler (fun p -> { p with OutputPath = deployDir  @@ "./app/" }) 
-)
+//Target "TypeScript" (fun _ ->
+//    !! "GreyTide/**/*.ts"
+//        |> TypeScriptCompiler (fun p -> { p with OutputPath = deployDir </> "app" }) 
+//)
 
-Target "app" (fun _ ->
-    !! "GreyTide/app/**/*.html" 
-        |> Copy (deployDir @@ "./app/")
-    
-    !! "GreyTide/**/*.gif" 
-    ++ "GreyTide/**/*.png" 
-    ++ "GreyTide/**/*.css" 
-    ++ "GreyTide/**/*.jpg" 
-    ++ "GreyTide/**/*.ico" 
-        |> Copy (deployDir @@ "./content/")
-
-    !! "GreyTide/**/*.eot" 
-    ++ "GreyTide/**/*.svg" 
-    ++ "GreyTide/**/*.ttf" 
-    ++ "GreyTide/**/*.woff" 
-    ++ "GreyTide/**/*.woff2" 
-    ++ "GreyTide/**/*.otf" 
-        |> Copy (deployDir @@ "./fonts/")
+Target "Deploy" (fun _ ->
+    [!! (buildDir </> "./**/*")
+    -- (buildDir </> "_PublishedWebSites")
+    ++ (buildDir </> "_PublishedWebSites" </> "GreyTide")]
+        |> CopyWithSubfoldersTo deployDir
 )
 
 
@@ -48,11 +35,17 @@ Target "Kudu" (fun _ ->
     trace "Hello World from FAKE"
 )
 
+Target "Default" (fun _ ->
+    trace "Default"
+)
+
+
+
 // Dependencies
 "Clean"
   ==> "BuildApp"
-  ==> "TypeScript"
-  ==> "app"
+  ==> "Default"
+  ==> "Deploy"
   ==> "Kudu"
 
 // start build

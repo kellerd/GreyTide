@@ -62,19 +62,27 @@
   -->
   <Import Project="..\.paket\paket.targets" />
   <ItemGroup>
-    <None Include="data/models.json" />
-    <None Include="data/states.json" />
-    <None Include="app.fsx" />
-    <None Include="App.config" />
+    <None Include="data/models.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="data/states.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <Content Include="paket.references" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config" />
     <Content Include="Web.Release.config" />
-    <None Include="initData.fsx" />
-    <None Include="data.fsx" />
+    <Compile Include="initData.fs" />
+    <Compile Include="data.fs" />
+    <None Include="load-references-debug.fsx" />
+    <None Include="load-project-debug.fsx" />
+    <Compile Include="greyTide.fs" />
+    <Compile Include="app.fs" />
+    <Content Include="..\..\App.config">
+      <Link>App.config</Link>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="FSharp.Data.TypeProviders" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />

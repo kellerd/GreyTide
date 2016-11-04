@@ -5,7 +5,7 @@
         /* This helps the ng-show/ng-hide animations start at the right place. */
         /* Since Angular has this but needs to load, this gives us the class early. */
         .ng-hide {
-            display: none!important;
+            display: none !important;
         }
     </style>
     <title data-ng-bind="title">Hot Towel Angular</title>
@@ -25,11 +25,15 @@
 
     <link href="content/ie10mobile.css" rel="stylesheet" />
     <link href="content/bootstrap.min.css" rel="stylesheet" />
+    <link href="content/bootstrap-datetimepicker.css" rel="stylesheet" />
     <link href="content/font-awesome.min.css" rel="stylesheet" />
     <link href="content/toastr.css" rel="stylesheet" />
     <link href="content/customtheme.css" rel="stylesheet">
     <link href="content/styles.css" rel="stylesheet" />
     <link href="content/breeze.directives.css" rel="stylesheet" />
+    <link href="scripts/x-editable/xeditable.css" rel="stylesheet">
+    <link href="scripts/nv.d3.css" rel="stylesheet" />
+    <meta name="description" content="Kanban board for painting warhammer" />
 </head>
 <body>
     <div>
@@ -49,21 +53,27 @@
 
     <!--INFO: The script files containg creation of modules must go on top before service scripts-->
     <!-- Vendor Scripts -->
-    <script src="scripts/jquery-2.1.1.js"></script>
+    <script src="scripts/jquery-2.1.4.js"></script>
     <script src="scripts/angular.js"></script>
     <script src="scripts/angular-animate.js"></script>
     <script src="scripts/angular-route.js"></script>
     <script src="scripts/angular-sanitize.js"></script>
     <script src="scripts/bootstrap.js"></script>
-    <script src="scripts/toastr.js"></script>
     <script src="scripts/moment.js"></script>
+    <script src="scripts/bootstrap-datetimepicker.js"></script>
+    <script src="scripts/toastr.js"></script>
     <script src="scripts/ui-bootstrap-tpls-0.10.0.js"></script>
     <script src="scripts/spin.js"></script>
     <script src="scripts/breeze.debug.js"></script>
-    <script src="scripts/breeze.angular.js"></script>
+    <script src="scripts/breeze.bridge.angular.js"></script>
     <script src="scripts/breeze.directives.js"></script>
     <script src="scripts/breeze.saveErrorExtensions.js"></script>
-
+    <script src="scripts/breeze.metadata-helper.js"></script>
+    <script src="scripts/x-editable/xeditable.js"></script>
+    <script src="scripts/linq.js"></script>
+    <script src="scripts/state-machine.js"></script>
+    <script src="scripts/d3/d3.min.js"></script>
+    <script src="scripts/nv.d3.js"></script>
 
     <!-- Bootstrapping -->
     <script src="app/app.js"></script>
@@ -72,22 +82,22 @@
     <script src="app/config.exceptionHandler.js"></script>
     <script src="app/config.route.js"></script>
     <!-- common Modules -->
-    
+
     <script src="app/common/commonConfig.js"></script>
     <script src="app/common/common.js"></script>
     <script src="app/common/logger.js"></script>
     <script src="app/common/spinner.js"></script>
-
+    <script src="scripts/moment.js"></script>
     <!-- common.bootstrap Modules -->
     <script src="app/common/bootstrap/common.bootstapModule.js"></script>
     <script src="app/common/bootstrap/bootstrap.dialog.js"></script>
-
     <!-- app -->
-    <script src="app/admin/admin.js"></script>
-    <script src="app/dashboard/dashboardCtrl.js"></script>
     <script src="app/layout/shellCtrl.js"></script>
     <script src="app/layout/sidebarCtrl.js"></script>
-    
+    <script src="app/chart/chart.js"></script>
+    <script src="app/tide/tide.js"></script>
+    <script src="app/state/state.js"></script>
+
     <!-- app Directives -->
     <script src="app/directives/cc-sidebar.js"></script>
     <script src="app/directives/cc-spinner.js"></script>
@@ -97,9 +107,11 @@
     <script src="app/directives/cc-widget-minimize.js"></script>
     <script src="app/directives/cc-scroll-to-top.js"></script>
     <script src="app/directives/cc-img-person.js"></script>
-
+    <script src="app/chart/chart.directives.js"></script>
     <!-- app Services -->
-    <script src="app/services/datacontext.js"></script>
+    <script src="app/services/guid.js"></script>
+    <script src="app/services/entityMetadata.js"></script>
     <script src="app/services/entityManagerFactory.js"></script>
+    <script src="app/services/datacontext.js"></script>
 </body>
 </html>

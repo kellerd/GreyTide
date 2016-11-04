@@ -160,3 +160,6 @@ $RECYCLE.BIN/
 /GreyTideSuave/app/**/*.js
 /GreyTideSuave/app/**/*.js.map
 /GreyTide/Properties/PublishProfiles
+/.fake
+/.paket/paket.exe
+/site/wwwroot/
