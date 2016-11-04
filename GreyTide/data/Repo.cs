@@ -27,7 +27,7 @@ namespace GreyTide
             public AsyncLazy(Func<Task<T>> taskFactory) :
                 base(() => Task.Factory.StartNew(() => taskFactory()).Unwrap(), LazyThreadSafetyMode.ExecutionAndPublication)
             { }
-
+            
             public TaskAwaiter<T> GetAwaiter() { return Value.GetAwaiter(); }
         }
 

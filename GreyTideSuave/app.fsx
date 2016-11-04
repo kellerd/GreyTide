@@ -1,4 +1,9 @@
-﻿#I @"..\packages\"
+﻿open System
+
+if (AppDomain.CurrentDomain.BaseDirectory = @"C:\Program Files (x86)\Microsoft SDKs\F#\4.0\Framework\v4.0\") then
+    AppDomain.CurrentDomain.SetData("APPBASE", @"C:\Users\kellerd\Source\Repos\GreyTide\GreyTideSuave")
+
+#I @"..\packages\"
 #r @"Suave\lib\net40\Suave.dll"
 #r @"Newtonsoft.Json\lib\net45\Newtonsoft.Json.dll"
 #load "loadData.fsx"
@@ -7,9 +12,7 @@ open Suave
 open Suave.Filters
 open Suave.Operators
 open Suave.Json
-open System
 open Newtonsoft.Json.Linq
-open GreyTide.data
 open Newtonsoft.Json
 open Breeze.ContextProvider
 open Microsoft.Azure.Documents.Linq
@@ -18,20 +21,33 @@ open GreyTide.Models.V2
 open System.Linq
 open LoadData
 open GreyTide.Models
+open GreyTide.data
 
 GreyTideDataService.App_Start.AutoMapperConfig.RegisterAutoMapperPreStart()
 
 let getItems (client:DocumentClient) : IQueryable<'T :> ITypeable> = 
     let database = getDatabase()
     let documentCollection = getDocumentCollection database
+    printfn "%A" typeof<'T>.FullName
     client.CreateDocumentQuery<'T>(documentCollection.SelfLink).
         Where(fun sc -> sc.``type`` = typeof<'T>.FullName)
 
 let v2Models client () : IQueryable<GreyTide.Models.V2.Model> = getItems client
 let v2States client () : IQueryable<GreyTide.Models.V2.StateCollection> = getItems client
+
+let JSON v =
+  let jsonSerializerSettings = new JsonSerializerSettings()
+  jsonSerializerSettings.ContractResolver <- new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver()
+
+  JsonConvert.SerializeObject(v(), jsonSerializerSettings)
+  |> Successful.OK
+  >=> Writers.setMimeType "application/json; charset=utf-8"
+
+
+v2States client |> JSON
+
 let v2SaveChanges (client:DocumentClient) (saveBundle:JObject) = 
     let entityInfo = SaveBundleToSaveMap.Convert(saveBundle);
-    let saveOptions = SaveBundleToSaveMap.ExtractSaveOptions(saveBundle);
     let database = getDatabase()
     let documentCollection = getDocumentCollection database
 
@@ -45,7 +61,10 @@ let v2SaveChanges (client:DocumentClient) (saveBundle:JObject) =
                                     SaveChangesResult ( Document = result.Resource, StatusCode = result.StatusCode )
                                 | state, (:? IIdentifyable as entity) when state = EntityState.Deleted ->
                                     let result = 
-                                        client.CreateDocumentQuery(documentCollection.SelfLink).Where(fun sc -> sc.Id = entity.id.ToString()).ToArray().FirstOrDefault() 
+                                        client.CreateDocumentQuery(documentCollection.SelfLink).
+                                            Where(fun sc -> sc.Id = entity.id.ToString()).
+                                            AsEnumerable().
+                                            FirstOrDefault() 
                                         |> Option.ofObj
                                         |> Option.map (fun doc -> let result = client.DeleteDocumentAsync(doc.SelfLink).Result
                                                                   SaveChangesResult ( Document = null, StatusCode = result.StatusCode ))
@@ -86,10 +105,10 @@ let request' f g =
 let greyTide client = 
     choose [ GET >=> choose [ 
                         path "/" >=> Files.browseFileHome "index.html"
-                        path "/tide/v1/Tide" >=> mapJson (GreyTide.Repo.Models.Value.ToList)
-                        path "/tide/v1/States" >=> mapJson (GreyTide.Repo.States.Value.ToList)
-                        path "/tide/v2/Models" >=> mapJson (v2Models client)
-                        path "/tide/v2/States" >=> mapJson (v2States client)
+                        path "/tide/v1/Tide" >=> JSON (GreyTide.Repo.Models.Value.ToList)
+                        path "/tide/v1/States" >=> JSON (GreyTide.Repo.States.Value.ToList)
+                        path "/tide/v2/Models" >=> JSON (v2Models client)
+                        path "/tide/v2/States" >=> JSON (v2States client)
                         Files.browseHome 
                      ]
              POST >=> choose [ path "/tide/v1/SaveChanges" >=> request' getSaveBundle (v1SaveChanges client) 
