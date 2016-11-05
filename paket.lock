@@ -1,3 +1,4 @@
+REDIRECTS: ON
 CONTENT: NONE
 NUGET
   remote: https://www.nuget.org/api/v2
