@@ -4,7 +4,12 @@ module GreyTide =
     #if INTERACTIVE
     let config = {defaultConfig with homeFolder = Some (System.IO.Path.Combine(__SOURCE_DIRECTORY__.Substring(0, __SOURCE_DIRECTORY__.LastIndexOf(System.IO.Path.DirectorySeparatorChar)) ,@"GreyTide")) }
     #else
-    let config = defaultConfig
+    let config = 
+        if System.IO.Directory.Exists(System.IO.Path.Combine(__SOURCE_DIRECTORY__, "app")) = false then
+            let path = System.IO.Path.Combine(__SOURCE_DIRECTORY__.Substring(0, __SOURCE_DIRECTORY__.LastIndexOf(System.IO.Path.DirectorySeparatorChar)) ,@"GreyTide")
+            {defaultConfig with homeFolder = Some (path) }
+        else defaultConfig
+
     #endif
     open Suave.Filters
     open Suave.Operators

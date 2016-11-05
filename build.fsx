@@ -4,8 +4,8 @@ open Fake
 open TypeScript
 
 // Properties
-let buildDir = "./build/"
-let deployDir = "./site/wwwroot/"
+let buildDir = "./build"
+let deployDir = "./site/wwwroot"
 // Targets
 Target "Clean" (fun _ ->
     CleanDirs [buildDir;deployDir]
@@ -24,10 +24,10 @@ Target "BuildApp" (fun _ ->
 //)
 
 Target "Deploy" (fun _ ->
-    [!! (buildDir </> "./**/*")
-    -- (buildDir </> "_PublishedWebSites")
-    ++ (buildDir </> "_PublishedWebSites" </> "GreyTide")]
-        |> CopyWithSubfoldersTo deployDir
+    Fake.FileHelper.CopyDir deployDir buildDir (fun f -> 
+        (f.IndexOf("_PublishedWebsites", System.StringComparison.InvariantCultureIgnoreCase)  < 0))
+    Fake.FileHelper.CopyDir deployDir (buildDir </> "_PublishedWebsites" </> "GreyTide") (fun f -> 
+        (f.IndexOf("Web.config", System.StringComparison.InvariantCultureIgnoreCase)  < 0))
 )
 
 
