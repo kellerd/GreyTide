@@ -21,8 +21,8 @@ module Data =
     GreyTideDataService.App_Start.AutoMapperConfig.RegisterAutoMapperPreStart()
 
     let getItems (client:DocumentClient) : IQueryable<'T :> ITypeable> = 
-        let database = getDatabase()
-        let documentCollection = getDocumentCollection database
+        let database = getDatabase client ()
+        let documentCollection = getDocumentCollection client database
         client.CreateDocumentQuery<'T>(documentCollection.SelfLink).
             Where(fun sc -> sc.``type`` = typeof<'T>.FullName)
 
@@ -33,8 +33,8 @@ module Data =
 
     let v2SaveChanges (client:DocumentClient) (saveBundle:JObject) = 
         let entityInfo = SaveBundleToSaveMap.Convert(saveBundle);
-        let database = getDatabase()
-        let documentCollection = getDocumentCollection database
+        let database = getDatabase client ()
+        let documentCollection = getDocumentCollection client database
 
         //Store in azure
         let entities = 

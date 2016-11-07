@@ -7,13 +7,14 @@ module InitData =
     open System
     open System.Configuration
     let getSetting (key:string) = ConfigurationManager.AppSettings.[key]
-    let databaseId = getSetting "DatabaseId"
-    let endpointUri = Uri( getSetting "ConnectionUri")
-    let connectionKey = getSetting "ConnectionKey"
-    let userToken = Guid(getSetting "UserToken").ToString("N")
 
-    let client = new DocumentClient(endpointUri, connectionKey, ConnectionPolicy(ConnectionProtocol = Protocol.Tcp))
-    let getDatabase () = 
+    let client = lazy (
+        printfn "Create client"
+        let endpointUri = Uri( getSetting "ConnectionUri")
+        let connectionKey = getSetting "ConnectionKey"
+        new DocumentClient(endpointUri, connectionKey, ConnectionPolicy(ConnectionProtocol = Protocol.Tcp)))
+    let getDatabase (client:DocumentClient) () = 
+        let databaseId = getSetting "DatabaseId"
         let db = 
             client.CreateDatabaseQuery().
                 Where(fun db -> db.Id = databaseId).
@@ -23,7 +24,8 @@ module InitData =
         match db with 
         | Some db -> db
         | None -> client.CreateDatabaseAsync(Database(Id = databaseId)).Result.Resource
-    let getDocumentCollection (database:Database) =
+    let getDocumentCollection (client:DocumentClient) (database:Database) =
+        let userToken = Guid(getSetting "UserToken").ToString("N")
         let dc = 
             client.CreateDocumentCollectionQuery(database.SelfLink).
                 Where(fun c -> c.Id = userToken).
@@ -35,8 +37,8 @@ module InitData =
         | None -> client.CreateDocumentCollectionAsync(database.SelfLink, DocumentCollection( Id = userToken )).Result.Resource
 
     let loadFilesIfTheyDontExist (client:DocumentClient) (items:ResizeArray<'a>) = 
-        let database = getDatabase()
-        let documentCollection = getDocumentCollection database
+        let database = getDatabase client ()
+        let documentCollection = getDocumentCollection client database
         let documentModel = client.
                                 CreateDocumentQuery<GreyTide.Models.V2.Model>(documentCollection.SelfLink).
                                 Where(fun sc -> sc.``type`` = typeof<'a>.FullName)

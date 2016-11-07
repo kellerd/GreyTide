@@ -5,28 +5,50 @@ module GreyTide =
     let config = {defaultConfig with homeFolder = Some (System.IO.Path.Combine(__SOURCE_DIRECTORY__.Substring(0, __SOURCE_DIRECTORY__.LastIndexOf(System.IO.Path.DirectorySeparatorChar)) ,@"GreyTide")) }
     #else
     let config = 
-        if not System.IO.Directory.Exists(System.IO.Path.Combine(__SOURCE_DIRECTORY__, "app")) then
+        if not (System.IO.Directory.Exists(System.IO.Path.Combine(__SOURCE_DIRECTORY__, "app"))) then
             let path = System.IO.Path.Combine(__SOURCE_DIRECTORY__.Substring(0, __SOURCE_DIRECTORY__.LastIndexOf(System.IO.Path.DirectorySeparatorChar)) ,@"GreyTide")
             {defaultConfig with homeFolder = Some (path) }
         else defaultConfig
 
     #endif
+    
     open Suave.Filters
     open Suave.Operators
     open GreyTideSuave.Data
+    open GreyTideSuave.InitData
     open Newtonsoft.Json.Linq
     open Newtonsoft.Json
     open System.Configuration
 
-    let JSON v =
-        let jsonSerializerSettings = new JsonSerializerSettings()
-        jsonSerializerSettings.ContractResolver <- new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver()
+    type SaveBundle = { SaveBundle:JObject }
+    type InitConfig = { DatabaseId : string
+                        ConnectionUri : string
+                        ConnectionKey : string
+                        UserToken : string }
 
+    let JSON v =
+        let jsonSerializerSettings = Breeze.ContextProvider.BreezeConfig.Instance.GetJsonSerializerSettings()
         JsonConvert.SerializeObject(v, jsonSerializerSettings)
         |> Successful.OK
         >=> Writers.setMimeType "application/json; charset=utf-8"
 
-    let getSaveBundle = Suave.Model.Binding.form "saveBundle" (JObject.Parse >> Choice1Of2) 
+    let getFormData (request:HttpRequest) key =
+        match request.formData key with
+        | Choice1Of2 x  -> x
+        | _             -> ""
+
+    let getSaveBundle req = 
+        let get = getFormData req
+        match { SaveBundle = JObject.Parse (get "saveBundle") } with
+        | x when isNull x.SaveBundle -> Choice2Of2 "Could not parse"
+        | x -> Choice1Of2 x.SaveBundle
+        
+    let getInitConfig req = 
+        let get = getFormData req
+        { DatabaseId = get "DatabaseId"
+          ConnectionUri = get "ConnectionUri"
+          ConnectionKey = get "ConnectionKey"
+          UserToken = get "UserToken" }
 
     let tryOrNever f x =
         try
@@ -37,8 +59,8 @@ module GreyTide =
         let iff b x =
             if b then Some x else None
     
-    let check test (x : HttpContext) =
-        async.Return (Option.iff (test) x)
+    let doIf test (x : HttpContext) =
+        async.Return (Option.iff (test x) x)
 
     let request' f g = 
         request ( f
@@ -46,23 +68,50 @@ module GreyTide =
                     >> Choice.bind (tryOrNever g)
                     >> Choice.fold id id)
 
-    let setSetting (key:string) (value:string) =
+    let setSettings kvp =
         let config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None)
-        config.AppSettings.Settings.[key].Value <- value
+        List.iter (fun (key,value) -> 
+            match config.AppSettings.Settings.[key] with
+            | null -> config.AppSettings.Settings.Add(key,value)
+            | setting -> setting.Value <- value) kvp
         config.Save(ConfigurationSaveMode.Modified)
         ConfigurationManager.RefreshSection("appSettings")
-    let greyTide client = 
+
+    let setInitConfig config =
+        setSettings 
+            [ "DatabaseId"   , config.DatabaseId   
+              "ConnectionUri", config.ConnectionUri
+              "ConnectionKey", config.ConnectionKey
+              "UserToken"    , config.UserToken ]
+
+    let isNotInit _ = (System.String.IsNullOrWhiteSpace(InitData.getSetting "ConnectionUri"))
+
+    let wire0 data _ = 
+        data 
+        |> JSON
+
+    let wire data _ = 
+        data client.Value 
+        |> JSON
+
+    let wire2 data r  = 
+        data client.Value r
+        |> JSON
+
+    let greyTide = 
         choose [ 
+            GET >=> request (fun _ -> doIf (isNotInit)) >=> Files.browseFileHome "setup.html"
+            POST >=> path "/setup.html" >=> request (fun r -> getInitConfig r |> setInitConfig; Files.browseFileHome "index.html" )
             GET >=> choose [ 
-                                path "/" >=> check (String.isEmpty(InitData.getSetting "ConnectionUri")) >>= setup >=> Files.browseFileHome "setup.html"
-                                path "/" >=> Files.browseFileHome "index.html"
+                                path "/" <|> (path "/setup.html" >=> request (fun _ -> doIf (isNotInit >> not)))  >=> Files.browseFileHome "index.html"
                                 path "/tide/v1/Tide"   >=> request (fun _ -> JSON (v1Models) )
                                 path "/tide/v1/States" >=> request (fun _ -> JSON (v1States) )
-                                path "/tide/v2/Models" >=> request (fun _ -> JSON (v2Models client)                  ) 
-                                path "/tide/v2/States" >=> request (fun _ -> JSON (v2States client)                  ) 
+                                path "/tide/v2/Models" >=> request (wire v2Models) 
+                                path "/tide/v2/States" >=> request (wire v2States) 
                                 Files.browseHome 
                              ]
-            POST >=> choose [ path "/tide/v1/SaveChanges" >=> request' getSaveBundle (v1SaveChanges client >> JSON) 
-                              path "/tide/v2/SaveChanges" >=>  request' getSaveBundle (v2SaveChanges client >> JSON) ]
+            POST >=> choose [ 
+                              path "/tide/v1/SaveChanges" >=> request' getSaveBundle (wire2 v1SaveChanges) 
+                              path "/tide/v2/SaveChanges" >=>  request' getSaveBundle (wire2 v2SaveChanges) ]
         ]
 
