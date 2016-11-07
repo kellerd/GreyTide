@@ -49,4 +49,4 @@ Target "Default" (fun _ ->
   ==> "Kudu"
 
 // start build
-RunTargetOrDefault "Default"
+RunTargetOrDefault "Deploy"
