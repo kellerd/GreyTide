@@ -42,6 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="app\chart\chart.html" />
+    <Content Include="app\layout\shell.html" />
     <Content Include="app\state\state.html" />
     <Content Include="app\tide\item.html" />
     <Content Include="app\tide\items.html" />
