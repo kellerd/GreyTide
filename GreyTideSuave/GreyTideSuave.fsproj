@@ -68,6 +68,7 @@
     <None Include="data/states.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <Content Include="app.config" />
     <Content Include="paket.references" />
     <Content Include="Web.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -78,9 +79,6 @@
     <None Include="load-project-debug.fsx" />
     <Compile Include="greyTide.fs" />
     <Compile Include="app.fs" />
-    <Content Include="..\..\App.config">
-      <Link>App.config</Link>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
