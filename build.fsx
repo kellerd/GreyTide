@@ -5,7 +5,7 @@ open TypeScript
 
 // Properties
 let buildDir = "./build"
-let deployDir = "./site/wwwroot"
+let deployDir = "../wwwroot"
 // Targets
 Target "Clean" (fun _ ->
     CleanDirs [buildDir;deployDir]
