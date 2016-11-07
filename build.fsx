@@ -40,7 +40,6 @@ Target "Default" (fun _ ->
 )
 
 
-
 // Dependencies
 "Clean"
   ==> "BuildApp"

@@ -5,7 +5,7 @@ module GreyTide =
     let config = {defaultConfig with homeFolder = Some (System.IO.Path.Combine(__SOURCE_DIRECTORY__.Substring(0, __SOURCE_DIRECTORY__.LastIndexOf(System.IO.Path.DirectorySeparatorChar)) ,@"GreyTide")) }
     #else
     let config = 
-        if System.IO.Directory.Exists(System.IO.Path.Combine(__SOURCE_DIRECTORY__, "app")) = false then
+        if not System.IO.Directory.Exists(System.IO.Path.Combine(__SOURCE_DIRECTORY__, "app")) then
             let path = System.IO.Path.Combine(__SOURCE_DIRECTORY__.Substring(0, __SOURCE_DIRECTORY__.LastIndexOf(System.IO.Path.DirectorySeparatorChar)) ,@"GreyTide")
             {defaultConfig with homeFolder = Some (path) }
         else defaultConfig
@@ -16,6 +16,7 @@ module GreyTide =
     open GreyTideSuave.Data
     open Newtonsoft.Json.Linq
     open Newtonsoft.Json
+    open System.Configuration
 
     let JSON v =
         let jsonSerializerSettings = new JsonSerializerSettings()
@@ -32,14 +33,28 @@ module GreyTide =
             f x |> Choice1Of2
         with _ -> WebPart.never |> Choice2Of2
 
+    module private Option =
+        let iff b x =
+            if b then Some x else None
+    
+    let check test (x : HttpContext) =
+        async.Return (Option.iff (test) x)
+
     let request' f g = 
         request ( f
                     >> Choice.mapSnd (fun _ -> WebPart.never)
                     >> Choice.bind (tryOrNever g)
                     >> Choice.fold id id)
+
+    let setSetting (key:string) (value:string) =
+        let config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None)
+        config.AppSettings.Settings.[key].Value <- value
+        config.Save(ConfigurationSaveMode.Modified)
+        ConfigurationManager.RefreshSection("appSettings")
     let greyTide client = 
         choose [ 
             GET >=> choose [ 
+                                path "/" >=> check (String.isEmpty(InitData.getSetting "ConnectionUri")) >>= setup >=> Files.browseFileHome "setup.html"
                                 path "/" >=> Files.browseFileHome "index.html"
                                 path "/tide/v1/Tide"   >=> request (fun _ -> JSON (v1Models) )
                                 path "/tide/v1/States" >=> request (fun _ -> JSON (v1States) )
