@@ -33,11 +33,10 @@ module Repo =
         member x.Models = lazy (
                JsonConvert.DeserializeObject<IEnumerable<Model>>(File.ReadAllText(Path.Combine(dir, "data/models.json")))
                |> Seq.map(processM)
-               |> ResizeArray<_>, LazyThreadSafetyMode.ExecutionAndPublication)
-        member x.States = lazy (
-               JsonConvert.DeserializeObject<IEnumerable<StateCollection>>(File.ReadAllText(Path.Combine(dir, "data/states.json")))
-               |> Seq.map(processS)
-               |> ResizeArray<_>, LazyThreadSafetyMode.ExecutionAndPublication)
+               |> ResizeArray<_>)
+        member x.States = lazy ( JsonConvert.DeserializeObject<IEnumerable<StateCollection>>(File.ReadAllText(Path.Combine(dir, "data/states.json")))
+                                     |> Seq.map(processS)
+                                     |> ResizeArray<_>)
                
         static member Convert (saveBundle,beforeSaveEntity,beforeSaveEntities) =
             let provider = new Repo(BeforeSaveEntityDelegate = beforeSaveEntity, BeforeSaveEntitiesDelegate = beforeSaveEntities)

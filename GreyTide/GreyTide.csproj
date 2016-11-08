@@ -263,18 +263,6 @@
     <None Include="scripts\linq-vsdoc.js" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\V1\FromState.cs" />
-    <Compile Include="Models\V1\Model.cs" />
-    <Compile Include="Models\V1\ModelState.cs" />
-    <Compile Include="Models\V1\State.cs" />
-    <Compile Include="Models\V1\StateCollection.cs" />
-    <Compile Include="Models\V2\ITypeable.cs" />
-    <Compile Include="Models\V2\IIdentifyable.cs" />
-    <Compile Include="Models\V2\Model.cs" />
-    <Compile Include="Models\V2\ModelItem.cs" />
-    <Compile Include="Models\V2\ModelState.cs" />
-    <Compile Include="Models\V2\State.cs" />
-    <Compile Include="Models\V2\StateCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
