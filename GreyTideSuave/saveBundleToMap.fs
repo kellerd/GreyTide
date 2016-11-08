@@ -1,11 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using Breeze.ContextProvider;
-using Newtonsoft.Json.Linq;
+﻿namespace GreyTideSuave
+module Data = 
 
-namespace GreyTide.data
-{
+    open System;
+    open System.Collections.Generic;
+    open System.Data;
+    open Breeze.ContextProvider;
+    open Newtonsoft.Json.Linq;
+
     /// <summary>
     /// A demonstration of technique to convert a saveBundle into a SaveMap
     /// for use by custom server code that didn't want to use a ContextProvider to handle
@@ -16,10 +17,9 @@ namespace GreyTide.data
     /// It is NOT a functioning ContextProvider!
     /// There are no examples of usage yet.
     /// </remarks>
-    public class SaveBundleToSaveMap : ContextProvider
-    {
+    type SaveBundleToSaveMap private () as x =
+        inherit ContextProvider()
         // Never create a public instance
-        private SaveBundleToSaveMap() { }
 
         /// <summary>
         /// Convert a saveBundle into a SaveMap
@@ -31,46 +31,16 @@ namespace GreyTide.data
         /// <param name="beforeSaveEntities">
         ///   optional function to evaluate the entire collection of entities before they are saved.
         /// </param>
-        public static Dictionary<Type, List<EntityInfo>> Convert(
-          JObject saveBundle,
-          Func<EntityInfo, bool> beforeSaveEntity = null,
-          Func<Dictionary<Type, List<EntityInfo>>, Dictionary<Type, List<EntityInfo>>> beforeSaveEntities = null)
-        {
-            var provider = new SaveBundleToSaveMap
-            {
-                BeforeSaveEntityDelegate = beforeSaveEntity,
-                BeforeSaveEntitiesDelegate = beforeSaveEntities
-            };
-            provider.InitializeSaveState(saveBundle);
-            provider.SaveWorkState.BeforeSave();
-            return provider.SaveWorkState.SaveMap;
-        }
+        member x.Convert (saveBundle:JObject,beforeSaveEntity,beforeSaveEntities) =
+//          Func<EntityInfo, bool> option,
+//          Func<Dictionary<Type, List<EntityInfo>>, Dictionary<Type, List<EntityInfo>>> beforeSaveEntities = null)
+            let provider = new SaveBundleToSaveMap(BeforeSaveEntityDelegate = beforeSaveEntity, BeforeSaveEntitiesDelegate = beforeSaveEntities)
+            provider.InitializeSaveState(saveBundle)
+            provider.SaveWorkState.BeforeSave()
+            provider.SaveWorkState.SaveMap
 
-        #region required overrides DO NOT USE ANY OF THEM
-        public override IDbConnection GetDbConnection()
-        {
-            throw new NotImplementedException();
-        }
-
-        protected override void OpenDbConnection()
-        {
-            throw new NotImplementedException();
-        }
-
-        protected override void CloseDbConnection()
-        {
-            throw new NotImplementedException();
-        }
-
-        protected override string BuildJsonMetadata()
-        {
-            throw new NotImplementedException();
-        }
-
-        protected override void SaveChangesCore(SaveWorkState saveWorkState)
-        {
-            throw new NotImplementedException();
-        }
-        #endregion
-    }
-}
+        member x.GetDbConnection = raise (NotImplementedException())
+        member x.OpenDbConnection() = raise (NotImplementedException())
+        member x.CloseDbConnection() = raise (NotImplementedException())
+        member x.BuildJsonMetadata() = raise (NotImplementedException())
+        member x.SaveChangesCore(saveWorkState) = raise (NotImplementedException())
