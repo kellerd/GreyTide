@@ -17,8 +17,10 @@ module Data =
     open Microsoft.Azure.Documents.Client
     open System.Linq
     open System
+    open System.Net
 
-    GreyTideDataService.App_Start.AutoMapperConfig.RegisterAutoMapperPreStart()
+    MapperConfiguration.RegisterAutoMapperPreStart()
+    type SaveChangesResult = { Document:Document option; StatusCode : HttpStatusCode}
 
     let getItems (client:DocumentClient) : IQueryable<'T :> ITypeable> = 
         let database = getDatabase client ()
@@ -43,7 +45,7 @@ module Data =
             |> Seq.map (fun item -> match (item.EntityState, item.Entity) with
                                     | (state, entity) when state = EntityState.Modified || state = EntityState.Added -> 
                                         let result = client.UpsertDocumentAsync(documentCollection.SelfLink, entity).Result
-                                        SaveChangesResult ( Document = result.Resource, StatusCode = result.StatusCode )
+                                        {Document = result.Resource |> Option.ofObj; StatusCode = result.StatusCode}
                                     | state, (:? IIdentifyable as entity) when state = EntityState.Deleted ->
                                         let result = 
                                             client.CreateDocumentQuery(documentCollection.SelfLink).
@@ -52,20 +54,19 @@ module Data =
                                                 FirstOrDefault() 
                                             |> Option.ofObj
                                             |> Option.map (fun doc -> let result = client.DeleteDocumentAsync(doc.SelfLink).Result
-                                                                      SaveChangesResult ( Document = null, StatusCode = result.StatusCode ))
-                                        defaultArg result (SaveChangesResult ( Document = null, StatusCode = System.Net.HttpStatusCode.NoContent ))
+                                                                      { Document = None; StatusCode = result.StatusCode })
+                                        defaultArg result { Document = None; StatusCode = HttpStatusCode.NoContent }
                                     | _,_ -> 
-                                        SaveChangesResult ( Document = null, StatusCode = System.Net.HttpStatusCode.NotImplemented ))
-
+                                        { Document = None; StatusCode = HttpStatusCode.NotImplemented }
+                )
         let keyMappings = ResizeArray<KeyMapping>();
         let entitiesList = 
             entities
-            |> Seq.map(fun e -> defaultArg (Option.ofObj (e.Document :> obj)) (JsonConvert.DeserializeObject(e.Document.ToString(), System.Type.GetType(e.Document.GetPropertyValue<string>("type")))))
-            |> Seq.filter(isNull >> not)
+            |> Seq.choose(fun {Document = doc} -> Option.map (fun (doc:Document) -> JsonConvert.DeserializeObject(doc.ToString(), System.Type.GetType(doc.GetPropertyValue<string>("type")))) doc)
             |> ResizeArray
         let errors = 
             entities
-            |> Seq.filter(fun result  -> result.StatusCode <> System.Net.HttpStatusCode.Created && result.StatusCode <> System.Net.HttpStatusCode.OK && result.StatusCode <> System.Net.HttpStatusCode.NoContent)
+            |> Seq.filter(fun {StatusCode = statusCode}  -> statusCode <> System.Net.HttpStatusCode.Created && statusCode <> System.Net.HttpStatusCode.OK && statusCode <> System.Net.HttpStatusCode.NoContent)
             |> Seq.map (fun e  -> e.Document :> obj)
             |> ResizeArray
         SaveResult(Entities = entitiesList, Errors = (if errors.Count = 0 then null else errors), KeyMappings = keyMappings)

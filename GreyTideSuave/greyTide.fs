@@ -38,8 +38,8 @@ module GreyTide =
         | _             -> ""
 
     let getSaveBundle req = 
-        let get = getFormData req
-        match { SaveBundle = JObject.Parse (get "saveBundle") } with
+        let get = req.rawForm |> System.Text.Encoding.UTF8.GetString
+        match { SaveBundle = JObject.Parse (get) } with
         | x when isNull x.SaveBundle -> Choice2Of2 "Could not parse"
         | x -> Choice1Of2 x.SaveBundle
         
