@@ -6,7 +6,6 @@ module Data =
     open GreyTide.Models.V2
     open System.Linq
     open GreyTide.Models
-    open GreyTide.data
     open AutoMapper
     open System.Collections.Generic
     open Newtonsoft.Json.Linq
@@ -16,25 +15,25 @@ module Data =
     open Microsoft.Azure.Documents.Linq
     open Microsoft.Azure.Documents.Client
     open System.Linq
-    open System
+    open Repo
     open System.Net
 
     MapperConfiguration.RegisterAutoMapperPreStart()
     type SaveChangesResult = { Document:Document option; StatusCode : HttpStatusCode}
-
+    let repo = Repo()
     let getItems (client:DocumentClient) : IQueryable<'T :> ITypeable> = 
         let database = getDatabase client ()
         let documentCollection = getDocumentCollection client database
         client.CreateDocumentQuery<'T>(documentCollection.SelfLink).
             Where(fun sc -> sc.``type`` = typeof<'T>.FullName)
 
-    let v1Models = AutoMapper.Mapper.Map<IEnumerable<V1.Model>>(GreyTide.Repo.Models.Value).AsQueryable()
-    let v1States = Mapper.Map<IEnumerable<V1.StateCollection>>(GreyTide.Repo.States.Value).AsQueryable()
+    let v1Models = AutoMapper.Mapper.Map<IEnumerable<V1.Model>>(repo.Models.Value).AsQueryable()
+    let v1States = Mapper.Map<IEnumerable<V1.StateCollection>>(repo.States.Value).AsQueryable()
     let v2Models client : IQueryable<GreyTide.Models.V2.Model> = getItems client
     let v2States client : IQueryable<GreyTide.Models.V2.StateCollection> =  getItems client
 
     let v2SaveChanges (client:DocumentClient) (saveBundle:JObject) = 
-        let entityInfo = SaveBundleToSaveMap.Convert(saveBundle);
+        let entityInfo = Repo.Convert(saveBundle, null, null);
         let database = getDatabase client ()
         let documentCollection = getDocumentCollection client database
 

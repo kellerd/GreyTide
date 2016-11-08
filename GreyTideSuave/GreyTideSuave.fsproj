@@ -75,7 +75,6 @@
     </Content>
     <Compile Include="initData.fs" />
     <Compile Include="autoMapper.fs" />
-    <Compile Include="saveBundleToMap.fs" />
     <Compile Include="Repo.fs" />
     <Compile Include="data.fs" />
     <None Include="load-references-debug.fsx" />
@@ -97,6 +96,8 @@
       <Project>{1f03ccbe-7f12-455b-9052-edea6ac24fbd}</Project>
       <Private>True</Private>
     </ProjectReference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <Choose>
     <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3')">
