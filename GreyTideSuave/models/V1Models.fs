@@ -23,8 +23,8 @@ namespace GreyTide.Models.V1
     and FromState =    
         { [<Key>] Id : Guid; 
           Name : string; 
-          State : State }
-        with member this.StateId() = this.State.Id
+          State :  State option}
+        with member this.StateId() = defaultArg (Option.map (fun (s:State) -> s.Id) this.State) Guid.Empty
     [<CLIMutable>]
     type Model =    
         { UserToken : Guid; 

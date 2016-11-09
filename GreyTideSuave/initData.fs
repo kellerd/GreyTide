@@ -6,6 +6,8 @@ module InitData =
     open System.Linq
     open System
     open System.Configuration
+    open GreyTide.Models.V2
+
     let getSetting (key:string) = ConfigurationManager.AppSettings.[key]
 
     let client = lazy (
@@ -40,7 +42,7 @@ module InitData =
         let database = getDatabase client ()
         let documentCollection = getDocumentCollection client database
         let documentModel = client.
-                                CreateDocumentQuery<GreyTide.Models.V2.Model>(documentCollection.SelfLink).
+                                CreateDocumentQuery<ITypeable>(documentCollection.SelfLink).
                                 Where(fun sc -> sc.``type`` = typeof<'a>.FullName)
                             |> Seq.tryHead
         match documentModel with

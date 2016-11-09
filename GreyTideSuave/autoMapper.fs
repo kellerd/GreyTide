@@ -2,21 +2,24 @@
 module MapperConfiguration = 
     open AutoMapper
     open System
+    open GreyTide.Models
+    let remap (xs:ResizeArray<'a>) f = 
+        let xs' = xs |> Option.ofObj |> defaultArg <| ResizeArray<'a>()
+        xs.Clear()
+        xs.AddRange(Seq.map f xs')
     let RegisterAutoMapperPreStart() = 
-        
-        Mapper.CreateMap<GreyTide.Models.V2.Model, GreyTide.Models.V1.Model>().AfterMap(fun V2 V1 ->
-            V1.States |> Option.ofObj |> Option.iter (Seq.iter (fun (s) -> s.Id <- Guid.NewGuid(); s.SetModel(V1)))
-            V1.Items  |> Option.ofObj |> Option.iter (Seq.iter (fun (s) -> s.Id <- Guid.NewGuid(); s.SetParent(V1)))
-        )  |> ignore
-        Mapper.CreateMap<GreyTide.Models.V2.ModelItem, GreyTide.Models.V1.Model>().AfterMap(fun V2 V1 ->
-            V1.States |> Option.ofObj |> Option.iter (Seq.iter (fun (s) -> s.Id <- Guid.NewGuid(); s.SetModel(V1)))
-        ) |> ignore
-        Mapper.CreateMap<GreyTide.Models.V2.ModelState, GreyTide.Models.V1.ModelState>() |> ignore
-        Mapper.CreateMap<GreyTide.Models.V2.State, GreyTide.Models.V1.State>() |> ignore
-        Mapper.CreateMap<string, GreyTide.Models.V1.FromState>().ConstructUsing(fun str -> GreyTide.Models.V1.FromState(Name = str)) |> ignore
 
-        Mapper.CreateMap<GreyTide.Models.V2.StateCollection, GreyTide.Models.V1.StateCollection>().AfterMap(fun V2 V1 ->
-            V1.Events |> Option.ofObj |> Option.iter (Seq.iter (fun (s) -> s.Id <- Guid.NewGuid()
-                                                                           s.SetStateCollection(V1)
-                                                                           s.From |> Seq.iter (fun f -> f.Id <- Guid.NewGuid(); f.SetState(s))))
+        Mapper.CreateMap<V2.Model, V1.Model>().AfterMap(fun V2 V1 ->
+            remap V1.States (fun (s:V1.ModelState) -> {s with Id = Guid.NewGuid(); Model = V1})
+            remap V1.Items (fun (s:V1.Model) -> {s with Id = Guid.NewGuid(); Parent = V1})
+        )  |> ignore
+        Mapper.CreateMap<V2.ModelItem, V1.Model>().AfterMap(fun V2 V1 ->
+            remap V1.States (fun (s:V1.ModelState) -> {s with Id = Guid.NewGuid(); Model = V1})
         ) |> ignore
+        Mapper.CreateMap<V2.ModelState, V1.ModelState>() |> ignore
+        Mapper.CreateMap<V2.State, V1.State>() |> ignore
+        let toFromState : string -> V1.FromState = fun str -> {Name=str;Id=Guid.NewGuid(); State=None}
+        Mapper.CreateMap<string, V1.FromState>().ConstructUsing(toFromState) |> ignore
+        Mapper.CreateMap<V2.StateCollection, V1.StateCollection>().AfterMap(fun V2 V1 ->
+            remap V1.Events (fun (s) -> remap s.From (fun f -> {f with State = Some s});
+                                        { s with Id = Guid.NewGuid(); StateCollection = V1} )) |> ignore

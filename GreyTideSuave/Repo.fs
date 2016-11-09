@@ -10,24 +10,21 @@ module Repo =
     open System.Collections.Generic;
     open Breeze.ContextProvider;
     open Newtonsoft.Json.Linq;
+    open MapperConfiguration
 
     type Repo ()  = 
         inherit ContextProvider()
         let mutable dir = AppDomain.CurrentDomain.BaseDirectory
 
         let processI (m:ModelItem) = 
-            m.states <- m.states.OrderByDescending(fun (s) -> s.date).ToList()
-            let lastState = m.states.DefaultIfEmpty(new ModelState ( name = "Startup", date = DateTime.Now )).FirstOrDefault()
-            m.currentState <- lastState.name
-            m.currentDate <- lastState.date
-            m
+            let orderedStates = m.states.OrderByDescending(fun (s) -> s.date).ToList()
+            let lastState = orderedStates.DefaultIfEmpty({name = "Startup"; date = DateTime.Now}).FirstOrDefault()
+            {m with states = orderedStates; currentState = lastState.name; currentDate = lastState.date.ToString()}
         let processM (m:Model) = 
-            m.states <- m.states.OrderByDescending(fun (s) -> s.date).ToList();
-            let lastState = m.states.DefaultIfEmpty(new ModelState ( name = "Startup", date = DateTime.Now )).FirstOrDefault();
-            m.currentState <- lastState.name;
-            m.currentDate <- lastState.date;
-            m.items |> Option.ofObj |> Option.iter(Seq.iter (processI >> ignore))
-            m
+            let orderedStates = m.states.OrderByDescending(fun (s) -> s.date).ToList()
+            let lastState = orderedStates.DefaultIfEmpty({name = "Startup"; date = DateTime.Now}).FirstOrDefault()
+            remap m.items processI
+            {m with states = orderedStates; currentState = lastState.name; currentDate = lastState.date.ToString();  }
         let processS s = s
 
         member x.Models = lazy (

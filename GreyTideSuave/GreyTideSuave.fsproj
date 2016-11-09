@@ -68,7 +68,8 @@
     <None Include="data/states.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Compile Include="models\V2\V2Models.fs" />
+    <Compile Include="models\V1Models.fs" />
+    <Compile Include="models\V2Models.fs" />
     <Content Include="app.config" />
     <Content Include="paket.references" />
     <Content Include="Web.config">
@@ -76,7 +77,6 @@
     </Content>
     <Compile Include="InitData.fs" />
     <Compile Include="AutoMapper.fs" />
-    <Compile Include="models\V1\V1Models.fs" />
     <Compile Include="Repo.fs" />
     <Compile Include="Data.fs" />
     <None Include="load-references-debug.fsx" />
@@ -85,7 +85,6 @@
     <Compile Include="App.fs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="FSharp.Data.TypeProviders" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />

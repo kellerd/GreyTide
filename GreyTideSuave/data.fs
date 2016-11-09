@@ -37,6 +37,13 @@ module Data =
         let database = getDatabase client ()
         let documentCollection = getDocumentCollection client database
 
+        let delectDoc (client:DocumentClient) (docOption:Document option) = 
+            let result = 
+                docOption
+                |> Option.map (fun doc -> let result = client.DeleteDocumentAsync(doc.SelfLink).Result
+                                          { Document = None; StatusCode = result.StatusCode })
+            defaultArg result { Document = None; StatusCode = HttpStatusCode.NoContent }
+
         //Store in azure
         let entities = 
             entityInfo 
@@ -45,16 +52,20 @@ module Data =
                                     | (state, entity) when state = EntityState.Modified || state = EntityState.Added -> 
                                         let result = client.UpsertDocumentAsync(documentCollection.SelfLink, entity).Result
                                         {Document = result.Resource |> Option.ofObj; StatusCode = result.StatusCode}
-                                    | state, (:? IIdentifyable as entity) when state = EntityState.Deleted ->
-                                        let result = 
-                                            client.CreateDocumentQuery(documentCollection.SelfLink).
+                                    | state, (:? Model as entity) when state = EntityState.Deleted ->
+                                        client.CreateDocumentQuery(documentCollection.SelfLink).
                                                 Where(fun sc -> sc.Id = entity.id.ToString()).
                                                 AsEnumerable().
                                                 FirstOrDefault() 
-                                            |> Option.ofObj
-                                            |> Option.map (fun doc -> let result = client.DeleteDocumentAsync(doc.SelfLink).Result
-                                                                      { Document = None; StatusCode = result.StatusCode })
-                                        defaultArg result { Document = None; StatusCode = HttpStatusCode.NoContent }
+                                        |> Option.ofObj
+                                        |> delectDoc client
+                                    | state, (:? StateCollection as entity) when state = EntityState.Deleted ->
+                                        client.CreateDocumentQuery(documentCollection.SelfLink).
+                                                Where(fun sc -> sc.Id = entity.id.ToString()).
+                                                AsEnumerable().
+                                                FirstOrDefault() 
+                                        |> Option.ofObj
+                                        |> delectDoc client
                                     | _,_ -> 
                                         { Document = None; StatusCode = HttpStatusCode.NotImplemented }
                 )
