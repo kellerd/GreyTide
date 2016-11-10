@@ -3,11 +3,7 @@ module Data =
     open Breeze.ContextProvider
     open Microsoft.Azure.Documents.Linq
     open Microsoft.Azure.Documents.Client
-    open GreyTide.Models.V2
-    open System.Linq
     open GreyTide.Models
-    open AutoMapper
-    open System.Collections.Generic
     open Newtonsoft.Json.Linq
     open Newtonsoft.Json
     open InitData
@@ -17,20 +13,34 @@ module Data =
     open System.Linq
     open Repo
     open System.Net
+    open MapperConfiguration
+    open FSharp.Interop.Dynamic
+//    open System.Linq.Expressions
+//    open Microsoft.FSharp.Quotations
+//    open Microsoft.FSharp.Linq.QuotationEvaluation
+//    open Microsoft.FSharp.Linq.RuntimeHelpers.LeafExpressionConverter
+//
+//    let toLinq (expr : Expr<'a -> 'b>) =
+//      let linq = expr.ToLinqExpression()
+//      let call = linq :?> MethodCallExpression
+//      let lambda = call.Arguments.[0] :?> LambdaExpression
+//      Expression.Lambda<Func<'a, 'b>>(lambda.Body, lambda.Parameters) 
 
-    MapperConfiguration.RegisterAutoMapperPreStart()
     type SaveChangesResult = { Document:Document option; StatusCode : HttpStatusCode}
     let repo = Repo()
-    let getItems (client:DocumentClient) : IQueryable<'T :> ITypeable> = 
+    
+//    loadFilesIfTheyDontExist client.Value (repo.States.Value.ToList())
+//    loadFilesIfTheyDontExist client.Value (repo.Models.Value.ToList())
+
+    let getItems (client:DocumentClient)  : IOrderedQueryable<'a>  = 
         let database = getDatabase client ()
         let documentCollection = getDocumentCollection client database
-        client.CreateDocumentQuery<'T>(documentCollection.SelfLink).
-            Where(fun sc -> sc.``type`` = typeof<'T>.FullName)
+        client.CreateDocumentQuery<'a>(documentCollection.SelfLink)
 
-    let v1Models = AutoMapper.Mapper.Map<IEnumerable<V1.Model>>(repo.Models.Value).AsQueryable()
-    let v1States = Mapper.Map<IEnumerable<V1.StateCollection>>(repo.States.Value).AsQueryable()
-    let v2Models client : IQueryable<GreyTide.Models.V2.Model> = getItems client
-    let v2States client : IQueryable<GreyTide.Models.V2.StateCollection> =  getItems client
+    let v1Models = (Seq.map mapModels repo.Models.Value).AsQueryable()
+    let v1States = (Seq.map mapStateCollection repo.States.Value).AsQueryable()
+    let v2Models client : IQueryable<V2.Model> = (getItems client).Where(fun (sc:V2.Model) -> sc.``type`` = typeof<V2.Model>.FullName)
+    let v2States client : IQueryable<V2.StateCollection> = (getItems client).Where(fun (sc:V2.StateCollection) -> sc.``type`` = typeof<V2.StateCollection>.FullName)
 
     let v2SaveChanges (client:DocumentClient) (saveBundle:JObject) = 
         let entityInfo = Repo.Convert(saveBundle, null, null);
@@ -52,14 +62,14 @@ module Data =
                                     | (state, entity) when state = EntityState.Modified || state = EntityState.Added -> 
                                         let result = client.UpsertDocumentAsync(documentCollection.SelfLink, entity).Result
                                         {Document = result.Resource |> Option.ofObj; StatusCode = result.StatusCode}
-                                    | state, (:? Model as entity) when state = EntityState.Deleted ->
+                                    | state, (:? V2.Model as entity) when state = EntityState.Deleted ->
                                         client.CreateDocumentQuery(documentCollection.SelfLink).
                                                 Where(fun sc -> sc.Id = entity.id.ToString()).
                                                 AsEnumerable().
                                                 FirstOrDefault() 
                                         |> Option.ofObj
                                         |> delectDoc client
-                                    | state, (:? StateCollection as entity) when state = EntityState.Deleted ->
+                                    | state, (:? V2.StateCollection as entity) when state = EntityState.Deleted ->
                                         client.CreateDocumentQuery(documentCollection.SelfLink).
                                                 Where(fun sc -> sc.Id = entity.id.ToString()).
                                                 AsEnumerable().
@@ -72,7 +82,8 @@ module Data =
         let keyMappings = ResizeArray<KeyMapping>();
         let entitiesList = 
             entities
-            |> Seq.choose(fun {Document = doc} -> Option.map (fun (doc:Document) -> JsonConvert.DeserializeObject(doc.ToString(), System.Type.GetType(doc.GetPropertyValue<string>("type")))) doc)
+            |> Seq.choose(fun {Document = doc} -> Option.map (fun (doc:Document) -> 
+                JsonConvert.DeserializeObject(doc.ToString(), System.Type.GetType(doc.GetPropertyValue<string>("type")))) doc)
             |> ResizeArray
         let errors = 
             entities

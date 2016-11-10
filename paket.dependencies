@@ -2,7 +2,6 @@ redirects: on
 source https://www.nuget.org/api/v2/
 
 nuget NuGet.CommandLine
-nuget AutoMapper 4.0.4 framework: >= net45
 nuget Breeze.Metadata.Helper 1.0.8 framework: >= net45
 nuget d3.TypeScript.DefinitelyTyped 1.9.8 framework: >= net45
 nuget linq.js 2.2.0.2 framework: >= net45

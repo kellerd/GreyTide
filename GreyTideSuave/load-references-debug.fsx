@@ -1,5 +1,6 @@
 // Warning: generated file; your changes could be lost when a new file is generated.
 #I __SOURCE_DIRECTORY__
+#I "../packages/Newtonsoft.Json/lib/net45"
 #r "../packages/AutoMapper/lib/net45/AutoMapper.dll"
 #r "../packages/Breeze.Server.ContextProvider/lib/Breeze.ContextProvider.dll"
 #r "../GreyTide/bin/GreyTide.dll"
@@ -12,5 +13,9 @@
 #r "System.Data.Linq.dll"
 #r "System.dll"
 #r "System.Numerics.dll"
-#I "../packages/Newtonsoft.Json/lib/net45"
 #r "Newtonsoft.Json.dll"
+#r "System.Xml"
+#r "System.Xml.Linq"
+#r "System.ComponentModel.DataAnnotations"
+
+

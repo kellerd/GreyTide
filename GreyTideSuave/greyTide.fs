@@ -1,6 +1,14 @@
 ﻿namespace GreyTideSuave
 module GreyTide =
     open Suave
+    open Suave.Filters
+    open Suave.Operators
+    open Newtonsoft.Json.Linq
+    open Newtonsoft.Json
+    open System.Configuration
+    open GreyTideSuave.Data
+    open GreyTideSuave.InitData
+
     #if INTERACTIVE
     let config = {defaultConfig with homeFolder = Some (System.IO.Path.Combine(__SOURCE_DIRECTORY__.Substring(0, __SOURCE_DIRECTORY__.LastIndexOf(System.IO.Path.DirectorySeparatorChar)) ,@"GreyTide")) }
     #else
@@ -11,14 +19,6 @@ module GreyTide =
         else defaultConfig
 
     #endif
-    
-    open Suave.Filters
-    open Suave.Operators
-    open GreyTideSuave.Data
-    open GreyTideSuave.InitData
-    open Newtonsoft.Json.Linq
-    open Newtonsoft.Json
-    open System.Configuration
 
     type SaveBundle = { SaveBundle:JObject }
     type InitConfig = { DatabaseId : string
@@ -53,7 +53,7 @@ module GreyTide =
     let tryOrNever f x =
         try
             f x |> Choice1Of2
-        with _ -> WebPart.never |> Choice2Of2
+        with e -> WebPart.never |> Choice2Of2
 
     module private Option =
         let iff b x =
