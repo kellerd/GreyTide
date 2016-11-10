@@ -9,11 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{8288E6
 		paket.lock = paket.lock
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreyTide", "GreyTide\GreyTide.csproj", "{1F03CCBE-7F12-455B-9052-EDEA6AC24FBD}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{410EA144-B99A-495B-B487-27981ECF5F79}"
-EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "GreyTideSuave", "GreyTideSuave\GreyTideSuave.fsproj", "{45AF1EFF-94FB-4867-917A-D2F04EDDAFCE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fake", "fake", "{CB3CFC8F-7D63-44BA-A2DA-1681D61E3303}"
 	ProjectSection(SolutionItems) = preProject
@@ -22,20 +18,24 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fake", "fake", "{CB3CFC8F-7
 		build.fsx = build.fsx
 	EndProjectSection
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "GreyTide", "GreyTide\GreyTide.fsproj", "{45AF1EFF-94FB-4867-917A-D2F04EDDAFCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreyTideAssets", "GreyTideAssets\GreyTideAssets.csproj", "{0E451116-CB41-42BA-B4E9-5097F25F382A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1F03CCBE-7F12-455B-9052-EDEA6AC24FBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1F03CCBE-7F12-455B-9052-EDEA6AC24FBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1F03CCBE-7F12-455B-9052-EDEA6AC24FBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1F03CCBE-7F12-455B-9052-EDEA6AC24FBD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{45AF1EFF-94FB-4867-917A-D2F04EDDAFCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{45AF1EFF-94FB-4867-917A-D2F04EDDAFCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45AF1EFF-94FB-4867-917A-D2F04EDDAFCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45AF1EFF-94FB-4867-917A-D2F04EDDAFCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E451116-CB41-42BA-B4E9-5097F25F382A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E451116-CB41-42BA-B4E9-5097F25F382A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E451116-CB41-42BA-B4E9-5097F25F382A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E451116-CB41-42BA-B4E9-5097F25F382A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -31,13 +31,9 @@ NUGET
     breeze.TypeScript.DefinitelyTyped (2.5.3) - framework: >= net45
     d3 (3.5.6) - framework: >= net45
     d3.TypeScript.DefinitelyTyped (1.9.8) - framework: >= net45
-    Dynamitey (1.0.2)
     FAKE (4.44.2)
     FontAwesome (4.4) - framework: >= net45
-    FSharp.Core (4.0.0.1)
-    FSharp.Interop.Dynamic (3.0)
-      Dynamitey (>= 1.0.2)
-      FSharp.Core (>= 3.1.2.1)
+    FSharp.Core (4.0.0.1) - framework: >= net452
     HotTowelTypescript (2.2.2) - framework: >= net45
       AngularJS.Animate (>= 1.2.19)
       AngularJS.Core (>= 1.2.19)
