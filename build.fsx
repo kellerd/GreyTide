@@ -43,14 +43,15 @@ Target "CopyAssets" (fun _ ->
 
 Target "CompileTypeScript" (fun _ ->
     (!! (assets </> "**/*.ts")).SetBaseDirectory(assets)
-        |> TypeScriptCompiler (fun p -> { p with  ECMAScript = ES5 }) //OutputPath = "./out";
+        |> TypeScriptCompiler (fun p -> { p with  ECMAScript = ES5; EmitSourceMaps= true }) 
+    !! (assets </> "**/*.ts") |> FileHelper.DeleteFiles
 )
 
 Target "Deploy" (fun _ ->
-    Fake.FileHelper.CopyDir deployDir buildDir (fun f -> 
-        (f.IndexOf("_PublishedWebsites", System.StringComparison.InvariantCultureIgnoreCase)  < 0))
-    Fake.FileHelper.CopyDir deployDir (buildDir </> "_PublishedWebsites" </> "GreyTide") (fun f -> 
-        (f.IndexOf("Web.config", System.StringComparison.InvariantCultureIgnoreCase)  < 0))
+    Fake.FileHelper.CopyDir deployDir buildDir (fun _ -> true)
+    [!! buildDir 
+     ++ assets]
+        |> FileHelper.CopyWithSubfoldersTo deployDir
 )
 
 
