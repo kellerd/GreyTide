@@ -1,5 +1,3 @@
-/// <reference path="../../scripts/typings/angularjs/angular.d.ts" />
-/// <reference path="../../scripts/typings/breeze/breeze.d.ts" />
 var App;
 (function (App) {
     var Services;

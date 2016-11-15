@@ -1,4 +1,6 @@
-﻿'use strict';
+﻿/// <reference path="../../scripts/typings/angularjs/angular.d.ts" />
+/// <reference path="../app.ts" />
+'use strict';
 module App.Controllers
 {
     export class State

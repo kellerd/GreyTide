@@ -1,3 +1,5 @@
+/// <reference path="../../../scripts/typings/angularjs/angular.d.ts" />
+/// <reference path="common.bootstapModule.ts" />
 'use strict';
 var App;
 (function (App) {

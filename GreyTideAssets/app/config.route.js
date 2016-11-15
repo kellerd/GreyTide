@@ -1,4 +1,6 @@
 /// <reference path="../scripts/typings/angularjs/angular.d.ts" />
+/// <reference path="../scripts/typings/angularjs/angular-route.d.ts" />
+/// <reference path="app.ts" />
 'use strict';
 var App;
 (function (App) {

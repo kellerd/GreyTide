@@ -1,4 +1,6 @@
-﻿'use strict';
+﻿/// <reference path="../config.ts" />
+/// <reference path="../app.ts" />
+'use strict';
 module App.Directives
 {
     //Usage:

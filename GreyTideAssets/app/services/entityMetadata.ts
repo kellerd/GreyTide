@@ -1,4 +1,7 @@
-﻿'use strict';
+﻿
+/// <reference path="../../scripts/typings/breeze/breeze.d.ts" />
+/// <reference path="../../scripts/typings/breeze/breeze.metadata-helper.d.ts" />
+'use strict';
 module App {
     export class MetadataHelper {
         public static FillMetadataStore(store) {

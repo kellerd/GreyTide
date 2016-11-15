@@ -2,26 +2,49 @@
 #r "packages/FAKE/tools/FakeLib.dll"
 open Fake
 open TypeScript
-
+open System.IO
 // Properties
 let buildDir = "./build"
+let packages = "./packages"
+let assets = "./assets"
 let deployDir = "../wwwroot"
-// Targets
+
+let foldDir dir () = 
+    let parentDirs = Directory.EnumerateDirectories(dir) |> Seq.toList
+    parentDirs 
+    |> Seq.collect (Directory.EnumerateDirectories)
+    |> Seq.collect(fun subDir -> Directory.EnumerateDirectories(subDir, "content"))
+    |> Seq.iter (fun content -> 
+        printfn "From %s to %s" content dir
+        Fake.FileUtils.cp_r content dir)
+    FileHelper.DeleteDirs parentDirs
 Target "Clean" (fun _ ->
-    CleanDirs [buildDir;deployDir]
+    CleanDirs [buildDir;deployDir;assets]
 )
 
+
 Target "BuildApp" (fun _ ->
-    !! "./**/*.csproj"
-    ++ "./**/*.fsproj"
+    !! "./**/*.fsproj"
         |> MSBuildRelease buildDir "Build"
         |> Log "HostBuild-Output: "
 )
+Target "CopyAssets" (fun _ ->
+    [!! (packages @@ "/**/*")
+     -- (packages </> "**/admin/**")
+     -- (packages </> "**/dashboard/**")]
+        |> FileHelper.CopyWithSubfoldersTo assets
+    //foldDir @"C:\Users\diese\Source\Repos\GreyTide\assets" ()
+    foldDir assets ()
+    FileHelper.DeleteDir (assets @@ "App_Start")
+    [(!! "./GreyTideAssets/**/*.html"
+    ++ "./GreyTideAssets/**/*.ts").SetBaseDirectory("./GreyTideAssets/")]
+        |> FileHelper.CopyWithSubfoldersTo assets
+)
 
-//Target "TypeScript" (fun _ ->
-//    !! "GreyTide/**/*.ts"
-//        |> TypeScriptCompiler (fun p -> { p with OutputPath = deployDir </> "app" }) 
-//)
+Target "CompileTypeScript" (fun _ ->
+    (!! (assets </> "**/*.ts")).SetBaseDirectory(assets)
+        |> TypeScriptCompiler (fun p -> { p with  ECMAScript = ES5 }) //OutputPath = "./out";
+)
 
 Target "Deploy" (fun _ ->
     Fake.FileHelper.CopyDir deployDir buildDir (fun f -> 
@@ -43,6 +66,8 @@ Target "Default" (fun _ ->
 // Dependencies
 "Clean"
   ==> "BuildApp"
+  ==> "CopyAssets"
+  ==> "CompileTypeScript" 
   ==> "Default"
   ==> "Deploy"
   ==> "Kudu"

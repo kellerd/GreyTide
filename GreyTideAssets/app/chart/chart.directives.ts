@@ -1,5 +1,10 @@
 ﻿/// <reference path="../../scripts/typings/d3/d3.d.ts" />
 /// <reference path="../../scripts/typings/d3/nvd3.d.ts" />
+/// <reference path="../../scripts/typings/angularjs/angular.d.ts" />
+/// <reference path="../config.ts" />
+/// <reference path="../common/common.ts" />
+/// <reference path="chart.ts" />
+/// <reference path="../app.ts" />
 
 'use strict';
 module App.Directives {

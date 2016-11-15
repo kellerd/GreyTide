@@ -1,4 +1,5 @@
-﻿module App.Shared {
+﻿/// <reference path="../../../scripts/typings/angularjs/angular.d.ts" />
+module App.Shared {
 
     //#region explanation
     //-------STARTING COMMON MODULE----------

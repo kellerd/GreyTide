@@ -1,3 +1,4 @@
+/// <reference path="../../scripts/typings/angularjs/angular.d.ts" />
 var App;
 (function (App) {
     var Shared;

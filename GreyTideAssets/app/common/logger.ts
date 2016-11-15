@@ -1,4 +1,5 @@
 ﻿/// <reference path="common.ts" />
+/// <reference path="../../scripts/typings/toastr/toastr.d.ts" />
 'use strict';
 module App.Shared{
 

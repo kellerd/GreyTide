@@ -1,5 +1,7 @@
 ﻿/// <reference path="../../scripts/typings/linq/linq.d.ts" />
 /// <reference path="../../scripts/typings/linq/linq.jquery.d.ts" />
+/// <reference path="../../app/services/datacontext.ts" />
+/// <reference path="../../app/services/guid.ts" />
 'use strict';
 module App.Controllers
 {

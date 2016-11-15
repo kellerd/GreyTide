@@ -1,7 +1,4 @@
-﻿/// <reference path="../../scripts/typings/angularjs/angular.d.ts" />
-/// <reference path="../../scripts/typings/breeze/breeze.d.ts" />
-
-module App.Services.GuidGenerator {
+﻿module App.Services.GuidGenerator {
     export function newGuid() {
         function s4() {
             return Math.floor((1 + Math.random()) * 0x10000)

@@ -1,4 +1,5 @@
-﻿'use strict';
+﻿/// <reference path="services/datacontext.ts" />
+'use strict';
 module App {
 
     export var app = angular.module('app', [

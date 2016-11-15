@@ -1,3 +1,5 @@
+/// <reference path="../../scripts/typings/breeze/breeze.d.ts" />
+/// <reference path="../../scripts/typings/breeze/breeze.metadata-helper.d.ts" />
 'use strict';
 var App;
 (function (App) {

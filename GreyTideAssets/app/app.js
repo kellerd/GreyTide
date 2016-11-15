@@ -1,3 +1,4 @@
+/// <reference path="services/datacontext.ts" />
 'use strict';
 var App;
 (function (App) {

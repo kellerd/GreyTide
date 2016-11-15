@@ -2,6 +2,8 @@
 // Exclude from testRunner.html which should run exactly what it wants to run
 // TS-comment: i don't make a class for this since this is extending an existing
 // angular piece which is not class based
+/// <reference path="common/logger.ts" />
+/// <reference path="app.ts" />
 'use strict';
 var App;
 (function (App) {

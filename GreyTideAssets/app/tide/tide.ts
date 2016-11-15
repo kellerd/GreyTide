@@ -1,4 +1,7 @@
-﻿'use strict';
+﻿/// <reference path="../../scripts/typings/angularjs/angular.d.ts" />
+/// <reference path="../app.ts" />
+/// <reference path="../services/guid.ts" />
+'use strict';
 module App.Controllers {
     export class Tide {
         public static controllerId: string = 'tide';

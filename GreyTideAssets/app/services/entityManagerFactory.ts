@@ -1,4 +1,9 @@
-﻿'use strict';
+﻿/// <reference path="entityMetadata.ts" />
+/// <reference path="../../scripts/typings/breeze/breeze.d.ts" />
+/// <reference path="../../scripts/typings/linq/linq.d.ts" />
+/// <reference path="../../scripts/typings/angularjs/angular.d.ts" />
+/// <reference path="../app.ts" />
+'use strict';
 
 module App.Services {
 

@@ -1,4 +1,5 @@
 ﻿/// <reference path="../common/common.ts" />
+/// <reference path="../app.ts" />
 'use strict';
 
 module App.Controllers

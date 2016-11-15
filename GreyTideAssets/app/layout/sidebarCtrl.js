@@ -1,3 +1,5 @@
+/// <reference path="../config.route.ts" />
+/// <reference path="../app.ts" />
 'use strict';
 var App;
 (function (App) {

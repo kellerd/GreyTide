@@ -1,4 +1,6 @@
-﻿'use strict';
+﻿/// <reference path="../../../scripts/typings/angularjs/angular.d.ts" />
+/// <reference path="common.bootstapModule.ts" />
+'use strict';
 module App.Shared
 {
     interface IBootstrapDialog

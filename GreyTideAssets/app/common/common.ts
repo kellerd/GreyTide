@@ -1,4 +1,8 @@
-﻿'use strict';
+﻿/// <reference path="..\..\scripts\typings\angularjs\angular.d.ts" />
+/// <reference path="logger.ts"/>
+/// <reference path="commonConfig.ts"/>
+/// <reference path="commonModule.ts"/>
+'use strict';
 module App.Shared {
 
     export interface ICommon {

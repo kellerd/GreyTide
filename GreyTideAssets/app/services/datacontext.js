@@ -1,3 +1,9 @@
+/// <reference path="entityManagerFactory.ts" />
+/// <reference path="../../scripts/typings/breeze/breeze.d.ts" />
+/// <reference path="../../scripts/typings/statemachine/statemachine.d.ts" />
+/// <reference path="../app.ts" />
+/// <reference path="../config.ts" />
+/// <reference path="../common/logger.ts" />
 'use strict';
 var App;
 (function (App) {

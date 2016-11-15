@@ -1,4 +1,4 @@
-﻿
+﻿/// <reference path="breeze.d.ts" />
 declare module breeze.config {
     class MetadataHelper {
         addDataService: Function;

@@ -1,3 +1,7 @@
+/// <reference path="entityMetadata.ts" />
+/// <reference path="../../scripts/typings/breeze/breeze.d.ts" />
+/// <reference path="../../scripts/typings/linq/linq.d.ts" />
+/// <reference path="../../scripts/typings/angularjs/angular.d.ts" />
 'use strict';
 var App;
 (function (App) {

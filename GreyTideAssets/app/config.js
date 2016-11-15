@@ -1,4 +1,5 @@
 /// <reference path="common/commonconfig.ts" />
+/// <reference path="../scripts/typings/toastr/toastr.d.ts" />
 var App;
 (function (App) {
     'use strict';
