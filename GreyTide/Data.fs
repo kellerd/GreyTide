@@ -28,8 +28,8 @@ module Data =
     type SaveChangesResult = { Document:Document option; StatusCode : HttpStatusCode}
     let repo = Repo()
     
-//    loadFilesIfTheyDontExist client.Value (repo.States.Value.ToList())
-//    loadFilesIfTheyDontExist client.Value (repo.Models.Value.ToList())
+    loadFilesIfTheyDontExist client.Value (repo.States.Value.ToList())
+    loadFilesIfTheyDontExist client.Value (repo.Models.Value.ToList())
 
     let getItems (client:DocumentClient)  : IOrderedQueryable<'a>  = 
         let database = getDatabase client ()

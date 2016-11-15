@@ -38,8 +38,11 @@ Target "CopyAssets" (fun _ ->
     foldDir assets ()
     FileHelper.DeleteDir (assets @@ "App_Start")
     [(!! "./GreyTideAssets/**/*.html"
-    ++ "./GreyTideAssets/**/*.ts").SetBaseDirectory("./GreyTideAssets/")]
+      ++ "./GreyTideAssets/**/*.ts"
+      ++ "./GreyTideAssets/**/*.css"
+      ++ "./GreyTideAssets/**/*.js").SetBaseDirectory("./GreyTideAssets/")]
         |> FileHelper.CopyWithSubfoldersTo assets
+    !! "paket-files/**/*.js" |> FileHelper.CopyTo (assets </> "Scripts")
 )
 
 Target "CompileTypeScript" (fun _ ->
@@ -60,12 +63,10 @@ Target "Deploy" kuduSync
 // Dependencies
 "Clean"
   ==> "Default"
-  ==> "StageWebsiteAssets" 
-"Clean"
   ==> "CopyAssets"
   ==> "CompileTypeScript" 
   ==> "StageWebsiteAssets" 
   ==> "Deploy"
 
 // start build
-RunTargetOrDefault "Default"
+RunTargetOrDefault "CompileTypeScript"

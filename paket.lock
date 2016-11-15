@@ -90,3 +90,6 @@ NUGET
     toastr.TypeScript.DefinitelyTyped (0.1.5) - framework: >= net45
       jquery.TypeScript.DefinitelyTyped
     WebActivator (1.0) - framework: >= net45
+GITHUB
+  remote: jakesgordon/javascript-state-machine
+    state-machine.js (5b2da44b852f3ba4c87161c5f6104bb74c7b7c02)
