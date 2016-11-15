@@ -3,6 +3,7 @@
 open Fake
 open TypeScript
 open System.IO
+open Fake.Azure.Kudu
 // Properties
 let buildDir = "./build"
 let packages = "./packages"
@@ -23,7 +24,7 @@ Target "Clean" (fun _ ->
 )
 
 
-Target "BuildApp" (fun _ ->
+Target "Default" (fun _ ->
     !! "./**/*.fsproj"
         |> MSBuildRelease buildDir "Build"
         |> Log "HostBuild-Output: "
@@ -47,31 +48,24 @@ Target "CompileTypeScript" (fun _ ->
     !! (assets </> "**/*.ts") |> FileHelper.DeleteFiles
 )
 
-Target "Deploy" (fun _ ->
-    Fake.FileHelper.CopyDir deployDir buildDir (fun _ -> true)
-    [!! buildDir 
-     ++ assets]
-        |> FileHelper.CopyWithSubfoldersTo deployDir
+Target "StageWebsiteAssets" (fun _ ->
+    stageFolder buildDir (fun _ -> true)
+    stageFolder assets (fun _ -> true)
 )
 
+Target "Deploy" kuduSync
 
-Target "Kudu" (fun _ ->
-    trace "Hello World from FAKE"
-)
-
-Target "Default" (fun _ ->
-    trace "Default"
-)
 
 
 // Dependencies
 "Clean"
-  ==> "BuildApp"
+  ==> "Default"
+  ==> "StageWebsiteAssets" 
+"Clean"
   ==> "CopyAssets"
   ==> "CompileTypeScript" 
-  ==> "Default"
+  ==> "StageWebsiteAssets" 
   ==> "Deploy"
-  ==> "Kudu"
 
 // start build
 RunTargetOrDefault "Default"
