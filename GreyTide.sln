@@ -20,8 +20,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fake", "fake", "{CB3CFC8F-7
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "GreyTide", "GreyTide\GreyTide.fsproj", "{45AF1EFF-94FB-4867-917A-D2F04EDDAFCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreyTideAssets", "GreyTideAssets\GreyTideAssets.csproj", "{0E451116-CB41-42BA-B4E9-5097F25F382A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,10 +30,6 @@ Global
 		{45AF1EFF-94FB-4867-917A-D2F04EDDAFCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45AF1EFF-94FB-4867-917A-D2F04EDDAFCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45AF1EFF-94FB-4867-917A-D2F04EDDAFCE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0E451116-CB41-42BA-B4E9-5097F25F382A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0E451116-CB41-42BA-B4E9-5097F25F382A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0E451116-CB41-42BA-B4E9-5097F25F382A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0E451116-CB41-42BA-B4E9-5097F25F382A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
