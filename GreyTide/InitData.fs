@@ -1,4 +1,4 @@
-﻿namespace GreyTideSuave
+﻿namespace GreyTide
 
 module InitData = 
     open Microsoft.Azure.Documents
@@ -35,20 +35,14 @@ module InitData =
         | None -> 
             client.CreateDocumentCollectionAsync(database.SelfLink, DocumentCollection(Id = userToken)).Result.Resource
     
-    let inline loadFilesIfTheyDontExist (client : DocumentClient) (items : ResizeArray<'a>) = 
-        let whereFunc (sc : ^a) = 
-            let theType = (^a : (member ``type`` : string) sc)
-            theType = typeof<'a>.FullName
-        
+    let loadFilesIfTheyDontExist (client : DocumentClient) (items : ResizeArray<'a>) (hasSome : IQueryable<'a> -> bool)= 
         let database = getDatabase client ()
         let documentCollection = getDocumentCollection client database
-        let documentModel = client.CreateDocumentQuery<'a>(documentCollection.SelfLink).Where(whereFunc) |> Seq.tryHead
-        match documentModel with
-        | None -> 
+        if hasSome (client.CreateDocumentQuery<'a>(documentCollection.SelfLink)) then ()
+        else
             items.ForEach(fun sc -> 
                 match client.UpsertDocumentAsync(documentCollection.SelfLink, sc).Result with
                 | result when result.StatusCode <> System.Net.HttpStatusCode.Created 
                               || result.StatusCode <> System.Net.HttpStatusCode.OK -> 
                     Exception("List did not migrate") |> raise
                 | _ -> ())
-        | _ -> ()

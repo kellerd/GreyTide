@@ -1,4 +1,4 @@
-﻿namespace GreyTideSuave
+﻿namespace GreyTide
 module Data =
     open Breeze.ContextProvider
     open Microsoft.Azure.Documents.Linq
@@ -14,22 +14,10 @@ module Data =
     open Repo
     open System.Net
     open MapperConfiguration
-//    open System.Linq.Expressions
-//    open Microsoft.FSharp.Quotations
-//    open Microsoft.FSharp.Linq.QuotationEvaluation
-//    open Microsoft.FSharp.Linq.RuntimeHelpers.LeafExpressionConverter
-//
-//    let toLinq (expr : Expr<'a -> 'b>) =
-//      let linq = expr.ToLinqExpression()
-//      let call = linq :?> MethodCallExpression
-//      let lambda = call.Arguments.[0] :?> LambdaExpression
-//      Expression.Lambda<Func<'a, 'b>>(lambda.Body, lambda.Parameters) 
 
     type SaveChangesResult = { Document:Document option; StatusCode : HttpStatusCode}
     let repo = Repo()
     
-    loadFilesIfTheyDontExist client.Value (repo.States.Value.ToList())
-    loadFilesIfTheyDontExist client.Value (repo.Models.Value.ToList())
 
     let getItems (client:DocumentClient)  : IOrderedQueryable<'a>  = 
         let database = getDatabase client ()

@@ -1,4 +1,4 @@
-﻿namespace GreyTideSuave
+﻿namespace GreyTide
 
 module Repo = 
     open System.IO
