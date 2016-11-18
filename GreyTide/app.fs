@@ -20,8 +20,8 @@ module App =
             | [|port'|] -> uint16 port',config.homeFolder
             | _ -> 8083us,config.homeFolder
         try
-            loadFilesIfTheyDontExist client.Value (Data.repo.States.Value.ToList()) (fun query -> query.Where(fun (sc:V2.StateCollection) -> sc.``type`` = typeof<V2.StateCollection>.FullName) |> Seq.isEmpty |> not)
-            loadFilesIfTheyDontExist client.Value (Data.repo.Models.Value.ToList()) (fun query -> query.Where(fun (sc:V2.Model) -> sc.``type`` = typeof<V2.Model>.FullName) |> Seq.isEmpty |> not)
+//            loadFilesIfTheyDontExist client.Value (Data.repo.States.Value.ToList()) (fun query -> query.Where(fun (sc:V2.StateCollection) -> sc.``type`` = typeof<V2.StateCollection>.FullName) |> Seq.isEmpty |> not)
+//            loadFilesIfTheyDontExist client.Value (Data.repo.Models.Value.ToList()) (fun query -> query.Where(fun (sc:V2.Model) -> sc.``type`` = typeof<V2.Model>.FullName) |> Seq.isEmpty |> not)
 
             let config =
                 { config with
