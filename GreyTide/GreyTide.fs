@@ -104,8 +104,8 @@ module GreyTide =
             POST >=> path "/setup.html" >=> request (fun r -> getInitConfig r |> setInitConfig; Files.browseFileHome "index.html" )
             GET >=> choose [ 
                                 path "/" <|> (path "/setup.html" >=> request (fun _ -> doIf (isNotInit >> not)))  >=> Files.browseFileHome "index.html"
-                                path "/tide/v1/Tide"   >=> request (fun _ -> JSON (v1Models) )
-                                path "/tide/v1/States" >=> request (fun _ -> JSON (v1States) )
+                                path "/tide/v1/Tide"   >=> request (wire0 v1Models) 
+                                path "/tide/v1/States" >=> request (wire0 v1States) 
                                 path "/tide/v2/Models" >=> request (wire v2Models) 
                                 path "/tide/v2/States" >=> request (wire v2States) 
                                 Files.browseHome 
