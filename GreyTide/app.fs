@@ -1,12 +1,9 @@
 ﻿namespace GreyTide
 module App = 
     open GreyTide
-    open GreyTide.InitData
-    open GreyTide.Models
     open Suave
     open System
     open System.Net
-    open System.Linq
 
     #if INTERACTIVE
     startWebServer config greyTide 
@@ -20,18 +17,15 @@ module App =
             | [|port'|] -> uint16 port',(Some Environment.CurrentDirectory)
             | _ -> 8083us,(Some Environment.CurrentDirectory)
 
-        try
 //            loadFilesIfTheyDontExist client.Value (Data.repo.States.Value.ToList()) (fun query -> query.Where(fun (sc:V2.StateCollection) -> sc.``type`` = typeof<V2.StateCollection>.FullName) |> Seq.isEmpty |> not)
 //            loadFilesIfTheyDontExist client.Value (Data.repo.Models.Value.ToList()) (fun query -> query.Where(fun (sc:V2.Model) -> sc.``type`` = typeof<V2.Model>.FullName) |> Seq.isEmpty |> not)
 
-            let config =
-                { config with
-                        bindings = [ HttpBinding.create HTTP IPAddress.Loopback port ]
-                        listenTimeout = TimeSpan.FromMilliseconds 3000.
-                        homeFolder = homeFolder }
-            startWebServer config greyTide
-        with e ->
-            printfn "%A" e
+        let config =
+            { config with
+                    bindings = [ HttpBinding.create HTTP IPAddress.Loopback port ]
+                    listenTimeout = TimeSpan.FromMilliseconds 3000.
+                    homeFolder = homeFolder }
+        greyTide |> Security.security |> startWebServer config 
         0
     #endif
 

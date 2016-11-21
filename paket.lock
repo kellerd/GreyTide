@@ -33,7 +33,7 @@ NUGET
     d3.TypeScript.DefinitelyTyped (1.9.8) - framework: >= net45
     FAKE (4.44.2)
     FontAwesome (4.4) - framework: >= net45
-    FSharp.Core (4.0.0.1) - framework: >= net452
+    FSharp.Core (4.0.0.1) - framework: >= net10, netstandard10, netstandard11, netstandard12, netstandard13, netstandard14, netstandard15
     HotTowelTypescript (2.2.2) - framework: >= net45
       AngularJS.Animate (>= 1.2.19)
       AngularJS.Core (>= 1.2.19)
@@ -82,8 +82,10 @@ NUGET
     Q (2.0.2) - framework: >= net45
     Q.TypeScript.DefinitelyTyped (0.7.6) - framework: >= net45
     Spin.js (2.0.1) - framework: >= net45
-    Suave (2.0.0-alpha7) - framework: >= net452
+    Suave (2.0.0-alpha7)
       FSharp.Core (>= 4.0.0.1) - framework: >= net10, netstandard10, netstandard11, netstandard12, netstandard13, netstandard14, netstandard15
+    Suave.OAuth (0.7.7)
+      Suave (>= 1.0)
     System.Spatial (5.6.4) - framework: >= net45
     toastr (2.1.1) - framework: >= net45
       jQuery (>= 1.6.3)
@@ -92,4 +94,4 @@ NUGET
     WebActivator (1.0) - framework: >= net45
 GITHUB
   remote: jakesgordon/javascript-state-machine
-    state-machine.js (5b2da44b852f3ba4c87161c5f6104bb74c7b7c02)
+    state-machine.js (90f11cccb47633dfc591858e2aef9d2aabd613fe)

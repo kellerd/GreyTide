@@ -97,12 +97,13 @@ module GreyTide =
     let wire2 data r  = 
         data client.Value r
         |> JSON
-
+    lrt setup = 
+        GET >=> request (fun _ -> doIf (isNotInit)) >=> Files.browseFileHome "setup.html"
+            POST >=> path "/setup.html" >=> request (fun r -> getInitConfig r |> setInitConfig; Files.browseFileHome "index.html" )
+            
     let greyTide = 
         choose [ 
-            GET >=> request (fun _ -> doIf (isNotInit)) >=> Files.browseFileHome "setup.html"
-            POST >=> path "/setup.html" >=> request (fun r -> getInitConfig r |> setInitConfig; Files.browseFileHome "index.html" )
-            GET >=> choose [ 
+           GET >=> choose [ 
                                 path "/" <|> (path "/setup.html" >=> request (fun _ -> doIf (isNotInit >> not)))  >=> Files.browseFileHome "index.html"
                                 path "/tide/v1/Tide"   >=> request (wire0 v1Models) 
                                 path "/tide/v1/States" >=> request (wire0 v1States) 
