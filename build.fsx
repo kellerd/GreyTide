@@ -41,6 +41,8 @@ Target "CopyAssets" (fun _ ->
       ++ "./GreyTideAssets/**/*.ts"
       ++ "./GreyTideAssets/**/*.css"
       ++ "./GreyTideAssets/**/*.js"
+      ++ "./GreyTideAssets/**/*.png"
+      ++ "./GreyTideAssets/**/*.svg"
       ).SetBaseDirectory("./GreyTideAssets/")]
         |> FileHelper.CopyWithSubfoldersTo assets
     !! "paket-files/**/*.js" |> FileHelper.CopyTo (assets </> "Scripts")

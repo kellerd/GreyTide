@@ -25,7 +25,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DocumentationFile>bin\Release\GreyTide.XML</DocumentationFile>
     <Prefer32Bit>true</Prefer32Bit>
-    <StartArguments>8083 "C:\Users\KELLERD\Source\Repos\GreyTide\assets"</StartArguments>
+    <StartArguments>8083 "C:\Users\%username%\Source\Repos\GreyTide\assets"</StartArguments>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>

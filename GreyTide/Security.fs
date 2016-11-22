@@ -16,20 +16,26 @@ module Security =
                     client_secret = getSetting "OAuthFS"}
             | _ -> id   // we do not provide secret keys for other oauth providers
         )
-    let authRedirectUri = "/"
-    let login f state =
-        authorize authRedirectUri oauthConfigs
-            (fun loginData ->
-                printf "%s (name: %s)" loginData.Id loginData.Name
-                f loginData.Id >=> Redirection.FOUND "/"
+    
+        
+    let secure setState loginRedirectPage protectedArea =
+        [
+            warbler(fun ctx ->
+                let authorizeRedirectUri = buildLoginUrl ctx
+                authorize authorizeRedirectUri oauthConfigs
+                    (fun loginData ->
+                        printf "%s (name: %s)" loginData.Id loginData.Name
+                        setState loginData.Id >=> Redirection.FOUND "/"
+                    )
+                    (fun () ->
+                        setState "" >=> Redirection.FOUND "/"
+                    )
+                    (fun error -> Successful.OK <| sprintf "Authorization failed because of `%s`" error.Message)
             )
-            (fun () ->
-                f "" >=> Redirection.FOUND "/"
-            )
-            (fun error -> Successful.OK <| sprintf "Authorization failed because of `%s`" error.Message)
-    let secure protected =
-      OAuth.protectedPart protected
-        (RequestErrors.FORBIDDEN "You do not have access to that application part")
+            loginRedirectPage
+            OAuth.protectedPart protectedArea
+                (RequestErrors.FORBIDDEN "You do not have access to that application part")
+        ]
 
 
 //<script>

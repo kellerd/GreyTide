@@ -132,11 +132,16 @@ module GreyTide =
         
             (GET >=> request (fun _ -> doIf (isNotInit)) >=> Files.browseFileHome "setup.html"                                    )  
             :: (POST >=> path "/setup.html" >=> request (fun r -> getInitConfig r |> setInitConfig; Files.browseFileHome homeFile )  )  
-            :: (GET >=> path "/setup.html" >=> request (fun _ -> doIf (isNotInit >> not)) >=> Suave.Redirection.redirect homeFile    )  
+            :: (GET >=> path "/setup.html" >=> request (fun _ -> doIf (isNotInit >> not)) >=> Files.browseFileHome homeFile    )  
             :: items
-    let orElsebadRequest f = function 
-        | NoSession -> RequestErrors.BAD_REQUEST "No Session Found"
-        | UserToken(userToken) -> f userToken
+    
+    let mapSession2 fSuccess fFailure = function 
+        | NoSession -> fFailure
+        | UserToken(userToken) -> fSuccess userToken
+
+    let orElsebadRequest f = mapSession2 f (RequestErrors.BAD_REQUEST "No Session Found")
+
+    let storeUserToken id = sessionStore (fun store -> store.set "usertoken" id)
 
     let mainApplication = 
         let app usertoken =
@@ -145,8 +150,7 @@ module GreyTide =
                                     path "/tide/v1/Tide"   >=> request (v1Models usertoken |> wire0 ) 
                                     path "/tide/v1/States" >=> request (wire0 v1States) 
                                     path "/tide/v2/Models" >=> request (v2Models usertoken |> wire ) 
-                                    path "/tide/v2/States" >=> request (wire v2States) 
-                                    Files.browseHome ]
+                                    path "/tide/v2/States" >=> request (wire v2States)  ]
                 POST >=> choose [ 
                                     path "/tide/v1/SaveChanges" >=> request' getSaveBundle (v1SaveChanges usertoken |> wire2 ) 
                                     path "/tide/v2/SaveChanges" >=>  request' getSaveBundle (v2SaveChanges usertoken |> wire2 ) ]
@@ -155,9 +159,9 @@ module GreyTide =
             |> choose
         app |> orElsebadRequest |> session
     let greyTide = 
-        let login = Security.login (fun id -> sessionStore (fun store -> store.set "usertoken" id))
-                    |> orElsebadRequest
-                    |> session
-        let app = login :: [Security.secure mainApplication]
+        let buttonstToLogin = mapSession2 (fun _ -> never) (Files.browseFileHome "signin.html") 
+                              |> session
+
+        let app = Files.browseHome :: Security.secure storeUserToken buttonstToLogin mainApplication
         setup "index.html" app |> choose
         

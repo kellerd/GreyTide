@@ -13,7 +13,7 @@ module App =
     let main args =
         let (port,homeFolder) = 
             match args with 
-            | [|port';homeFolder'|] -> uint16 port',Some homeFolder'
+            | [|port';homeFolder'|] -> uint16 port',(Some ( Environment.ExpandEnvironmentVariables homeFolder'))
             | [|port'|] -> uint16 port',(Some Environment.CurrentDirectory)
             | _ -> 8083us,(Some Environment.CurrentDirectory)
 
