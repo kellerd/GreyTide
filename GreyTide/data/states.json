@@ -188,7 +188,8 @@
         "to": "Nothing"
       }
     ],
-    "type": "GreyTide.Models.V1.StateCollection",
+    "userToken": "someGoogleId", 
+"type": "GreyTide.Models.V1.StateCollection",
     "_rid": "n9wIAJNqDQABAAAAAAAAAA==",
     "_ts": 1444876354,
     "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQABAAAAAAAAAA==/",

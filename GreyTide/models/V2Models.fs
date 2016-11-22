@@ -47,5 +47,6 @@ type Model =
       currentState : string
       currentDate : string
       points : int
-      states : ModelState seq }
+      states : ModelState seq
+      userToken : string }
     member x.``type`` = x.GetType().FullName

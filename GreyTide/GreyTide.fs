@@ -8,6 +8,9 @@ module GreyTide =
     open System.Configuration
     open GreyTide.Data
     open GreyTide.InitData
+    open Suave.State.CookieStateStore
+    open Suave.Cookie
+    open Suave.Authentication
 
     #if INTERACTIVE
     let config = {defaultConfig with homeFolder = Some (System.IO.Path.Combine(__SOURCE_DIRECTORY__.Substring(0, __SOURCE_DIRECTORY__.LastIndexOf(System.IO.Path.DirectorySeparatorChar)) ,@"GreyTide")) }
@@ -24,7 +27,11 @@ module GreyTide =
     type InitConfig = { DatabaseId : string
                         ConnectionUri : string
                         ConnectionKey : string
-                        UserToken : string }
+                        DocumentCollectionId : string;
+                        OAuthGId : string;
+                        OAuthGS : string
+                        OAuthFId : string;
+                        OAuthFS : string }
 
     let JSON v =
         let jsonSerializerSettings = Breeze.ContextProvider.BreezeConfig.Instance.GetJsonSerializerSettings()
@@ -45,10 +52,14 @@ module GreyTide =
         
     let getInitConfig req = 
         let get = getFormData req
-        { DatabaseId = get "DatabaseId"
-          ConnectionUri = get "ConnectionUri"
-          ConnectionKey = get "ConnectionKey"
-          UserToken = get "UserToken" }
+        { DatabaseId           = get "DatabaseId"
+          ConnectionUri        = get "ConnectionUri"
+          ConnectionKey        = get "ConnectionKey"
+          DocumentCollectionId = get "UserToken" 
+          OAuthGId             = get "OAuthGId"
+          OAuthGS              = get "OAuthGS"
+          OAuthFId             = get "OAuthFId"
+          OAuthFS              = get "OAuthFS"  }
 
     let tryOrNever f x =
         try
@@ -82,37 +93,71 @@ module GreyTide =
             [ "DatabaseId"   , config.DatabaseId   
               "ConnectionUri", config.ConnectionUri
               "ConnectionKey", config.ConnectionKey
-              "UserToken"    , config.UserToken ]
+              "DocumentCollectionId"    , config.DocumentCollectionId ]
 
     let isNotInit _ = (System.String.IsNullOrWhiteSpace(InitData.getSetting "ConnectionUri"))
 
-    let wire0 data _ = 
-        data 
-        |> JSON
+    let wire0 data _ = data |> JSON
+    let wire data _ = data client.Value |> JSON
+    let wire2 data r  = data client.Value r |> JSON
 
-    let wire data _ = 
-        data client.Value 
-        |> JSON
 
-    let wire2 data r  = 
-        data client.Value r
-        |> JSON
-    lrt setup = 
-        GET >=> request (fun _ -> doIf (isNotInit)) >=> Files.browseFileHome "setup.html"
-            POST >=> path "/setup.html" >=> request (fun r -> getInitConfig r |> setInitConfig; Files.browseFileHome "index.html" )
-            
+    
+    type Session = 
+        | NoSession
+        | UserToken of string
+
+    let session f = 
+        statefulForSession
+        >=> context (fun x -> 
+            match x |> HttpContext.state with
+            | None -> f NoSession
+            | Some state ->
+                match state.get "usertoken" with
+                | Some usertoken -> f (UserToken usertoken)
+                | _ -> f NoSession)
+
+    let sessionStore setF = context (fun x ->
+        match HttpContext.state x with
+        | Some state -> setF state
+        | None -> never)
+
+    let reset =
+        unsetPair SessionAuthCookie
+        >=> unsetPair StateCookie
+        >=> Redirection.FOUND "index.html"
+
+
+    let setup homeFile items  = 
+        
+            (GET >=> request (fun _ -> doIf (isNotInit)) >=> Files.browseFileHome "setup.html"                                    )  
+            :: (POST >=> path "/setup.html" >=> request (fun r -> getInitConfig r |> setInitConfig; Files.browseFileHome homeFile )  )  
+            :: (GET >=> path "/setup.html" >=> request (fun _ -> doIf (isNotInit >> not)) >=> Suave.Redirection.redirect homeFile    )  
+            :: items
+    let orElsebadRequest f = function 
+        | NoSession -> RequestErrors.BAD_REQUEST "No Session Found"
+        | UserToken(userToken) -> f userToken
+
+    let mainApplication = 
+        let app usertoken =
+            [ 
+                GET >=> choose [    path "/" >=> Files.browseFileHome "index.html"
+                                    path "/tide/v1/Tide"   >=> request (v1Models usertoken |> wire0 ) 
+                                    path "/tide/v1/States" >=> request (wire0 v1States) 
+                                    path "/tide/v2/Models" >=> request (v2Models usertoken |> wire ) 
+                                    path "/tide/v2/States" >=> request (wire v2States) 
+                                    Files.browseHome ]
+                POST >=> choose [ 
+                                    path "/tide/v1/SaveChanges" >=> request' getSaveBundle (v1SaveChanges usertoken |> wire2 ) 
+                                    path "/tide/v2/SaveChanges" >=>  request' getSaveBundle (v2SaveChanges usertoken |> wire2 ) ]
+            ] 
+            |> setup "index.html"
+            |> choose
+        app |> orElsebadRequest |> session
     let greyTide = 
-        choose [ 
-           GET >=> choose [ 
-                                path "/" <|> (path "/setup.html" >=> request (fun _ -> doIf (isNotInit >> not)))  >=> Files.browseFileHome "index.html"
-                                path "/tide/v1/Tide"   >=> request (wire0 v1Models) 
-                                path "/tide/v1/States" >=> request (wire0 v1States) 
-                                path "/tide/v2/Models" >=> request (wire v2Models) 
-                                path "/tide/v2/States" >=> request (wire v2States) 
-                                Files.browseHome 
-                             ]
-            POST >=> choose [ 
-                              path "/tide/v1/SaveChanges" >=> request' getSaveBundle (wire2 v1SaveChanges) 
-                              path "/tide/v2/SaveChanges" >=>  request' getSaveBundle (wire2 v2SaveChanges) ]
-        ]
-
+        let login = Security.login (fun id -> sessionStore (fun store -> store.set "usertoken" id))
+                    |> orElsebadRequest
+                    |> session
+        let app = login :: [Security.secure mainApplication]
+        setup "index.html" app |> choose
+        

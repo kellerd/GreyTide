@@ -19,17 +19,17 @@ module Data =
     let repo = Repo()
     
 
-    let getItems (client:DocumentClient)  : IOrderedQueryable<'a>  = 
+    let getItems (client:DocumentClient)  : IOrderedQueryable<'a> = 
         let database = getDatabase client ()
         let documentCollection = getDocumentCollection client database
         client.CreateDocumentQuery<'a>(documentCollection.SelfLink)
 
-    let v1Models = (Seq.map mapModels repo.Models.Value).AsQueryable()
-    let v1States = (Seq.map mapStateCollection repo.States.Value).AsQueryable()
-    let v2Models client : IQueryable<V2.Model> = (getItems client).Where(fun (sc:V2.Model) -> sc.``type`` = typeof<V2.Model>.FullName)
+    let v1Models tenantUserToken = (Seq.map mapModels repo.Models.Value).AsQueryable().Where(fun m -> m.UserToken = tenantUserToken)
+    let v1States  = (Seq.map mapStateCollection repo.States.Value).AsQueryable()
+    let v2Models tenantUserToken client  : IQueryable<V2.Model> = (getItems client).Where(fun (m:V2.Model) -> m.userToken = tenantUserToken && m.``type`` = typeof<V2.Model>.FullName)
     let v2States client : IQueryable<V2.StateCollection> = (getItems client).Where(fun (sc:V2.StateCollection) -> sc.``type`` = typeof<V2.StateCollection>.FullName)
 
-    let v2SaveChanges (client:DocumentClient) (saveBundle:JObject) = 
+    let v2SaveChanges tenantUserToken (client:DocumentClient) (saveBundle:JObject)  = 
         let entityInfo = Repo.Convert(saveBundle, null, null);
         let database = getDatabase client ()
         let documentCollection = getDocumentCollection client database
@@ -41,15 +41,22 @@ module Data =
                                           { Document = None; StatusCode = result.StatusCode })
             defaultArg result { Document = None; StatusCode = HttpStatusCode.NoContent }
 
+        let upsertEntity entity = 
+            let result = client.UpsertDocumentAsync(documentCollection.SelfLink, entity).Result
+            {Document = result.Resource |> Option.ofObj; StatusCode = result.StatusCode}
         //Store in azure
         let entities = 
             entityInfo 
             |> Seq.collect (fun f -> f.Value)
             |> Seq.map (fun item -> match (item.EntityState, item.Entity) with
-                                    | (state, entity) when state = EntityState.Modified || state = EntityState.Added -> 
-                                        let result = client.UpsertDocumentAsync(documentCollection.SelfLink, entity).Result
-                                        {Document = result.Resource |> Option.ofObj; StatusCode = result.StatusCode}
+                                    | state, (:? V2.Model as entity) when state = EntityState.Modified || state = EntityState.Added -> 
+                                        let entity = {entity with userToken = tenantUserToken}
+                                        upsertEntity entity 
+                                    | state, (:? V1.Model as entity) when state = EntityState.Modified || state = EntityState.Added -> 
+                                        let entity = {entity with UserToken = tenantUserToken}
+                                        upsertEntity entity
                                     | state, (:? V2.Model as entity) when state = EntityState.Deleted ->
+                                        let entity = {entity with userToken = tenantUserToken}
                                         client.CreateDocumentQuery(documentCollection.SelfLink).
                                                 Where(fun sc -> sc.Id = entity.id.ToString()).
                                                 AsEnumerable().

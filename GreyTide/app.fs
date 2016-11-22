@@ -25,7 +25,7 @@ module App =
                     bindings = [ HttpBinding.create HTTP IPAddress.Loopback port ]
                     listenTimeout = TimeSpan.FromMilliseconds 3000.
                     homeFolder = homeFolder }
-        greyTide |> Security.security |> startWebServer config 
+        startWebServer config greyTide 
         0
     #endif
 

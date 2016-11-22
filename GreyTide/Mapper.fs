@@ -12,7 +12,7 @@ module MapperConfiguration =
     
     let mapModelItems model (v2 : V2.ModelItem) : V1.Model = 
         let x : V1.Model = 
-            { UserToken = Guid.Empty
+            { UserToken = ""
               Id = Guid.Empty
               Name = v2.name
               CurrentState = v2.currentState
@@ -26,7 +26,7 @@ module MapperConfiguration =
     
     let mapModels (v2 : V2.Model) : V1.Model = 
         let x : V1.Model = 
-            { UserToken = Guid.Empty
+            { UserToken = ""
               Id = v2.id
               Name = v2.name
               CurrentState = v2.currentState
@@ -56,7 +56,7 @@ module MapperConfiguration =
     
     let mapStateCollection (v2 : V2.StateCollection) : V1.StateCollection = 
         let x : V1.StateCollection = 
-            { UserToken = Guid.Empty
+            { UserToken = ""
               Id = v2.id
               Name = v2.name
               Events = Seq.empty }

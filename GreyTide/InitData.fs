@@ -26,14 +26,14 @@ module InitData =
         | None -> client.CreateDatabaseAsync(Database(Id = databaseId)).Result.Resource
     
     let getDocumentCollection (client : DocumentClient) (database : Database) = 
-        let userToken = Guid(getSetting "UserToken").ToString("N")
+        let documentCollectionId = Guid(getSetting "DocumentCollectionId").ToString("N")
         let dc = 
-            client.CreateDocumentCollectionQuery(database.SelfLink).Where(fun c -> c.Id = userToken).AsEnumerable()
+            client.CreateDocumentCollectionQuery(database.SelfLink).Where(fun c -> c.Id = documentCollectionId).AsEnumerable()
                   .FirstOrDefault() |> Option.ofObj
         match dc with
         | Some dc -> dc
         | None -> 
-            client.CreateDocumentCollectionAsync(database.SelfLink, DocumentCollection(Id = userToken)).Result.Resource
+            client.CreateDocumentCollectionAsync(database.SelfLink, DocumentCollection(Id = documentCollectionId)).Result.Resource
     
     let loadFilesIfTheyDontExist (client : DocumentClient) (items : ResizeArray<'a>) (hasSome : IQueryable<'a> -> bool)= 
         let database = getDatabase client ()

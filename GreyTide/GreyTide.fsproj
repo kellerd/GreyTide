@@ -25,7 +25,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DocumentationFile>bin\Release\GreyTide.XML</DocumentationFile>
     <Prefer32Bit>true</Prefer32Bit>
-    <StartArguments>8083 "C:\Users\diese\Source\Repos\GreyTide\assets"</StartArguments>
+    <StartArguments>8083 "C:\Users\KELLERD\Source\Repos\GreyTide\assets"</StartArguments>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -82,8 +82,8 @@
     <Compile Include="Data.fs" />
     <None Include="load-references-debug.fsx" />
     <None Include="load-project-debug.fsx" />
-    <Compile Include="GreyTide.fs" />
     <Compile Include="Security.fs" />
+    <Compile Include="GreyTide.fs" />
     <Compile Include="App.fs" />
   </ItemGroup>
   <ItemGroup>

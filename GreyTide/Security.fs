@@ -1,6 +1,7 @@
 ﻿namespace GreyTide
 module Security =
     open Suave.OAuth
+    open Suave.Operators
     open Suave
     open InitData
     let oauthConfigs =
@@ -16,24 +17,17 @@ module Security =
             | _ -> id   // we do not provide secret keys for other oauth providers
         )
     let authRedirectUri = "/"
-    let login model = 
+    let login f state =
         authorize authRedirectUri oauthConfigs
             (fun loginData ->
-
-                model.logged_in <- true
-                model.logged_id <- sprintf "%s (name: %s)" loginData.Id loginData.Name
-
-                Redirection.FOUND "/"
+                printf "%s (name: %s)" loginData.Id loginData.Name
+                f loginData.Id >=> Redirection.FOUND "/"
             )
             (fun () ->
-
-                model.logged_id <- ""
-                model.logged_in <- false
-
-                Redirection.FOUND "/"
+                f "" >=> Redirection.FOUND "/"
             )
             (fun error -> Successful.OK <| sprintf "Authorization failed because of `%s`" error.Message)
-    let secutity protected =
+    let secure protected =
       OAuth.protectedPart protected
         (RequestErrors.FORBIDDEN "You do not have access to that application part")
 

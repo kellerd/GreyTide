@@ -2,7 +2,8 @@
   {
     "id": "dfbbd000-67ba-4347-a7ea-99d9ade66234",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Hive Tyrant",
     "currentState": "Prime",
@@ -97,6 +98,7 @@
         ]
       }
     ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Hive Tyrant",
     "currentState": "Complete",
@@ -133,7 +135,8 @@
   {
     "id": "32b31f21-1993-4339-bbd8-667c62b7381a",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Tervigon",
     "currentState": "Complete",
@@ -170,7 +173,8 @@
   {
     "id": "2a768ae0-7ba6-4d3f-acd5-8651d45d6cc6",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Venomthrope",
     "currentState": "Prime",
@@ -195,7 +199,8 @@
   {
     "id": "18a495a6-d26f-4227-b68a-58e8d6c43999",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Venomthrope Finecast",
     "currentState": "Prime",
@@ -224,7 +229,8 @@
   {
     "id": "39798537-a9c7-4d47-9e46-054ccc0f7aae",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Zoanthrope",
     "currentState": "Prime",
@@ -295,6 +301,7 @@
         ]
       }
     ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Zoanthrope",
     "currentState": "Complete",
@@ -331,7 +338,8 @@
   {
     "id": "adf5e368-1988-4339-a697-88580597e793",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Zoanthrope Finecast",
     "currentState": "Prime",
@@ -360,7 +368,8 @@
   {
     "id": "73cd563a-f2c6-4e3d-b81e-7db614e2593b",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Hormagaunt",
     "currentState": "Prime",
@@ -393,7 +402,8 @@
   {
     "id": "26d976e4-f737-4343-97f0-809124854ade",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Hormagaunt",
     "currentState": "Complete",
@@ -422,7 +432,8 @@
   {
     "id": "cbc3c838-f6d2-44dc-b5ca-eeb0e2d58465",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Ripper Swarm",
     "currentState": "Complete",
@@ -497,6 +508,7 @@
         ]
       }
     ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Termagaunt",
     "currentState": "Complete",
@@ -533,7 +545,8 @@
   {
     "id": "2c15951a-600c-4ee6-968d-6eca107a042d",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Termagaunt",
     "currentState": "Complete",
@@ -562,7 +575,8 @@
   {
     "id": "8a335192-b4d7-4938-92b0-7bed0ee86542",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Gargoyle",
     "currentState": "Complete",
@@ -599,7 +613,8 @@
   {
     "id": "8691980a-0288-4980-b170-fdbd93b1d8b6",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Hive Crone",
     "currentState": "Prime",
@@ -648,7 +663,8 @@
   {
     "id": "b75b25e0-3078-47d1-9acf-db0416fc5622",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Biovore",
     "currentState": "Prime",
@@ -673,7 +689,8 @@
   {
     "id": "1c955f9a-db2f-49e1-b071-129843f75f17",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Exocrine",
     "currentState": "Complete",
@@ -772,6 +789,7 @@
         ]
       }
     ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Mawloc",
     "currentState": "Complete",
@@ -808,7 +826,8 @@
   {
     "id": "51cd55f9-9406-4049-8930-b47d8c84cc63",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Tyrant Guard",
     "currentState": "Prime",
@@ -903,6 +922,7 @@
         ]
       }
     ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Hive Guard",
     "currentState": "Complete",
@@ -977,6 +997,7 @@
         ]
       }
     ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Deathleaper",
     "currentState": "Complete",
@@ -1013,7 +1034,8 @@
   {
     "id": "ef68cfab-2a49-40a8-a7f7-3602774cf460",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Hive Tyrant",
     "currentState": "Complete",
@@ -1088,6 +1110,7 @@
         ]
       }
     ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Tyranid Prime",
     "currentState": "Complete",
@@ -1170,6 +1193,7 @@
         ]
       }
     ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Lictor",
     "currentState": "Complete",
@@ -1206,7 +1230,8 @@
   {
     "id": "c8eb6286-7fbb-432d-bcd0-7a98619e56fd",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Genestealer",
     "currentState": "Complete",
@@ -1281,6 +1306,7 @@
         ]
       }
     ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Broodlord",
     "currentState": "Complete",
@@ -1363,6 +1389,7 @@
         ]
       }
     ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Tyranid Warrior Old",
     "currentState": "Complete",
@@ -1457,6 +1484,7 @@
         ]
       }
     ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Tyranid Warrior Boneswords",
     "currentState": "Complete",
@@ -1519,6 +1547,7 @@
         ]
       }
     ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Tyranid Warrior Rending Claws",
     "currentState": "Buy Primed",
@@ -1543,7 +1572,8 @@
   {
     "id": "6d0b14ce-c81b-48ae-9fb5-b7eb73d2d38c",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Tyranid Warrior New",
     "currentState": "Prime",
@@ -1576,7 +1606,8 @@
   {
     "id": "b2018a56-bc67-4a0e-9697-a7d6dcfacf60",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Carnifex Old",
     "currentState": "Complete",
@@ -1605,7 +1636,8 @@
   {
     "id": "b038fa14-e13d-419d-85e7-38dc38edc98c",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Carnifex VC",
     "currentState": "Prime",
@@ -1654,7 +1686,8 @@
   {
     "id": "9e3f09ca-4f3c-4ff9-bfd3-2f805d55bc5f",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Carnifex CC",
     "currentState": "Prime",
@@ -1703,7 +1736,8 @@
   {
     "id": "8428ab22-d813-4fe7-8b5b-6f536353fdbe",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Carnifex New",
     "currentState": "Prime",
@@ -1736,7 +1770,8 @@
   {
     "id": "e5dc7168-d2f3-4a6e-8b31-17a4ab62498f",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Spawn of Cryptus",
     "currentState": "Prime",
@@ -1761,7 +1796,8 @@
   {
     "id": "5d9aef0c-ebc9-4bf6-8cee-8fe6f95978bb",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Children of Cryptus",
     "currentState": "Prime",
@@ -1794,7 +1830,8 @@
   {
     "id": "02dacec4-ea60-4ee3-b213-d70bf4d1655b",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Exocrine",
     "currentState": "Prime",
@@ -1819,7 +1856,8 @@
   {
     "id": "7b47c935-7c44-45a8-b2be-144a556f51e8",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Krom Dragongaze",
     "currentState": "Prime",
@@ -1894,6 +1932,7 @@
         ]
       }
     ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Njal",
     "currentState": "Complete",
@@ -1934,7 +1973,8 @@
   {
     "id": "280b7923-b4fb-4c04-bff8-3c3f793a05fd",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Rune Priest 1",
     "currentState": "Complete",
@@ -1975,7 +2015,8 @@
   {
     "id": "8013cc8d-23e8-4d23-8edb-2e43a39a7104",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Rune Priest 2",
     "currentState": "Complete",
@@ -2016,7 +2057,8 @@
   {
     "id": "5b43eeeb-be0b-487c-b406-dafd5a453567",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Rune Priest 3",
     "currentState": "Complete",
@@ -2057,7 +2099,8 @@
   {
     "id": "3b5883d4-ce89-4701-a163-801129d414c1",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Ulrik",
     "currentState": "Prime",
@@ -2132,6 +2175,7 @@
         ]
       }
     ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Battle Leader",
     "currentState": "Complete",
@@ -2238,6 +2282,7 @@
         ]
       }
     ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Wolf Lord on Thunderwolf",
     "currentState": "Prime",
@@ -2262,7 +2307,8 @@
   {
     "id": "b99dda40-8a23-4f1f-840e-9e355ebea7aa",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Wolf Priest on Jump",
     "currentState": "Prime",
@@ -2287,7 +2333,8 @@
   {
     "id": "dd5b831a-e65d-4bdd-a2bb-84925785de33",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Terminators",
     "currentState": "Prime",
@@ -2362,6 +2409,7 @@
         ]
       }
     ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Terminators",
     "currentState": "Complete",
@@ -2452,6 +2500,7 @@
         ]
       }
     ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Scouts",
     "currentState": "Complete",
@@ -2550,6 +2599,7 @@
         ]
       }
     ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Blood Claws",
     "currentState": "Complete",
@@ -2648,6 +2698,7 @@
         ]
       }
     ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Sky Claws 1",
     "currentState": "Complete",
@@ -2754,6 +2805,7 @@
         ]
       }
     ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Sky Claws 2",
     "currentState": "Complete",
@@ -2856,6 +2908,7 @@
         ]
       }
     ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Grey Hunters 1",
     "currentState": "Complete",
@@ -2954,6 +3007,7 @@
         ]
       }
     ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Grey Hunters 2",
     "currentState": "Complete",
@@ -3052,6 +3106,7 @@
         ]
       }
     ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Grey Hunters 3",
     "currentState": "Complete",
@@ -3092,7 +3147,8 @@
   {
     "id": "95d19255-f037-45c8-8cc7-d2867438f4b1",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Grey Hunters 4",
     "currentState": "Complete",
@@ -3129,7 +3185,8 @@
   {
     "id": "e33c9462-e25a-4522-b7cf-855d61c73cb1",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Grey Hunters 5",
     "currentState": "Complete",
@@ -3166,7 +3223,8 @@
   {
     "id": "923d7b44-7aa8-4d80-a159-a9252e8a62e0",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Wolf Guard",
     "currentState": "Complete",
@@ -3207,7 +3265,8 @@
   {
     "id": "87c8038a-e599-49bb-a9c0-ed3dc929af9a",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Land Speeder",
     "currentState": "Prime",
@@ -3298,6 +3357,7 @@
         ]
       }
     ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Thunderwolf",
     "currentState": "Prime",
@@ -3372,6 +3432,7 @@
         ]
       }
     ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Long Fangs 1",
     "currentState": "Complete",
@@ -3412,7 +3473,8 @@
   {
     "id": "d33418ee-d1c0-4aa7-a8ee-e613e68ef51d",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Long Fangs 2",
     "currentState": "Prime",
@@ -3437,7 +3499,8 @@
   {
     "id": "18b46e2f-6522-426d-8a84-9f346aa3f8e9",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Long Fangs 3",
     "currentState": "Prime",
@@ -3462,7 +3525,8 @@
   {
     "id": "99ee5104-99cb-4814-8bb1-88e43f50d53f",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Razorback",
     "currentState": "Complete",
@@ -3503,7 +3567,8 @@
   {
     "id": "ab1b7847-b9d4-4657-a652-d2fdc305a9b3",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Rhino",
     "currentState": "Complete",
@@ -3544,7 +3609,8 @@
   {
     "id": "566798ca-6ef1-4892-891c-5af9902fa772",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Rhino",
     "currentState": "Prime",
@@ -3569,7 +3635,8 @@
   {
     "id": "5eb82ddb-43d0-45c5-b148-f5015c6b18d7",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Toxicrene",
     "currentState": "Prime",
@@ -3594,7 +3661,8 @@
   {
     "id": "c83b5a3a-b265-4491-8068-c04c95973e93",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Stormwolf",
     "currentState": "Prime",
@@ -3619,7 +3687,8 @@
   {
     "id": "48307bd2-71e8-4f22-b22d-02cfcd93ec7b",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Land Raider",
     "currentState": "Assemble",
@@ -3648,7 +3717,8 @@
   {
     "id": "06665ed8-e4bd-425b-a0c8-dc8604fb32ca",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Predator",
     "currentState": "Buy New",
@@ -3673,7 +3743,8 @@
   {
     "id": "3b42c762-60f9-4441-8ccc-24076fbe10e6",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Dreadnaught",
     "currentState": "Complete",
@@ -3722,7 +3793,8 @@
   {
     "id": "4b621902-1688-44b9-81e1-77fcd815a077",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Tac Squad",
     "currentState": "Buy New",
@@ -3747,7 +3819,8 @@
   {
     "id": "56f846ad-99e7-44b2-a6e5-04ad0d5f9232",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Terminators",
     "currentState": "Buy New",
@@ -3772,7 +3845,8 @@
   {
     "id": "3008febb-57b2-40a8-a712-bc7c93a99ae1",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Battle Leader",
     "currentState": "Buy New",
@@ -3797,7 +3871,8 @@
   {
     "id": "ca140681-a0e6-4be7-95c7-35fff7b6617d",
     "faction": "Ork",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Warboss",
     "currentState": "Buy New",
@@ -3822,7 +3897,8 @@
   {
     "id": "c39eb11c-2803-4fb9-b3c0-9cab3b83b192",
     "faction": "Ork",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Nobs",
     "currentState": "Buy New",
@@ -3847,7 +3923,8 @@
   {
     "id": "7ed2ce70-c3dc-4c96-ba81-1ff7f56895dd",
     "faction": "Ork",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Boys",
     "currentState": "Buy New",
@@ -3872,7 +3949,8 @@
   {
     "id": "594f50ea-9dd3-40bc-92bb-dfdf9b6f7ef1",
     "faction": "Ork",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Deffkoptas",
     "currentState": "Buy New",
@@ -3939,6 +4017,7 @@
         ]
       }
     ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Zoanthropes",
     "currentState": "Prime",
@@ -3971,7 +4050,8 @@
   {
     "id": "101e291d-9ce5-13b5-20f0-cc8c35371fe8",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Venomthropes",
     "currentState": "Prime",
@@ -4004,7 +4084,8 @@
   {
     "id": "48a55311-5803-4f83-848e-ca15ab6beb3c",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Tyrannocyte",
     "currentState": "Prime",
@@ -4037,7 +4118,8 @@
   {
     "id": "90e3c5da-aae7-dccd-a05a-6743a147523b",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Wolf Lord on Thunderwolf",
     "currentState": "Prime",
@@ -4070,7 +4152,8 @@
   {
     "id": "6f3bd92f-8670-749d-47d4-7d7cddd94651",
     "faction": "Deathwatch",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Deathwatch",
     "currentState": "Prime",
@@ -4107,7 +4190,8 @@
   {
     "id": "796eebad-5892-5c93-b29e-02d7eba0f67a",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Mucolid Spore",
     "currentState": "Prime",
@@ -4140,7 +4224,8 @@
   {
     "id": "cec264cb-17a3-994d-a30a-301328fc28fc",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Spore Mine Cluster",
     "currentState": "Prime",
@@ -4173,7 +4258,8 @@
   {
     "id": "6b530ec1-0481-9ea3-3af6-6aa8c3690ce1",
     "faction": "Gene Cult",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Acolyte Hybrid",
     "currentState": "Prime",
@@ -4210,7 +4296,8 @@
   {
     "id": "766b4f47-f77b-c79b-bb39-ce200819a79f",
     "faction": "Gene Cult",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Neophyte Hybrid",
     "currentState": "Prime",
@@ -4247,7 +4334,8 @@
   {
     "id": "868ace9f-cb25-223a-11a5-38b5cc7fb218",
     "faction": "Gene Cult",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Purestrain Princelings",
     "currentState": "Prime",
@@ -4284,7 +4372,8 @@
   {
     "id": "8a21645d-526f-30a7-09b7-be4f24bbd535",
     "faction": "Gene Cult",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Aberant",
     "currentState": "Prime",
@@ -4321,7 +4410,8 @@
   {
     "id": "b03eb7e3-1fb0-c976-06be-9accf74361e3",
     "faction": "Gene Cult",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Primus",
     "currentState": "Prime",
@@ -4358,7 +4448,8 @@
   {
     "id": "0f6faa75-d489-6fda-b839-90d7a0956c2c",
     "faction": "Gene Cult",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Patriarch",
     "currentState": "Prime",
@@ -4395,7 +4486,8 @@
   {
     "id": "af3a52fe-8069-b8cc-fd6d-6f3905a03e55",
     "faction": "Gene Cult",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Magus",
     "currentState": "Prime",
@@ -4432,7 +4524,8 @@
   {
     "id": "611d3883-8a48-1b97-1548-9c3ca70d00b0",
     "faction": "Tyranids",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Ripper Swarm",
     "currentState": "Prime",
@@ -4465,7 +4558,8 @@
   {
     "id": "1cb691ed-323c-fe8b-7039-fbaaa125e0ef",
     "faction": "Ork",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Warboss",
     "currentState": "Buy New",
@@ -4490,7 +4584,8 @@
   {
     "id": "3f9eddca-8c63-7fa0-3df6-88928763c316",
     "faction": "Space Wolves",
-    "items": [],
+    "items": [ ],
+    "userToken": "someGoogleId",
     "type": "GreyTide.Models.V2.Model",
     "name": "Venerable Dread",
     "currentState": "Buy New",

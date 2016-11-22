@@ -20,6 +20,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fake", "fake", "{CB3CFC8F-7
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "GreyTide", "GreyTide\GreyTide.fsproj", "{45AF1EFF-94FB-4867-917A-D2F04EDDAFCE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{70D70EEB-4401-440B-A55C-EA7B3A5CB032}"
+	ProjectSection(SolutionItems) = preProject
+		GreyTideAssets\index.html = GreyTideAssets\index.html
+		GreyTideAssets\setup.html = GreyTideAssets\setup.html
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

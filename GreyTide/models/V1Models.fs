@@ -18,7 +18,7 @@ type State =
     member this.StateCollectionId = this.StateCollection.Id
 
 and StateCollection = 
-    { UserToken : Guid
+    { UserToken : string
       [<Key>]
       Id : Guid
       [<Required>]
@@ -34,7 +34,7 @@ and FromState =
 
 [<CLIMutable>]
 type Model = 
-    { UserToken : Guid
+    { UserToken : string
       [<Key>]
       Id : Guid
       [<Required>]
