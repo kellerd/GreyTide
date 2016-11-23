@@ -18,7 +18,7 @@ module Security =
                 | _ -> id   // we do not provide secret keys for other oauth providers
             ))
     
-    let authorizeRedirectUri = "http://greytide.azurewebsites.net/oalogin?provider=google"
+    let authorizeRedirectUri = "http://greytide.azurewebsites.net/oalogin"
         
     let secure setState loginRedirectPage protectedArea =
         [
