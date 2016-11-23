@@ -117,11 +117,11 @@ module GreyTide =
         >=> Redirection.FOUND "index.html"
 
 
-    let setup homeFile items  = 
+    let setup  items  = 
         
             (GET >=> request (fun _ -> doIf (isNotInit)) >=> Files.browseFileHome "setup.html"                                    )  
-            :: (POST >=> path "/setup.html" >=> request (fun r -> getInitConfig r |> setInitConfig; Files.browseFileHome homeFile )  )  
-            :: (GET >=> path "/setup.html" >=> request (fun _ -> doIf (isNotInit >> not)) >=> Files.browseFileHome homeFile    )  
+            :: (POST >=> path "/setup.html" >=> request (fun r -> getInitConfig r |> setInitConfig; Redirection.redirect "/" )  )  
+            :: (GET >=> path "/setup.html" >=> request (fun _ -> doIf (isNotInit >> not)) >=> Redirection.redirect "/"    )  
             :: items
     
     let mapSession2 fSuccess fFailure = function 
@@ -144,7 +144,6 @@ module GreyTide =
                                     path "/tide/v1/SaveChanges" >=> request' getSaveBundle (v1SaveChanges usertoken |> wire2 ) 
                                     path "/tide/v2/SaveChanges" >=>  request' getSaveBundle (v2SaveChanges usertoken |> wire2 ) ]
             ] 
-            |> setup "index.html"
             |> choose
         app |> orElsebadRequest |> session
     let greyTide = 
@@ -156,5 +155,5 @@ module GreyTide =
         #else
         let app = Files.browseHome :: Security.secure storeUserToken buttonstToLogin mainApplication
         #endif
-        setup "index.html" app |> choose
+        setup app |> choose
         
