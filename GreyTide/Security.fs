@@ -4,7 +4,7 @@ module Security =
     open Suave.Operators
     open Suave
     open InitData
-    let oauthConfigs =
+    let oauthConfigs = lazy
         defineProviderConfigs (function
             | "google" -> fun c ->
                 {c with
@@ -22,7 +22,7 @@ module Security =
         [
             warbler(fun ctx ->
                 let authorizeRedirectUri = buildLoginUrl ctx
-                authorize authorizeRedirectUri oauthConfigs
+                authorize authorizeRedirectUri oauthConfigs.Value
                     (fun loginData ->
                         printf "%s (name: %s)" loginData.Id loginData.Name
                         setState loginData.Id >=> Redirection.FOUND "/"
