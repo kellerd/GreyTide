@@ -104,11 +104,17 @@ module GreyTide =
         statefulForSession
         >=> context (fun x -> 
             match x |> HttpContext.state with
-            | None -> f NoSession
+            | None ->
+                printfn "Didn't find HttpContext state"
+                f NoSession
             | Some state ->
                 match state.get "usertoken" with
-                | Some usertoken -> f (UserToken usertoken)
-                | _ -> f NoSession)
+                | Some usertoken -> 
+                    printfn "found usertoken %s" usertoken
+                    f (UserToken usertoken)
+                | _ -> 
+                    printfn "User token not found"
+                    f NoSession)
 
     let sessionStore setF = context (fun x ->
         match HttpContext.state x with
@@ -129,8 +135,12 @@ module GreyTide =
             :: items
     
     let mapSession2 fSuccess fFailure = function 
-        | NoSession -> fFailure
-        | UserToken(userToken) -> fSuccess userToken
+        | NoSession -> 
+            printfn "No session in mapsession2"
+            fFailure
+        | UserToken(userToken) -> 
+            printfn "Found user token"
+            fSuccess userToken
 
     let orElsebadRequest f = mapSession2 f (RequestErrors.BAD_REQUEST "No Session Found")
 
@@ -139,6 +149,7 @@ module GreyTide =
     let mainApplication = 
         let app usertoken =
             [ 
+                Files.browseHome
                 GET >=> choose [    path "/" >=> Files.browseFileHome "index.html"
                                     path "/tide/v1/Tide"   >=> request (v1Models usertoken |> wire0 ) 
                                     path "/tide/v1/States" >=> request (wire0 v1States) 
@@ -159,7 +170,7 @@ module GreyTide =
         #if INTERACTIVE
         let app = Files.browseHome :: [storeUserToken "myusertoken" >=> mainApplication]
         #else
-        let app = Files.browseHome :: Security.secure storeUserToken buttonstToLogin mainApplication
+        let app = Security.secure storeUserToken buttonstToLogin mainApplication
         //let app = Files.browseHome :: Security.secure storeUserToken buttonstToLogin protected' @ [(Successful.OK "Welcome")]
         #endif
         setup app |> choose
