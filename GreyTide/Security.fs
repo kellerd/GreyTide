@@ -18,11 +18,11 @@ module Security =
                 | _ -> id   // we do not provide secret keys for other oauth providers
             ))
     
+    let authorizeRedirectUri = "http://greytide.azurewebsites.net/oalogin?provider=google"
         
     let secure setState loginRedirectPage protectedArea =
         [
             warbler(fun ctx ->
-                let authorizeRedirectUri = buildLoginUrl ctx
                 printfn "Redirect url: %s" authorizeRedirectUri
                 authorize authorizeRedirectUri oauthConfigs.Value
                     (fun loginData ->
