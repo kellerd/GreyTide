@@ -159,8 +159,8 @@ module GreyTide =
         #if INTERACTIVE
         let app = Files.browseHome :: [storeUserToken "myusertoken" >=> mainApplication]
         #else
-        //let app = Files.browseHome :: Security.secure storeUserToken buttonstToLogin mainApplication
-        let app = Files.browseHome :: Security.secure storeUserToken buttonstToLogin protected' @ [(Successful.OK "Welcome")]
+        let app = Files.browseHome :: Security.secure storeUserToken buttonstToLogin mainApplication
+        //let app = Files.browseHome :: Security.secure storeUserToken buttonstToLogin protected' @ [(Successful.OK "Welcome")]
         #endif
         setup app |> choose
         
