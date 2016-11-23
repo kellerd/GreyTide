@@ -151,7 +151,7 @@ module GreyTide =
             |> choose
         app |> orElsebadRequest |> session
 
-    let protected = path "/protected" >=> (Successful.OK "Welcome")
+    let protected' = path "/protected" >=> (Successful.OK "Welcome")
     let greyTide = 
         let buttonstToLogin = mapSession2 (fun _ -> never) (Files.browseFileHome "signin.html") 
                               |> session
@@ -160,9 +160,7 @@ module GreyTide =
         let app = Files.browseHome :: [storeUserToken "myusertoken" >=> mainApplication]
         #else
         //let app = Files.browseHome :: Security.secure storeUserToken buttonstToLogin mainApplication
-        let app = Files.browseHome :: 
-                   Security.secure storeUserToken buttonstToLogin mainApplication
-                   @ [(Successful.OK "Welcome")]
+        let app = Files.browseHome :: Security.secure storeUserToken buttonstToLogin protected' @ [(Successful.OK "Welcome")]
         #endif
         setup app |> choose
         
