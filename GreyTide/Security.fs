@@ -23,7 +23,7 @@ module Security =
         [
             warbler(fun ctx ->
                 let authorizeRedirectUri = buildLoginUrl ctx
-                printfn "%s" authorizeRedirectUri
+                printfn "Redirect url: %s" authorizeRedirectUri
                 authorize authorizeRedirectUri oauthConfigs.Value
                     (fun loginData ->
                         printf "%s (name: %s)" loginData.Id loginData.Name
