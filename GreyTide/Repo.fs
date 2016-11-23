@@ -11,8 +11,6 @@ module Repo =
     
     type Repo() = 
         inherit ContextProvider()
-        let mutable dir = AppDomain.CurrentDomain.BaseDirectory
-        
         let processI (m : ModelItem) = 
             let orderedStates = m.states.OrderByDescending(fun s -> s.date).ToList()
             
@@ -35,6 +33,10 @@ module Repo =
                      currentDate = lastState.date.ToString() }
         
         let processS s = s
+        static let mutable dir = AppDomain.CurrentDomain.BaseDirectory
+        static member DirSet d = 
+            dir <- d
+
         member x.Models = 
             lazy (JsonConvert.DeserializeObject<IEnumerable<Model>>
                       (File.ReadAllText(Path.Combine(dir, "data/models.json"))) |> Seq.map (processM))

@@ -12,17 +12,6 @@ module GreyTide =
     open Suave.Cookie
     open Suave.Authentication
 
-    #if INTERACTIVE
-    let config = {defaultConfig with homeFolder = Some (System.IO.Path.Combine(__SOURCE_DIRECTORY__.Substring(0, __SOURCE_DIRECTORY__.LastIndexOf(System.IO.Path.DirectorySeparatorChar)) ,@"GreyTide")) }
-    #else
-    let config = 
-        if not (System.IO.Directory.Exists(System.IO.Path.Combine(__SOURCE_DIRECTORY__, "app"))) then
-            let path = System.IO.Path.Combine(__SOURCE_DIRECTORY__.Substring(0, __SOURCE_DIRECTORY__.LastIndexOf(System.IO.Path.DirectorySeparatorChar)) ,@"GreyTide")
-            {defaultConfig with homeFolder = Some (path) }
-        else defaultConfig
-
-    #endif
-
     type SaveBundle = { SaveBundle:JObject }
     type InitConfig = { DatabaseId : string
                         ConnectionUri : string
@@ -64,7 +53,7 @@ module GreyTide =
     let tryOrNever f x =
         try
             f x |> Choice1Of2
-        with e -> WebPart.never |> Choice2Of2
+        with _ -> WebPart.never |> Choice2Of2
 
     module private Option =
         let iff b x =
@@ -162,6 +151,10 @@ module GreyTide =
         let buttonstToLogin = mapSession2 (fun _ -> never) (Files.browseFileHome "signin.html") 
                               |> session
 
+        #if INTERACTIVE
+        let app = Files.browseHome :: [storeUserToken "myusertoken" >=> mainApplication]
+        #else
         let app = Files.browseHome :: Security.secure storeUserToken buttonstToLogin mainApplication
+        #endif
         setup "index.html" app |> choose
         
