@@ -11,6 +11,7 @@ module GreyTide =
     open Suave.State.CookieStateStore
     open Suave.Cookie
     open Suave.Authentication
+    open Suave.Writers
 
     type SaveBundle = { SaveBundle:JObject }
     type InitConfig = { DatabaseId : string
@@ -115,25 +116,22 @@ module GreyTide =
                 | _ -> 
                     printfn "User token not found"
                     f NoSession)
+    let noCache = 
+        setHeader "Cache-Control" "no-cache, no-store, must-revalidate"
+          >=> setHeader "Pragma" "no-cache"
+          >=> setHeader "Expires" "0"
 
-    let sessionStore setF = context (fun x ->
-        match HttpContext.state x with
-        | Some state -> setF state
-        | None -> never)
+    let sessionStore setF = 
+        context (fun x ->
+            match HttpContext.state x with
+            | Some state -> setF state
+            | None -> never)
 
     let reset =
         unsetPair SessionAuthCookie
         >=> unsetPair StateCookie
         >=> Redirection.FOUND "index.html"
-
-
-    let setup  items  = 
-        
-            (GET >=> request (fun _ -> doIf (isNotInit)) >=> Files.browseFileHome "setup.html"                                    )  
-            :: (POST >=> path "/setup.html" >=> request (fun r -> getInitConfig r |> setInitConfig; Redirection.redirect "/" )  )  
-            :: (GET >=> path "/setup.html" >=> request (fun _ -> doIf (isNotInit >> not)) >=> Redirection.redirect "/"    )  
-            :: items
-    
+   
     let mapSession2 fSuccess fFailure = function 
         | NoSession -> 
             printfn "No session in mapsession2"
@@ -144,13 +142,20 @@ module GreyTide =
 
     let orElsebadRequest f = mapSession2 f (RequestErrors.BAD_REQUEST "No Session Found")
 
-    let storeUserToken id = sessionStore (fun store -> store.set "usertoken" id)
+    let storeUserToken id = statefulForSession >=> sessionStore (fun store -> store.set "usertoken" id)
+
+    let setup  items  = 
+        
+            (GET >=> request (fun _ -> doIf (isNotInit)) >=> Files.browseFileHome "setup.html"  >=> noCache )  
+            :: (POST >=> path "/setup.html" >=> request (fun r -> getInitConfig r |> setInitConfig; Redirection.redirect "/" )  )  
+            :: (GET >=> path "/setup.html" >=> request (fun _ -> doIf (isNotInit >> not)) >=> Redirection.redirect "/"    )  
+            :: items
 
     let mainApplication = 
         let app usertoken =
             [ 
-                Files.browseHome
-                GET >=> choose [    path "/" >=> Files.browseFileHome "index.html"
+                
+                GET >=> choose [    path "/" >=> Files.browseFileHome "index.html" >=> noCache
                                     path "/tide/v1/Tide"   >=> request (v1Models usertoken |> wire0 ) 
                                     path "/tide/v1/States" >=> request (wire0 v1States) 
                                     path "/tide/v2/Models" >=> request (v2Models usertoken |> wire ) 
@@ -158,20 +163,17 @@ module GreyTide =
                 POST >=> choose [ 
                                     path "/tide/v1/SaveChanges" >=> request' getSaveBundle (v1SaveChanges usertoken |> wire2 ) 
                                     path "/tide/v2/SaveChanges" >=>  request' getSaveBundle (v2SaveChanges usertoken |> wire2 ) ]
+                Files.browseHome
             ] 
             |> choose
         app |> orElsebadRequest |> session
 
-    let protected' = path "/protected" >=> (Successful.OK "Welcome")
     let greyTide = 
-        let buttonstToLogin = mapSession2 (fun _ -> never) (Files.browseFileHome "signin.html") 
-                              |> session
-
+        let buttonstToLogin = session (mapSession2 (fun _ -> never) (Files.browseFileHome "signin.html")) >=> noCache
         #if INTERACTIVE
         let app = Files.browseHome :: [storeUserToken "myusertoken" >=> mainApplication]
         #else
-        let app = Security.secure storeUserToken buttonstToLogin mainApplication
-        //let app = Files.browseHome :: Security.secure storeUserToken buttonstToLogin protected' @ [(Successful.OK "Welcome")]
+        let app = (pathRegex "(.*)\.(css|png|gif|js)" >=> Files.browseHome) :: Security.secure storeUserToken buttonstToLogin mainApplication
         #endif
         setup app |> choose
         
