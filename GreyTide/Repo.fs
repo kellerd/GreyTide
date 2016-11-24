@@ -19,7 +19,7 @@ module Repo =
                                                date = DateTime.Now }).FirstOrDefault()
             { m with states = orderedStates
                      currentState = lastState.name
-                     currentDate = lastState.date.ToString() }
+                     currentDate = lastState.date }
         
         let processM (m : Model) = 
             let orderedStates = m.states.OrderByDescending(fun s -> s.date).ToList()
@@ -30,7 +30,7 @@ module Repo =
             { m with states = orderedStates
                      items = Seq.map processI m.items
                      currentState = lastState.name
-                     currentDate = lastState.date.ToString() }
+                     currentDate = lastState.date }
         
         let processS s = s
         static let mutable dir = AppDomain.CurrentDomain.BaseDirectory

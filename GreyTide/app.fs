@@ -4,6 +4,9 @@ module App =
     open Suave
     open System
     open System.Net
+    open InitData
+    open System.Linq
+    open GreyTide.Models
 
     #if INTERACTIVE
     let config = {defaultConfig with homeFolder = Some (System.IO.Path.Combine(__SOURCE_DIRECTORY__.Substring(0, __SOURCE_DIRECTORY__.LastIndexOf(System.IO.Path.DirectorySeparatorChar)) ,@"GreyTide")) }
@@ -22,10 +25,7 @@ module App =
             match args with 
             | [|port';homeFolder'|] -> uint16 port',(Some ( Environment.ExpandEnvironmentVariables homeFolder'))
             | [|port'|] -> uint16 port',(Some Environment.CurrentDirectory)
-            | _ -> 8083us,(Some Environment.CurrentDirectory)
-
-//            loadFilesIfTheyDontExist client.Value (Data.repo.States.Value.ToList()) (fun query -> query.Where(fun (sc:V2.StateCollection) -> sc.``type`` = typeof<V2.StateCollection>.FullName) |> Seq.isEmpty |> not)
-//            loadFilesIfTheyDontExist client.Value (Data.repo.Models.Value.ToList()) (fun query -> query.Where(fun (sc:V2.Model) -> sc.``type`` = typeof<V2.Model>.FullName) |> Seq.isEmpty |> not)
+            | _ -> 8083us,(Some Environment.CurrentDirectory)      
 
         let config =
             { config with

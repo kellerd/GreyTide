@@ -43,6 +43,6 @@ module InitData =
             items.ForEach(fun sc -> 
                 match client.UpsertDocumentAsync(documentCollection.SelfLink, sc).Result with
                 | result when result.StatusCode <> System.Net.HttpStatusCode.Created 
-                              || result.StatusCode <> System.Net.HttpStatusCode.OK -> 
+                              && result.StatusCode <> System.Net.HttpStatusCode.OK -> 
                     Exception("List did not migrate") |> raise
                 | _ -> ())
