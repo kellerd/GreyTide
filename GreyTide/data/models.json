@@ -3,7 +3,7 @@
     "id": "dfbbd000-67ba-4347-a7ea-99d9ade66234",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Hive Tyrant",
     "currentState": "Prime",
@@ -42,12 +42,7 @@
         "name": "Prime",
         "date": "2016-06-02T03:50:02.651Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQACAAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQACAAAAAAAAAA==/",
-    "_etag": "\"00000100-0000-0000-0000-574faceb0000\"",
-    "_attachments": "attachments/",
-    "_ts": 1464839402
+    ]
   },
   {
     "id": "cf64c22e-e823-4ebc-990e-de6dc699fe1f",
@@ -98,7 +93,7 @@
         ]
       }
     ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Hive Tyrant",
     "currentState": "Complete",
@@ -125,18 +120,13 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQADAAAAAAAAAA==",
-    "_ts": 1444876354,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQADAAAAAAAAAA==/",
-    "_etag": "\"00006204-0000-0000-0000-561f10420000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "32b31f21-1993-4339-bbd8-667c62b7381a",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Tervigon",
     "currentState": "Complete",
@@ -163,18 +153,13 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAEAAAAAAAAAA==",
-    "_ts": 1444876354,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAEAAAAAAAAAA==/",
-    "_etag": "\"00006304-0000-0000-0000-561f10420000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "2a768ae0-7ba6-4d3f-acd5-8651d45d6cc6",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Venomthrope",
     "currentState": "Prime",
@@ -189,18 +174,13 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAFAAAAAAAAAA==",
-    "_ts": 1444876355,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAFAAAAAAAAAA==/",
-    "_etag": "\"00006404-0000-0000-0000-561f10430000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "18a495a6-d26f-4227-b68a-58e8d6c43999",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Venomthrope Finecast",
     "currentState": "Prime",
@@ -219,18 +199,13 @@
         "name": "Buy New",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAGAAAAAAAAAA==",
-    "_ts": 1444876355,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAGAAAAAAAAAA==/",
-    "_etag": "\"00006504-0000-0000-0000-561f10430000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "39798537-a9c7-4d47-9e46-054ccc0f7aae",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Zoanthrope",
     "currentState": "Prime",
@@ -245,12 +220,7 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAHAAAAAAAAAA==",
-    "_ts": 1444876355,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAHAAAAAAAAAA==/",
-    "_etag": "\"00006604-0000-0000-0000-561f10430000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "4270e09b-5007-4744-b4a4-4e8c8169da7c",
@@ -301,7 +271,7 @@
         ]
       }
     ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Zoanthrope",
     "currentState": "Complete",
@@ -328,18 +298,13 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAIAAAAAAAAAA==",
-    "_ts": 1444876355,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAIAAAAAAAAAA==/",
-    "_etag": "\"00006704-0000-0000-0000-561f10430000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "adf5e368-1988-4339-a697-88580597e793",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Zoanthrope Finecast",
     "currentState": "Prime",
@@ -358,18 +323,13 @@
         "name": "Startup",
         "date": "2015-01-01T12:49:20.793Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAJAAAAAAAAAA==",
-    "_ts": 1444876355,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAJAAAAAAAAAA==/",
-    "_etag": "\"00006804-0000-0000-0000-561f10430000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "73cd563a-f2c6-4e3d-b81e-7db614e2593b",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Hormagaunt",
     "currentState": "Prime",
@@ -392,18 +352,13 @@
         "name": "Prime",
         "date": "2016-09-11T03:03:48.239Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAKAAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAKAAAAAAAAAA==/",
-    "_etag": "\"0100c72f-0000-0000-0000-57d4c99e0000\"",
-    "_attachments": "attachments/",
-    "_ts": 1473563009
+    ]
   },
   {
     "id": "26d976e4-f737-4343-97f0-809124854ade",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Hormagaunt",
     "currentState": "Complete",
@@ -422,18 +377,13 @@
         "name": "Paint",
         "date": "2015-01-01T21:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQALAAAAAAAAAA==",
-    "_ts": 1444876355,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQALAAAAAAAAAA==/",
-    "_etag": "\"00006a04-0000-0000-0000-561f10430000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "cbc3c838-f6d2-44dc-b5ca-eeb0e2d58465",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Ripper Swarm",
     "currentState": "Complete",
@@ -452,12 +402,7 @@
         "name": "Paint",
         "date": "2015-01-01T21:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAMAAAAAAAAAA==",
-    "_ts": 1444876355,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAMAAAAAAAAAA==/",
-    "_etag": "\"00006b04-0000-0000-0000-561f10430000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "9a8acb9a-6b44-4463-b3d2-ce123589011b",
@@ -508,7 +453,7 @@
         ]
       }
     ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Termagaunt",
     "currentState": "Complete",
@@ -535,18 +480,13 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQANAAAAAAAAAA==",
-    "_ts": 1444876356,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQANAAAAAAAAAA==/",
-    "_etag": "\"00006c04-0000-0000-0000-561f10440000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "2c15951a-600c-4ee6-968d-6eca107a042d",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Termagaunt",
     "currentState": "Complete",
@@ -565,18 +505,13 @@
         "name": "Paint",
         "date": "2015-01-01T21:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAOAAAAAAAAAA==",
-    "_ts": 1444876356,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAOAAAAAAAAAA==/",
-    "_etag": "\"00006d04-0000-0000-0000-561f10440000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "8a335192-b4d7-4938-92b0-7bed0ee86542",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Gargoyle",
     "currentState": "Complete",
@@ -603,18 +538,13 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAPAAAAAAAAAA==",
-    "_ts": 1444876356,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAPAAAAAAAAAA==/",
-    "_etag": "\"00006e04-0000-0000-0000-561f10440000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "8691980a-0288-4980-b170-fdbd93b1d8b6",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Hive Crone",
     "currentState": "Prime",
@@ -653,18 +583,13 @@
         "name": "Prime",
         "date": "2016-06-02T03:50:16.085Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAQAAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAQAAAAAAAAAA==/",
-    "_etag": "\"00000200-0000-0000-0000-574facf80000\"",
-    "_attachments": "attachments/",
-    "_ts": 1464839415
+    ]
   },
   {
     "id": "b75b25e0-3078-47d1-9acf-db0416fc5622",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Biovore",
     "currentState": "Prime",
@@ -679,18 +604,13 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQARAAAAAAAAAA==",
-    "_ts": 1444876356,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQARAAAAAAAAAA==/",
-    "_etag": "\"00007004-0000-0000-0000-561f10440000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "1c955f9a-db2f-49e1-b071-129843f75f17",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Exocrine",
     "currentState": "Complete",
@@ -733,12 +653,7 @@
         "name": "Startup",
         "date": "2015-01-01T12:49:20.794Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQASAAAAAAAAAA==",
-    "_ts": 1444876356,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQASAAAAAAAAAA==/",
-    "_etag": "\"00007104-0000-0000-0000-561f10440000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "83945504-0f12-47ae-9e79-3f7c268658d0",
@@ -789,7 +704,7 @@
         ]
       }
     ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Mawloc",
     "currentState": "Complete",
@@ -816,18 +731,13 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQATAAAAAAAAAA==",
-    "_ts": 1444876356,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQATAAAAAAAAAA==/",
-    "_etag": "\"00007204-0000-0000-0000-561f10440000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "51cd55f9-9406-4049-8930-b47d8c84cc63",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Tyrant Guard",
     "currentState": "Prime",
@@ -866,12 +776,7 @@
         "name": "Prime",
         "date": "2016-06-02T03:50:23.519Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAUAAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAUAAAAAAAAAA==/",
-    "_etag": "\"00000300-0000-0000-0000-574fad000000\"",
-    "_attachments": "attachments/",
-    "_ts": 1464839422
+    ]
   },
   {
     "id": "bd02bcef-ab23-44c5-884a-940e67c9ac33",
@@ -922,7 +827,7 @@
         ]
       }
     ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Hive Guard",
     "currentState": "Complete",
@@ -949,12 +854,7 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAVAAAAAAAAAA==",
-    "_ts": 1444876357,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAVAAAAAAAAAA==/",
-    "_etag": "\"00007404-0000-0000-0000-561f10450000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "828c2347-3224-4bed-939a-3ee535b43ddd",
@@ -997,7 +897,7 @@
         ]
       }
     ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Deathleaper",
     "currentState": "Complete",
@@ -1024,18 +924,13 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAWAAAAAAAAAA==",
-    "_ts": 1444876357,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAWAAAAAAAAAA==/",
-    "_etag": "\"00007504-0000-0000-0000-561f10450000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "ef68cfab-2a49-40a8-a7f7-3602774cf460",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Hive Tyrant",
     "currentState": "Complete",
@@ -1054,12 +949,7 @@
         "name": "Paint",
         "date": "2015-01-01T21:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAXAAAAAAAAAA==",
-    "_ts": 1444876357,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAXAAAAAAAAAA==/",
-    "_etag": "\"00007604-0000-0000-0000-561f10450000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "0180a770-e5a4-4787-bd5f-5569b5dd1ba6",
@@ -1110,7 +1000,7 @@
         ]
       }
     ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Tyranid Prime",
     "currentState": "Complete",
@@ -1137,12 +1027,7 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAYAAAAAAAAAA==",
-    "_ts": 1444876357,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAYAAAAAAAAAA==/",
-    "_etag": "\"00007704-0000-0000-0000-561f10450000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "71112d14-605e-467b-bfa0-0ca8bfc29c68",
@@ -1193,7 +1078,7 @@
         ]
       }
     ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Lictor",
     "currentState": "Complete",
@@ -1220,18 +1105,13 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAZAAAAAAAAAA==",
-    "_ts": 1444876357,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAZAAAAAAAAAA==/",
-    "_etag": "\"00007804-0000-0000-0000-561f10450000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "c8eb6286-7fbb-432d-bcd0-7a98619e56fd",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Genestealer",
     "currentState": "Complete",
@@ -1250,12 +1130,7 @@
         "name": "Paint",
         "date": "2015-01-01T21:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAaAAAAAAAAAA==",
-    "_ts": 1444876358,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAaAAAAAAAAAA==/",
-    "_etag": "\"00007904-0000-0000-0000-561f10460000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "2b8b206e-c955-40e6-a402-2f4821ee9d4f",
@@ -1306,7 +1181,7 @@
         ]
       }
     ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Broodlord",
     "currentState": "Complete",
@@ -1333,12 +1208,7 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAbAAAAAAAAAA==",
-    "_ts": 1444876358,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAbAAAAAAAAAA==/",
-    "_etag": "\"00007a04-0000-0000-0000-561f10460000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "e323b29f-f1a6-4d5a-b0b4-4b4d539412ce",
@@ -1389,7 +1259,7 @@
         ]
       }
     ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Tyranid Warrior Old",
     "currentState": "Complete",
@@ -1416,12 +1286,7 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAcAAAAAAAAAA==",
-    "_ts": 1444876358,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAcAAAAAAAAAA==/",
-    "_etag": "\"00007b04-0000-0000-0000-561f10460000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "f9b353fc-3a78-47c9-a02b-beae44a5fa94",
@@ -1484,7 +1349,7 @@
         ]
       }
     ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Tyranid Warrior Boneswords",
     "currentState": "Complete",
@@ -1507,12 +1372,7 @@
         "name": "Complete",
         "date": "2015-12-16T03:11:41.022Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAdAAAAAAAAAA==",
-    "_ts": 1450235512,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAdAAAAAAAAAA==/",
-    "_etag": "\"0000010d-0000-0000-0000-5670d6780000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "88ad4634-72b2-41d0-8554-c2fadbb9c9ac",
@@ -1547,7 +1407,7 @@
         ]
       }
     ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Tyranid Warrior Rending Claws",
     "currentState": "Buy Primed",
@@ -1562,18 +1422,13 @@
         "name": "Startup",
         "date": "2015-01-01T12:49:20.796Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAeAAAAAAAAAA==",
-    "_ts": 1450235559,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAeAAAAAAAAAA==/",
-    "_etag": "\"0000040d-0000-0000-0000-5670d6a70000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "6d0b14ce-c81b-48ae-9fb5-b7eb73d2d38c",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Tyranid Warrior New",
     "currentState": "Prime",
@@ -1596,18 +1451,13 @@
         "name": "Prime",
         "date": "2016-09-11T03:03:49.774Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAfAAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAfAAAAAAAAAA==/",
-    "_etag": "\"0100c82f-0000-0000-0000-57d4c99f0000\"",
-    "_attachments": "attachments/",
-    "_ts": 1473563010
+    ]
   },
   {
     "id": "b2018a56-bc67-4a0e-9697-a7d6dcfacf60",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Carnifex Old",
     "currentState": "Complete",
@@ -1626,18 +1476,13 @@
         "name": "Paint",
         "date": "2015-01-01T21:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAgAAAAAAAAAA==",
-    "_ts": 1444876359,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAgAAAAAAAAAA==/",
-    "_etag": "\"00007f04-0000-0000-0000-561f10470000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "b038fa14-e13d-419d-85e7-38dc38edc98c",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Carnifex VC",
     "currentState": "Prime",
@@ -1676,18 +1521,13 @@
         "name": "Prime",
         "date": "2016-06-02T03:50:26.62Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAhAAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAhAAAAAAAAAA==/",
-    "_etag": "\"00000400-0000-0000-0000-574fad030000\"",
-    "_attachments": "attachments/",
-    "_ts": 1464839426
+    ]
   },
   {
     "id": "9e3f09ca-4f3c-4ff9-bfd3-2f805d55bc5f",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Carnifex CC",
     "currentState": "Prime",
@@ -1726,18 +1566,13 @@
         "name": "Prime",
         "date": "2016-06-02T03:50:29.032Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAiAAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAiAAAAAAAAAA==/",
-    "_etag": "\"00000500-0000-0000-0000-574fad050000\"",
-    "_attachments": "attachments/",
-    "_ts": 1464839428
+    ]
   },
   {
     "id": "8428ab22-d813-4fe7-8b5b-6f536353fdbe",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Carnifex New",
     "currentState": "Prime",
@@ -1760,18 +1595,13 @@
         "name": "Prime",
         "date": "2016-06-02T03:50:32.149Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAjAAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAjAAAAAAAAAA==/",
-    "_etag": "\"00000600-0000-0000-0000-574fad080000\"",
-    "_attachments": "attachments/",
-    "_ts": 1464839431
+    ]
   },
   {
     "id": "e5dc7168-d2f3-4a6e-8b31-17a4ab62498f",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Spawn of Cryptus",
     "currentState": "Prime",
@@ -1786,18 +1616,13 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAkAAAAAAAAAA==",
-    "_ts": 1444876359,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAkAAAAAAAAAA==/",
-    "_etag": "\"00008304-0000-0000-0000-561f10470000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "5d9aef0c-ebc9-4bf6-8cee-8fe6f95978bb",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Children of Cryptus",
     "currentState": "Prime",
@@ -1820,18 +1645,13 @@
         "name": "Startup",
         "date": "2015-01-01T12:49:20.797Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAlAAAAAAAAAA==",
-    "_ts": 1444876359,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAlAAAAAAAAAA==/",
-    "_etag": "\"00008404-0000-0000-0000-561f10470000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "02dacec4-ea60-4ee3-b213-d70bf4d1655b",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Exocrine",
     "currentState": "Prime",
@@ -1846,18 +1666,13 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAmAAAAAAAAAA==",
-    "_ts": 1444876360,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAmAAAAAAAAAA==/",
-    "_etag": "\"00008504-0000-0000-0000-561f10480000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "7b47c935-7c44-45a8-b2be-144a556f51e8",
     "faction": "Space Wolves",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Krom Dragongaze",
     "currentState": "Prime",
@@ -1872,12 +1687,7 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAnAAAAAAAAAA==",
-    "_ts": 1444876360,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAnAAAAAAAAAA==/",
-    "_etag": "\"00008604-0000-0000-0000-561f10480000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "23e411e5-74da-4184-aeae-de896569cc75",
@@ -1932,7 +1742,7 @@
         ]
       }
     ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Njal",
     "currentState": "Complete",
@@ -1963,18 +1773,13 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAoAAAAAAAAAA==",
-    "_ts": 1444876360,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAoAAAAAAAAAA==/",
-    "_etag": "\"00008704-0000-0000-0000-561f10480000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "280b7923-b4fb-4c04-bff8-3c3f793a05fd",
     "faction": "Space Wolves",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Rune Priest 1",
     "currentState": "Complete",
@@ -2005,18 +1810,13 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQApAAAAAAAAAA==",
-    "_ts": 1444876360,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQApAAAAAAAAAA==/",
-    "_etag": "\"00008804-0000-0000-0000-561f10480000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "8013cc8d-23e8-4d23-8edb-2e43a39a7104",
     "faction": "Space Wolves",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Rune Priest 2",
     "currentState": "Complete",
@@ -2047,18 +1847,13 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAqAAAAAAAAAA==",
-    "_ts": 1444876360,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAqAAAAAAAAAA==/",
-    "_etag": "\"00008904-0000-0000-0000-561f10480000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "5b43eeeb-be0b-487c-b406-dafd5a453567",
     "faction": "Space Wolves",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Rune Priest 3",
     "currentState": "Complete",
@@ -2089,18 +1884,13 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQArAAAAAAAAAA==",
-    "_ts": 1444876360,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQArAAAAAAAAAA==/",
-    "_etag": "\"00008a04-0000-0000-0000-561f10480000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "3b5883d4-ce89-4701-a163-801129d414c1",
     "faction": "Space Wolves",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Ulrik",
     "currentState": "Prime",
@@ -2115,12 +1905,7 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAsAAAAAAAAAA==",
-    "_ts": 1444876360,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAsAAAAAAAAAA==/",
-    "_etag": "\"00008b04-0000-0000-0000-561f10480000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "f70ce5f7-0235-4b74-8b47-531ffd4714b3",
@@ -2175,7 +1960,7 @@
         ]
       }
     ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Battle Leader",
     "currentState": "Complete",
@@ -2206,12 +1991,7 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAtAAAAAAAAAA==",
-    "_ts": 1444876361,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAtAAAAAAAAAA==/",
-    "_etag": "\"00008c04-0000-0000-0000-561f10490000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "b1ec2d0c-9baf-4d39-bedb-497a4e4c478a",
@@ -2282,7 +2062,7 @@
         ]
       }
     ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Wolf Lord on Thunderwolf",
     "currentState": "Prime",
@@ -2297,18 +2077,13 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAuAAAAAAAAAA==",
-    "_ts": 1444876361,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAuAAAAAAAAAA==/",
-    "_etag": "\"00008d04-0000-0000-0000-561f10490000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "b99dda40-8a23-4f1f-840e-9e355ebea7aa",
     "faction": "Space Wolves",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Wolf Priest on Jump",
     "currentState": "Prime",
@@ -2323,18 +2098,13 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAvAAAAAAAAAA==",
-    "_ts": 1444876361,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAvAAAAAAAAAA==/",
-    "_etag": "\"00008e04-0000-0000-0000-561f10490000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "dd5b831a-e65d-4bdd-a2bb-84925785de33",
     "faction": "Space Wolves",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Terminators",
     "currentState": "Prime",
@@ -2349,12 +2119,7 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAwAAAAAAAAAA==",
-    "_ts": 1444876361,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAwAAAAAAAAAA==/",
-    "_etag": "\"00008f04-0000-0000-0000-561f10490000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "be2a99d4-28be-4284-9dfb-427885398d29",
@@ -2409,7 +2174,7 @@
         ]
       }
     ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Terminators",
     "currentState": "Complete",
@@ -2440,12 +2205,7 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAxAAAAAAAAAA==",
-    "_ts": 1444876361,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAxAAAAAAAAAA==/",
-    "_etag": "\"00009004-0000-0000-0000-561f10490000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "ede33a63-d53c-48ac-b2b4-f33aa57a7ef9",
@@ -2500,7 +2260,7 @@
         ]
       }
     ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Scouts",
     "currentState": "Complete",
@@ -2531,12 +2291,7 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAyAAAAAAAAAA==",
-    "_ts": 1444876361,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAyAAAAAAAAAA==/",
-    "_etag": "\"00009104-0000-0000-0000-561f10490000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "e5187d4e-7204-4083-9d6b-9e6dbad5a608",
@@ -2599,7 +2354,7 @@
         ]
       }
     ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Blood Claws",
     "currentState": "Complete",
@@ -2630,12 +2385,7 @@
         "name": "Complete",
         "date": "2016-05-26T02:41:13.393Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQAzAAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQAzAAAAAAAAAA==/",
-    "_etag": "\"1300a064-0000-0000-0000-574662580000\"",
-    "_attachments": "attachments/",
-    "_ts": 1464230469
+    ]
   },
   {
     "id": "21e721fd-f092-41fa-932e-2d7fd2f18d0a",
@@ -2698,7 +2448,7 @@
         ]
       }
     ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Sky Claws 1",
     "currentState": "Complete",
@@ -2733,12 +2483,7 @@
         "name": "Complete",
         "date": "2016-05-26T02:41:14.204Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQA0AAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA0AAAAAAAAAA==/",
-    "_etag": "\"1300a264-0000-0000-0000-574662580000\"",
-    "_attachments": "attachments/",
-    "_ts": 1464230470
+    ]
   },
   {
     "id": "c89c6372-55eb-48c1-b1de-dceba452c989",
@@ -2805,7 +2550,7 @@
         ]
       }
     ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Sky Claws 2",
     "currentState": "Complete",
@@ -2840,12 +2585,7 @@
         "name": "Complete",
         "date": "2016-05-26T02:41:14.914Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQA1AAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA1AAAAAAAAAA==/",
-    "_etag": "\"1300a564-0000-0000-0000-574662590000\"",
-    "_attachments": "attachments/",
-    "_ts": 1464230471
+    ]
   },
   {
     "id": "0aef645a-4113-4b54-85cd-dae9ab5aceb9",
@@ -2908,7 +2648,7 @@
         ]
       }
     ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Grey Hunters 1",
     "currentState": "Complete",
@@ -2939,12 +2679,7 @@
         "name": "Complete",
         "date": "2016-05-26T02:41:15.365Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQA2AAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA2AAAAAAAAAA==/",
-    "_etag": "\"1300a664-0000-0000-0000-5746625a0000\"",
-    "_attachments": "attachments/",
-    "_ts": 1464230471
+    ]
   },
   {
     "id": "d12f2774-5be8-44d1-976a-8d64e24cf1f2",
@@ -3007,7 +2742,7 @@
         ]
       }
     ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Grey Hunters 2",
     "currentState": "Complete",
@@ -3038,12 +2773,7 @@
         "name": "Complete",
         "date": "2016-05-26T02:41:16.221Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQA3AAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA3AAAAAAAAAA==/",
-    "_etag": "\"1300a764-0000-0000-0000-5746625a0000\"",
-    "_attachments": "attachments/",
-    "_ts": 1464230472
+    ]
   },
   {
     "id": "847e9408-b847-4f44-9116-7200eea396c0",
@@ -3106,7 +2836,7 @@
         ]
       }
     ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Grey Hunters 3",
     "currentState": "Complete",
@@ -3137,18 +2867,13 @@
         "name": "Complete",
         "date": "2016-05-26T02:41:17.066Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQA4AAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA4AAAAAAAAAA==/",
-    "_etag": "\"1300a864-0000-0000-0000-5746625b0000\"",
-    "_attachments": "attachments/",
-    "_ts": 1464230473
+    ]
   },
   {
     "id": "95d19255-f037-45c8-8cc7-d2867438f4b1",
     "faction": "Space Wolves",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Grey Hunters 4",
     "currentState": "Complete",
@@ -3175,18 +2900,13 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQA5AAAAAAAAAA==",
-    "_ts": 1450351601,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA5AAAAAAAAAA==/",
-    "_etag": "\"00005c1a-0000-0000-0000-56729bf10000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "e33c9462-e25a-4522-b7cf-855d61c73cb1",
     "faction": "Space Wolves",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Grey Hunters 5",
     "currentState": "Complete",
@@ -3213,18 +2933,13 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQA6AAAAAAAAAA==",
-    "_ts": 1450351573,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA6AAAAAAAAAA==/",
-    "_etag": "\"00005b1a-0000-0000-0000-56729bd50000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "923d7b44-7aa8-4d80-a159-a9252e8a62e0",
     "faction": "Space Wolves",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Wolf Guard",
     "currentState": "Complete",
@@ -3255,18 +2970,13 @@
         "name": "Complete",
         "date": "2016-05-26T02:41:21.543Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQA7AAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA7AAAAAAAAAA==/",
-    "_etag": "\"1300ba64-0000-0000-0000-574662600000\"",
-    "_attachments": "attachments/",
-    "_ts": 1464230477
+    ]
   },
   {
     "id": "87c8038a-e599-49bb-a9c0-ed3dc929af9a",
     "faction": "Space Wolves",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Land Speeder",
     "currentState": "Prime",
@@ -3281,12 +2991,7 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQA8AAAAAAAAAA==",
-    "_ts": 1444876363,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA8AAAAAAAAAA==/",
-    "_etag": "\"00009b04-0000-0000-0000-561f104b0000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "d01c7417-c3cd-4cba-bd97-5ca63e7105d2",
@@ -3357,7 +3062,7 @@
         ]
       }
     ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Thunderwolf",
     "currentState": "Prime",
@@ -3372,12 +3077,7 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQA9AAAAAAAAAA==",
-    "_ts": 1444876363,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA9AAAAAAAAAA==/",
-    "_etag": "\"00009c04-0000-0000-0000-561f104b0000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "413ba460-0ed5-4165-b5ee-25068c231c9d",
@@ -3432,7 +3132,7 @@
         ]
       }
     ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Long Fangs 1",
     "currentState": "Complete",
@@ -3463,18 +3163,13 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQA+AAAAAAAAAA==",
-    "_ts": 1444876363,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA+AAAAAAAAAA==/",
-    "_etag": "\"00009d04-0000-0000-0000-561f104b0000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "d33418ee-d1c0-4aa7-a8ee-e613e68ef51d",
     "faction": "Space Wolves",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Long Fangs 2",
     "currentState": "Prime",
@@ -3489,18 +3184,13 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQA-AAAAAAAAAA==",
-    "_ts": 1444876363,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQA-AAAAAAAAAA==/",
-    "_etag": "\"00009e04-0000-0000-0000-561f104b0000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "18b46e2f-6522-426d-8a84-9f346aa3f8e9",
     "faction": "Space Wolves",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Long Fangs 3",
     "currentState": "Prime",
@@ -3515,18 +3205,13 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBAAAAAAAAAAA==",
-    "_ts": 1444876363,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBAAAAAAAAAAA==/",
-    "_etag": "\"00009f04-0000-0000-0000-561f104b0000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "99ee5104-99cb-4814-8bb1-88e43f50d53f",
     "faction": "Space Wolves",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Razorback",
     "currentState": "Complete",
@@ -3557,18 +3242,13 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBBAAAAAAAAAA==",
-    "_ts": 1444876363,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBBAAAAAAAAAA==/",
-    "_etag": "\"0000a004-0000-0000-0000-561f104b0000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "ab1b7847-b9d4-4657-a652-d2fdc305a9b3",
     "faction": "Space Wolves",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Rhino",
     "currentState": "Complete",
@@ -3599,18 +3279,13 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBCAAAAAAAAAA==",
-    "_ts": 1444876363,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBCAAAAAAAAAA==/",
-    "_etag": "\"0000a104-0000-0000-0000-561f104b0000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "566798ca-6ef1-4892-891c-5af9902fa772",
     "faction": "Space Wolves",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Rhino",
     "currentState": "Prime",
@@ -3625,18 +3300,13 @@
         "name": "Assemble",
         "date": "2015-01-01T19:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBDAAAAAAAAAA==",
-    "_ts": 1444876364,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBDAAAAAAAAAA==/",
-    "_etag": "\"0000a204-0000-0000-0000-561f104c0000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "5eb82ddb-43d0-45c5-b148-f5015c6b18d7",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Toxicrene",
     "currentState": "Prime",
@@ -3651,18 +3321,13 @@
         "name": "Assemble",
         "date": "2015-01-31T23:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBEAAAAAAAAAA==",
-    "_ts": 1444876364,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBEAAAAAAAAAA==/",
-    "_etag": "\"0000a304-0000-0000-0000-561f104c0000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "c83b5a3a-b265-4491-8068-c04c95973e93",
     "faction": "Space Wolves",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Stormwolf",
     "currentState": "Prime",
@@ -3677,18 +3342,13 @@
         "name": "Assemble",
         "date": "2015-01-31T23:00:00Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBFAAAAAAAAAA==",
-    "_ts": 1444876364,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBFAAAAAAAAAA==/",
-    "_etag": "\"0000a404-0000-0000-0000-561f104c0000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "48307bd2-71e8-4f22-b22d-02cfcd93ec7b",
     "faction": "Space Wolves",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Land Raider",
     "currentState": "Assemble",
@@ -3707,18 +3367,13 @@
         "name": "Assemble",
         "date": "2016-10-21T00:44:20.752Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBGAAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBGAAAAAAAAAA==/",
-    "_etag": "\"00002ad2-0000-0000-0000-580964ea0000\"",
-    "_attachments": "attachments/",
-    "_ts": 1477010659
+    ]
   },
   {
     "id": "06665ed8-e4bd-425b-a0c8-dc8604fb32ca",
     "faction": "Space Wolves",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Predator",
     "currentState": "Buy New",
@@ -3733,18 +3388,13 @@
         "name": "Startup",
         "date": "2015-05-13T13:20:35.525Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBHAAAAAAAAAA==",
-    "_ts": 1444876364,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBHAAAAAAAAAA==/",
-    "_etag": "\"0000a604-0000-0000-0000-561f104c0000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "3b42c762-60f9-4441-8ccc-24076fbe10e6",
     "faction": "Space Wolves",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Dreadnaught",
     "currentState": "Complete",
@@ -3783,18 +3433,13 @@
         "name": "Startup",
         "date": "2015-05-13T13:20:52.924Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBIAAAAAAAAAA==",
-    "_ts": 1444876364,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBIAAAAAAAAAA==/",
-    "_etag": "\"0000a704-0000-0000-0000-561f104c0000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "4b621902-1688-44b9-81e1-77fcd815a077",
     "faction": "Space Wolves",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Tac Squad",
     "currentState": "Buy New",
@@ -3809,18 +3454,13 @@
         "name": "Startup",
         "date": "2015-05-13T13:21:27.102Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBJAAAAAAAAAA==",
-    "_ts": 1444876364,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBJAAAAAAAAAA==/",
-    "_etag": "\"0000a804-0000-0000-0000-561f104c0000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "56f846ad-99e7-44b2-a6e5-04ad0d5f9232",
     "faction": "Space Wolves",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Terminators",
     "currentState": "Buy New",
@@ -3835,18 +3475,13 @@
         "name": "Startup",
         "date": "2015-05-13T13:23:12.548Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBKAAAAAAAAAA==",
-    "_ts": 1444876365,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBKAAAAAAAAAA==/",
-    "_etag": "\"0000a904-0000-0000-0000-561f104d0000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "3008febb-57b2-40a8-a712-bc7c93a99ae1",
     "faction": "Space Wolves",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Battle Leader",
     "currentState": "Buy New",
@@ -3861,18 +3496,13 @@
         "name": "Startup",
         "date": "2015-05-13T13:24:25.603Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBLAAAAAAAAAA==",
-    "_ts": 1444876365,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBLAAAAAAAAAA==/",
-    "_etag": "\"0000aa04-0000-0000-0000-561f104d0000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "ca140681-a0e6-4be7-95c7-35fff7b6617d",
     "faction": "Ork",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Warboss",
     "currentState": "Buy New",
@@ -3887,18 +3517,13 @@
         "name": "Startup",
         "date": "2015-05-13T13:28:50.031Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBMAAAAAAAAAA==",
-    "_ts": 1444876365,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBMAAAAAAAAAA==/",
-    "_etag": "\"0000ab04-0000-0000-0000-561f104d0000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "c39eb11c-2803-4fb9-b3c0-9cab3b83b192",
     "faction": "Ork",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Nobs",
     "currentState": "Buy New",
@@ -3913,18 +3538,13 @@
         "name": "Startup",
         "date": "2015-05-13T13:28:56.327Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBNAAAAAAAAAA==",
-    "_ts": 1444876365,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBNAAAAAAAAAA==/",
-    "_etag": "\"0000ac04-0000-0000-0000-561f104d0000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "7ed2ce70-c3dc-4c96-ba81-1ff7f56895dd",
     "faction": "Ork",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Boys",
     "currentState": "Buy New",
@@ -3939,18 +3559,13 @@
         "name": "Startup",
         "date": "2015-05-13T13:29:01.489Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBOAAAAAAAAAA==",
-    "_ts": 1444876365,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBOAAAAAAAAAA==/",
-    "_etag": "\"0000ad04-0000-0000-0000-561f104d0000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "594f50ea-9dd3-40bc-92bb-dfdf9b6f7ef1",
     "faction": "Ork",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Deffkoptas",
     "currentState": "Buy New",
@@ -3965,12 +3580,7 @@
         "name": "Startup",
         "date": "2015-05-13T13:29:12.591Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBPAAAAAAAAAA==",
-    "_ts": 1444876365,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBPAAAAAAAAAA==/",
-    "_etag": "\"0000ae04-0000-0000-0000-561f104d0000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "730a445d-ed9c-d3d6-cb52-03838c3a1de3",
@@ -4017,7 +3627,7 @@
         ]
       }
     ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Zoanthropes",
     "currentState": "Prime",
@@ -4040,18 +3650,13 @@
         "name": "Prime",
         "date": "2015-10-05T02:39:05.727Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBQAAAAAAAAAA==",
-    "_ts": 1444877258,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBQAAAAAAAAAA==/",
-    "_etag": "\"0000c004-0000-0000-0000-561f13ca0000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "101e291d-9ce5-13b5-20f0-cc8c35371fe8",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Venomthropes",
     "currentState": "Prime",
@@ -4074,18 +3679,13 @@
         "name": "Prime",
         "date": "2015-10-05T02:39:50.707Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBRAAAAAAAAAA==",
-    "_ts": 1444877279,
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBRAAAAAAAAAA==/",
-    "_etag": "\"0000c104-0000-0000-0000-561f13df0000\"",
-    "_attachments": "attachments/"
+    ]
   },
   {
     "id": "48a55311-5803-4f83-848e-ca15ab6beb3c",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Tyrannocyte",
     "currentState": "Prime",
@@ -4108,18 +3708,13 @@
         "name": "Prime",
         "date": "2016-09-11T03:03:50.874Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBSAAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBSAAAAAAAAAA==/",
-    "_etag": "\"0100c92f-0000-0000-0000-57d4c9a00000\"",
-    "_attachments": "attachments/",
-    "_ts": 1473563011
+    ]
   },
   {
     "id": "90e3c5da-aae7-dccd-a05a-6743a147523b",
     "faction": "Space Wolves",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Wolf Lord on Thunderwolf",
     "currentState": "Prime",
@@ -4142,18 +3737,13 @@
         "name": "Prime",
         "date": "2016-09-11T03:03:52.222Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBTAAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBTAAAAAAAAAA==/",
-    "_etag": "\"0100ca2f-0000-0000-0000-57d4c9a10000\"",
-    "_attachments": "attachments/",
-    "_ts": 1473563013
+    ]
   },
   {
     "id": "6f3bd92f-8670-749d-47d4-7d7cddd94651",
     "faction": "Deathwatch",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Deathwatch",
     "currentState": "Prime",
@@ -4180,18 +3770,13 @@
         "name": "Prime",
         "date": "2016-09-11T03:03:54.453Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBVAAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBVAAAAAAAAAA==/",
-    "_etag": "\"0100cb2f-0000-0000-0000-57d4c9a40000\"",
-    "_attachments": "attachments/",
-    "_ts": 1473563016
+    ]
   },
   {
     "id": "796eebad-5892-5c93-b29e-02d7eba0f67a",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Mucolid Spore",
     "currentState": "Prime",
@@ -4214,18 +3799,13 @@
         "name": "Prime",
         "date": "2016-09-11T03:03:55.354Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBWAAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBWAAAAAAAAAA==/",
-    "_etag": "\"0100cc2f-0000-0000-0000-57d4c9a50000\"",
-    "_attachments": "attachments/",
-    "_ts": 1473563017
+    ]
   },
   {
     "id": "cec264cb-17a3-994d-a30a-301328fc28fc",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Spore Mine Cluster",
     "currentState": "Prime",
@@ -4248,18 +3828,13 @@
         "name": "Prime",
         "date": "2016-09-11T03:03:57.428Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBXAAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBXAAAAAAAAAA==/",
-    "_etag": "\"0100cd2f-0000-0000-0000-57d4c9a70000\"",
-    "_attachments": "attachments/",
-    "_ts": 1473563018
+    ]
   },
   {
     "id": "6b530ec1-0481-9ea3-3af6-6aa8c3690ce1",
     "faction": "Gene Cult",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Acolyte Hybrid",
     "currentState": "Prime",
@@ -4286,18 +3861,13 @@
         "name": "Prime",
         "date": "2016-09-11T03:04:02.863Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBYAAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBYAAAAAAAAAA==/",
-    "_etag": "\"0100ce2f-0000-0000-0000-57d4c9ac0000\"",
-    "_attachments": "attachments/",
-    "_ts": 1473563024
+    ]
   },
   {
     "id": "766b4f47-f77b-c79b-bb39-ce200819a79f",
     "faction": "Gene Cult",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Neophyte Hybrid",
     "currentState": "Prime",
@@ -4324,18 +3894,13 @@
         "name": "Prime",
         "date": "2016-09-27T03:36:08.876Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBZAAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBZAAAAAAAAAA==/",
-    "_etag": "\"00000801-0000-0000-0000-57e9e9280000\"",
-    "_attachments": "attachments/",
-    "_ts": 1474947359
+    ]
   },
   {
     "id": "868ace9f-cb25-223a-11a5-38b5cc7fb218",
     "faction": "Gene Cult",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Purestrain Princelings",
     "currentState": "Prime",
@@ -4362,18 +3927,13 @@
         "name": "Prime",
         "date": "2016-09-11T03:04:05.479Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBaAAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBaAAAAAAAAAA==/",
-    "_etag": "\"0100cf2f-0000-0000-0000-57d4c9af0000\"",
-    "_attachments": "attachments/",
-    "_ts": 1473563027
+    ]
   },
   {
     "id": "8a21645d-526f-30a7-09b7-be4f24bbd535",
     "faction": "Gene Cult",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Aberant",
     "currentState": "Prime",
@@ -4400,18 +3960,13 @@
         "name": "Prime",
         "date": "2016-09-11T03:04:07.534Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBbAAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBbAAAAAAAAAA==/",
-    "_etag": "\"0100d02f-0000-0000-0000-57d4c9b10000\"",
-    "_attachments": "attachments/",
-    "_ts": 1473563029
+    ]
   },
   {
     "id": "b03eb7e3-1fb0-c976-06be-9accf74361e3",
     "faction": "Gene Cult",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Primus",
     "currentState": "Prime",
@@ -4438,18 +3993,13 @@
         "name": "Prime",
         "date": "2016-09-11T03:04:10.871Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBcAAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBcAAAAAAAAAA==/",
-    "_etag": "\"0100d12f-0000-0000-0000-57d4c9b50000\"",
-    "_attachments": "attachments/",
-    "_ts": 1473563032
+    ]
   },
   {
     "id": "0f6faa75-d489-6fda-b839-90d7a0956c2c",
     "faction": "Gene Cult",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Patriarch",
     "currentState": "Prime",
@@ -4476,18 +4026,13 @@
         "name": "Prime",
         "date": "2016-09-11T03:04:13.605Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBdAAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBdAAAAAAAAAA==/",
-    "_etag": "\"0100d22f-0000-0000-0000-57d4c9b70000\"",
-    "_attachments": "attachments/",
-    "_ts": 1473563035
+    ]
   },
   {
     "id": "af3a52fe-8069-b8cc-fd6d-6f3905a03e55",
     "faction": "Gene Cult",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Magus",
     "currentState": "Prime",
@@ -4514,18 +4059,13 @@
         "name": "Prime",
         "date": "2016-09-11T03:04:15.118Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBeAAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBeAAAAAAAAAA==/",
-    "_etag": "\"0100d32f-0000-0000-0000-57d4c9b90000\"",
-    "_attachments": "attachments/",
-    "_ts": 1473563037
+    ]
   },
   {
     "id": "611d3883-8a48-1b97-1548-9c3ca70d00b0",
     "faction": "Tyranids",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Ripper Swarm",
     "currentState": "Prime",
@@ -4548,18 +4088,13 @@
         "name": "Prime",
         "date": "2016-09-11T03:04:17.205Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBfAAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBfAAAAAAAAAA==/",
-    "_etag": "\"0100d42f-0000-0000-0000-57d4c9bb0000\"",
-    "_attachments": "attachments/",
-    "_ts": 1473563038
+    ]
   },
   {
     "id": "1cb691ed-323c-fe8b-7039-fbaaa125e0ef",
     "faction": "Ork",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Warboss",
     "currentState": "Buy New",
@@ -4574,18 +4109,13 @@
         "name": "Buy New",
         "date": "2016-08-27T02:02:26.974Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBgAAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBgAAAAAAAAAA==/",
-    "_etag": "\"0b00a229-0000-0000-0000-57c0f79b0000\"",
-    "_attachments": "attachments/",
-    "_ts": 1472264072
+    ]
   },
   {
     "id": "3f9eddca-8c63-7fa0-3df6-88928763c316",
     "faction": "Space Wolves",
     "items": [ ],
-    "userToken": "someGoogleId",
+    "userToken": "111935457639592347208",
     "type": "GreyTide.Models.V2.Model",
     "name": "Venerable Dread",
     "currentState": "Buy New",
@@ -4600,11 +4130,6 @@
         "name": "Buy New",
         "date": "2016-08-27T02:02:49.067Z"
       }
-    ],
-    "_rid": "n9wIAJNqDQBhAAAAAAAAAA==",
-    "_self": "dbs/n9wIAA==/colls/n9wIAJNqDQA=/docs/n9wIAJNqDQBhAAAAAAAAAA==/",
-    "_etag": "\"0b00a029-0000-0000-0000-57c0f4de0000\"",
-    "_attachments": "attachments/",
-    "_ts": 1472263372
+    ]
   }
 ]

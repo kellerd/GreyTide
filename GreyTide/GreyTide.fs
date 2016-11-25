@@ -7,11 +7,13 @@ module GreyTide =
     open Newtonsoft.Json
     open System.Configuration
     open GreyTide.Data
+    open GreyTide.Models
     open GreyTide.InitData
     open Suave.State.CookieStateStore
     open Suave.Cookie
     open Suave.Authentication
     open Suave.Writers
+    open System.Linq;
 
     type SaveBundle = { SaveBundle:JObject }
     type InitConfig = { DatabaseId : string
@@ -156,24 +158,45 @@ module GreyTide =
             [ 
                 
                 GET >=> choose [    path "/" >=> Files.browseFileHome "index.html" >=> noCache
+                                    path "/logout" >=> reset >=> Redirection.redirect "/" >=> noCache
                                     path "/tide/v1/Tide"   >=> request (v1Models usertoken |> wire0 ) 
                                     path "/tide/v1/States" >=> request (wire0 v1States) 
                                     path "/tide/v2/Models" >=> request (v2Models usertoken |> wire ) 
-                                    path "/tide/v2/States" >=> request (wire v2States)  ]
+                                    path "/tide/v2/States" >=> request (wire v2States) 
+                                    path "/reloads" >=> request (fun _ -> 
+                                        try
+                                            do loadFilesIfTheyDontExist client.Value (Data.repo.States.Value.ToList()) (fun query -> query.Where(fun (sc:V2.StateCollection) -> sc.``type`` = typeof<V2.StateCollection>.FullName) |> Seq.isEmpty |> not) 
+                                            Successful.OK "Reloaded States"
+                                        with e -> ServerErrors.INTERNAL_ERROR  e.Message)
+                                    path "/reloadm" >=> request (fun _ -> 
+                                        try
+                                            do loadFilesIfTheyDontExist client.Value (Data.repo.Models.Value.ToList()) (fun query -> query.Where(fun (sc:V2.Model) -> sc.``type`` = typeof<V2.Model>.FullName) |> Seq.isEmpty |> not)
+                                            Successful.OK "Reloaded Models"
+                                        with e -> ServerErrors.INTERNAL_ERROR e.Message)
+        
+                                                                            ]
                 POST >=> choose [ 
                                     path "/tide/v1/SaveChanges" >=> request' getSaveBundle (v1SaveChanges usertoken |> wire2 ) 
                                     path "/tide/v2/SaveChanges" >=>  request' getSaveBundle (v2SaveChanges usertoken |> wire2 ) ]
                 Files.browseHome
             ] 
             |> choose
-        app |> orElsebadRequest |> session
+        app
 
     let greyTide = 
-        let buttonstToLogin = session (mapSession2 (fun _ -> never) (Files.browseFileHome "signin.html")) >=> noCache
         #if INTERACTIVE
-        let app = Files.browseHome :: [storeUserToken "myusertoken" >=> mainApplication]
+        let assetFiles = pathRegex "(.*)\.(css|png|gif|js|ts)" >=> Files.browseHome
+        let app = [mainApplication "111935457639592347208"]
         #else
-        let app = (pathRegex "(.*)\.(css|png|gif|js)" >=> Files.browseHome) :: Security.secure storeUserToken buttonstToLogin mainApplication
+        //let app = (Files.browseHome) :: [mainApplication "111935457639592347208"]
+        let buttonstToLogin = session (mapSession2 (fun _ -> never) (Files.browseFileHome "signin.html")) >=> noCache
+        let app = 
+            mainApplication  
+            |> orElsebadRequest 
+            |> session 
+            |> Security.secure storeUserToken buttonstToLogin 
+        let assetFiles = (pathRegex "(.*)\.(css|png|gif|js|ts)" >=> Files.browseHome)
+        
         #endif
-        setup app |> choose
+        assetFiles::app |> setup |> choose
         

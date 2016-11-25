@@ -31,7 +31,7 @@ type ModelItem =
       name : string
       [<Required>]
       currentState : string
-      currentDate : string
+      currentDate : DateTime
       points : int
       states : ModelState seq }
 
@@ -45,7 +45,7 @@ type Model =
       name : string
       [<Required>]
       currentState : string
-      currentDate : string
+      currentDate : DateTime
       points : int
       states : ModelState seq
       userToken : string }
