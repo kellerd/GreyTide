@@ -182,21 +182,24 @@ module GreyTide =
             ] 
             |> choose
         app
+    let v3 = 
+        GET >=> choose [  path "/tide/v3/Models" >=> request (v2Models "111935457639592347208" |> wire ) 
+                          path "/tide/v3/States" >=> request (wire v2States) ]
 
     let greyTide = 
         #if INTERACTIVE
         let assetFiles = pathRegex "(.*)\.(css|png|gif|js|ts)" >=> Files.browseHome
         let app = [mainApplication "111935457639592347208"]
         #else
-        let app = (Files.browseHome) :: [mainApplication "111935457639592347208"]
+        //let app = (Files.browseHome) :: [mainApplication "111935457639592347208"]
         let buttonstToLogin = session (mapSession2 (fun _ -> never) (Files.browseFileHome "signin.html")) >=> noCache
-//        let app = 
-//            mainApplication  
-//            |> orElsebadRequest 
-//            |> session 
-//            |> Security.secure storeUserToken buttonstToLogin 
+        let app = 
+           mainApplication  
+           |> orElsebadRequest 
+           |> session 
+           |> Security.secure storeUserToken buttonstToLogin 
         let assetFiles = (pathRegex "(.*)\.(css|png|gif|js|ts)" >=> Files.browseHome)
         
         #endif
-        assetFiles::app |> setup |> choose
+        assetFiles::v3::app |> setup |> choose
         
