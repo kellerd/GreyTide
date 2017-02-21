@@ -34,9 +34,9 @@ module App.Controllers {
             }
             return item.parent ||
                 (
-                    (this.$scope.query5 || item.current != "Completed") &&
+                    (this.$scope.query5 || (item.current != null && item.current != "Completed")) &&
                     (strCheck(item.name) || strCheck(item.faction) || strCheck((item.points | 0).toString())) &&
-                    (!this.$scope.query3 || item.current.indexOf(this.$scope.query3) > -1)
+                    (!this.$scope.query3 || (item.current != null && item.current.indexOf(this.$scope.query3) > -1))
                 );
         };
         //#region Public Methods

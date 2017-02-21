@@ -51,7 +51,7 @@ Target "CopyAssets" (fun _ ->
 Target "CompileTypeScript" (fun _ ->
     (!! (assets </> "**/*.ts")).SetBaseDirectory(assets)
         |> TypeScriptCompiler (fun p -> { p with  ECMAScript = ES5; EmitSourceMaps= true }) 
-    !! (assets </> "**/*.ts") |> FileHelper.DeleteFiles
+   // !! (assets </> "**/*.ts") |> FileHelper.DeleteFiles
 )
 
 Target "StageWebsiteAssets" (fun _ ->

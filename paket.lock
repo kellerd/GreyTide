@@ -13,6 +13,11 @@ NUGET
       jquery.TypeScript.DefinitelyTyped
     bootstrap (3.3.5) - framework: >= net45
       jQuery (>= 1.9.1)
+    Bootstrap.Less (3.3.7)
+      jQuery (>= 1.9.1 < 4.0)
+    Bootstrap.v3.Datetimepicker (4.17.45)
+      Bootstrap.Less (>= 3.3)
+      Moment.js (>= 2.9)
     Breeze.Angular (1.1.1) - framework: >= net45
       Breeze.Angular.Directives (>= 1.3.10)
       Breeze.Client (>= 1.5.3)
@@ -52,7 +57,7 @@ NUGET
       Spin.js (>= 2.0.1)
       toastr (>= 2.0.3)
       toastr.TypeScript.DefinitelyTyped (>= 0.1)
-    jQuery (2.1.4) - framework: >= net45
+    jQuery (2.1.4)
     jquery.TypeScript.DefinitelyTyped (2.3) - framework: >= net45
     linq.js (2.2.0.2) - framework: >= net45
     linq.TypeScript.DefinitelyTyped (0.1.8) - framework: >= net45
@@ -74,7 +79,7 @@ NUGET
       Microsoft.Data.Edm (5.6.4)
       System.Spatial (5.6.4)
     Microsoft.Web.Infrastructure (1.0) - framework: >= net45
-    Moment.js (2.10.6) - framework: >= net45
+    Moment.js (2.10.6)
     Newtonsoft.Json (7.0.1) - framework: >= net45
     NuGet.CommandLine (3.4.3)
     nvd3.js (1.8.1) - framework: >= net45
@@ -94,4 +99,6 @@ NUGET
     WebActivator (1.0) - framework: >= net45
 GITHUB
   remote: jakesgordon/javascript-state-machine
-    state-machine.js (90f11cccb47633dfc591858e2aef9d2aabd613fe)
+    state-machine.js (c0333e624a81ad8c43248009648fb31d9ddfd7c8)
+  remote: smalot/bootstrap-datetimepicker
+    css/bootstrap-datetimepicker.css (97870217cf718f64ffb37aab1b312c709b2f494c)

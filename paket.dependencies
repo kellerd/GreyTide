@@ -14,3 +14,5 @@ nuget FAKE
 github jakesgordon/javascript-state-machine state-machine.js
 content none
 nuget HotTowelTypescript 2.2.2 framework: >= net45
+nuget Bootstrap.v3.Datetimepicker
+github smalot/bootstrap-datetimepicker css/bootstrap-datetimepicker.css
