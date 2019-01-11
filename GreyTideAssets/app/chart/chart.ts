@@ -63,7 +63,13 @@ module App.Controllers
                                 From(orderedStates).
                                 Select(function (s, i) {
                                     if (i != 0)
-                                        currentObject[s.name].call(currentObject);
+                                        try {
+                                            currentObject[s.name].call(currentObject);
+                                        } catch (e) {
+                                            console.log("Exception: " + e);
+                                            console.log("Current: " + currentObject.name + " " + currentObject.id);
+                                            throw e;
+                                        }
                                     return {
                                         points: currentObject.points,
                                         date: new Date(s.date),
